@@ -173,6 +173,8 @@ function ReFlow() {
 
 
 VarTrivSelCap = new Variable( 'VarTrivSelCap', 'none', 0, 0, null, null, 'buildbettertraining', true )
+VarPageInTitle = new Variable( 'VarPageInTitle', null, 0, 0, null, null, 'buildbettertraining' )
+VarPageInTitle.set( '6' )
 VarTriMuteAllFLV = new Variable( 'VarTriMuteAllFLV', '', 0, 0, null, null, 'buildbettertraining', true )
 
 onload = responsiveInit
@@ -196,9 +198,10 @@ function init11() {
   findWH()
   if( is.min ){
     trivPageTracking.InitPageTracking();
-    PreloadResources(new Array(button26226,shape3288,audio3324,shape36130,image2558,image15872,text3034,text3065,text3093,text3127,shape3156,audio3538,text3173,text3675,audio30851,image2566))
+    PreloadResources(new Array(button58354,text56824,shape3288,audio3324,shape36130,image2558,image15872,text3034,text3065,text3093,text3127,shape3156,audio3538,text3173,text3675,audio30851,image2566))
     pageLayer.show(true);
-    button26226.init()
+    button58354.init()
+    text56824.init()
     shape3288.init()
     audio3324.init()
     shape36130.init()
@@ -214,7 +217,8 @@ function init11() {
     text3675.init()
     audio30851.init()
     image2566.init()
-    button26226.activate()
+    button58354.activate()
+    text56824.activate()
     shape3288.activate()
     audio3324.activate()
     shape36130.activate()
@@ -230,14 +234,15 @@ function init11() {
     text3675.activate()
     audio30851.activate()
     image2566.activate()
-button26226.strCookieState = (trivBtnTracking.GetRangeStatus(26226,true));
-button26226.loadStateFromSes("normalState");
+button58354.strCookieState = (trivBtnTracking.GetRangeStatus(58354,true));
+button58354.loadStateFromSes("normalState");
 		    try{
 		     var objToScroll = trivGetScrollObj(window.location.href) ;
 		     trivScrollTo(window, objToScroll);
 		     var titleManagerIndexWindow = (window && window.parent && window.parent.bIsTitleManagerIndexFile) ? window.parent : null;
 		     if(titleManagerIndexWindow)  trivScrollTo(titleManagerIndexWindow, objToScroll);
 		    } catch (e) { }
+    action56825();action56826();
     if(!isSinglePagePlayerAvail()) postPageShowAction();
     if( location.hash )
     {
@@ -347,14 +352,26 @@ function playerReady(obj){
   	if(obj['id'] == 'swfaudio3538') { audio3538.setFlashPlayer(); audio3538.flsPlayer.addModelListener("STATE", "OnStateChange"); }
 }
 
-function action26227(fn){
+function action58355(fn){
     trivExitPage('page2470.html',false); 
     if(fn && typeof(fn) == 'string' ) eval(fn);
     else if(fn && typeof(fn) == 'function' ) fn();
 }
 
-function button26226onUp() {
-  action26227();
+function button58354onUp() {
+  action58355();
+}
+
+function action56825(fn){
+    text56824.actionChangeContents( "Page  " +  VarPageInTitle.getValue() + "","alignleft","1" ); 
+    if(fn && typeof(fn) == 'string' ) eval(fn);
+    else if(fn && typeof(fn) == 'function' ) fn();
+}
+
+function action56826(fn){
+    text56824.actionShow(); 
+    if(fn && typeof(fn) == 'string' ) eval(fn);
+    else if(fn && typeof(fn) == 'function' ) fn();
 }
 
 function action3612(fn){
@@ -398,15 +415,21 @@ function text3034actionShow() {
 }
 
 function text3065actionShow() {
-  setTimeout("if(!text3065.isVisible()) { text3065.objLyr.doTrans( 0, 35, 5, null, text3065.objLyr.x, text3065.objLyr.y, -178, -93, winW+20, winH+20, 0, 2, 1 ); }", 1 )
+  setTimeout("if(!text3065.isVisible()) { text3065.objLyr.doTrans( 0, 35, 5, null, text3065.objLyr.x, text3065.objLyr.y, -181, -83, winW+20, winH+20, 0, 2, 1 ); }", 1 )
 }
 
 function text3093actionShow() {
   setTimeout("if(!text3093.isVisible()) { text3093.objLyr.doTrans( 0, 35, 5, null, text3093.objLyr.x, text3093.objLyr.y, -167, -93, winW+20, winH+20, 0, 2, 1 ); }", 1 )
 }
 
+function action12951(fn){
+    shape36130.actionShow(); 
+    if(fn && typeof(fn) == 'string' ) eval(fn);
+    else if(fn && typeof(fn) == 'function' ) fn();
+}
+
 function text3127actionShow() {
-  setTimeout("if(!text3127.isVisible()) { text3127.objLyr.doTrans( 0, 35, 5, null, text3127.objLyr.x, text3127.objLyr.y, -177, -125, winW+20, winH+20, 0, 2, 1 ); }", 1 )
+  setTimeout("if(!text3127.isVisible()) { text3127.objLyr.doTrans( 0, 35, 5, 'action12951();', text3127.objLyr.x, text3127.objLyr.y, -177, -125, winW+20, winH+20, 0, 2, 1 ); }", 1 )
 }
 
 function audio3538evEvent_2(fn){
@@ -466,32 +489,50 @@ function setPlayerMute(plrObj, bMute){
 }
 
 if( is.min ){
-button26226 = new ObjButton('button26226', 'Back',50,50,82.000000,35.000000,1,27,'div','',1,0)
-button26226.setUseSvgFile(1)
-button26226.setFillStyle(1)
-button26226.setUniqueFillID('page2557_button26226')
-button26226.initRotateAngle(0,0,0,-0.000000,-0.000000,81,34)
-button26226.initHasShadow(0)
-button26226.initHasReflection(0)
-button26226.setImages({"disabledState":"","downState":"","normalState":"images/button26226.png","overState":"","selectedState":"","visitedState":""});
-button26226.setStateOpacity({"disabledState":1.0,"downState":1.0,"normalState":1.0,"overState":1.0,"selectedState":1.0,"visitedState":1.0});
-button26226.addOpacity(100)
-button26226.initImageMap('81,10,17,10,17,0,0,17,17,34,17,24,81,24,81,10','M 81.000000 9.690001 L 17.000000 9.690001 L 17.000000 0.000000 L 0.000000 17.000000 L 17.000000 34.000000 L 17.000000 24.309999 L 81.000000 24.309999 L 81.000000 9.690001 z')
-button26226.setFills({"disabledState":{"fillInfo":"","stylePath":"fill:#708DC1;\""},"downState":{"fillInfo":"","stylePath":"fill:#223D6C;\""},"normalState":{"fillInfo":"","stylePath":"fill:#21314D;\""},"overState":{"fillInfo":"","stylePath":"fill:#223D6C;\""},"selectedState":{"fillInfo":"","screenRdr":"Selected","stylePath":"fill:#1B4FAA;\""},"visitedState":{"fillInfo":"","screenRdr":"Visited","stylePath":"fill:#1B4FAA;\""}});
-button26226.setImgFillVal({"disabledState":{"B64":"","fill":"","style":""},"downState":{"B64":"","fill":"","style":""},"normalState":{"B64":"","fill":"","style":""},"overState":{"B64":"","fill":"","style":""},"selectedState":{"B64":"","fill":"","style":""},"visitedState":{"B64":"","fill":"","style":""}});
-button26226.initLineWeight('0')
-button26226.onUp = button26226onUp
-button26226.hasOnUp = true
-button26226.capture=4
-button26226.setTextVal({"disabledState":{"div":"div.button26226disabledStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:81.000000px; height:34.000000px;}","span":"span.button26226disabledStateText { width:77.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"downState":{"div":"div.button26226downStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:81.000000px; height:34.000000px;}","span":"span.button26226downStateText { width:77.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"normalState":{"div":"div.button26226Text { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:81.000000px; height:34.000000px;}","span":"span.button26226Text { width:77.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"overState":{"div":"div.button26226overStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:81.000000px; height:34.000000px;}","span":"span.button26226overStateText { width:77.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"selectedState":{"div":"div.button26226selectedStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:81.000000px; height:34.000000px;}","span":"span.button26226selectedStateText { width:77.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"visitedState":{"div":"div.button26226visitedStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:81.000000px; height:34.000000px;}","span":"span.button26226visitedStateText { width:77.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"}});
-button26226.text = 'Back'
-button26226.bSelectedEnabled = false;
-button26226.bVisitedEnabled = false;
-button26226.bOverEnabled = true;
-button26226.bDownEnabled = true;
-button26226.build()
+button58354 = new ObjButton('button58354', 'Back',50,50,81.000000,43.000000,1,28,'div','',1,0)
+button58354.setUseSvgFile(1)
+button58354.setFillStyle(1)
+button58354.setUniqueFillID('page2557_button58354')
+button58354.initRotateAngle(0,0,0,-0.000000,-0.000000,80,42)
+button58354.initHasShadow(0)
+button58354.initHasReflection(0)
+button58354.setImages({"disabledState":"","downState":"","normalState":"images/button58354.png","overState":"","selectedState":"","visitedState":""});
+button58354.setStateOpacity({"disabledState":1.0,"downState":1.0,"normalState":1.0,"overState":1.0,"selectedState":1.0,"visitedState":1.0});
+button58354.addOpacity(100)
+button58354.initImageMap('80,12,21,12,21,0,0,21,21,42,21,30,80,30,80,12','M 80.000000 11.970000 L 21.000000 11.970000 L 21.000000 0.000000 L 0.000000 21.000000 L 21.000000 42.000000 L 21.000000 30.029999 L 80.000000 30.029999 L 80.000000 11.970000 z')
+button58354.setFills({"disabledState":{"fillInfo":"","stylePath":"fill:#708DC1;\""},"downState":{"fillInfo":"","stylePath":"fill:#223D6C;\""},"normalState":{"fillInfo":"","stylePath":"fill:#21314D;\""},"overState":{"fillInfo":"","stylePath":"fill:#223D6C;\""},"selectedState":{"fillInfo":"","screenRdr":"Selected","stylePath":"fill:#1B4FAA;\""},"visitedState":{"fillInfo":"","screenRdr":"Visited","stylePath":"fill:#1B4FAA;\""}});
+button58354.setImgFillVal({"disabledState":{"B64":"","fill":"","style":""},"downState":{"B64":"","fill":"","style":""},"normalState":{"B64":"","fill":"","style":""},"overState":{"B64":"","fill":"","style":""},"selectedState":{"B64":"","fill":"","style":""},"visitedState":{"B64":"","fill":"","style":""}});
+button58354.initLineWeight('0')
+button58354.onUp = button58354onUp
+button58354.hasOnUp = true
+button58354.capture=4
+button58354.setTextVal({"disabledState":{"div":"div.button58354disabledStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:80.000000px; height:42.000000px;}","span":"span.button58354disabledStateText { width:76.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"downState":{"div":"div.button58354downStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:80.000000px; height:42.000000px;}","span":"span.button58354downStateText { width:76.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"normalState":{"div":"div.button58354Text { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:80.000000px; height:42.000000px;}","span":"span.button58354Text { width:76.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"overState":{"div":"div.button58354overStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:80.000000px; height:42.000000px;}","span":"span.button58354overStateText { width:76.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"selectedState":{"div":"div.button58354selectedStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:80.000000px; height:42.000000px;}","span":"span.button58354selectedStateText { width:76.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"visitedState":{"div":"div.button58354visitedStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:80.000000px; height:42.000000px;}","span":"span.button58354visitedStateText { width:76.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"}});
+button58354.text = 'Back'
+button58354.bSelectedEnabled = false;
+button58354.bVisitedEnabled = false;
+button58354.bOverEnabled = true;
+button58354.bDownEnabled = true;
+button58354.build()
 
-shape3288 = new ObjImage('shape3288','images/shape3288.png','Triangle 1',886,293,26.000000,25.000000,0,28,'div','',0 )
+text56824 = new ObjText('text56824',null,50,685,116,21,0,29,null,'div',null,1 )
+text56824.initSLine(1)
+text56824.initHasBullet(0)
+text56824.initRotateAngle(0,0,0)
+text56824.initHasOuterShadow(0)
+text56824.initHasTextShadow(0)
+text56824.initHasBorder(0)
+text56824.initHasOutline(0)
+text56824.initHasMargin(0)
+text56824.addIe8Attr(50, 685, 116, 21, 0, 0)
+text56824.addHeading(0)
+text56824.addOpacity(100)
+text56824.arrCSSStyles = new Array();
+text56824.arrCSSStyles.push('span.text56824Font1 { font-size:13px; font-family:"Arial", sans-serif; color:#21314d;}');
+text56824.arrCSSStyles.push('span.text56824Font2 { font-size:13px; font-family:"Arial", sans-serif; color:#000000;}');
+text56824.addInnerText('<div id=\"text56824\" aria-live=\"off\"  ><p lang=\"en\"  style=\"margin-left:0px;text-indent:0px;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text56824Font1\"  >Page n</span ><span class=\"text56824Font2\" style=\"background-color:transparent\" >\n</span ></p ></div>\n');
+text56824.build()
+
+shape3288 = new ObjImage('shape3288','images/shape3288.png','Triangle 1',886,293,26.000000,25.000000,0,30,'div','',0 )
 shape3288.initRotateAngle(0,0,0,-1.000000,-1.000000,24,23)
 shape3288.initHasShadow(0)
 shape3288.initHasReflection(0)
@@ -507,13 +548,13 @@ shape3288.hasOnUp = true
 shape3288.capture=4
 shape3288.build()
 
-audio3324 = new ObjMedia('audio3324','Welcome 5_!',31,517,150,24,1,29,'media/welcome_5_.mp3',0,1,0,0,1,0.800000,1,'div',0);
+audio3324 = new ObjMedia('audio3324','Welcome 5_!',31,517,150,24,1,31,'media/welcome_5_.mp3',0,1,0,0,1,0.800000,1,'div',0);
 audio3324.bNeedPool = true;
 audio3324.bSpeedControl = true;
 audio3324.BuildMediaString()
 audio3324.build()
 
-shape36130 = new ObjImage('shape36130','images/shape36130.png','Triangle Left',276,399,26.000000,25.000000,0,30,'div','',0 )
+shape36130 = new ObjImage('shape36130','images/shape36130.png','Triangle Left',276,399,26.000000,25.000000,0,32,'div','',0 )
 shape36130.initRotateAngle(0,0,0,-1.000000,-1.000000,24,23)
 shape36130.initHasShadow(0)
 shape36130.initHasReflection(0)
@@ -529,7 +570,7 @@ shape36130.hasOnUp = true
 shape36130.capture=4
 shape36130.build()
 
-image2558 = new ObjImage('image2558','images/litchen_background.png','litchen background',0,0,1281,720,1,5,'div',null, 0 )
+image2558 = new ObjImage('image2558','images/litchen_background.png','litchen background',0,0,1281,720,1,6,'div',null, 0 )
 image2558.initRotateAngle(0,0,0,0,0,0,0)
 image2558.initHasShadow(0)
 image2558.initHasReflection(0)
@@ -539,7 +580,7 @@ image2558.addBorder(0)
 image2558.addOpacity(100)
 image2558.build()
 
-image15872 = new ObjImage('image15872','images/recipe_card_1crop_image15872.png','A lined paper sheet with hole punches sits over a pink and yellow folder. A yellow star reads “Final Dish Complete!” on it',71,48,391,425,1,6,'div',null, 0 )
+image15872 = new ObjImage('image15872','images/recipe_card_1crop_image15872.png','A lined paper sheet with hole punches sits over a pink and yellow folder. A yellow star reads “Final Dish Complete!” on it',71,48,391,425,1,7,'div',null, 0 )
 image15872.initRotateAngle(0,0,0,0,0,0,0)
 image15872.initHasShadow(0)
 image15872.initHasReflection(0)
@@ -549,7 +590,7 @@ image15872.addBorder(0)
 image15872.addOpacity(100)
 image15872.build()
 
-text3034 = new ObjText('text3034',null,216,154,204,97,0,7,null,'div',null,0 )
+text3034 = new ObjText('text3034',null,216,154,204,97,0,8,null,'div',null,0 )
 text3034.initSLine(0)
 text3034.initHasBullet(0)
 text3034.initRotateAngle(0,0,0)
@@ -567,7 +608,7 @@ text3034.arrCSSStyles.push('span.text3034Font1 { font-size:15px; font-family:"Ar
 text3034.addInnerText('<div id=\"text3034\" aria-live=\"off\"  ><p lang=\"en\"  legLH=\"1.419\" style=\"margin-left:0px;text-indent:0px;line-height:1.312;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text3034Font1\" style=\"position:relative;top:-1px;\" >Identify real-world case relevant to professionals training\n</span ></p ></div>\n');
 text3034.build()
 
-text3065 = new ObjText('text3065',null,216,209,204,69,0,8,null,'div',null,0 )
+text3065 = new ObjText('text3065',null,216,216,204,44,0,9,null,'div',null,0 )
 text3065.initSLine(0)
 text3065.initHasBullet(0)
 text3065.initRotateAngle(0,0,0)
@@ -576,7 +617,7 @@ text3065.initHasTextShadow(0)
 text3065.initHasBorder(0)
 text3065.initHasOutline(0)
 text3065.initHasMargin(0)
-text3065.addIe8Attr(216, 209, 204, 69, 0, 0)
+text3065.addIe8Attr(216, 216, 204, 44, 0, 0)
 text3065.addHeading(0)
 text3065.addOpacity(100)
 text3065.actionShow = text3065actionShow
@@ -585,7 +626,7 @@ text3065.arrCSSStyles.push('span.text3065Font1 { font-size:15px; font-family:"Ar
 text3065.addInnerText('<div id=\"text3065\" aria-live=\"off\"  ><p lang=\"en\"  legLH=\"1.419\" style=\"margin-left:0px;text-indent:0px;line-height:1.312;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text3065Font1\" style=\"position:relative;top:-1px;\" >Develop Bloom-aligned objectives\n</span ></p ></div>\n');
 text3065.build()
 
-text3093 = new ObjText('text3093',null,216,271,204,49,0,9,null,'div',null,0 )
+text3093 = new ObjText('text3093',null,216,271,204,49,0,10,null,'div',null,0 )
 text3093.initSLine(0)
 text3093.initHasBullet(0)
 text3093.initRotateAngle(0,0,0)
@@ -603,7 +644,7 @@ text3093.arrCSSStyles.push('span.text3093Font1 { font-size:15px; font-family:"Ar
 text3093.addInnerText('<div id=\"text3093\" aria-live=\"off\"  ><p lang=\"en\"  legLH=\"1.419\" style=\"margin-left:0px;text-indent:0px;line-height:1.312;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text3093Font1\" style=\"position:relative;top:-1px;\" >Design higher-order thinking activities\n</span ></p ></div>\n');
 text3093.build()
 
-text3127 = new ObjText('text3127',null,216,330,204,49,0,10,null,'div',null,0 )
+text3127 = new ObjText('text3127',null,216,330,204,49,0,11,null,'div',null,0 )
 text3127.initSLine(0)
 text3127.initHasBullet(0)
 text3127.initRotateAngle(0,0,0)
@@ -621,7 +662,7 @@ text3127.arrCSSStyles.push('span.text3127Font1 { font-size:15px; font-family:"Ar
 text3127.addInnerText('<div id=\"text3127\" aria-live=\"off\"  ><p lang=\"en\"  legLH=\"1.419\" style=\"margin-left:0px;text-indent:0px;line-height:1.312;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text3127Font1\" style=\"position:relative;top:-1px;\" >Apply Bloom\'s taxonomy levels to workplace scenarios\n</span ></p ></div>\n');
 text3127.build()
 
-shape3156 = new ObjImage('shape3156','images/shape3156.png','Callout Ellipse',753,161,268.000000,166.000000,1,11,'div','',0 )
+shape3156 = new ObjImage('shape3156','images/shape3156.png','Callout Ellipse',753,161,268.000000,166.000000,1,12,'div','',0 )
 shape3156.initRotateAngle(0,0,0,-1.000000,0.000000,266,165)
 shape3156.initHasShadow(0)
 shape3156.initHasReflection(0)
@@ -634,7 +675,7 @@ shape3156.initLineWeight(1)
 shape3156.addOpacity(100)
 shape3156.build()
 
-audio3538 = new ObjMedia('audio3538','Welcome 5',783,338,225,24,1,12,'media/welcome_5.mp3',0,0,0,0,1,0.800000,1,'div',0);
+audio3538 = new ObjMedia('audio3538','Welcome 5',783,338,225,24,1,13,'media/welcome_5.mp3',0,0,0,0,1,0.800000,1,'div',0);
 audio3538.bNeedPool = true;
 audio3538.bSpeedControl = true;
 audio3538.BuildMediaString()
@@ -643,7 +684,7 @@ audio3538.build()
 audio3538.addEvent('3.27', 'audio3538evEvent_2')
 audio3538.addEvent('6.00', 'audio3538evEvent_3')
 audio3538.addEvent('9.00', 'audio3538evEvent_4')
-text3173 = new ObjText('text3173',null,783,198,221,97,1,13,null,'div',null,0 )
+text3173 = new ObjText('text3173',null,783,198,221,97,1,14,null,'div',null,0 )
 text3173.initSLine(0)
 text3173.initHasBullet(0)
 text3173.initRotateAngle(0,0,0)
@@ -660,8 +701,8 @@ text3173.arrCSSStyles.push('span.text3173Font1 { font-size:16px; font-family:"Ar
 text3173.addInnerText('<div id=\"text3173\" aria-live=\"off\"  ><p lang=\"en\"  legLH=\"1.409\" style=\"margin-left:0px;text-indent:0px;line-height:1.350;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text3173Font1\" style=\"position:relative;top:-2px;\" >By the end, you won\'t just understand Bloom\'s Taxonomy, you\'ll use it to create learning experiences that truly work.\n</span ></p ></div>\n');
 text3173.build()
 
-text3675 = new ObjText('text3675',null,179,107,244,35,1,14,null,'div',null,0 )
-text3675.initSLine(0)
+text3675 = new ObjText('text3675',null,179,107,244,35,1,15,null,'div',null,0 )
+text3675.initSLine(1)
 text3675.initHasBullet(0)
 text3675.initRotateAngle(0,0,0)
 text3675.initHasOuterShadow(0)
@@ -678,13 +719,13 @@ text3675.arrCSSStyles.push('span.text3675Font2 { font-size:16px; font-family:"Ar
 text3675.addInnerText('<div id=\"text3675\" aria-live=\"off\"  ><p lang=\"en\"  legLH=\"1.409\" style=\"margin-left:0px;text-indent:0px;line-height:1.350;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text3675Font1\" style=\"position:relative;top:-2px;\" >Learning Objectives:</span ><span class=\"text3675Font2\" style=\"background-color:transparentposition:relative;top:-2px;\" >\n</span ></p ></div>\n');
 text3675.build()
 
-audio30851 = new ObjMedia('audio30851','Learning objectives',358,210,1,1,0,15,'media/learning_objectives.mp3',0,0,0,0,1,0.800000,0,'div',0);
+audio30851 = new ObjMedia('audio30851','Learning objectives',358,210,1,1,0,16,'media/learning_objectives.mp3',0,0,0,0,1,0.800000,0,'div',0);
 audio30851.bSpeedControl = true;
 audio30851.BuildMediaString()
 audio30851.build()
 
 audio30851.addEvent('5.00', 'audio30851evEvent_1')
-image2566 = new ObjImage('image2566','images/5crop_image2566.png','a smiling chef wearing a white uniform and hat. The figure has brown hair and an approachable expression',566,225,167,298,1,16,'div',null, 0 )
+image2566 = new ObjImage('image2566','images/5crop_image2566.png','a smiling chef wearing a white uniform and hat. The figure has brown hair and an approachable expression',566,225,167,298,1,17,'div',null, 0 )
 image2566.initRotateAngle(0,0,0,0,0,0,0)
 image2566.initHasShadow(0)
 image2566.initHasReflection(0)
@@ -694,7 +735,8 @@ image2566.addBorder(0)
 image2566.addOpacity(100)
 image2566.build()
 
-arObjs.push(button26226);
+arObjs.push(button58354);
+arObjs.push(text56824);
 arObjs.push(shape3288);
 arObjs.push(audio3324);
 arObjs.push(shape36130);
@@ -735,7 +777,8 @@ if( is.min ){
 
 <script>
 if( is.min ){
-    appendElement(button26226, null, null);
+    appendElement(button58354, null, null);
+    appendElement(text56824, null, null);
     appendElement(shape3288, null, null);
     appendElement(audio3324, null, null);
     appendElement(shape36130, null, null);

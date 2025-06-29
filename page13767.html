@@ -169,6 +169,8 @@ function ReFlow() {
 
 
 VarTrivSelCap = new Variable( 'VarTrivSelCap', 'none', 0, 0, null, null, 'buildbettertraining', true )
+VarPageInTitle = new Variable( 'VarPageInTitle', null, 0, 0, null, null, 'buildbettertraining' )
+VarPageInTitle.set( '17' )
 VarQuestion_0003 = new Variable( 'VarQuestion_0003', '', 0, 0, null, null, 'buildbettertraining', false )
 VarTriMuteAllFLV = new Variable( 'VarTriMuteAllFLV', '', 0, 0, null, null, 'buildbettertraining', true )
 
@@ -193,9 +195,10 @@ function init11() {
   findWH()
   if( is.min ){
     trivPageTracking.InitPageTracking();
-    PreloadResources(new Array(button13787,image13769,image13771,image13774,text13775,qu13813,text13815,entry13816,shape13869))
+    PreloadResources(new Array(text57313,button63478,image13769,image13771,image13774,text13775,qu13813,text13815,entry13816,shape13869))
     pageLayer.show(true);
-    button13787.init()
+    text57313.init()
+    button63478.init()
     image13769.init()
     image13771.init()
     image13774.init()
@@ -204,7 +207,8 @@ function init11() {
     text13815.init()
     entry13816.init()
     shape13869.init()
-    button13787.activate()
+    text57313.activate()
+    button63478.activate()
     image13769.activate()
     image13771.activate()
     image13774.activate()
@@ -213,8 +217,8 @@ function init11() {
     text13815.activate()
     entry13816.activate()
     shape13869.activate()
-button13787.strCookieState = (trivBtnTracking.GetRangeStatus(13787,true));
-button13787.loadStateFromSes("normalState");
+button63478.strCookieState = (trivBtnTracking.GetRangeStatus(63478,true));
+button63478.loadStateFromSes("normalState");
 		    try{
 		     var objToScroll = trivGetScrollObj(window.location.href) ;
 		     trivScrollTo(window, objToScroll);
@@ -224,6 +228,7 @@ button13787.loadStateFromSes("normalState");
     var valVarQuestion_0003 = VarQuestion_0003.getValue()
     if(valVarQuestion_0003!='~~~null~~~')entry13816.objLyr.doc.forms["entry13816form"]["Entry field"].value=valVarQuestion_0003
 
+    action57314();action57315();
     if(!isSinglePagePlayerAvail()) postPageShowAction();
     if( location.hash )
     {
@@ -346,7 +351,7 @@ function doImmFeedback( objId ) {
       qu13813PrevAns = ans_VarQuestion_0003;
    if( ans_VarQuestion_0003 != '~~~null~~~' ) {
     { //1 
-        trivActFBCnt++; action13813_2(onAfterFBAction);  return 0;
+        trivActFBCnt++; action13813_4(onAfterFBAction);  return 0;
   } //1
 
       }
@@ -359,28 +364,34 @@ function OnDeviceRotate() {
 
 }
 
-function action13788(fn){
-    trivExitPage('page5889.html',true); 
+function action57314(fn){
+    text57313.actionChangeContents( "Page  " +  VarPageInTitle.getValue() + "","alignleft","1" ); 
     if(fn && typeof(fn) == 'string' ) eval(fn);
     else if(fn && typeof(fn) == 'function' ) fn();
 }
 
-function action13789(fn){
-    
+function action57315(fn){
+    text57313.actionShow(); 
     if(fn && typeof(fn) == 'string' ) eval(fn);
     else if(fn && typeof(fn) == 'function' ) fn();
 }
 
-function button13787onUp() {
-  action13788();action13789();
+function action63479(fn){
+    trivExitPage('page10959.html',false); 
+    if(fn && typeof(fn) == 'string' ) eval(fn);
+    else if(fn && typeof(fn) == 'function' ) fn();
+}
+
+function button63478onUp() {
+  action63479();
 }
 
 function Offset_qu13813(bDevRotate) {
 }
 
 
-function action13813_2(fn){
-    if(!document.getElementById("DLG_Div_13813"))trivAlert( 'action13813_2', 'BuildBetterTraining', 'Sample answer 1:\n Ask learners to explain the concept in their own words or give an example of it in their work. If they can’t explain it without repeating the exact wording from the slide, they likely don’t understand it yet..\n\nSample Answer 2:\nI’d include group discussions or storytelling prompts where learners connect a concept to a real work example. This makes them interpret the idea instead of just repeating it.', fn );
+function action13813_4(fn){
+    if(!document.getElementById("DLG_Div_13813"))trivAlert( 'action13813_4', 'BuildBetterTraining', 'Sample answer 1:\n Ask learners to explain the concept in their own words or give an example of it in their work. If they can’t explain it without repeating the exact wording from the slide, they likely don’t understand it yet..\n\nSample Answer 2:\nI’d include group discussions or storytelling prompts where learners connect a concept to a real work example. This makes them interpret the idea instead of just repeating it.', fn );
 }
 
 function action13909(fn){
@@ -426,32 +437,50 @@ function shape13869actionShow() {
 }
 
 if( is.min ){
-button13787 = new ObjButton('button13787', 'Back',67,61,82.000000,35.000000,1,20,'div','',1,0)
-button13787.setUseSvgFile(1)
-button13787.setFillStyle(1)
-button13787.setUniqueFillID('page13767_button13787')
-button13787.initRotateAngle(0,0,0,-0.000000,-0.000000,81,34)
-button13787.initHasShadow(0)
-button13787.initHasReflection(0)
-button13787.setImages({"disabledState":"","downState":"","normalState":"images/button13787.png","overState":"","selectedState":"","visitedState":""});
-button13787.setStateOpacity({"disabledState":1.0,"downState":1.0,"normalState":1.0,"overState":1.0,"selectedState":1.0,"visitedState":1.0});
-button13787.addOpacity(100)
-button13787.initImageMap('81,10,17,10,17,0,0,17,17,34,17,24,81,24,81,10','M 81.000000 9.690001 L 17.000000 9.690001 L 17.000000 0.000000 L 0.000000 17.000000 L 17.000000 34.000000 L 17.000000 24.309999 L 81.000000 24.309999 L 81.000000 9.690001 z')
-button13787.setFills({"disabledState":{"fillInfo":"","stylePath":"fill:#708DC1;\""},"downState":{"fillInfo":"","stylePath":"fill:#223D6C;\""},"normalState":{"fillInfo":"","stylePath":"fill:#21314D;\""},"overState":{"fillInfo":"","stylePath":"fill:#223D6C;\""},"selectedState":{"fillInfo":"","screenRdr":"Selected","stylePath":"fill:#1B4FAA;\""},"visitedState":{"fillInfo":"","screenRdr":"Visited","stylePath":"fill:#1B4FAA;\""}});
-button13787.setImgFillVal({"disabledState":{"B64":"","fill":"","style":""},"downState":{"B64":"","fill":"","style":""},"normalState":{"B64":"","fill":"","style":""},"overState":{"B64":"","fill":"","style":""},"selectedState":{"B64":"","fill":"","style":""},"visitedState":{"B64":"","fill":"","style":""}});
-button13787.initLineWeight('0')
-button13787.onUp = button13787onUp
-button13787.hasOnUp = true
-button13787.capture=4
-button13787.setTextVal({"disabledState":{"div":"div.button13787disabledStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:81.000000px; height:34.000000px;}","span":"span.button13787disabledStateText { width:77.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"downState":{"div":"div.button13787downStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:81.000000px; height:34.000000px;}","span":"span.button13787downStateText { width:77.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"normalState":{"div":"div.button13787Text { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:81.000000px; height:34.000000px;}","span":"span.button13787Text { width:77.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"overState":{"div":"div.button13787overStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:81.000000px; height:34.000000px;}","span":"span.button13787overStateText { width:77.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"selectedState":{"div":"div.button13787selectedStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:81.000000px; height:34.000000px;}","span":"span.button13787selectedStateText { width:77.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"visitedState":{"div":"div.button13787visitedStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:81.000000px; height:34.000000px;}","span":"span.button13787visitedStateText { width:77.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"}});
-button13787.text = 'Back'
-button13787.bSelectedEnabled = false;
-button13787.bVisitedEnabled = false;
-button13787.bOverEnabled = true;
-button13787.bDownEnabled = true;
-button13787.build()
+text57313 = new ObjText('text57313',null,50,685,116,21,0,21,null,'div',null,1 )
+text57313.initSLine(1)
+text57313.initHasBullet(0)
+text57313.initRotateAngle(0,0,0)
+text57313.initHasOuterShadow(0)
+text57313.initHasTextShadow(0)
+text57313.initHasBorder(0)
+text57313.initHasOutline(0)
+text57313.initHasMargin(0)
+text57313.addIe8Attr(50, 685, 116, 21, 0, 0)
+text57313.addHeading(0)
+text57313.addOpacity(100)
+text57313.arrCSSStyles = new Array();
+text57313.arrCSSStyles.push('span.text57313Font1 { font-size:13px; font-family:"Arial", sans-serif; color:#21314d;}');
+text57313.arrCSSStyles.push('span.text57313Font2 { font-size:13px; font-family:"Arial", sans-serif; color:#000000;}');
+text57313.addInnerText('<div id=\"text57313\" aria-live=\"off\"  ><p lang=\"en\"  style=\"margin-left:0px;text-indent:0px;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text57313Font1\"  >Page n</span ><span class=\"text57313Font2\" style=\"background-color:transparent\" >\n</span ></p ></div>\n');
+text57313.build()
 
-image13769 = new ObjImage('image13769','images/litchen_background.png','Kitchen background',0,2,1280,719,1,2,'div',null, 0 )
+button63478 = new ObjButton('button63478', 'Back',50,50,81.000000,43.000000,1,22,'div','',1,0)
+button63478.setUseSvgFile(1)
+button63478.setFillStyle(1)
+button63478.setUniqueFillID('page13767_button63478')
+button63478.initRotateAngle(0,0,0,-0.000000,-0.000000,80,42)
+button63478.initHasShadow(0)
+button63478.initHasReflection(0)
+button63478.setImages({"disabledState":"","downState":"","normalState":"images/button63478.png","overState":"","selectedState":"","visitedState":""});
+button63478.setStateOpacity({"disabledState":1.0,"downState":1.0,"normalState":1.0,"overState":1.0,"selectedState":1.0,"visitedState":1.0});
+button63478.addOpacity(100)
+button63478.initImageMap('80,12,21,12,21,0,0,21,21,42,21,30,80,30,80,12','M 80.000000 11.970000 L 21.000000 11.970000 L 21.000000 0.000000 L 0.000000 21.000000 L 21.000000 42.000000 L 21.000000 30.029999 L 80.000000 30.029999 L 80.000000 11.970000 z')
+button63478.setFills({"disabledState":{"fillInfo":"","stylePath":"fill:#708DC1;\""},"downState":{"fillInfo":"","stylePath":"fill:#223D6C;\""},"normalState":{"fillInfo":"","stylePath":"fill:#21314D;\""},"overState":{"fillInfo":"","stylePath":"fill:#223D6C;\""},"selectedState":{"fillInfo":"","screenRdr":"Selected","stylePath":"fill:#1B4FAA;\""},"visitedState":{"fillInfo":"","screenRdr":"Visited","stylePath":"fill:#1B4FAA;\""}});
+button63478.setImgFillVal({"disabledState":{"B64":"","fill":"","style":""},"downState":{"B64":"","fill":"","style":""},"normalState":{"B64":"","fill":"","style":""},"overState":{"B64":"","fill":"","style":""},"selectedState":{"B64":"","fill":"","style":""},"visitedState":{"B64":"","fill":"","style":""}});
+button63478.initLineWeight('0')
+button63478.onUp = button63478onUp
+button63478.hasOnUp = true
+button63478.capture=4
+button63478.setTextVal({"disabledState":{"div":"div.button63478disabledStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:80.000000px; height:42.000000px;}","span":"span.button63478disabledStateText { width:76.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"downState":{"div":"div.button63478downStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:80.000000px; height:42.000000px;}","span":"span.button63478downStateText { width:76.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"normalState":{"div":"div.button63478Text { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:80.000000px; height:42.000000px;}","span":"span.button63478Text { width:76.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"overState":{"div":"div.button63478overStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:80.000000px; height:42.000000px;}","span":"span.button63478overStateText { width:76.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"selectedState":{"div":"div.button63478selectedStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:80.000000px; height:42.000000px;}","span":"span.button63478selectedStateText { width:76.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"visitedState":{"div":"div.button63478visitedStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:80.000000px; height:42.000000px;}","span":"span.button63478visitedStateText { width:76.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"}});
+button63478.text = 'Back'
+button63478.bSelectedEnabled = false;
+button63478.bVisitedEnabled = false;
+button63478.bOverEnabled = true;
+button63478.bDownEnabled = true;
+button63478.build()
+
+image13769 = new ObjImage('image13769','images/litchen_background.png','Kitchen background',0,2,1280,719,1,3,'div',null, 0 )
 image13769.initRotateAngle(0,0,0,0,0,0,0)
 image13769.initHasShadow(0)
 image13769.initHasReflection(0)
@@ -461,7 +490,7 @@ image13769.addBorder(0)
 image13769.addOpacity(100)
 image13769.build()
 
-image13771 = new ObjImage('image13771','images/recipe_cardcrop_image9621.png','Recipe card',51,107,858,462,1,3,'div',null, 0 )
+image13771 = new ObjImage('image13771','images/recipe_cardcrop_image9621.png','Recipe card',51,107,858,462,1,4,'div',null, 0 )
 image13771.initRotateAngle(0,0,0,0,0,0,0)
 image13771.initHasShadow(0)
 image13771.initHasReflection(0)
@@ -471,7 +500,7 @@ image13771.addBorder(0)
 image13771.addOpacity(100)
 image13771.build()
 
-image13774 = new ObjImage('image13774','images/knifecrop_image9630.png','knife',534,61,224,211,1,4,'div',null, 0 )
+image13774 = new ObjImage('image13774','images/knifecrop_image9630.png','knife',534,61,224,211,1,5,'div',null, 0 )
 image13774.initRotateAngle(44,0,0,0,0,0,0)
 image13774.initHasShadow(0)
 image13774.initHasReflection(0)
@@ -481,7 +510,7 @@ image13774.addBorder(0)
 image13774.addOpacity(100)
 image13774.build()
 
-text13775 = new ObjText('text13775',null,635,161,93,23,1,5,null,'div',null,0 )
+text13775 = new ObjText('text13775',null,635,161,93,23,1,6,null,'div',null,0 )
 text13775.initSLine(1)
 text13775.initHasBullet(0)
 text13775.initRotateAngle(0,0,0)
@@ -506,7 +535,7 @@ qu13813.addChild('entry13816')
 qu13813.ansVar=VarQuestion_0003;
 qu13813.build()
 
-text13815 = new ObjText('text13815',null,98,210,770,133,1,6,null,'div',null,0 )
+text13815 = new ObjText('text13815',null,98,210,770,133,1,7,null,'div',null,0 )
 text13815.initSLine(0)
 text13815.initHasBullet(0)
 text13815.initRotateAngle(0,0,0)
@@ -523,13 +552,13 @@ text13815.arrCSSStyles.push('span.text13815Font1 { font-size:16px; font-family:"
 text13815.addInnerText('<legend><div id=\"text13815\" aria-live=\"off\"  ><label id=\"label13816id\" for=\"entry13816id\" ><p lang=\"en\"  legLH=\"1.691\" style=\"margin-left:0px;text-indent:0px;line-height:1.620;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text13815Font1\" style=\"position:relative;top:-4px;\" >1. What’s a good way to check whether a learner truly understands a concept, rather than just memorized it?\n</span ></p >\n<p  legLH=\"1.691\" style=\"margin-left:0px;text-indent:0px;line-height:1.620;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text13815Font1\" style=\"position:relative;top:-4px;\" >2. How might you modify a training session to move from ‘Remember’ to ‘Understand’?\n</span ></p >\n<p  legLH=\"1.409\" style=\"margin-left:0px;text-indent:0px;line-height:1.350;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text13815Font1\" style=\"position:relative;top:-2px;\" >Write your answers in the box, and click on the blue triangle to review a sample answer for the question. \n</span ></p ></label></div>\n</legend>\n');
 text13815.build()
 
-entry13816 = new ObjInline('entry13816',null,(is.ie?98:98),(is.ie?340:339),null,null,1,7, 0, null, null, 0)
+entry13816 = new ObjInline('entry13816',null,(is.ie?98:98),(is.ie?340:339),null,null,1,8, 0, null, null, 0)
 entry13816.onSelChg = entry13816onSelChg
 entry13816.arrCSSStyles = new Array();
 entry13816.arrCSSStyles.push('textarea.entry13816 { font-size:16px; font-family:"Arial", sans-serif; color:#21314d; width:672px; height:194px; -webkit-appearance:none; background-color:#ffffff; }');
 entry13816.build()
 
-shape13869 = new ObjImage('shape13869','images/shape13869.png','Triangle Right',791,433,28.000000,25.000000,0,8,'div','',0 )
+shape13869 = new ObjImage('shape13869','images/shape13869.png','Triangle Right',791,433,28.000000,25.000000,0,9,'div','',0 )
 shape13869.initRotateAngle(0,0,0,-1.000000,-1.000000,26,23)
 shape13869.initHasShadow(0)
 shape13869.initHasReflection(0)
@@ -547,7 +576,8 @@ shape13869.capture=4
 shape13869.build()
 
 var trivQuestionArray=[qu13813];
-arObjs.push(button13787);
+arObjs.push(text57313);
+arObjs.push(button63478);
 arObjs.push(image13769);
 arObjs.push(image13771);
 arObjs.push(image13774);
@@ -581,7 +611,8 @@ if( is.min ){
 
 <script>
 if( is.min ){
-    appendElement(button13787, null, null);
+    appendElement(text57313, null, null);
+    appendElement(button63478, null, null);
     appendElement(image13769, null, null);
     appendElement(image13771, null, null);
     appendElement(image13774, null, null);

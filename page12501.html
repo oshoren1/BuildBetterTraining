@@ -165,6 +165,8 @@ function ReFlow() {
 
 
 VarTrivSelCap = new Variable( 'VarTrivSelCap', 'none', 0, 0, null, null, 'buildbettertraining', true )
+VarPageInTitle = new Variable( 'VarPageInTitle', null, 0, 0, null, null, 'buildbettertraining' )
+VarPageInTitle.set( '25' )
 VarTriMuteAllFLV = new Variable( 'VarTriMuteAllFLV', '', 0, 0, null, null, 'buildbettertraining', true )
 
 onload = responsiveInit
@@ -188,10 +190,11 @@ function init11() {
   findWH()
   if( is.min ){
     trivPageTracking.InitPageTracking();
-    PreloadResources(new Array(shape12513,button12521,image12503,image12505,og12506,image12508,text12509,text12510,text12511))
+    PreloadResources(new Array(text57772,shape12513,button64754,image12503,image12505,og12506,image12508,text12509,text12510,text12511))
     pageLayer.show(true);
+    text57772.init()
     shape12513.init()
-    button12521.init()
+    button64754.init()
     image12503.init()
     image12505.init()
     og12506.init()
@@ -199,8 +202,9 @@ function init11() {
     text12509.init()
     text12510.init()
     text12511.init()
+    text57772.activate()
     shape12513.activate()
-    button12521.activate()
+    button64754.activate()
     image12503.activate()
     image12505.activate()
     og12506.activate()
@@ -208,14 +212,15 @@ function init11() {
     text12509.activate()
     text12510.activate()
     text12511.activate()
-button12521.strCookieState = (trivBtnTracking.GetRangeStatus(12521,true));
-button12521.loadStateFromSes("normalState");
+button64754.strCookieState = (trivBtnTracking.GetRangeStatus(64754,true));
+button64754.loadStateFromSes("normalState");
 		    try{
 		     var objToScroll = trivGetScrollObj(window.location.href) ;
 		     trivScrollTo(window, objToScroll);
 		     var titleManagerIndexWindow = (window && window.parent && window.parent.bIsTitleManagerIndexFile) ? window.parent : null;
 		     if(titleManagerIndexWindow)  trivScrollTo(titleManagerIndexWindow, objToScroll);
 		    } catch (e) { }
+    action57773();action57774();
     if(!isSinglePagePlayerAvail()) postPageShowAction();
     if( location.hash )
     {
@@ -320,6 +325,18 @@ function OnDeviceRotate() {
 
 }
 
+function action57773(fn){
+    text57772.actionChangeContents( "Page  " +  VarPageInTitle.getValue() + "","alignleft","1" ); 
+    if(fn && typeof(fn) == 'string' ) eval(fn);
+    else if(fn && typeof(fn) == 'function' ) fn();
+}
+
+function action57774(fn){
+    text57772.actionShow(); 
+    if(fn && typeof(fn) == 'string' ) eval(fn);
+    else if(fn && typeof(fn) == 'function' ) fn();
+}
+
 function action12514(fn){
     trivExitPage('page15140.html',true); 
     if(fn && typeof(fn) == 'string' ) eval(fn);
@@ -334,24 +351,36 @@ function shape12513actionShow() {
   setTimeout("if(!shape12513.isVisible()) { shape12513.objLyr.doTrans( 0, 33, 4, null, shape12513.objLyr.x, shape12513.objLyr.y, -39, -38, winW+20, winH+20, 0, -1, 0 ); }", 1 )
 }
 
-function action12522(fn){
-    trivExitPage('page5889.html',true); 
+function action64755(fn){
+    trivExitPage('page14643.html',false); 
     if(fn && typeof(fn) == 'string' ) eval(fn);
     else if(fn && typeof(fn) == 'function' ) fn();
 }
 
-function action12523(fn){
-    
-    if(fn && typeof(fn) == 'string' ) eval(fn);
-    else if(fn && typeof(fn) == 'function' ) fn();
-}
-
-function button12521onUp() {
-  action12522();action12523();
+function button64754onUp() {
+  action64755();
 }
 
 if( is.min ){
-shape12513 = new ObjImage('shape12513','images/shape12513.png','Triangle Right',827,440,28.000000,25.000000,1,20,'div','',0 )
+text57772 = new ObjText('text57772',null,50,685,116,21,0,21,null,'div',null,1 )
+text57772.initSLine(1)
+text57772.initHasBullet(0)
+text57772.initRotateAngle(0,0,0)
+text57772.initHasOuterShadow(0)
+text57772.initHasTextShadow(0)
+text57772.initHasBorder(0)
+text57772.initHasOutline(0)
+text57772.initHasMargin(0)
+text57772.addIe8Attr(50, 685, 116, 21, 0, 0)
+text57772.addHeading(0)
+text57772.addOpacity(100)
+text57772.arrCSSStyles = new Array();
+text57772.arrCSSStyles.push('span.text57772Font1 { font-size:13px; font-family:"Arial", sans-serif; color:#21314d;}');
+text57772.arrCSSStyles.push('span.text57772Font2 { font-size:13px; font-family:"Arial", sans-serif; color:#000000;}');
+text57772.addInnerText('<div id=\"text57772\" aria-live=\"off\"  ><p lang=\"en\"  style=\"margin-left:0px;text-indent:0px;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text57772Font1\"  >Page n</span ><span class=\"text57772Font2\" style=\"background-color:transparent\" >\n</span ></p ></div>\n');
+text57772.build()
+
+shape12513 = new ObjImage('shape12513','images/shape12513.png','Triangle Right',827,440,28.000000,25.000000,1,22,'div','',0 )
 shape12513.initRotateAngle(0,0,0,-1.000000,-1.000000,26,23)
 shape12513.initHasShadow(0)
 shape12513.initHasReflection(0)
@@ -368,32 +397,32 @@ shape12513.actionShow = shape12513actionShow
 shape12513.capture=4
 shape12513.build()
 
-button12521 = new ObjButton('button12521', 'Back',50,50,82.000000,35.000000,1,21,'div','',1,0)
-button12521.setUseSvgFile(1)
-button12521.setFillStyle(1)
-button12521.setUniqueFillID('page12501_button12521')
-button12521.initRotateAngle(0,0,0,-0.000000,-0.000000,81,34)
-button12521.initHasShadow(0)
-button12521.initHasReflection(0)
-button12521.setImages({"disabledState":"","downState":"","normalState":"images/button12521.png","overState":"","selectedState":"","visitedState":""});
-button12521.setStateOpacity({"disabledState":1.0,"downState":1.0,"normalState":1.0,"overState":1.0,"selectedState":1.0,"visitedState":1.0});
-button12521.addOpacity(100)
-button12521.initImageMap('81,10,17,10,17,0,0,17,17,34,17,24,81,24,81,10','M 81.000000 9.690001 L 17.000000 9.690001 L 17.000000 0.000000 L 0.000000 17.000000 L 17.000000 34.000000 L 17.000000 24.309999 L 81.000000 24.309999 L 81.000000 9.690001 z')
-button12521.setFills({"disabledState":{"fillInfo":"","stylePath":"fill:#708DC1;\""},"downState":{"fillInfo":"","stylePath":"fill:#223D6C;\""},"normalState":{"fillInfo":"","stylePath":"fill:#21314D;\""},"overState":{"fillInfo":"","stylePath":"fill:#223D6C;\""},"selectedState":{"fillInfo":"","screenRdr":"Selected","stylePath":"fill:#1B4FAA;\""},"visitedState":{"fillInfo":"","screenRdr":"Visited","stylePath":"fill:#1B4FAA;\""}});
-button12521.setImgFillVal({"disabledState":{"B64":"","fill":"","style":""},"downState":{"B64":"","fill":"","style":""},"normalState":{"B64":"","fill":"","style":""},"overState":{"B64":"","fill":"","style":""},"selectedState":{"B64":"","fill":"","style":""},"visitedState":{"B64":"","fill":"","style":""}});
-button12521.initLineWeight('0')
-button12521.onUp = button12521onUp
-button12521.hasOnUp = true
-button12521.capture=4
-button12521.setTextVal({"disabledState":{"div":"div.button12521disabledStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:81.000000px; height:34.000000px;}","span":"span.button12521disabledStateText { width:77.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"downState":{"div":"div.button12521downStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:81.000000px; height:34.000000px;}","span":"span.button12521downStateText { width:77.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"normalState":{"div":"div.button12521Text { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:81.000000px; height:34.000000px;}","span":"span.button12521Text { width:77.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"overState":{"div":"div.button12521overStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:81.000000px; height:34.000000px;}","span":"span.button12521overStateText { width:77.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"selectedState":{"div":"div.button12521selectedStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:81.000000px; height:34.000000px;}","span":"span.button12521selectedStateText { width:77.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"visitedState":{"div":"div.button12521visitedStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:81.000000px; height:34.000000px;}","span":"span.button12521visitedStateText { width:77.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"}});
-button12521.text = 'Back'
-button12521.bSelectedEnabled = false;
-button12521.bVisitedEnabled = false;
-button12521.bOverEnabled = true;
-button12521.bDownEnabled = true;
-button12521.build()
+button64754 = new ObjButton('button64754', 'Back',50,50,81.000000,43.000000,1,23,'div','',1,0)
+button64754.setUseSvgFile(1)
+button64754.setFillStyle(1)
+button64754.setUniqueFillID('page12501_button64754')
+button64754.initRotateAngle(0,0,0,-0.000000,-0.000000,80,42)
+button64754.initHasShadow(0)
+button64754.initHasReflection(0)
+button64754.setImages({"disabledState":"","downState":"","normalState":"images/button64754.png","overState":"","selectedState":"","visitedState":""});
+button64754.setStateOpacity({"disabledState":1.0,"downState":1.0,"normalState":1.0,"overState":1.0,"selectedState":1.0,"visitedState":1.0});
+button64754.addOpacity(100)
+button64754.initImageMap('80,12,21,12,21,0,0,21,21,42,21,30,80,30,80,12','M 80.000000 11.970000 L 21.000000 11.970000 L 21.000000 0.000000 L 0.000000 21.000000 L 21.000000 42.000000 L 21.000000 30.029999 L 80.000000 30.029999 L 80.000000 11.970000 z')
+button64754.setFills({"disabledState":{"fillInfo":"","stylePath":"fill:#708DC1;\""},"downState":{"fillInfo":"","stylePath":"fill:#223D6C;\""},"normalState":{"fillInfo":"","stylePath":"fill:#21314D;\""},"overState":{"fillInfo":"","stylePath":"fill:#223D6C;\""},"selectedState":{"fillInfo":"","screenRdr":"Selected","stylePath":"fill:#1B4FAA;\""},"visitedState":{"fillInfo":"","screenRdr":"Visited","stylePath":"fill:#1B4FAA;\""}});
+button64754.setImgFillVal({"disabledState":{"B64":"","fill":"","style":""},"downState":{"B64":"","fill":"","style":""},"normalState":{"B64":"","fill":"","style":""},"overState":{"B64":"","fill":"","style":""},"selectedState":{"B64":"","fill":"","style":""},"visitedState":{"B64":"","fill":"","style":""}});
+button64754.initLineWeight('0')
+button64754.onUp = button64754onUp
+button64754.hasOnUp = true
+button64754.capture=4
+button64754.setTextVal({"disabledState":{"div":"div.button64754disabledStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:80.000000px; height:42.000000px;}","span":"span.button64754disabledStateText { width:76.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"downState":{"div":"div.button64754downStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:80.000000px; height:42.000000px;}","span":"span.button64754downStateText { width:76.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"normalState":{"div":"div.button64754Text { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:80.000000px; height:42.000000px;}","span":"span.button64754Text { width:76.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"overState":{"div":"div.button64754overStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:80.000000px; height:42.000000px;}","span":"span.button64754overStateText { width:76.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"selectedState":{"div":"div.button64754selectedStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:80.000000px; height:42.000000px;}","span":"span.button64754selectedStateText { width:76.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"visitedState":{"div":"div.button64754visitedStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:80.000000px; height:42.000000px;}","span":"span.button64754visitedStateText { width:76.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"}});
+button64754.text = 'Back'
+button64754.bSelectedEnabled = false;
+button64754.bVisitedEnabled = false;
+button64754.bOverEnabled = true;
+button64754.bDownEnabled = true;
+button64754.build()
 
-image12503 = new ObjImage('image12503','images/litchen_background.png','Kitchen background',0,0,1280,719,1,3,'div',null, 0 )
+image12503 = new ObjImage('image12503','images/litchen_background.png','Kitchen background',0,0,1280,719,1,4,'div',null, 0 )
 image12503.initRotateAngle(0,0,0,0,0,0,0)
 image12503.initHasShadow(0)
 image12503.initHasReflection(0)
@@ -403,7 +432,7 @@ image12503.addBorder(0)
 image12503.addOpacity(100)
 image12503.build()
 
-image12505 = new ObjImage('image12505','images/recipe_cardcrop_image9621.png','Recipe card',149,107,866,466,1,4,'div',null, 0 )
+image12505 = new ObjImage('image12505','images/recipe_cardcrop_image9621.png','Recipe card',149,107,866,466,1,5,'div',null, 0 )
 image12505.initRotateAngle(0,0,0,0,0,0,0)
 image12505.initHasShadow(0)
 image12505.initHasReflection(0)
@@ -419,7 +448,7 @@ og12506.addChild('image12508')
 og12506.addChild('text12509')
 og12506.build()
 
-image12508 = new ObjImage('image12508','images/knifecrop_image9630.png','knife',617,61,224,211,1,5,'div',null, 0 )
+image12508 = new ObjImage('image12508','images/knifecrop_image9630.png','knife',617,61,224,211,1,6,'div',null, 0 )
 image12508.initRotateAngle(44,0,0,0,0,0,0)
 image12508.initHasShadow(0)
 image12508.initHasReflection(0)
@@ -429,7 +458,7 @@ image12508.addBorder(0)
 image12508.addOpacity(100)
 image12508.build()
 
-text12509 = new ObjText('text12509',null,718,161,93,23,1,6,null,'div',null,0 )
+text12509 = new ObjText('text12509',null,718,161,93,23,1,7,null,'div',null,0 )
 text12509.initSLine(1)
 text12509.initHasBullet(0)
 text12509.initRotateAngle(0,0,0)
@@ -447,7 +476,7 @@ text12509.arrCSSStyles.push('span.text12509Font2 { font-size:16px; font-family:"
 text12509.addInnerText('<div id=\"text12509\" aria-live=\"off\"  ><p lang=\"en\"  legLH=\"1.409\" style=\"margin-left:0px;text-indent:0px;line-height:1.350;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text12509Font1\" style=\"position:relative;top:-2px;\" >Evaluate</span ><span class=\"text12509Font2\" style=\"background-color:transparentposition:relative;top:-2px;\" >\n</span ></p ></div>\n');
 text12509.build()
 
-text12510 = new ObjText('text12510',null,187,229,790,168,1,7,null,'div',null,0 )
+text12510 = new ObjText('text12510',null,187,229,790,168,1,8,null,'div',null,0 )
 text12510.initSLine(0)
 text12510.initHasBullet(0)
 text12510.initRotateAngle(0,0,0)
@@ -464,7 +493,7 @@ text12510.arrCSSStyles.push('span.text12510Font1 { font-size:15px; font-family:"
 text12510.addInnerText('<div id=\"text12510\" aria-live=\"off\"  ><p lang=\"en\"  legLH=\"1.419\" style=\"margin-left:0px;text-indent:0px;line-height:1.312;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text12510Font1\" style=\"position:relative;top:-1px;\" >The Evaluate level involves making judgments based on defined criteria and standards. At this stage, learners critically assess the quality, credibility, or effectiveness of ideas, processes, or solutions. This includes checking for inconsistencies, comparing alternatives, justifying choices, and critiquing outcomes. Effective learning activities might involve analyzing case studies, assessing reports, ranking options, or defending a position in group discussions. Learners are expected to draw on their prior understanding to apply logical reasoning, evaluate evidence, and form well-supported conclusions. This level deepens critical thinking by requiring learners not just to analyze, but to take a stance and justify it.\n</span ></p >\n<p  legLH=\"1.419\" style=\"margin-left:0px;text-indent:0px;line-height:1.312;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text12510Font1\" style=\"background-color:transparentposition:relative;top:-1px;\" >\n&nbsp;</span ></p >\n<p  legLH=\"1.419\" style=\"margin-left:0px;text-indent:0px;line-height:1.312;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text12510Font1\" style=\"position:relative;top:-1px;\" >The appropriate learning outcome verbs for this level include:\n</span ></p ></div>\n');
 text12510.build()
 
-text12511 = new ObjText('text12511',null,248,417,184,127,1,8,null,'div',null,0 )
+text12511 = new ObjText('text12511',null,248,417,184,127,1,9,null,'div',null,0 )
 text12511.initSLine(0)
 text12511.initHasBullet(0)
 text12511.initRotateAngle(0,0,0)
@@ -481,8 +510,9 @@ text12511.arrCSSStyles.push('span.text12511Font1 { font-size:15px; font-family:"
 text12511.addInnerText('<div id=\"text12511\" aria-live=\"off\"  ><table style=\"border-collapse:collapse; border-spacing:0\" >\n<tr style=\"vertical-align:top\"  >\n<td  style=\"width:100px;height:129px; padding-left:4px;padding-right:4px;padding-bottom:0px;padding-top:0px;vertical-align:top;\" >\n<p lang=\"en\"  legLH=\"1.419\" style=\"margin-left:0px;text-indent:0px;line-height:1.312;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text12511Font1\" style=\"position:relative;top:-1px;\" >Evaluate</span ></p >\n<p  legLH=\"1.419\" style=\"margin-left:0px;text-indent:0px;line-height:1.312;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text12511Font1\" style=\"position:relative;top:-1px;\" >Judge</span ></p >\n<p  legLH=\"1.419\" style=\"margin-left:0px;text-indent:0px;line-height:1.312;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text12511Font1\" style=\"position:relative;top:-1px;\" >Critique</span ></p >\n<p  legLH=\"1.419\" style=\"margin-left:0px;text-indent:0px;line-height:1.312;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text12511Font1\" style=\"position:relative;top:-1px;\" >Justify</span ></p >\n<p  legLH=\"1.419\" style=\"margin-left:0px;text-indent:0px;line-height:1.312;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text12511Font1\" style=\"position:relative;top:-1px;\" >Recommend</span ></p >\n<span style=\"line-height:2px;\">&nbsp;</span >\n</td >\n<td  style=\"width:84px;height:129px; padding-left:4px;padding-right:4px;padding-bottom:0px;padding-top:0px;vertical-align:top;\" >\n<p  legLH=\"1.419\" style=\"margin-left:0px;text-indent:0px;line-height:1.312;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text12511Font1\" style=\"position:relative;top:-1px;\" >Argue</span ></p >\n<p  legLH=\"1.419\" style=\"margin-left:0px;text-indent:0px;line-height:1.312;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text12511Font1\" style=\"position:relative;top:-1px;\" >Support</span ></p >\n<p  legLH=\"1.419\" style=\"margin-left:0px;text-indent:0px;line-height:1.312;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text12511Font1\" style=\"position:relative;top:-1px;\" >Assess</span ></p >\n<p  legLH=\"1.419\" style=\"margin-left:0px;text-indent:0px;line-height:1.312;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text12511Font1\" style=\"position:relative;top:-1px;\" >Rate</span ></p >\n<p  legLH=\"1.419\" style=\"margin-left:0px;text-indent:0px;line-height:1.312;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text12511Font1\" style=\"position:relative;top:-1px;\" >Defend</span ></p >\n<p  legLH=\"1.419\" style=\"margin-left:0px;text-indent:0px;line-height:1.312;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text12511Font1\" style=\"position:relative;top:-1px;\" >Prioritize</span ></p >\n</td >\n</tr >\n</table ></div>\n');
 text12511.build()
 
+arObjs.push(text57772);
 arObjs.push(shape12513);
-arObjs.push(button12521);
+arObjs.push(button64754);
 arObjs.push(image12503);
 arObjs.push(image12505);
 arObjs.push(og12506);
@@ -516,8 +546,9 @@ if( is.min ){
 
 <script>
 if( is.min ){
+    appendElement(text57772, null, null);
     appendElement(shape12513, null, null);
-    appendElement(button12521, null, null);
+    appendElement(button64754, null, null);
     appendElement(image12503, null, null);
     appendElement(image12505, null, null);
     appendElement(image12508, null, null);

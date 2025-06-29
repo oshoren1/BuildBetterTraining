@@ -172,6 +172,8 @@ function ReFlow() {
 
 
 VarTrivSelCap = new Variable( 'VarTrivSelCap', 'none', 0, 0, null, null, 'buildbettertraining', true )
+VarPageInTitle = new Variable( 'VarPageInTitle', null, 0, 0, null, null, 'buildbettertraining' )
+VarPageInTitle.set( '5' )
 VarTriMuteAllFLV = new Variable( 'VarTriMuteAllFLV', '', 0, 0, null, null, 'buildbettertraining', true )
 
 onload = responsiveInit
@@ -195,30 +197,33 @@ function init11() {
   findWH()
   if( is.min ){
     trivPageTracking.InitPageTracking();
-    PreloadResources(new Array(button26113,shape2479,image2472,image2474,shape2476,text2477,audio2539))
+    PreloadResources(new Array(button58241,text56797,shape2479,image2472,image2474,shape2476,text2477,audio2539))
     pageLayer.show(true);
-    button26113.init()
+    button58241.init()
+    text56797.init()
     shape2479.init()
     image2472.init()
     image2474.init()
     shape2476.init()
     text2477.init()
     audio2539.init()
-    button26113.activate()
+    button58241.activate()
+    text56797.activate()
     shape2479.activate()
     image2472.activate()
     image2474.activate()
     shape2476.activate()
     text2477.activate()
     audio2539.activate()
-button26113.strCookieState = (trivBtnTracking.GetRangeStatus(26113,true));
-button26113.loadStateFromSes("normalState");
+button58241.strCookieState = (trivBtnTracking.GetRangeStatus(58241,true));
+button58241.loadStateFromSes("normalState");
 		    try{
 		     var objToScroll = trivGetScrollObj(window.location.href) ;
 		     trivScrollTo(window, objToScroll);
 		     var titleManagerIndexWindow = (window && window.parent && window.parent.bIsTitleManagerIndexFile) ? window.parent : null;
 		     if(titleManagerIndexWindow)  trivScrollTo(titleManagerIndexWindow, objToScroll);
 		    } catch (e) { }
+    action56798();action56799();
     if(!isSinglePagePlayerAvail()) postPageShowAction();
     if( location.hash )
     {
@@ -327,14 +332,26 @@ function playerReady(obj){
   	if(obj['id'] == 'swfaudio2539') { audio2539.setFlashPlayer(); audio2539.flsPlayer.addModelListener("STATE", "OnStateChange"); }
 }
 
-function action26114(fn){
+function action58242(fn){
     trivExitPage('page1484.html',false); 
     if(fn && typeof(fn) == 'string' ) eval(fn);
     else if(fn && typeof(fn) == 'function' ) fn();
 }
 
-function button26113onUp() {
-  action26114();
+function button58241onUp() {
+  action58242();
+}
+
+function action56798(fn){
+    text56797.actionChangeContents( "Page  " +  VarPageInTitle.getValue() + "","alignleft","1" ); 
+    if(fn && typeof(fn) == 'string' ) eval(fn);
+    else if(fn && typeof(fn) == 'function' ) fn();
+}
+
+function action56799(fn){
+    text56797.actionShow(); 
+    if(fn && typeof(fn) == 'string' ) eval(fn);
+    else if(fn && typeof(fn) == 'function' ) fn();
 }
 
 function action2480(fn){
@@ -372,37 +389,55 @@ function setPlayerMute(plrObj, bMute){
 }
 
 if( is.min ){
-button26113 = new ObjButton('button26113', 'Back',56,21,82.000000,35.000000,1,18,'div','',1,0)
-button26113.setUseSvgFile(1)
-button26113.setFillStyle(1)
-button26113.setUniqueFillID('page2470_button26113')
-button26113.initRotateAngle(0,0,0,-0.000000,-0.000000,81,34)
-button26113.initHasShadow(0)
-button26113.initHasReflection(0)
-button26113.setImages({"disabledState":"","downState":"","normalState":"images/button26113.png","overState":"","selectedState":"","visitedState":""});
-button26113.setStateOpacity({"disabledState":1.0,"downState":1.0,"normalState":1.0,"overState":1.0,"selectedState":1.0,"visitedState":1.0});
-button26113.addOpacity(100)
-button26113.initImageMap('81,10,17,10,17,0,0,17,17,34,17,24,81,24,81,10','M 81.000000 9.690001 L 17.000000 9.690001 L 17.000000 0.000000 L 0.000000 17.000000 L 17.000000 34.000000 L 17.000000 24.309999 L 81.000000 24.309999 L 81.000000 9.690001 z')
-button26113.setFills({"disabledState":{"fillInfo":"","stylePath":"fill:#708DC1;\""},"downState":{"fillInfo":"","stylePath":"fill:#223D6C;\""},"normalState":{"fillInfo":"","stylePath":"fill:#21314D;\""},"overState":{"fillInfo":"","stylePath":"fill:#223D6C;\""},"selectedState":{"fillInfo":"","screenRdr":"Selected","stylePath":"fill:#1B4FAA;\""},"visitedState":{"fillInfo":"","screenRdr":"Visited","stylePath":"fill:#1B4FAA;\""}});
-button26113.setImgFillVal({"disabledState":{"B64":"","fill":"","style":""},"downState":{"B64":"","fill":"","style":""},"normalState":{"B64":"","fill":"","style":""},"overState":{"B64":"","fill":"","style":""},"selectedState":{"B64":"","fill":"","style":""},"visitedState":{"B64":"","fill":"","style":""}});
-button26113.initLineWeight('0')
-button26113.onUp = button26113onUp
-button26113.hasOnUp = true
-button26113.capture=4
-button26113.setTextVal({"disabledState":{"div":"div.button26113disabledStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:81.000000px; height:34.000000px;}","span":"span.button26113disabledStateText { width:77.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"downState":{"div":"div.button26113downStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:81.000000px; height:34.000000px;}","span":"span.button26113downStateText { width:77.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"normalState":{"div":"div.button26113Text { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:81.000000px; height:34.000000px;}","span":"span.button26113Text { width:77.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"overState":{"div":"div.button26113overStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:81.000000px; height:34.000000px;}","span":"span.button26113overStateText { width:77.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"selectedState":{"div":"div.button26113selectedStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:81.000000px; height:34.000000px;}","span":"span.button26113selectedStateText { width:77.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"visitedState":{"div":"div.button26113visitedStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:81.000000px; height:34.000000px;}","span":"span.button26113visitedStateText { width:77.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"}});
-button26113.text = 'Back'
-button26113.bSelectedEnabled = false;
-button26113.bVisitedEnabled = false;
-button26113.bOverEnabled = true;
-button26113.bDownEnabled = true;
-button26113.build()
+button58241 = new ObjButton('button58241', 'Back',50,50,81.000000,43.000000,1,19,'div','',1,0)
+button58241.setUseSvgFile(1)
+button58241.setFillStyle(1)
+button58241.setUniqueFillID('page2470_button58241')
+button58241.initRotateAngle(0,0,0,-0.000000,-0.000000,80,42)
+button58241.initHasShadow(0)
+button58241.initHasReflection(0)
+button58241.setImages({"disabledState":"","downState":"","normalState":"images/button58241.png","overState":"","selectedState":"","visitedState":""});
+button58241.setStateOpacity({"disabledState":1.0,"downState":1.0,"normalState":1.0,"overState":1.0,"selectedState":1.0,"visitedState":1.0});
+button58241.addOpacity(100)
+button58241.initImageMap('80,12,21,12,21,0,0,21,21,42,21,30,80,30,80,12','M 80.000000 11.970000 L 21.000000 11.970000 L 21.000000 0.000000 L 0.000000 21.000000 L 21.000000 42.000000 L 21.000000 30.029999 L 80.000000 30.029999 L 80.000000 11.970000 z')
+button58241.setFills({"disabledState":{"fillInfo":"","stylePath":"fill:#708DC1;\""},"downState":{"fillInfo":"","stylePath":"fill:#223D6C;\""},"normalState":{"fillInfo":"","stylePath":"fill:#21314D;\""},"overState":{"fillInfo":"","stylePath":"fill:#223D6C;\""},"selectedState":{"fillInfo":"","screenRdr":"Selected","stylePath":"fill:#1B4FAA;\""},"visitedState":{"fillInfo":"","screenRdr":"Visited","stylePath":"fill:#1B4FAA;\""}});
+button58241.setImgFillVal({"disabledState":{"B64":"","fill":"","style":""},"downState":{"B64":"","fill":"","style":""},"normalState":{"B64":"","fill":"","style":""},"overState":{"B64":"","fill":"","style":""},"selectedState":{"B64":"","fill":"","style":""},"visitedState":{"B64":"","fill":"","style":""}});
+button58241.initLineWeight('0')
+button58241.onUp = button58241onUp
+button58241.hasOnUp = true
+button58241.capture=4
+button58241.setTextVal({"disabledState":{"div":"div.button58241disabledStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:80.000000px; height:42.000000px;}","span":"span.button58241disabledStateText { width:76.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"downState":{"div":"div.button58241downStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:80.000000px; height:42.000000px;}","span":"span.button58241downStateText { width:76.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"normalState":{"div":"div.button58241Text { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:80.000000px; height:42.000000px;}","span":"span.button58241Text { width:76.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"overState":{"div":"div.button58241overStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:80.000000px; height:42.000000px;}","span":"span.button58241overStateText { width:76.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"selectedState":{"div":"div.button58241selectedStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:80.000000px; height:42.000000px;}","span":"span.button58241selectedStateText { width:76.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"visitedState":{"div":"div.button58241visitedStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:80.000000px; height:42.000000px;}","span":"span.button58241visitedStateText { width:76.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"}});
+button58241.text = 'Back'
+button58241.bSelectedEnabled = false;
+button58241.bVisitedEnabled = false;
+button58241.bOverEnabled = true;
+button58241.bDownEnabled = true;
+button58241.build()
 
-shape2479 = new ObjImage('shape2479','images/shape2479.png','Triangle Right',850,301,26.000000,25.000000,0,19,'div','',0 )
+text56797 = new ObjText('text56797',null,50,685,116,21,0,20,null,'div',null,1 )
+text56797.initSLine(1)
+text56797.initHasBullet(0)
+text56797.initRotateAngle(0,0,0)
+text56797.initHasOuterShadow(0)
+text56797.initHasTextShadow(0)
+text56797.initHasBorder(0)
+text56797.initHasOutline(0)
+text56797.initHasMargin(0)
+text56797.addIe8Attr(50, 685, 116, 21, 0, 0)
+text56797.addHeading(0)
+text56797.addOpacity(100)
+text56797.arrCSSStyles = new Array();
+text56797.arrCSSStyles.push('span.text56797Font1 { font-size:13px; font-family:"Arial", sans-serif; color:#21314d;}');
+text56797.arrCSSStyles.push('span.text56797Font2 { font-size:13px; font-family:"Arial", sans-serif; color:#000000;}');
+text56797.addInnerText('<div id=\"text56797\" aria-live=\"off\"  ><p lang=\"en\"  style=\"margin-left:0px;text-indent:0px;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text56797Font1\"  >Page n</span ><span class=\"text56797Font2\" style=\"background-color:transparent\" >\n</span ></p ></div>\n');
+text56797.build()
+
+shape2479 = new ObjImage('shape2479','images/shape2479.png','Triangle Right',846,301,26.000000,25.000000,0,21,'div','',0 )
 shape2479.initRotateAngle(0,0,0,-1.000000,-1.000000,24,23)
 shape2479.initHasShadow(0)
 shape2479.initHasReflection(0)
 shape2479.setUniqueFillID('page2470_shape2479')
-shape2479.addIe8Attr(850.000000, 301.000000, 26.000000, 25.000000, 0, 0)
+shape2479.addIe8Attr(846.000000, 301.000000, 26.000000, 25.000000, 0, 0)
 shape2479.initImageMap(1,'25,12,1,24,1,1,25,12','M 25.000000 12.000000 L 1.000000 24.000000 L 1.000000 1.000000 L 25.000000 12.000000 z', '', 'stroke:#010000; stroke-width:1; stroke-linejoin:round;stroke-dasharray: none; fill:#21314D;"' , '')
 shape2479.setUseSvgFile(1)
 shape2479.addBorder(0)
@@ -413,7 +448,7 @@ shape2479.hasOnUp = true
 shape2479.capture=4
 shape2479.build()
 
-image2472 = new ObjImage('image2472','images/litchen_backgroundcrop_image2472.png','litchen background',0,0,1280,719,1,3,'div',null, 0 )
+image2472 = new ObjImage('image2472','images/litchen_backgroundcrop_image2472.png','litchen background',0,0,1280,719,1,4,'div',null, 0 )
 image2472.initRotateAngle(0,0,0,0,0,0,0)
 image2472.initHasShadow(0)
 image2472.initHasReflection(0)
@@ -423,7 +458,7 @@ image2472.addBorder(0)
 image2472.addOpacity(100)
 image2472.build()
 
-image2474 = new ObjImage('image2474','images/1.png','a smiling chef in a white uniform and hat stirring colorful vegetables in a skillet',96,84,1009,568,1,4,'div',null, 0 )
+image2474 = new ObjImage('image2474','images/1.png','a smiling chef in a white uniform and hat stirring colorful vegetables in a skillet',96,84,1009,568,1,5,'div',null, 0 )
 image2474.initRotateAngle(0,0,0,0,0,0,0)
 image2474.initHasShadow(0)
 image2474.initHasReflection(0)
@@ -433,7 +468,7 @@ image2474.addBorder(0)
 image2474.addOpacity(100)
 image2474.build()
 
-shape2476 = new ObjImage('shape2476','images/shape2476.png','Callout Ellipse',712,124,331.000000,212.000000,1,5,'div','',0 )
+shape2476 = new ObjImage('shape2476','images/shape2476.png','Callout Ellipse',712,124,331.000000,212.000000,1,6,'div','',0 )
 shape2476.initRotateAngle(0,0,0,-1.000000,0.000000,292,210)
 shape2476.initHasShadow(0)
 shape2476.initHasReflection(0)
@@ -446,7 +481,7 @@ shape2476.initLineWeight(1)
 shape2476.addOpacity(100)
 shape2476.build()
 
-text2477 = new ObjText('text2477',null,762,156,223,145,1,6,null,'div',null,0 )
+text2477 = new ObjText('text2477',null,748,157,223,145,1,7,null,'div',null,0 )
 text2477.initSLine(0)
 text2477.initHasBullet(0)
 text2477.initRotateAngle(0,0,0)
@@ -455,21 +490,22 @@ text2477.initHasTextShadow(0)
 text2477.initHasBorder(0)
 text2477.initHasOutline(0)
 text2477.initHasMargin(0)
-text2477.addIe8Attr(762, 156, 223, 145, 0, 0)
+text2477.addIe8Attr(748, 157, 223, 145, 0, 0)
 text2477.addHeading(0)
 text2477.addOpacity(100)
 text2477.arrCSSStyles = new Array();
 text2477.arrCSSStyles.push('span.text2477Font1 { font-size:16px; font-family:"Arial", sans-serif; color:#010101;}');
-text2477.addInnerText('<div id=\"text2477\" aria-live=\"off\"  ><p lang=\"en\"  legLH=\"1.409\" style=\"margin-left:0px;text-indent:0px;line-height:1.350;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text2477Font1\" style=\"position:relative;top:-2px;\" >In this course, you\'ll learn to design smarter, more effective training, step by step. Each skill you learn earns you an ingredient for your final dish: a well-balanced training session \n</span ></p ></div>\n');
+text2477.addInnerText('<div id=\"text2477\" aria-live=\"off\"  ><p lang=\"en\"  legLH=\"1.409\" style=\"margin-left:0px;text-indent:0px;line-height:1.350;margin-top:0px;margin-bottom:0px;text-align:center;\" >\n<span class=\"text2477Font1\" style=\"position:relative;top:-2px;\" >In this course, you\'ll learn to design smarter, more effective training, step by step. Each skill you learn earns you an ingredient for your final dish: a well-balanced training session.\n</span ></p ></div>\n');
 text2477.build()
 
-audio2539 = new ObjMedia('audio2539','welcome4',50,515,225,24,1,7,'media/welcome4.mp3',0,1,0,0,1,0.800000,1,'div',0);
+audio2539 = new ObjMedia('audio2539','welcome4',50,515,225,24,1,8,'media/welcome4.mp3',0,1,0,0,1,0.800000,1,'div',0);
 audio2539.bNeedPool = true;
 audio2539.bSpeedControl = true;
 audio2539.BuildMediaString()
 audio2539.build()
 
-arObjs.push(button26113);
+arObjs.push(button58241);
+arObjs.push(text56797);
 arObjs.push(shape2479);
 arObjs.push(image2472);
 arObjs.push(image2474);
@@ -501,7 +537,8 @@ if( is.min ){
 
 <script>
 if( is.min ){
-    appendElement(button26113, null, null);
+    appendElement(button58241, null, null);
+    appendElement(text56797, null, null);
     appendElement(shape2479, null, null);
     appendElement(image2472, null, null);
     appendElement(image2474, null, null);

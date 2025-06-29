@@ -172,6 +172,8 @@ function ReFlow() {
 
 
 VarTrivSelCap = new Variable( 'VarTrivSelCap', 'none', 0, 0, null, null, 'buildbettertraining', true )
+VarPageInTitle = new Variable( 'VarPageInTitle', null, 0, 0, null, null, 'buildbettertraining' )
+VarPageInTitle.set( '15' )
 VarTriMuteAllFLV = new Variable( 'VarTriMuteAllFLV', '', 0, 0, null, null, 'buildbettertraining', true )
 
 onload = responsiveInit
@@ -195,30 +197,33 @@ function init11() {
   findWH()
   if( is.min ){
     trivPageTracking.InitPageTracking();
-    PreloadResources(new Array(button27520,shape13955,audio14105,image13944,shape13948,text13949,image43258))
+    PreloadResources(new Array(text57283,button63151,shape13955,audio14105,image13944,shape13948,text13949,image43258))
     pageLayer.show(true);
-    button27520.init()
+    text57283.init()
+    button63151.init()
     shape13955.init()
     audio14105.init()
     image13944.init()
     shape13948.init()
     text13949.init()
     image43258.init()
-    button27520.activate()
+    text57283.activate()
+    button63151.activate()
     shape13955.activate()
     audio14105.activate()
     image13944.activate()
     shape13948.activate()
     text13949.activate()
     image43258.activate()
-button27520.strCookieState = (trivBtnTracking.GetRangeStatus(27520,true));
-button27520.loadStateFromSes("normalState");
+button63151.strCookieState = (trivBtnTracking.GetRangeStatus(63151,true));
+button63151.loadStateFromSes("normalState");
 		    try{
 		     var objToScroll = trivGetScrollObj(window.location.href) ;
 		     trivScrollTo(window, objToScroll);
 		     var titleManagerIndexWindow = (window && window.parent && window.parent.bIsTitleManagerIndexFile) ? window.parent : null;
 		     if(titleManagerIndexWindow)  trivScrollTo(titleManagerIndexWindow, objToScroll);
 		    } catch (e) { }
+    action57284();action57285();
     if(!isSinglePagePlayerAvail()) postPageShowAction();
     if( location.hash )
     {
@@ -327,14 +332,26 @@ function playerReady(obj){
   	if(obj['id'] == 'swfaudio14105') { audio14105.setFlashPlayer(); audio14105.flsPlayer.addModelListener("STATE", "OnStateChange"); }
 }
 
-function action27521(fn){
+function action57284(fn){
+    text57283.actionChangeContents( "Page  " +  VarPageInTitle.getValue() + "","alignleft","1" ); 
+    if(fn && typeof(fn) == 'string' ) eval(fn);
+    else if(fn && typeof(fn) == 'function' ) fn();
+}
+
+function action57285(fn){
+    text57283.actionShow(); 
+    if(fn && typeof(fn) == 'string' ) eval(fn);
+    else if(fn && typeof(fn) == 'function' ) fn();
+}
+
+function action63152(fn){
     trivExitPage('page13546.html',false); 
     if(fn && typeof(fn) == 'string' ) eval(fn);
     else if(fn && typeof(fn) == 'function' ) fn();
 }
 
-function button27520onUp() {
-  action27521();
+function button63151onUp() {
+  action63152();
 }
 
 function action16203(fn){
@@ -372,32 +389,50 @@ function setPlayerMute(plrObj, bMute){
 }
 
 if( is.min ){
-button27520 = new ObjButton('button27520', 'Back',50,50,82.000000,35.000000,1,18,'div','',1,0)
-button27520.setUseSvgFile(1)
-button27520.setFillStyle(1)
-button27520.setUniqueFillID('page13942_button27520')
-button27520.initRotateAngle(0,0,0,-0.000000,-0.000000,81,34)
-button27520.initHasShadow(0)
-button27520.initHasReflection(0)
-button27520.setImages({"disabledState":"","downState":"","normalState":"images/button27520.png","overState":"","selectedState":"","visitedState":""});
-button27520.setStateOpacity({"disabledState":1.0,"downState":1.0,"normalState":1.0,"overState":1.0,"selectedState":1.0,"visitedState":1.0});
-button27520.addOpacity(100)
-button27520.initImageMap('81,10,17,10,17,0,0,17,17,34,17,24,81,24,81,10','M 81.000000 9.690001 L 17.000000 9.690001 L 17.000000 0.000000 L 0.000000 17.000000 L 17.000000 34.000000 L 17.000000 24.309999 L 81.000000 24.309999 L 81.000000 9.690001 z')
-button27520.setFills({"disabledState":{"fillInfo":"","stylePath":"fill:#708DC1;\""},"downState":{"fillInfo":"","stylePath":"fill:#223D6C;\""},"normalState":{"fillInfo":"","stylePath":"fill:#21314D;\""},"overState":{"fillInfo":"","stylePath":"fill:#223D6C;\""},"selectedState":{"fillInfo":"","screenRdr":"Selected","stylePath":"fill:#1B4FAA;\""},"visitedState":{"fillInfo":"","screenRdr":"Visited","stylePath":"fill:#1B4FAA;\""}});
-button27520.setImgFillVal({"disabledState":{"B64":"","fill":"","style":""},"downState":{"B64":"","fill":"","style":""},"normalState":{"B64":"","fill":"","style":""},"overState":{"B64":"","fill":"","style":""},"selectedState":{"B64":"","fill":"","style":""},"visitedState":{"B64":"","fill":"","style":""}});
-button27520.initLineWeight('0')
-button27520.onUp = button27520onUp
-button27520.hasOnUp = true
-button27520.capture=4
-button27520.setTextVal({"disabledState":{"div":"div.button27520disabledStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:81.000000px; height:34.000000px;}","span":"span.button27520disabledStateText { width:77.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"downState":{"div":"div.button27520downStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:81.000000px; height:34.000000px;}","span":"span.button27520downStateText { width:77.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"normalState":{"div":"div.button27520Text { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:81.000000px; height:34.000000px;}","span":"span.button27520Text { width:77.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"overState":{"div":"div.button27520overStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:81.000000px; height:34.000000px;}","span":"span.button27520overStateText { width:77.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"selectedState":{"div":"div.button27520selectedStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:81.000000px; height:34.000000px;}","span":"span.button27520selectedStateText { width:77.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"visitedState":{"div":"div.button27520visitedStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:81.000000px; height:34.000000px;}","span":"span.button27520visitedStateText { width:77.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"}});
-button27520.text = 'Back'
-button27520.bSelectedEnabled = false;
-button27520.bVisitedEnabled = false;
-button27520.bOverEnabled = true;
-button27520.bDownEnabled = true;
-button27520.build()
+text57283 = new ObjText('text57283',null,50,685,116,21,0,19,null,'div',null,1 )
+text57283.initSLine(1)
+text57283.initHasBullet(0)
+text57283.initRotateAngle(0,0,0)
+text57283.initHasOuterShadow(0)
+text57283.initHasTextShadow(0)
+text57283.initHasBorder(0)
+text57283.initHasOutline(0)
+text57283.initHasMargin(0)
+text57283.addIe8Attr(50, 685, 116, 21, 0, 0)
+text57283.addHeading(0)
+text57283.addOpacity(100)
+text57283.arrCSSStyles = new Array();
+text57283.arrCSSStyles.push('span.text57283Font1 { font-size:13px; font-family:"Arial", sans-serif; color:#21314d;}');
+text57283.arrCSSStyles.push('span.text57283Font2 { font-size:13px; font-family:"Arial", sans-serif; color:#000000;}');
+text57283.addInnerText('<div id=\"text57283\" aria-live=\"off\"  ><p lang=\"en\"  style=\"margin-left:0px;text-indent:0px;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text57283Font1\"  >Page n</span ><span class=\"text57283Font2\" style=\"background-color:transparent\" >\n</span ></p ></div>\n');
+text57283.build()
 
-shape13955 = new ObjImage('shape13955','images/shape13955.png','Triangle Right',760,230,26.000000,25.000000,0,19,'div','',0 )
+button63151 = new ObjButton('button63151', 'Back',50,50,81.000000,43.000000,1,20,'div','',1,0)
+button63151.setUseSvgFile(1)
+button63151.setFillStyle(1)
+button63151.setUniqueFillID('page13942_button63151')
+button63151.initRotateAngle(0,0,0,-0.000000,-0.000000,80,42)
+button63151.initHasShadow(0)
+button63151.initHasReflection(0)
+button63151.setImages({"disabledState":"","downState":"","normalState":"images/button63151.png","overState":"","selectedState":"","visitedState":""});
+button63151.setStateOpacity({"disabledState":1.0,"downState":1.0,"normalState":1.0,"overState":1.0,"selectedState":1.0,"visitedState":1.0});
+button63151.addOpacity(100)
+button63151.initImageMap('80,12,21,12,21,0,0,21,21,42,21,30,80,30,80,12','M 80.000000 11.970000 L 21.000000 11.970000 L 21.000000 0.000000 L 0.000000 21.000000 L 21.000000 42.000000 L 21.000000 30.029999 L 80.000000 30.029999 L 80.000000 11.970000 z')
+button63151.setFills({"disabledState":{"fillInfo":"","stylePath":"fill:#708DC1;\""},"downState":{"fillInfo":"","stylePath":"fill:#223D6C;\""},"normalState":{"fillInfo":"","stylePath":"fill:#21314D;\""},"overState":{"fillInfo":"","stylePath":"fill:#223D6C;\""},"selectedState":{"fillInfo":"","screenRdr":"Selected","stylePath":"fill:#1B4FAA;\""},"visitedState":{"fillInfo":"","screenRdr":"Visited","stylePath":"fill:#1B4FAA;\""}});
+button63151.setImgFillVal({"disabledState":{"B64":"","fill":"","style":""},"downState":{"B64":"","fill":"","style":""},"normalState":{"B64":"","fill":"","style":""},"overState":{"B64":"","fill":"","style":""},"selectedState":{"B64":"","fill":"","style":""},"visitedState":{"B64":"","fill":"","style":""}});
+button63151.initLineWeight('0')
+button63151.onUp = button63151onUp
+button63151.hasOnUp = true
+button63151.capture=4
+button63151.setTextVal({"disabledState":{"div":"div.button63151disabledStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:80.000000px; height:42.000000px;}","span":"span.button63151disabledStateText { width:76.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"downState":{"div":"div.button63151downStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:80.000000px; height:42.000000px;}","span":"span.button63151downStateText { width:76.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"normalState":{"div":"div.button63151Text { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:80.000000px; height:42.000000px;}","span":"span.button63151Text { width:76.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"overState":{"div":"div.button63151overStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:80.000000px; height:42.000000px;}","span":"span.button63151overStateText { width:76.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"selectedState":{"div":"div.button63151selectedStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:80.000000px; height:42.000000px;}","span":"span.button63151selectedStateText { width:76.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"visitedState":{"div":"div.button63151visitedStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:80.000000px; height:42.000000px;}","span":"span.button63151visitedStateText { width:76.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"}});
+button63151.text = 'Back'
+button63151.bSelectedEnabled = false;
+button63151.bVisitedEnabled = false;
+button63151.bOverEnabled = true;
+button63151.bDownEnabled = true;
+button63151.build()
+
+shape13955 = new ObjImage('shape13955','images/shape13955.png','Triangle Right',760,230,26.000000,25.000000,0,21,'div','',0 )
 shape13955.initRotateAngle(0,0,0,-1.000000,-1.000000,24,23)
 shape13955.initHasShadow(0)
 shape13955.initHasReflection(0)
@@ -413,13 +448,13 @@ shape13955.hasOnUp = true
 shape13955.capture=4
 shape13955.build()
 
-audio14105 = new ObjMedia('audio14105','Salt',50,517,225,24,1,20,'media/salt.mp3',0,1,0,0,1,0.800000,1,'div',0);
+audio14105 = new ObjMedia('audio14105','Salt',50,517,225,24,1,22,'media/salt.mp3',0,1,0,0,1,0.800000,1,'div',0);
 audio14105.bNeedPool = true;
 audio14105.bSpeedControl = true;
 audio14105.BuildMediaString()
 audio14105.build()
 
-image13944 = new ObjImage('image13944','images/pantrycrop_image13944.png','pantry',0,0,1277,720,1,4,'div',null, 0 )
+image13944 = new ObjImage('image13944','images/pantrycrop_image13944.png','pantry',0,0,1277,720,1,5,'div',null, 0 )
 image13944.initRotateAngle(0,0,0,0,0,0,0)
 image13944.initHasShadow(0)
 image13944.initHasReflection(0)
@@ -429,7 +464,7 @@ image13944.addBorder(0)
 image13944.addOpacity(100)
 image13944.build()
 
-shape13948 = new ObjImage('shape13948','images/shape13948.png','Callout Ellipse',609,80,324.000000,200.000000,1,5,'div','',0 )
+shape13948 = new ObjImage('shape13948','images/shape13948.png','Callout Ellipse',609,80,324.000000,200.000000,1,6,'div','',0 )
 shape13948.initRotateAngle(0,0,0,-1.000000,0.000000,322,199)
 shape13948.initHasShadow(0)
 shape13948.initHasReflection(0)
@@ -442,7 +477,7 @@ shape13948.initLineWeight(1)
 shape13948.addOpacity(100)
 shape13948.build()
 
-text13949 = new ObjText('text13949',null,650,127,271,127,1,6,null,'div',null,0 )
+text13949 = new ObjText('text13949',null,650,127,271,127,1,7,null,'div',null,0 )
 text13949.initSLine(0)
 text13949.initHasBullet(0)
 text13949.initRotateAngle(0,0,0)
@@ -459,7 +494,7 @@ text13949.arrCSSStyles.push('span.text13949Font1 { font-size:16px; font-family:"
 text13949.addInnerText('<div id=\"text13949\" aria-live=\"off\"  ><p lang=\"en\"  legLH=\"1.409\" style=\"margin-left:0px;text-indent:0px;line-height:1.350;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text13949Font1\" style=\"position:relative;top:-2px;\" >You\'ve earned Salt- the essential seasoning that starts every dish, just like remembering facts and terms are the essential foundations of all learning\n</span ></p ></div>\n');
 text13949.build()
 
-image43258 = new ObjImage('image43258','images/salt_ingredient.png','',-80,80,1280,720,1,7,'div',null, 0 )
+image43258 = new ObjImage('image43258','images/salt_ingredient.png','',-80,80,1280,720,1,8,'div',null, 0 )
 image43258.initRotateAngle(0,0,0,0,0,0,0)
 image43258.initHasShadow(0)
 image43258.initHasReflection(0)
@@ -470,7 +505,8 @@ image43258.addOpacity(100)
 image43258.bEmptyAltImage = true;
 image43258.build()
 
-arObjs.push(button27520);
+arObjs.push(text57283);
+arObjs.push(button63151);
 arObjs.push(shape13955);
 arObjs.push(audio14105);
 arObjs.push(image13944);
@@ -502,7 +538,8 @@ if( is.min ){
 
 <script>
 if( is.min ){
-    appendElement(button27520, null, null);
+    appendElement(text57283, null, null);
+    appendElement(button63151, null, null);
     appendElement(shape13955, null, null);
     appendElement(audio14105, null, null);
     appendElement(image13944, null, null);

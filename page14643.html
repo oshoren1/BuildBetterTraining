@@ -172,6 +172,8 @@ function ReFlow() {
 
 
 VarTrivSelCap = new Variable( 'VarTrivSelCap', 'none', 0, 0, null, null, 'buildbettertraining', true )
+VarPageInTitle = new Variable( 'VarPageInTitle', null, 0, 0, null, null, 'buildbettertraining' )
+VarPageInTitle.set( '24' )
 VarTriMuteAllFLV = new Variable( 'VarTriMuteAllFLV', '', 0, 0, null, null, 'buildbettertraining', true )
 
 onload = responsiveInit
@@ -195,30 +197,33 @@ function init11() {
   findWH()
   if( is.min ){
     trivPageTracking.InitPageTracking();
-    PreloadResources(new Array(button28243,audio15024,shape16334,image14645,shape14649,text14650,image15601))
+    PreloadResources(new Array(text57760,button64592,audio15024,shape16334,image14645,shape14649,text14650,image15601))
     pageLayer.show(true);
-    button28243.init()
+    text57760.init()
+    button64592.init()
     audio15024.init()
     shape16334.init()
     image14645.init()
     shape14649.init()
     text14650.init()
     image15601.init()
-    button28243.activate()
+    text57760.activate()
+    button64592.activate()
     audio15024.activate()
     shape16334.activate()
     image14645.activate()
     shape14649.activate()
     text14650.activate()
     image15601.activate()
-button28243.strCookieState = (trivBtnTracking.GetRangeStatus(28243,true));
-button28243.loadStateFromSes("normalState");
+button64592.strCookieState = (trivBtnTracking.GetRangeStatus(64592,true));
+button64592.loadStateFromSes("normalState");
 		    try{
 		     var objToScroll = trivGetScrollObj(window.location.href) ;
 		     trivScrollTo(window, objToScroll);
 		     var titleManagerIndexWindow = (window && window.parent && window.parent.bIsTitleManagerIndexFile) ? window.parent : null;
 		     if(titleManagerIndexWindow)  trivScrollTo(titleManagerIndexWindow, objToScroll);
 		    } catch (e) { }
+    action57761();action57762();
     if(!isSinglePagePlayerAvail()) postPageShowAction();
     if( location.hash )
     {
@@ -327,14 +332,26 @@ function playerReady(obj){
   	if(obj['id'] == 'swfaudio15024') { audio15024.setFlashPlayer(); audio15024.flsPlayer.addModelListener("STATE", "OnStateChange"); }
 }
 
-function action28244(fn){
+function action57761(fn){
+    text57760.actionChangeContents( "Page  " +  VarPageInTitle.getValue() + "","alignleft","1" ); 
+    if(fn && typeof(fn) == 'string' ) eval(fn);
+    else if(fn && typeof(fn) == 'function' ) fn();
+}
+
+function action57762(fn){
+    text57760.actionShow(); 
+    if(fn && typeof(fn) == 'string' ) eval(fn);
+    else if(fn && typeof(fn) == 'function' ) fn();
+}
+
+function action64593(fn){
     trivExitPage('page14842.html',false); 
     if(fn && typeof(fn) == 'string' ) eval(fn);
     else if(fn && typeof(fn) == 'function' ) fn();
 }
 
-function button28243onUp() {
-  action28244();
+function button64592onUp() {
+  action64593();
 }
 
 function action47231(fn){
@@ -372,43 +389,61 @@ function setPlayerMute(plrObj, bMute){
 }
 
 if( is.min ){
-button28243 = new ObjButton('button28243', 'Back',50,50,82.000000,35.000000,1,18,'div','',1,0)
-button28243.setUseSvgFile(1)
-button28243.setFillStyle(1)
-button28243.setUniqueFillID('page14643_button28243')
-button28243.initRotateAngle(0,0,0,-0.000000,-0.000000,81,34)
-button28243.initHasShadow(0)
-button28243.initHasReflection(0)
-button28243.setImages({"disabledState":"","downState":"","normalState":"images/button28243.png","overState":"","selectedState":"","visitedState":""});
-button28243.setStateOpacity({"disabledState":1.0,"downState":1.0,"normalState":1.0,"overState":1.0,"selectedState":1.0,"visitedState":1.0});
-button28243.addOpacity(100)
-button28243.initImageMap('81,10,17,10,17,0,0,17,17,34,17,24,81,24,81,10','M 81.000000 9.690001 L 17.000000 9.690001 L 17.000000 0.000000 L 0.000000 17.000000 L 17.000000 34.000000 L 17.000000 24.309999 L 81.000000 24.309999 L 81.000000 9.690001 z')
-button28243.setFills({"disabledState":{"fillInfo":"","stylePath":"fill:#708DC1;\""},"downState":{"fillInfo":"","stylePath":"fill:#223D6C;\""},"normalState":{"fillInfo":"","stylePath":"fill:#21314D;\""},"overState":{"fillInfo":"","stylePath":"fill:#223D6C;\""},"selectedState":{"fillInfo":"","screenRdr":"Selected","stylePath":"fill:#1B4FAA;\""},"visitedState":{"fillInfo":"","screenRdr":"Visited","stylePath":"fill:#1B4FAA;\""}});
-button28243.setImgFillVal({"disabledState":{"B64":"","fill":"","style":""},"downState":{"B64":"","fill":"","style":""},"normalState":{"B64":"","fill":"","style":""},"overState":{"B64":"","fill":"","style":""},"selectedState":{"B64":"","fill":"","style":""},"visitedState":{"B64":"","fill":"","style":""}});
-button28243.initLineWeight('0')
-button28243.onUp = button28243onUp
-button28243.hasOnUp = true
-button28243.capture=4
-button28243.setTextVal({"disabledState":{"div":"div.button28243disabledStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:81.000000px; height:34.000000px;}","span":"span.button28243disabledStateText { width:77.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"downState":{"div":"div.button28243downStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:81.000000px; height:34.000000px;}","span":"span.button28243downStateText { width:77.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"normalState":{"div":"div.button28243Text { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:81.000000px; height:34.000000px;}","span":"span.button28243Text { width:77.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"overState":{"div":"div.button28243overStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:81.000000px; height:34.000000px;}","span":"span.button28243overStateText { width:77.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"selectedState":{"div":"div.button28243selectedStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:81.000000px; height:34.000000px;}","span":"span.button28243selectedStateText { width:77.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"visitedState":{"div":"div.button28243visitedStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:81.000000px; height:34.000000px;}","span":"span.button28243visitedStateText { width:77.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"}});
-button28243.text = 'Back'
-button28243.bSelectedEnabled = false;
-button28243.bVisitedEnabled = false;
-button28243.bOverEnabled = true;
-button28243.bDownEnabled = true;
-button28243.build()
+text57760 = new ObjText('text57760',null,50,685,116,21,0,19,null,'div',null,1 )
+text57760.initSLine(1)
+text57760.initHasBullet(0)
+text57760.initRotateAngle(0,0,0)
+text57760.initHasOuterShadow(0)
+text57760.initHasTextShadow(0)
+text57760.initHasBorder(0)
+text57760.initHasOutline(0)
+text57760.initHasMargin(0)
+text57760.addIe8Attr(50, 685, 116, 21, 0, 0)
+text57760.addHeading(0)
+text57760.addOpacity(100)
+text57760.arrCSSStyles = new Array();
+text57760.arrCSSStyles.push('span.text57760Font1 { font-size:13px; font-family:"Arial", sans-serif; color:#21314d;}');
+text57760.arrCSSStyles.push('span.text57760Font2 { font-size:13px; font-family:"Arial", sans-serif; color:#000000;}');
+text57760.addInnerText('<div id=\"text57760\" aria-live=\"off\"  ><p lang=\"en\"  style=\"margin-left:0px;text-indent:0px;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text57760Font1\"  >Page n</span ><span class=\"text57760Font2\" style=\"background-color:transparent\" >\n</span ></p ></div>\n');
+text57760.build()
 
-audio15024 = new ObjMedia('audio15024','Garlic',50,517,225,24,1,19,'media/garlic.mp3',0,1,0,0,1,0.800000,1,'div',0);
+button64592 = new ObjButton('button64592', 'Back',50,50,81.000000,43.000000,1,20,'div','',1,0)
+button64592.setUseSvgFile(1)
+button64592.setFillStyle(1)
+button64592.setUniqueFillID('page14643_button64592')
+button64592.initRotateAngle(0,0,0,-0.000000,-0.000000,80,42)
+button64592.initHasShadow(0)
+button64592.initHasReflection(0)
+button64592.setImages({"disabledState":"","downState":"","normalState":"images/button64592.png","overState":"","selectedState":"","visitedState":""});
+button64592.setStateOpacity({"disabledState":1.0,"downState":1.0,"normalState":1.0,"overState":1.0,"selectedState":1.0,"visitedState":1.0});
+button64592.addOpacity(100)
+button64592.initImageMap('80,12,21,12,21,0,0,21,21,42,21,30,80,30,80,12','M 80.000000 11.970000 L 21.000000 11.970000 L 21.000000 0.000000 L 0.000000 21.000000 L 21.000000 42.000000 L 21.000000 30.029999 L 80.000000 30.029999 L 80.000000 11.970000 z')
+button64592.setFills({"disabledState":{"fillInfo":"","stylePath":"fill:#708DC1;\""},"downState":{"fillInfo":"","stylePath":"fill:#223D6C;\""},"normalState":{"fillInfo":"","stylePath":"fill:#21314D;\""},"overState":{"fillInfo":"","stylePath":"fill:#223D6C;\""},"selectedState":{"fillInfo":"","screenRdr":"Selected","stylePath":"fill:#1B4FAA;\""},"visitedState":{"fillInfo":"","screenRdr":"Visited","stylePath":"fill:#1B4FAA;\""}});
+button64592.setImgFillVal({"disabledState":{"B64":"","fill":"","style":""},"downState":{"B64":"","fill":"","style":""},"normalState":{"B64":"","fill":"","style":""},"overState":{"B64":"","fill":"","style":""},"selectedState":{"B64":"","fill":"","style":""},"visitedState":{"B64":"","fill":"","style":""}});
+button64592.initLineWeight('0')
+button64592.onUp = button64592onUp
+button64592.hasOnUp = true
+button64592.capture=4
+button64592.setTextVal({"disabledState":{"div":"div.button64592disabledStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:80.000000px; height:42.000000px;}","span":"span.button64592disabledStateText { width:76.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"downState":{"div":"div.button64592downStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:80.000000px; height:42.000000px;}","span":"span.button64592downStateText { width:76.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"normalState":{"div":"div.button64592Text { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:80.000000px; height:42.000000px;}","span":"span.button64592Text { width:76.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"overState":{"div":"div.button64592overStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:80.000000px; height:42.000000px;}","span":"span.button64592overStateText { width:76.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"selectedState":{"div":"div.button64592selectedStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:80.000000px; height:42.000000px;}","span":"span.button64592selectedStateText { width:76.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"visitedState":{"div":"div.button64592visitedStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:80.000000px; height:42.000000px;}","span":"span.button64592visitedStateText { width:76.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"}});
+button64592.text = 'Back'
+button64592.bSelectedEnabled = false;
+button64592.bVisitedEnabled = false;
+button64592.bOverEnabled = true;
+button64592.bDownEnabled = true;
+button64592.build()
+
+audio15024 = new ObjMedia('audio15024','Garlic',50,517,225,24,1,21,'media/garlic.mp3',0,1,0,0,1,0.800000,1,'div',0);
 audio15024.bNeedPool = true;
 audio15024.bSpeedControl = true;
 audio15024.BuildMediaString()
 audio15024.build()
 
-shape16334 = new ObjImage('shape16334','images/shape16334.png','Triangle Right',828,313,26.000000,25.000000,0,20,'div','',0 )
+shape16334 = new ObjImage('shape16334','images/shape16334.png','Triangle Right',862,270,26.000000,25.000000,0,22,'div','',0 )
 shape16334.initRotateAngle(0,0,0,-1.000000,-1.000000,24,23)
 shape16334.initHasShadow(0)
 shape16334.initHasReflection(0)
 shape16334.setUniqueFillID('page14643_shape16334')
-shape16334.addIe8Attr(828.000000, 313.000000, 26.000000, 25.000000, 0, 0)
+shape16334.addIe8Attr(862.000000, 270.000000, 26.000000, 25.000000, 0, 0)
 shape16334.initImageMap(1,'25,12,1,24,1,1,25,12','M 25.000000 12.000000 L 1.000000 24.000000 L 1.000000 1.000000 L 25.000000 12.000000 z', '', 'stroke:#010000; stroke-width:1; stroke-linejoin:round;stroke-dasharray: none; fill:#21314D;"' , '')
 shape16334.setUseSvgFile(1)
 shape16334.addBorder(0)
@@ -419,7 +454,7 @@ shape16334.hasOnUp = true
 shape16334.capture=4
 shape16334.build()
 
-image14645 = new ObjImage('image14645','images/pantrycrop_image14645.png','pantry',0,0,1280,722,1,4,'div',null, 0 )
+image14645 = new ObjImage('image14645','images/pantrycrop_image14645.png','pantry',0,0,1280,722,1,5,'div',null, 0 )
 image14645.initRotateAngle(0,0,0,0,0,0,0)
 image14645.initHasShadow(0)
 image14645.initHasReflection(0)
@@ -429,7 +464,7 @@ image14645.addBorder(0)
 image14645.addOpacity(100)
 image14645.build()
 
-shape14649 = new ObjImage('shape14649','images/shape14649.png','Callout Ellipse',628,188,275.000000,190.000000,1,5,'div','',0 )
+shape14649 = new ObjImage('shape14649','images/shape14649.png','Callout Ellipse',628,188,275.000000,190.000000,1,6,'div','',0 )
 shape14649.initRotateAngle(0,0,0,-1.000000,0.000000,270,188)
 shape14649.initHasShadow(0)
 shape14649.initHasReflection(0)
@@ -442,7 +477,7 @@ shape14649.initLineWeight(1)
 shape14649.addOpacity(100)
 shape14649.build()
 
-text14650 = new ObjText('text14650',null,663,219,200,169,1,6,null,'div',null,0 )
+text14650 = new ObjText('text14650',null,663,219,195,144,1,7,null,'div',null,0 )
 text14650.initSLine(0)
 text14650.initHasBullet(0)
 text14650.initRotateAngle(0,0,0)
@@ -451,15 +486,15 @@ text14650.initHasTextShadow(0)
 text14650.initHasBorder(0)
 text14650.initHasOutline(0)
 text14650.initHasMargin(0)
-text14650.addIe8Attr(663, 219, 200, 169, 0, 0)
+text14650.addIe8Attr(663, 219, 195, 144, 0, 0)
 text14650.addHeading(0)
 text14650.addOpacity(100)
 text14650.arrCSSStyles = new Array();
 text14650.arrCSSStyles.push('span.text14650Font1 { font-size:16px; font-family:"Arial", sans-serif; color:#21314d;}');
-text14650.addInnerText('<div id=\"text14650\" aria-live=\"off\"  ><p lang=\"en\"  legLH=\"1.409\" style=\"margin-left:0px;text-indent:0px;line-height:1.350;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text14650Font1\" style=\"position:relative;top:-2px;\" >You\'ve earned Garlic- bold, layered, and complex, just like analyzing helps break ideas down to uncover deeper patterns and relationships\n</span ></p ></div>\n');
+text14650.addInnerText('<div id=\"text14650\" aria-live=\"off\"  ><p lang=\"en\"  legLH=\"1.409\" style=\"margin-left:0px;text-indent:0px;line-height:1.350;margin-top:0px;margin-bottom:0px;text-align:center;\" >\n<span class=\"text14650Font1\" style=\"position:relative;top:-2px;\" >You\'ve earned Garlic- bold, layered, and complex, just like analyzing helps break ideas down to uncover deeper patterns and relationships.\n</span ></p ></div>\n');
 text14650.build()
 
-image15601 = new ObjImage('image15601','images/garlic_ingredientcrop_image15601.png','Garlic ingredient',-31,101,1067,601,1,7,'div',null, 0 )
+image15601 = new ObjImage('image15601','images/garlic_ingredientcrop_image15601.png','Garlic ingredient',-31,101,1067,601,1,8,'div',null, 0 )
 image15601.initRotateAngle(0,0,0,0,0,0,0)
 image15601.initHasShadow(0)
 image15601.initHasReflection(0)
@@ -469,7 +504,8 @@ image15601.addBorder(0)
 image15601.addOpacity(100)
 image15601.build()
 
-arObjs.push(button28243);
+arObjs.push(text57760);
+arObjs.push(button64592);
 arObjs.push(audio15024);
 arObjs.push(shape16334);
 arObjs.push(image14645);
@@ -501,7 +537,8 @@ if( is.min ){
 
 <script>
 if( is.min ){
-    appendElement(button28243, null, null);
+    appendElement(text57760, null, null);
+    appendElement(button64592, null, null);
     appendElement(audio15024, null, null);
     appendElement(shape16334, null, null);
     appendElement(image14645, null, null);

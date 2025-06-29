@@ -172,6 +172,8 @@ function ReFlow() {
 
 
 VarTrivSelCap = new Variable( 'VarTrivSelCap', 'none', 0, 0, null, null, 'buildbettertraining', true )
+VarPageInTitle = new Variable( 'VarPageInTitle', null, 0, 0, null, null, 'buildbettertraining' )
+VarPageInTitle.set( '11' )
 VarTriMuteAllFLV = new Variable( 'VarTriMuteAllFLV', '', 0, 0, null, null, 'buildbettertraining', true )
 
 onload = responsiveInit
@@ -195,30 +197,33 @@ function init11() {
   findWH()
   if( is.min ){
     trivPageTracking.InitPageTracking();
-    PreloadResources(new Array(button27134,shape5821,image5603,image16428,shape5631,text5648,audio5806))
+    PreloadResources(new Array(text57075,button59497,shape5821,image5603,image16428,shape5631,text5648,audio5806))
     pageLayer.show(true);
-    button27134.init()
+    text57075.init()
+    button59497.init()
     shape5821.init()
     image5603.init()
     image16428.init()
     shape5631.init()
     text5648.init()
     audio5806.init()
-    button27134.activate()
+    text57075.activate()
+    button59497.activate()
     shape5821.activate()
     image5603.activate()
     image16428.activate()
     shape5631.activate()
     text5648.activate()
     audio5806.activate()
-button27134.strCookieState = (trivBtnTracking.GetRangeStatus(27134,true));
-button27134.loadStateFromSes("normalState");
+button59497.strCookieState = (trivBtnTracking.GetRangeStatus(59497,true));
+button59497.loadStateFromSes("normalState");
 		    try{
 		     var objToScroll = trivGetScrollObj(window.location.href) ;
 		     trivScrollTo(window, objToScroll);
 		     var titleManagerIndexWindow = (window && window.parent && window.parent.bIsTitleManagerIndexFile) ? window.parent : null;
 		     if(titleManagerIndexWindow)  trivScrollTo(titleManagerIndexWindow, objToScroll);
 		    } catch (e) { }
+    action57076();action57077();
     if(!isSinglePagePlayerAvail()) postPageShowAction();
     if( location.hash )
     {
@@ -327,14 +332,26 @@ function playerReady(obj){
   	if(obj['id'] == 'swfaudio5806') { audio5806.setFlashPlayer(); audio5806.flsPlayer.addModelListener("STATE", "OnStateChange"); }
 }
 
-function action27135(fn){
+function action57076(fn){
+    text57075.actionChangeContents( "Page  " +  VarPageInTitle.getValue() + "","alignleft","1" ); 
+    if(fn && typeof(fn) == 'string' ) eval(fn);
+    else if(fn && typeof(fn) == 'function' ) fn();
+}
+
+function action57077(fn){
+    text57075.actionShow(); 
+    if(fn && typeof(fn) == 'string' ) eval(fn);
+    else if(fn && typeof(fn) == 'function' ) fn();
+}
+
+function action59498(fn){
     trivExitPage('page4879.html',false); 
     if(fn && typeof(fn) == 'string' ) eval(fn);
     else if(fn && typeof(fn) == 'function' ) fn();
 }
 
-function button27134onUp() {
-  action27135();
+function button59497onUp() {
+  action59498();
 }
 
 function action5823(fn){
@@ -372,32 +389,50 @@ function setPlayerMute(plrObj, bMute){
 }
 
 if( is.min ){
-button27134 = new ObjButton('button27134', 'Back',50,50,82.000000,35.000000,1,18,'div','',1,0)
-button27134.setUseSvgFile(1)
-button27134.setFillStyle(1)
-button27134.setUniqueFillID('page5466_button27134')
-button27134.initRotateAngle(0,0,0,-0.000000,-0.000000,81,34)
-button27134.initHasShadow(0)
-button27134.initHasReflection(0)
-button27134.setImages({"disabledState":"","downState":"","normalState":"images/button27134.png","overState":"","selectedState":"","visitedState":""});
-button27134.setStateOpacity({"disabledState":1.0,"downState":1.0,"normalState":1.0,"overState":1.0,"selectedState":1.0,"visitedState":1.0});
-button27134.addOpacity(100)
-button27134.initImageMap('81,10,17,10,17,0,0,17,17,34,17,24,81,24,81,10','M 81.000000 9.690001 L 17.000000 9.690001 L 17.000000 0.000000 L 0.000000 17.000000 L 17.000000 34.000000 L 17.000000 24.309999 L 81.000000 24.309999 L 81.000000 9.690001 z')
-button27134.setFills({"disabledState":{"fillInfo":"","stylePath":"fill:#708DC1;\""},"downState":{"fillInfo":"","stylePath":"fill:#223D6C;\""},"normalState":{"fillInfo":"","stylePath":"fill:#21314D;\""},"overState":{"fillInfo":"","stylePath":"fill:#223D6C;\""},"selectedState":{"fillInfo":"","screenRdr":"Selected","stylePath":"fill:#1B4FAA;\""},"visitedState":{"fillInfo":"","screenRdr":"Visited","stylePath":"fill:#1B4FAA;\""}});
-button27134.setImgFillVal({"disabledState":{"B64":"","fill":"","style":""},"downState":{"B64":"","fill":"","style":""},"normalState":{"B64":"","fill":"","style":""},"overState":{"B64":"","fill":"","style":""},"selectedState":{"B64":"","fill":"","style":""},"visitedState":{"B64":"","fill":"","style":""}});
-button27134.initLineWeight('0')
-button27134.onUp = button27134onUp
-button27134.hasOnUp = true
-button27134.capture=4
-button27134.setTextVal({"disabledState":{"div":"div.button27134disabledStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:81.000000px; height:34.000000px;}","span":"span.button27134disabledStateText { width:77.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"downState":{"div":"div.button27134downStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:81.000000px; height:34.000000px;}","span":"span.button27134downStateText { width:77.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"normalState":{"div":"div.button27134Text { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:81.000000px; height:34.000000px;}","span":"span.button27134Text { width:77.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"overState":{"div":"div.button27134overStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:81.000000px; height:34.000000px;}","span":"span.button27134overStateText { width:77.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"selectedState":{"div":"div.button27134selectedStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:81.000000px; height:34.000000px;}","span":"span.button27134selectedStateText { width:77.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"visitedState":{"div":"div.button27134visitedStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:81.000000px; height:34.000000px;}","span":"span.button27134visitedStateText { width:77.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"}});
-button27134.text = 'Back'
-button27134.bSelectedEnabled = false;
-button27134.bVisitedEnabled = false;
-button27134.bOverEnabled = true;
-button27134.bDownEnabled = true;
-button27134.build()
+text57075 = new ObjText('text57075',null,50,685,116,21,0,19,null,'div',null,1 )
+text57075.initSLine(1)
+text57075.initHasBullet(0)
+text57075.initRotateAngle(0,0,0)
+text57075.initHasOuterShadow(0)
+text57075.initHasTextShadow(0)
+text57075.initHasBorder(0)
+text57075.initHasOutline(0)
+text57075.initHasMargin(0)
+text57075.addIe8Attr(50, 685, 116, 21, 0, 0)
+text57075.addHeading(0)
+text57075.addOpacity(100)
+text57075.arrCSSStyles = new Array();
+text57075.arrCSSStyles.push('span.text57075Font1 { font-size:13px; font-family:"Arial", sans-serif; color:#21314d;}');
+text57075.arrCSSStyles.push('span.text57075Font2 { font-size:13px; font-family:"Arial", sans-serif; color:#000000;}');
+text57075.addInnerText('<div id=\"text57075\" aria-live=\"off\"  ><p lang=\"en\"  style=\"margin-left:0px;text-indent:0px;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text57075Font1\"  >Page n</span ><span class=\"text57075Font2\" style=\"background-color:transparent\" >\n</span ></p ></div>\n');
+text57075.build()
 
-shape5821 = new ObjImage('shape5821','images/shape5821.png','Triangle Right',744,261,26.000000,25.000000,0,19,'div','',0 )
+button59497 = new ObjButton('button59497', 'Back',50,50,81.000000,43.000000,1,20,'div','',1,0)
+button59497.setUseSvgFile(1)
+button59497.setFillStyle(1)
+button59497.setUniqueFillID('page5466_button59497')
+button59497.initRotateAngle(0,0,0,-0.000000,-0.000000,80,42)
+button59497.initHasShadow(0)
+button59497.initHasReflection(0)
+button59497.setImages({"disabledState":"","downState":"","normalState":"images/button59497.png","overState":"","selectedState":"","visitedState":""});
+button59497.setStateOpacity({"disabledState":1.0,"downState":1.0,"normalState":1.0,"overState":1.0,"selectedState":1.0,"visitedState":1.0});
+button59497.addOpacity(100)
+button59497.initImageMap('80,12,21,12,21,0,0,21,21,42,21,30,80,30,80,12','M 80.000000 11.970000 L 21.000000 11.970000 L 21.000000 0.000000 L 0.000000 21.000000 L 21.000000 42.000000 L 21.000000 30.029999 L 80.000000 30.029999 L 80.000000 11.970000 z')
+button59497.setFills({"disabledState":{"fillInfo":"","stylePath":"fill:#708DC1;\""},"downState":{"fillInfo":"","stylePath":"fill:#223D6C;\""},"normalState":{"fillInfo":"","stylePath":"fill:#21314D;\""},"overState":{"fillInfo":"","stylePath":"fill:#223D6C;\""},"selectedState":{"fillInfo":"","screenRdr":"Selected","stylePath":"fill:#1B4FAA;\""},"visitedState":{"fillInfo":"","screenRdr":"Visited","stylePath":"fill:#1B4FAA;\""}});
+button59497.setImgFillVal({"disabledState":{"B64":"","fill":"","style":""},"downState":{"B64":"","fill":"","style":""},"normalState":{"B64":"","fill":"","style":""},"overState":{"B64":"","fill":"","style":""},"selectedState":{"B64":"","fill":"","style":""},"visitedState":{"B64":"","fill":"","style":""}});
+button59497.initLineWeight('0')
+button59497.onUp = button59497onUp
+button59497.hasOnUp = true
+button59497.capture=4
+button59497.setTextVal({"disabledState":{"div":"div.button59497disabledStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:80.000000px; height:42.000000px;}","span":"span.button59497disabledStateText { width:76.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"downState":{"div":"div.button59497downStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:80.000000px; height:42.000000px;}","span":"span.button59497downStateText { width:76.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"normalState":{"div":"div.button59497Text { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:80.000000px; height:42.000000px;}","span":"span.button59497Text { width:76.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"overState":{"div":"div.button59497overStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:80.000000px; height:42.000000px;}","span":"span.button59497overStateText { width:76.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"selectedState":{"div":"div.button59497selectedStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:80.000000px; height:42.000000px;}","span":"span.button59497selectedStateText { width:76.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"visitedState":{"div":"div.button59497visitedStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:80.000000px; height:42.000000px;}","span":"span.button59497visitedStateText { width:76.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"}});
+button59497.text = 'Back'
+button59497.bSelectedEnabled = false;
+button59497.bVisitedEnabled = false;
+button59497.bOverEnabled = true;
+button59497.bDownEnabled = true;
+button59497.build()
+
+shape5821 = new ObjImage('shape5821','images/shape5821.png','Triangle Right',744,261,26.000000,25.000000,0,21,'div','',0 )
 shape5821.initRotateAngle(0,0,0,-1.000000,-1.000000,24,23)
 shape5821.initHasShadow(0)
 shape5821.initHasReflection(0)
@@ -413,7 +448,7 @@ shape5821.hasOnUp = true
 shape5821.capture=4
 shape5821.build()
 
-image5603 = new ObjImage('image5603','images/pantry.jpg','pantry',0,0,1280,720,1,3,'div',null, 0 )
+image5603 = new ObjImage('image5603','images/pantry.jpg','pantry',0,0,1280,720,1,4,'div',null, 0 )
 image5603.initRotateAngle(0,0,0,0,0,0,0)
 image5603.initHasShadow(0)
 image5603.initHasReflection(0)
@@ -423,7 +458,7 @@ image5603.addBorder(0)
 image5603.addOpacity(100)
 image5603.build()
 
-image16428 = new ObjImage('image16428','images/olive_oil_ingredientcrop_image16428.png','a smiling female chef in a white uniform and hat, holding a bottle of olive oil.',422,231,247,474,1,4,'div',null, 0 )
+image16428 = new ObjImage('image16428','images/olive_oil_ingredientcrop_image16428.png','a smiling female chef in a white uniform and hat, holding a bottle of olive oil.',422,231,247,474,1,5,'div',null, 0 )
 image16428.initRotateAngle(0,0,0,0,0,0,0)
 image16428.initHasShadow(0)
 image16428.initHasReflection(0)
@@ -433,7 +468,7 @@ image16428.addBorder(0)
 image16428.addOpacity(100)
 image16428.build()
 
-shape5631 = new ObjImage('shape5631','images/shape5631.png','Callout Ellipse',627,113,289.000000,186.000000,1,5,'div','',0 )
+shape5631 = new ObjImage('shape5631','images/shape5631.png','Callout Ellipse',627,113,289.000000,186.000000,1,6,'div','',0 )
 shape5631.initRotateAngle(0,0,0,-1.000000,0.000000,261,185)
 shape5631.initHasShadow(0)
 shape5631.initHasReflection(0)
@@ -446,7 +481,7 @@ shape5631.initLineWeight(1)
 shape5631.addOpacity(100)
 shape5631.build()
 
-text5648 = new ObjText('text5648',null,669,146,200,127,1,6,null,'div',null,0 )
+text5648 = new ObjText('text5648',null,669,146,200,162,1,7,null,'div',null,0 )
 text5648.initSLine(0)
 text5648.initHasBullet(0)
 text5648.initRotateAngle(0,0,0)
@@ -455,21 +490,22 @@ text5648.initHasTextShadow(0)
 text5648.initHasBorder(0)
 text5648.initHasOutline(0)
 text5648.initHasMargin(0)
-text5648.addIe8Attr(669, 146, 200, 127, 0, 0)
+text5648.addIe8Attr(669, 146, 200, 162, 0, 0)
 text5648.addHeading(0)
 text5648.addOpacity(100)
 text5648.arrCSSStyles = new Array();
 text5648.arrCSSStyles.push('span.text5648Font1 { font-size:16px; font-family:"Arial", sans-serif; color:#010101;}');
-text5648.addInnerText('<div id=\"text5648\" aria-live=\"off\"  ><p lang=\"en\"  legLH=\"1.409\" style=\"margin-left:0px;text-indent:0px;line-height:1.350;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text5648Font1\" style=\"position:relative;top:-2px;\" >Here\'s your first ingredient: Olive Oil.\n</span ></p >\n<p  legLH=\"1.409\" style=\"margin-left:0px;text-indent:0px;line-height:1.350;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text5648Font1\" style=\"position:relative;top:-2px;\" >It\'s the base of most dishes, just like experience is the base of thoughtful training design\n</span ></p ></div>\n');
+text5648.addInnerText('<div id=\"text5648\" aria-live=\"off\"  ><p lang=\"en\"  legLH=\"1.409\" style=\"margin-left:0px;text-indent:0px;line-height:1.350;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text5648Font1\" style=\"position:relative;top:-2px;\" >Here\'s your first ingredient: Olive Oil.\n</span ></p >\n<p  legLH=\"1.409\" style=\"margin-left:0px;text-indent:0px;line-height:1.350;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text5648Font1\" style=\"position:relative;top:-2px;\" >It\'s the base of most dishes, just like experience is the base of thoughtful training design.\n</span ></p ></div>\n');
 text5648.build()
 
-audio5806 = new ObjMedia('audio5806','First ingredient',50,515,150,24,1,7,'media/first_ingredient.mp3',0,1,0,0,1,0.800000,1,'div',0);
+audio5806 = new ObjMedia('audio5806','First ingredient',50,515,150,24,1,8,'media/first_ingredient.mp3',0,1,0,0,1,0.800000,1,'div',0);
 audio5806.bNeedPool = true;
 audio5806.bSpeedControl = true;
 audio5806.BuildMediaString()
 audio5806.build()
 
-arObjs.push(button27134);
+arObjs.push(text57075);
+arObjs.push(button59497);
 arObjs.push(shape5821);
 arObjs.push(image5603);
 arObjs.push(image16428);
@@ -501,7 +537,8 @@ if( is.min ){
 
 <script>
 if( is.min ){
-    appendElement(button27134, null, null);
+    appendElement(text57075, null, null);
+    appendElement(button59497, null, null);
     appendElement(shape5821, null, null);
     appendElement(image5603, null, null);
     appendElement(image16428, null, null);

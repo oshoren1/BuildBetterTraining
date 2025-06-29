@@ -172,6 +172,8 @@ function ReFlow() {
 
 
 VarTrivSelCap = new Variable( 'VarTrivSelCap', 'none', 0, 0, null, null, 'buildbettertraining', true )
+VarPageInTitle = new Variable( 'VarPageInTitle', null, 0, 0, null, null, 'buildbettertraining' )
+VarPageInTitle.set( '12' )
 VarTriMuteAllFLV = new Variable( 'VarTriMuteAllFLV', '', 0, 0, null, null, 'buildbettertraining', true )
 
 onload = responsiveInit
@@ -195,9 +197,10 @@ function init11() {
   findWH()
   if( is.min ){
     trivPageTracking.InitPageTracking();
-    PreloadResources(new Array(button27253,button6403,button6674,button6829,button7292,button7418,button7539,button8766,image5890,image6041,shape6213,text6251,audio9299,og9515,image5904))
+    PreloadResources(new Array(text57166,button59663,button6403,button6674,button6829,button7292,button7418,button7539,button8766,image5890,image6041,shape6213,text6251,audio9299,og9515,image5904))
     pageLayer.show(true);
-    button27253.init()
+    text57166.init()
+    button59663.init()
     button6403.init()
     button6674.init()
     button6829.init()
@@ -212,7 +215,8 @@ function init11() {
     audio9299.init()
     og9515.init()
     image5904.init()
-    button27253.activate()
+    text57166.activate()
+    button59663.activate()
     button6403.activate()
     button6674.activate()
     button6829.activate()
@@ -227,8 +231,8 @@ function init11() {
     audio9299.activate()
     og9515.activate()
     image5904.activate()
-button27253.strCookieState = (trivBtnTracking.GetRangeStatus(27253,true));
-button27253.loadStateFromSes("normalState");
+button59663.strCookieState = (trivBtnTracking.GetRangeStatus(59663,true));
+button59663.loadStateFromSes("normalState");
 button6403.strCookieState = (trivBtnTracking.GetRangeStatus(6403,true));
 button6403.loadStateFromSes("normalState");
 button6674.strCookieState = (trivBtnTracking.GetRangeStatus(6674,true));
@@ -249,6 +253,7 @@ button8766.loadStateFromSes("normalState");
 		     var titleManagerIndexWindow = (window && window.parent && window.parent.bIsTitleManagerIndexFile) ? window.parent : null;
 		     if(titleManagerIndexWindow)  trivScrollTo(titleManagerIndexWindow, objToScroll);
 		    } catch (e) { }
+    action57167();action57168();
     if(!isSinglePagePlayerAvail()) postPageShowAction();
     if( location.hash )
     {
@@ -357,14 +362,26 @@ function playerReady(obj){
   	if(obj['id'] == 'swfaudio9299') { audio9299.setFlashPlayer(); audio9299.flsPlayer.addModelListener("STATE", "OnStateChange"); }
 }
 
-function action27254(fn){
+function action57167(fn){
+    text57166.actionChangeContents( "Page  " +  VarPageInTitle.getValue() + "","alignleft","1" ); 
+    if(fn && typeof(fn) == 'string' ) eval(fn);
+    else if(fn && typeof(fn) == 'function' ) fn();
+}
+
+function action57168(fn){
+    text57166.actionShow(); 
+    if(fn && typeof(fn) == 'string' ) eval(fn);
+    else if(fn && typeof(fn) == 'function' ) fn();
+}
+
+function action59664(fn){
     trivExitPage('page5466.html',false); 
     if(fn && typeof(fn) == 'string' ) eval(fn);
     else if(fn && typeof(fn) == 'function' ) fn();
 }
 
-function button27253onUp() {
-  action27254();
+function button59663onUp() {
+  action59664();
 }
 
 function action6410(fn){
@@ -433,8 +450,14 @@ function button7539onUp() {
   action7546();action22790();
 }
 
+function action53514(fn){
+    button8766.actionShow(); 
+    if(fn && typeof(fn) == 'string' ) eval(fn);
+    else if(fn && typeof(fn) == 'function' ) fn();
+}
+
 function action9291(fn){
-    
+    trivExitPage('page18582.html',true); 
     if(fn && typeof(fn) == 'string' ) eval(fn);
     else if(fn && typeof(fn) == 'function' ) fn();
 }
@@ -447,6 +470,10 @@ function action8773(fn){
 
 function button8766onUp() {
   action9291();action8773();
+}
+
+function button8766actionShow() {
+  setTimeout("if(!button8766.isVisible()) { button8766.objLyr.moveTo(button8766.x, button8766.y);button8766.onShow();action53514(); }", 1 )
 }
 
 function action16728(fn){
@@ -481,32 +508,50 @@ function setPlayerMute(plrObj, bMute){
 }
 
 if( is.min ){
-button27253 = new ObjButton('button27253', 'Back',50,50,82.000000,35.000000,1,26,'div','',1,0)
-button27253.setUseSvgFile(1)
-button27253.setFillStyle(1)
-button27253.setUniqueFillID('page5889_button27253')
-button27253.initRotateAngle(0,0,0,-0.000000,-0.000000,81,34)
-button27253.initHasShadow(0)
-button27253.initHasReflection(0)
-button27253.setImages({"disabledState":"","downState":"","normalState":"images/button27253.png","overState":"","selectedState":"","visitedState":""});
-button27253.setStateOpacity({"disabledState":1.0,"downState":1.0,"normalState":1.0,"overState":1.0,"selectedState":1.0,"visitedState":1.0});
-button27253.addOpacity(100)
-button27253.initImageMap('81,10,17,10,17,0,0,17,17,34,17,24,81,24,81,10','M 81.000000 9.690001 L 17.000000 9.690001 L 17.000000 0.000000 L 0.000000 17.000000 L 17.000000 34.000000 L 17.000000 24.309999 L 81.000000 24.309999 L 81.000000 9.690001 z')
-button27253.setFills({"disabledState":{"fillInfo":"","stylePath":"fill:#708DC1;\""},"downState":{"fillInfo":"","stylePath":"fill:#223D6C;\""},"normalState":{"fillInfo":"","stylePath":"fill:#21314D;\""},"overState":{"fillInfo":"","stylePath":"fill:#223D6C;\""},"selectedState":{"fillInfo":"","screenRdr":"Selected","stylePath":"fill:#1B4FAA;\""},"visitedState":{"fillInfo":"","screenRdr":"Visited","stylePath":"fill:#1B4FAA;\""}});
-button27253.setImgFillVal({"disabledState":{"B64":"","fill":"","style":""},"downState":{"B64":"","fill":"","style":""},"normalState":{"B64":"","fill":"","style":""},"overState":{"B64":"","fill":"","style":""},"selectedState":{"B64":"","fill":"","style":""},"visitedState":{"B64":"","fill":"","style":""}});
-button27253.initLineWeight('0')
-button27253.onUp = button27253onUp
-button27253.hasOnUp = true
-button27253.capture=4
-button27253.setTextVal({"disabledState":{"div":"div.button27253disabledStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:81.000000px; height:34.000000px;}","span":"span.button27253disabledStateText { width:77.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"downState":{"div":"div.button27253downStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:81.000000px; height:34.000000px;}","span":"span.button27253downStateText { width:77.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"normalState":{"div":"div.button27253Text { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:81.000000px; height:34.000000px;}","span":"span.button27253Text { width:77.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"overState":{"div":"div.button27253overStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:81.000000px; height:34.000000px;}","span":"span.button27253overStateText { width:77.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"selectedState":{"div":"div.button27253selectedStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:81.000000px; height:34.000000px;}","span":"span.button27253selectedStateText { width:77.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"visitedState":{"div":"div.button27253visitedStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:81.000000px; height:34.000000px;}","span":"span.button27253visitedStateText { width:77.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"}});
-button27253.text = 'Back'
-button27253.bSelectedEnabled = false;
-button27253.bVisitedEnabled = false;
-button27253.bOverEnabled = true;
-button27253.bDownEnabled = true;
-button27253.build()
+text57166 = new ObjText('text57166',null,50,685,116,21,0,27,null,'div',null,1 )
+text57166.initSLine(1)
+text57166.initHasBullet(0)
+text57166.initRotateAngle(0,0,0)
+text57166.initHasOuterShadow(0)
+text57166.initHasTextShadow(0)
+text57166.initHasBorder(0)
+text57166.initHasOutline(0)
+text57166.initHasMargin(0)
+text57166.addIe8Attr(50, 685, 116, 21, 0, 0)
+text57166.addHeading(0)
+text57166.addOpacity(100)
+text57166.arrCSSStyles = new Array();
+text57166.arrCSSStyles.push('span.text57166Font1 { font-size:13px; font-family:"Arial", sans-serif; color:#21314d;}');
+text57166.arrCSSStyles.push('span.text57166Font2 { font-size:13px; font-family:"Arial", sans-serif; color:#000000;}');
+text57166.addInnerText('<div id=\"text57166\" aria-live=\"off\"  ><p lang=\"en\"  style=\"margin-left:0px;text-indent:0px;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text57166Font1\"  >Page n</span ><span class=\"text57166Font2\" style=\"background-color:transparent\" >\n</span ></p ></div>\n');
+text57166.build()
 
-button6403 = new ObjButton('button6403', 'Button',718,462,89.000000,23.000000,1,27,'div','',1,0)
+button59663 = new ObjButton('button59663', 'Back',50,50,81.000000,43.000000,1,28,'div','',1,0)
+button59663.setUseSvgFile(1)
+button59663.setFillStyle(1)
+button59663.setUniqueFillID('page5889_button59663')
+button59663.initRotateAngle(0,0,0,-0.000000,-0.000000,80,42)
+button59663.initHasShadow(0)
+button59663.initHasReflection(0)
+button59663.setImages({"disabledState":"","downState":"","normalState":"images/button59663.png","overState":"","selectedState":"","visitedState":""});
+button59663.setStateOpacity({"disabledState":1.0,"downState":1.0,"normalState":1.0,"overState":1.0,"selectedState":1.0,"visitedState":1.0});
+button59663.addOpacity(100)
+button59663.initImageMap('80,12,21,12,21,0,0,21,21,42,21,30,80,30,80,12','M 80.000000 11.970000 L 21.000000 11.970000 L 21.000000 0.000000 L 0.000000 21.000000 L 21.000000 42.000000 L 21.000000 30.029999 L 80.000000 30.029999 L 80.000000 11.970000 z')
+button59663.setFills({"disabledState":{"fillInfo":"","stylePath":"fill:#708DC1;\""},"downState":{"fillInfo":"","stylePath":"fill:#223D6C;\""},"normalState":{"fillInfo":"","stylePath":"fill:#21314D;\""},"overState":{"fillInfo":"","stylePath":"fill:#223D6C;\""},"selectedState":{"fillInfo":"","screenRdr":"Selected","stylePath":"fill:#1B4FAA;\""},"visitedState":{"fillInfo":"","screenRdr":"Visited","stylePath":"fill:#1B4FAA;\""}});
+button59663.setImgFillVal({"disabledState":{"B64":"","fill":"","style":""},"downState":{"B64":"","fill":"","style":""},"normalState":{"B64":"","fill":"","style":""},"overState":{"B64":"","fill":"","style":""},"selectedState":{"B64":"","fill":"","style":""},"visitedState":{"B64":"","fill":"","style":""}});
+button59663.initLineWeight('0')
+button59663.onUp = button59663onUp
+button59663.hasOnUp = true
+button59663.capture=4
+button59663.setTextVal({"disabledState":{"div":"div.button59663disabledStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:80.000000px; height:42.000000px;}","span":"span.button59663disabledStateText { width:76.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"downState":{"div":"div.button59663downStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:80.000000px; height:42.000000px;}","span":"span.button59663downStateText { width:76.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"normalState":{"div":"div.button59663Text { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:80.000000px; height:42.000000px;}","span":"span.button59663Text { width:76.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"overState":{"div":"div.button59663overStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:80.000000px; height:42.000000px;}","span":"span.button59663overStateText { width:76.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"selectedState":{"div":"div.button59663selectedStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:80.000000px; height:42.000000px;}","span":"span.button59663selectedStateText { width:76.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"visitedState":{"div":"div.button59663visitedStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:80.000000px; height:42.000000px;}","span":"span.button59663visitedStateText { width:76.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"}});
+button59663.text = 'Back'
+button59663.bSelectedEnabled = false;
+button59663.bVisitedEnabled = false;
+button59663.bOverEnabled = true;
+button59663.bDownEnabled = true;
+button59663.build()
+
+button6403 = new ObjButton('button6403', 'Button',718,462,89.000000,23.000000,1,29,'div','',1,0)
 button6403.setUseSvgFile(1)
 button6403.setFillStyle(1)
 button6403.setUniqueFillID('page5889_button6403')
@@ -529,7 +574,7 @@ button6403.bOverEnabled = true;
 button6403.bDownEnabled = true;
 button6403.build()
 
-button6674 = new ObjButton('button6674', 'Button 2',830,472,95.000000,23.000000,1,28,'div','',1,0)
+button6674 = new ObjButton('button6674', 'Button 2',830,472,95.000000,23.000000,1,30,'div','',1,0)
 button6674.setUseSvgFile(1)
 button6674.setFillStyle(1)
 button6674.setUniqueFillID('page5889_button6674')
@@ -552,7 +597,7 @@ button6674.bOverEnabled = true;
 button6674.bDownEnabled = true;
 button6674.build()
 
-button6829 = new ObjButton('button6829', 'Button 3',719,489,89.000000,27.000000,1,29,'div','',1,0)
+button6829 = new ObjButton('button6829', 'Button 3',719,489,89.000000,27.000000,1,31,'div','',1,0)
 button6829.setUseSvgFile(1)
 button6829.setFillStyle(1)
 button6829.setUniqueFillID('page5889_button6829')
@@ -575,7 +620,7 @@ button6829.bOverEnabled = true;
 button6829.bDownEnabled = true;
 button6829.build()
 
-button7292 = new ObjButton('button7292', 'Button 4',830,501,95.000000,23.000000,1,30,'div','',1,0)
+button7292 = new ObjButton('button7292', 'Button 4',830,501,95.000000,23.000000,1,32,'div','',1,0)
 button7292.setUseSvgFile(1)
 button7292.setFillStyle(1)
 button7292.setUniqueFillID('page5889_button7292')
@@ -598,7 +643,7 @@ button7292.bOverEnabled = true;
 button7292.bDownEnabled = true;
 button7292.build()
 
-button7418 = new ObjButton('button7418', 'Button 5',718,519,95.000000,23.000000,1,31,'div','',1,0)
+button7418 = new ObjButton('button7418', 'Button 5',718,519,95.000000,23.000000,1,33,'div','',1,0)
 button7418.setUseSvgFile(1)
 button7418.setFillStyle(1)
 button7418.setUniqueFillID('page5889_button7418')
@@ -621,7 +666,7 @@ button7418.bOverEnabled = true;
 button7418.bDownEnabled = true;
 button7418.build()
 
-button7539 = new ObjButton('button7539', 'Button 6',823,531,95.000000,23.000000,1,32,'div','',1,0)
+button7539 = new ObjButton('button7539', 'Button 6',823,531,95.000000,23.000000,1,34,'div','',1,0)
 button7539.setUseSvgFile(1)
 button7539.setFillStyle(1)
 button7539.setUniqueFillID('page5889_button7539')
@@ -644,24 +689,25 @@ button7539.bOverEnabled = true;
 button7539.bDownEnabled = true;
 button7539.build()
 
-button8766 = new ObjButton('button8766', 'Next',150,50,82.000000,35.000000,0,33,'div','',0,0)
+button8766 = new ObjButton('button8766', 'Next',150,50,81.000000,43.000000,1,35,'div','',1,0)
 button8766.setUseSvgFile(1)
 button8766.setFillStyle(1)
 button8766.setUniqueFillID('page5889_button8766')
-button8766.initRotateAngle(0,0,0,-0.000000,-0.000000,81,34)
+button8766.initRotateAngle(0,0,0,-0.000000,-0.000000,80,42)
 button8766.initHasShadow(0)
 button8766.initHasReflection(0)
 button8766.setImages({"disabledState":"","downState":"","normalState":"images/button8766.png","overState":"","selectedState":"","visitedState":""});
 button8766.setStateOpacity({"disabledState":1.0,"downState":1.0,"normalState":1.0,"overState":1.0,"selectedState":1.0,"visitedState":1.0});
 button8766.addOpacity(100)
-button8766.initImageMap('0,10,64,10,64,0,81,17,64,34,64,24,0,24,0,10','M 0.000000 9.690001 L 64.000000 9.690001 L 64.000000 0.000000 L 81.000000 17.000000 L 64.000000 34.000000 L 64.000000 24.309999 L 0.000000 24.309999 L 0.000000 9.690001 z')
+button8766.initImageMap('0,12,59,12,59,0,80,21,59,42,59,30,0,30,0,12','M 0.000000 11.970000 L 59.000000 11.970000 L 59.000000 0.000000 L 80.000000 21.000000 L 59.000000 42.000000 L 59.000000 30.029999 L 0.000000 30.029999 L 0.000000 11.970000 z')
 button8766.setFills({"disabledState":{"fillInfo":"","stylePath":"fill:#708DC1;\""},"downState":{"fillInfo":"","stylePath":"fill:#223D6C;\""},"normalState":{"fillInfo":"","stylePath":"fill:#21314D;\""},"overState":{"fillInfo":"","stylePath":"fill:#223D6C;\""},"selectedState":{"fillInfo":"","screenRdr":"Selected","stylePath":"fill:#1B4FAA;\""},"visitedState":{"fillInfo":"","screenRdr":"Visited","stylePath":"fill:#1B4FAA;\""}});
 button8766.setImgFillVal({"disabledState":{"B64":"","fill":"","style":""},"downState":{"B64":"","fill":"","style":""},"normalState":{"B64":"","fill":"","style":""},"overState":{"B64":"","fill":"","style":""},"selectedState":{"B64":"","fill":"","style":""},"visitedState":{"B64":"","fill":"","style":""}});
 button8766.initLineWeight('0')
 button8766.onUp = button8766onUp
 button8766.hasOnUp = true
+button8766.actionShow = button8766actionShow
 button8766.capture=4
-button8766.setTextVal({"disabledState":{"div":"div.button8766disabledStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:81.000000px; height:34.000000px;}","span":"span.button8766disabledStateText { width:77.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"downState":{"div":"div.button8766downStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:81.000000px; height:34.000000px;}","span":"span.button8766downStateText { width:77.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"normalState":{"div":"div.button8766Text { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:81.000000px; height:34.000000px;}","span":"span.button8766Text { width:77.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"overState":{"div":"div.button8766overStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:81.000000px; height:34.000000px;}","span":"span.button8766overStateText { width:77.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"selectedState":{"div":"div.button8766selectedStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:81.000000px; height:34.000000px;}","span":"span.button8766selectedStateText { width:77.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"visitedState":{"div":"div.button8766visitedStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:81.000000px; height:34.000000px;}","span":"span.button8766visitedStateText { width:77.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"}});
+button8766.setTextVal({"disabledState":{"div":"div.button8766disabledStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:80.000000px; height:42.000000px;}","span":"span.button8766disabledStateText { width:76.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"downState":{"div":"div.button8766downStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:80.000000px; height:42.000000px;}","span":"span.button8766downStateText { width:76.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"normalState":{"div":"div.button8766Text { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:80.000000px; height:42.000000px;}","span":"span.button8766Text { width:76.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"overState":{"div":"div.button8766overStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:80.000000px; height:42.000000px;}","span":"span.button8766overStateText { width:76.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"selectedState":{"div":"div.button8766selectedStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:80.000000px; height:42.000000px;}","span":"span.button8766selectedStateText { width:76.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"visitedState":{"div":"div.button8766visitedStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:80.000000px; height:42.000000px;}","span":"span.button8766visitedStateText { width:76.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"}});
 button8766.text = 'Next'
 button8766.bSelectedEnabled = false;
 button8766.bVisitedEnabled = false;
@@ -669,7 +715,7 @@ button8766.bOverEnabled = true;
 button8766.bDownEnabled = true;
 button8766.build()
 
-image5890 = new ObjImage('image5890','images/litchen_background.png','Kitchen background',0,0,1280,719,1,9,'div',null, 0 )
+image5890 = new ObjImage('image5890','images/litchen_background.png','Kitchen background',0,0,1280,719,1,10,'div',null, 0 )
 image5890.initRotateAngle(0,0,0,0,0,0,0)
 image5890.initHasShadow(0)
 image5890.initHasReflection(0)
@@ -679,7 +725,7 @@ image5890.addBorder(0)
 image5890.addOpacity(100)
 image5890.build()
 
-image6041 = new ObjImage('image6041','images/2crop_image6041.png','a smiling chef with short brown hair wearing a white chef&#39;s hat and coat, pointing upwards with one hand',210,175,249,333,1,10,'div',null, 0 )
+image6041 = new ObjImage('image6041','images/2crop_image6041.png','a smiling chef with short brown hair wearing a white chef&#39;s hat and coat, pointing upwards with one hand',210,175,249,333,1,11,'div',null, 0 )
 image6041.initRotateAngle(0,0,1,0,0,0,0)
 image6041.initHasShadow(0)
 image6041.initHasReflection(0)
@@ -689,7 +735,7 @@ image6041.addBorder(0)
 image6041.addOpacity(100)
 image6041.build()
 
-shape6213 = new ObjImage('shape6213','images/shape6213.png','Callout Ellipse',485,137,346.000000,200.000000,1,11,'div','',0 )
+shape6213 = new ObjImage('shape6213','images/shape6213.png','Callout Ellipse',485,137,346.000000,200.000000,1,12,'div','',0 )
 shape6213.initRotateAngle(0,0,0,-1.000000,0.000000,312,198)
 shape6213.initHasShadow(0)
 shape6213.initHasReflection(0)
@@ -702,7 +748,7 @@ shape6213.initLineWeight(1)
 shape6213.addOpacity(100)
 shape6213.build()
 
-text6251 = new ObjText('text6251',null,526,179,247,145,1,12,null,'div',null,0 )
+text6251 = new ObjText('text6251',null,526,179,247,145,1,13,null,'div',null,0 )
 text6251.initSLine(0)
 text6251.initHasBullet(0)
 text6251.initRotateAngle(0,0,0)
@@ -716,10 +762,10 @@ text6251.addHeading(0)
 text6251.addOpacity(100)
 text6251.arrCSSStyles = new Array();
 text6251.arrCSSStyles.push('span.text6251Font1 { font-size:16px; font-family:"Arial", sans-serif; color:#21314d;}');
-text6251.addInnerText('<div id=\"text6251\" aria-live=\"off\"  ><p lang=\"en\"  legLH=\"1.409\" style=\"margin-left:0px;text-indent:0px;line-height:1.350;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text6251Font1\" style=\"position:relative;top:-2px;\" >Now let\'s take a closer look at your tools- the six levels of Bloom\'s Taxonomy. Each one is a skill set, a strategy. Click on each one to learn about the level and practice your understanding. \n</span ></p ></div>\n');
+text6251.addInnerText('<div id=\"text6251\" aria-live=\"off\"  ><p lang=\"en\"  legLH=\"1.409\" style=\"margin-left:0px;text-indent:0px;line-height:1.350;margin-top:0px;margin-bottom:0px;text-align:center;\" >\n<span class=\"text6251Font1\" style=\"position:relative;top:-2px;\" >Now let\'s take a closer look at your tools- the six levels of Bloom\'s Taxonomy. Each one is a skill set, a strategy. Click on each one to learn about the level and practice your understanding. \n</span ></p ></div>\n');
 text6251.build()
 
-audio9299 = new ObjMedia('audio9299','The six levels',50,517,225,24,1,13,'media/the_six_levels.mp3',0,1,0,0,1,0.800000,1,'div',0);
+audio9299 = new ObjMedia('audio9299','The six levels',50,517,225,24,1,14,'media/the_six_levels.mp3',0,1,0,0,1,0.800000,1,'div',0);
 audio9299.bNeedPool = true;
 audio9299.bSpeedControl = true;
 audio9299.BuildMediaString()
@@ -736,7 +782,7 @@ og9515.addChild('button7418')
 og9515.addChild('button7539')
 og9515.build()
 
-image5904 = new ObjImage('image5904','images/blooms_toolscrop_image5904.png','Blooms tools',640,285,382,329,1,14,'div',null, 0 )
+image5904 = new ObjImage('image5904','images/blooms_toolscrop_image5904.png','Blooms tools',640,285,382,329,1,15,'div',null, 0 )
 image5904.initRotateAngle(0,0,0,0,0,0,0)
 image5904.initHasShadow(0)
 image5904.initHasReflection(0)
@@ -746,7 +792,8 @@ image5904.addBorder(0)
 image5904.addOpacity(100)
 image5904.build()
 
-arObjs.push(button27253);
+arObjs.push(text57166);
+arObjs.push(button59663);
 arObjs.push(button6403);
 arObjs.push(button6674);
 arObjs.push(button6829);
@@ -787,7 +834,8 @@ if( is.min ){
 
 <script>
 if( is.min ){
-    appendElement(button27253, null, null);
+    appendElement(text57166, null, null);
+    appendElement(button59663, null, null);
     appendElement(button6403, null, null);
     appendElement(button6674, null, null);
     appendElement(button6829, null, null);

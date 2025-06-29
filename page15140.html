@@ -169,6 +169,8 @@ function ReFlow() {
 
 
 VarTrivSelCap = new Variable( 'VarTrivSelCap', 'none', 0, 0, null, null, 'buildbettertraining', true )
+VarPageInTitle = new Variable( 'VarPageInTitle', null, 0, 0, null, null, 'buildbettertraining' )
+VarPageInTitle.set( '26' )
 VarQuestion_0006 = new Variable( 'VarQuestion_0006', '', 0, 0, null, null, 'buildbettertraining', false )
 VarTriMuteAllFLV = new Variable( 'VarTriMuteAllFLV', '', 0, 0, null, null, 'buildbettertraining', true )
 
@@ -193,9 +195,10 @@ function init11() {
   findWH()
   if( is.min ){
     trivPageTracking.InitPageTracking();
-    PreloadResources(new Array(button15160,image15142,image15144,image15147,text15148,qu16619,text16621,entry16622,shape15152))
+    PreloadResources(new Array(text57784,button64904,image15142,image15144,image15147,text15148,qu16619,text16621,entry16622,shape15152))
     pageLayer.show(true);
-    button15160.init()
+    text57784.init()
+    button64904.init()
     image15142.init()
     image15144.init()
     image15147.init()
@@ -204,7 +207,8 @@ function init11() {
     text16621.init()
     entry16622.init()
     shape15152.init()
-    button15160.activate()
+    text57784.activate()
+    button64904.activate()
     image15142.activate()
     image15144.activate()
     image15147.activate()
@@ -213,8 +217,8 @@ function init11() {
     text16621.activate()
     entry16622.activate()
     shape15152.activate()
-button15160.strCookieState = (trivBtnTracking.GetRangeStatus(15160,true));
-button15160.loadStateFromSes("normalState");
+button64904.strCookieState = (trivBtnTracking.GetRangeStatus(64904,true));
+button64904.loadStateFromSes("normalState");
 		    try{
 		     var objToScroll = trivGetScrollObj(window.location.href) ;
 		     trivScrollTo(window, objToScroll);
@@ -224,6 +228,7 @@ button15160.loadStateFromSes("normalState");
     var valVarQuestion_0006 = VarQuestion_0006.getValue()
     if(valVarQuestion_0006!='~~~null~~~')entry16622.objLyr.doc.forms["entry16622form"]["Entry field"].value=valVarQuestion_0006
 
+    action57785();action57786();
     if(!isSinglePagePlayerAvail()) postPageShowAction();
     if( location.hash )
     {
@@ -346,7 +351,7 @@ function doImmFeedback( objId ) {
       qu16619PrevAns = ans_VarQuestion_0006;
    if( ans_VarQuestion_0006 != '~~~null~~~' ) {
     { //1 
-        trivActFBCnt++; action16619_2(onAfterFBAction);  return 0;
+        trivActFBCnt++; action16619_4(onAfterFBAction);  return 0;
   } //1
 
       }
@@ -359,28 +364,34 @@ function OnDeviceRotate() {
 
 }
 
-function action15161(fn){
-    trivExitPage('page5889.html',true); 
+function action57785(fn){
+    text57784.actionChangeContents( "Page  " +  VarPageInTitle.getValue() + "","alignleft","1" ); 
     if(fn && typeof(fn) == 'string' ) eval(fn);
     else if(fn && typeof(fn) == 'function' ) fn();
 }
 
-function action15162(fn){
-    
+function action57786(fn){
+    text57784.actionShow(); 
     if(fn && typeof(fn) == 'string' ) eval(fn);
     else if(fn && typeof(fn) == 'function' ) fn();
 }
 
-function button15160onUp() {
-  action15161();action15162();
+function action64905(fn){
+    trivExitPage('page12501.html',false); 
+    if(fn && typeof(fn) == 'string' ) eval(fn);
+    else if(fn && typeof(fn) == 'function' ) fn();
+}
+
+function button64904onUp() {
+  action64905();
 }
 
 function Offset_qu16619(bDevRotate) {
 }
 
 
-function action16619_2(fn){
-    if(!document.getElementById("DLG_Div_16619"))trivAlert( 'action16619_2', 'BuildBetterTraining', 'Sample Answer 1:\nThey allow learners to assess others’ work, justify their opinions, and consider alternative solutions. It’s not just about being right, it’s about defending your thinking with logic.\n\nSample Answer 2:\nI’d model how to compare two approaches using data or outcomes, and then ask learners to back up their recommendations using key metrics or case examples.', fn );
+function action16619_4(fn){
+    if(!document.getElementById("DLG_Div_16619"))trivAlert( 'action16619_4', 'BuildBetterTraining', 'Sample Answer 1:\nThey allow learners to assess others’ work, justify their opinions, and consider alternative solutions. It’s not just about being right, it’s about defending your thinking with logic.\n\nSample Answer 2:\nI’d model how to compare two approaches using data or outcomes, and then ask learners to back up their recommendations using key metrics or case examples.', fn );
 }
 
 function action16670(fn){
@@ -426,32 +437,50 @@ function shape15152actionShow() {
 }
 
 if( is.min ){
-button15160 = new ObjButton('button15160', 'Back',63,61,82.000000,35.000000,1,20,'div','',1,0)
-button15160.setUseSvgFile(1)
-button15160.setFillStyle(1)
-button15160.setUniqueFillID('page15140_button15160')
-button15160.initRotateAngle(0,0,0,-0.000000,-0.000000,81,34)
-button15160.initHasShadow(0)
-button15160.initHasReflection(0)
-button15160.setImages({"disabledState":"","downState":"","normalState":"images/button15160.png","overState":"","selectedState":"","visitedState":""});
-button15160.setStateOpacity({"disabledState":1.0,"downState":1.0,"normalState":1.0,"overState":1.0,"selectedState":1.0,"visitedState":1.0});
-button15160.addOpacity(100)
-button15160.initImageMap('81,10,17,10,17,0,0,17,17,34,17,24,81,24,81,10','M 81.000000 9.690001 L 17.000000 9.690001 L 17.000000 0.000000 L 0.000000 17.000000 L 17.000000 34.000000 L 17.000000 24.309999 L 81.000000 24.309999 L 81.000000 9.690001 z')
-button15160.setFills({"disabledState":{"fillInfo":"","stylePath":"fill:#708DC1;\""},"downState":{"fillInfo":"","stylePath":"fill:#223D6C;\""},"normalState":{"fillInfo":"","stylePath":"fill:#21314D;\""},"overState":{"fillInfo":"","stylePath":"fill:#223D6C;\""},"selectedState":{"fillInfo":"","screenRdr":"Selected","stylePath":"fill:#1B4FAA;\""},"visitedState":{"fillInfo":"","screenRdr":"Visited","stylePath":"fill:#1B4FAA;\""}});
-button15160.setImgFillVal({"disabledState":{"B64":"","fill":"","style":""},"downState":{"B64":"","fill":"","style":""},"normalState":{"B64":"","fill":"","style":""},"overState":{"B64":"","fill":"","style":""},"selectedState":{"B64":"","fill":"","style":""},"visitedState":{"B64":"","fill":"","style":""}});
-button15160.initLineWeight('0')
-button15160.onUp = button15160onUp
-button15160.hasOnUp = true
-button15160.capture=4
-button15160.setTextVal({"disabledState":{"div":"div.button15160disabledStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:81.000000px; height:34.000000px;}","span":"span.button15160disabledStateText { width:77.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"downState":{"div":"div.button15160downStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:81.000000px; height:34.000000px;}","span":"span.button15160downStateText { width:77.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"normalState":{"div":"div.button15160Text { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:81.000000px; height:34.000000px;}","span":"span.button15160Text { width:77.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"overState":{"div":"div.button15160overStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:81.000000px; height:34.000000px;}","span":"span.button15160overStateText { width:77.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"selectedState":{"div":"div.button15160selectedStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:81.000000px; height:34.000000px;}","span":"span.button15160selectedStateText { width:77.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"visitedState":{"div":"div.button15160visitedStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:81.000000px; height:34.000000px;}","span":"span.button15160visitedStateText { width:77.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"}});
-button15160.text = 'Back'
-button15160.bSelectedEnabled = false;
-button15160.bVisitedEnabled = false;
-button15160.bOverEnabled = true;
-button15160.bDownEnabled = true;
-button15160.build()
+text57784 = new ObjText('text57784',null,50,685,116,21,0,21,null,'div',null,1 )
+text57784.initSLine(1)
+text57784.initHasBullet(0)
+text57784.initRotateAngle(0,0,0)
+text57784.initHasOuterShadow(0)
+text57784.initHasTextShadow(0)
+text57784.initHasBorder(0)
+text57784.initHasOutline(0)
+text57784.initHasMargin(0)
+text57784.addIe8Attr(50, 685, 116, 21, 0, 0)
+text57784.addHeading(0)
+text57784.addOpacity(100)
+text57784.arrCSSStyles = new Array();
+text57784.arrCSSStyles.push('span.text57784Font1 { font-size:13px; font-family:"Arial", sans-serif; color:#21314d;}');
+text57784.arrCSSStyles.push('span.text57784Font2 { font-size:13px; font-family:"Arial", sans-serif; color:#000000;}');
+text57784.addInnerText('<div id=\"text57784\" aria-live=\"off\"  ><p lang=\"en\"  style=\"margin-left:0px;text-indent:0px;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text57784Font1\"  >Page n</span ><span class=\"text57784Font2\" style=\"background-color:transparent\" >\n</span ></p ></div>\n');
+text57784.build()
 
-image15142 = new ObjImage('image15142','images/litchen_background.png','Kitchen background',0,2,1280,719,1,2,'div',null, 0 )
+button64904 = new ObjButton('button64904', 'Back',50,50,81.000000,43.000000,1,22,'div','',1,0)
+button64904.setUseSvgFile(1)
+button64904.setFillStyle(1)
+button64904.setUniqueFillID('page15140_button64904')
+button64904.initRotateAngle(0,0,0,-0.000000,-0.000000,80,42)
+button64904.initHasShadow(0)
+button64904.initHasReflection(0)
+button64904.setImages({"disabledState":"","downState":"","normalState":"images/button64904.png","overState":"","selectedState":"","visitedState":""});
+button64904.setStateOpacity({"disabledState":1.0,"downState":1.0,"normalState":1.0,"overState":1.0,"selectedState":1.0,"visitedState":1.0});
+button64904.addOpacity(100)
+button64904.initImageMap('80,12,21,12,21,0,0,21,21,42,21,30,80,30,80,12','M 80.000000 11.970000 L 21.000000 11.970000 L 21.000000 0.000000 L 0.000000 21.000000 L 21.000000 42.000000 L 21.000000 30.029999 L 80.000000 30.029999 L 80.000000 11.970000 z')
+button64904.setFills({"disabledState":{"fillInfo":"","stylePath":"fill:#708DC1;\""},"downState":{"fillInfo":"","stylePath":"fill:#223D6C;\""},"normalState":{"fillInfo":"","stylePath":"fill:#21314D;\""},"overState":{"fillInfo":"","stylePath":"fill:#223D6C;\""},"selectedState":{"fillInfo":"","screenRdr":"Selected","stylePath":"fill:#1B4FAA;\""},"visitedState":{"fillInfo":"","screenRdr":"Visited","stylePath":"fill:#1B4FAA;\""}});
+button64904.setImgFillVal({"disabledState":{"B64":"","fill":"","style":""},"downState":{"B64":"","fill":"","style":""},"normalState":{"B64":"","fill":"","style":""},"overState":{"B64":"","fill":"","style":""},"selectedState":{"B64":"","fill":"","style":""},"visitedState":{"B64":"","fill":"","style":""}});
+button64904.initLineWeight('0')
+button64904.onUp = button64904onUp
+button64904.hasOnUp = true
+button64904.capture=4
+button64904.setTextVal({"disabledState":{"div":"div.button64904disabledStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:80.000000px; height:42.000000px;}","span":"span.button64904disabledStateText { width:76.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"downState":{"div":"div.button64904downStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:80.000000px; height:42.000000px;}","span":"span.button64904downStateText { width:76.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"normalState":{"div":"div.button64904Text { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:80.000000px; height:42.000000px;}","span":"span.button64904Text { width:76.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"overState":{"div":"div.button64904overStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:80.000000px; height:42.000000px;}","span":"span.button64904overStateText { width:76.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"selectedState":{"div":"div.button64904selectedStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:80.000000px; height:42.000000px;}","span":"span.button64904selectedStateText { width:76.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"visitedState":{"div":"div.button64904visitedStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:80.000000px; height:42.000000px;}","span":"span.button64904visitedStateText { width:76.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"}});
+button64904.text = 'Back'
+button64904.bSelectedEnabled = false;
+button64904.bVisitedEnabled = false;
+button64904.bOverEnabled = true;
+button64904.bDownEnabled = true;
+button64904.build()
+
+image15142 = new ObjImage('image15142','images/litchen_background.png','Kitchen background',0,2,1280,719,1,3,'div',null, 0 )
 image15142.initRotateAngle(0,0,0,0,0,0,0)
 image15142.initHasShadow(0)
 image15142.initHasReflection(0)
@@ -461,7 +490,7 @@ image15142.addBorder(0)
 image15142.addOpacity(100)
 image15142.build()
 
-image15144 = new ObjImage('image15144','images/recipe_cardcrop_image9621.png','Recipe card',51,107,858,462,1,3,'div',null, 0 )
+image15144 = new ObjImage('image15144','images/recipe_cardcrop_image9621.png','Recipe card',51,107,858,462,1,4,'div',null, 0 )
 image15144.initRotateAngle(0,0,0,0,0,0,0)
 image15144.initHasShadow(0)
 image15144.initHasReflection(0)
@@ -471,7 +500,7 @@ image15144.addBorder(0)
 image15144.addOpacity(100)
 image15144.build()
 
-image15147 = new ObjImage('image15147','images/knifecrop_image9630.png','knife',534,61,224,211,1,4,'div',null, 0 )
+image15147 = new ObjImage('image15147','images/knifecrop_image9630.png','knife',534,61,224,211,1,5,'div',null, 0 )
 image15147.initRotateAngle(44,0,0,0,0,0,0)
 image15147.initHasShadow(0)
 image15147.initHasReflection(0)
@@ -481,7 +510,7 @@ image15147.addBorder(0)
 image15147.addOpacity(100)
 image15147.build()
 
-text15148 = new ObjText('text15148',null,635,161,93,23,1,5,null,'div',null,0 )
+text15148 = new ObjText('text15148',null,635,161,93,23,1,6,null,'div',null,0 )
 text15148.initSLine(1)
 text15148.initHasBullet(0)
 text15148.initRotateAngle(0,0,0)
@@ -507,7 +536,7 @@ qu16619.addChild('shape15152')
 qu16619.ansVar=VarQuestion_0006;
 qu16619.build()
 
-text16621 = new ObjText('text16621',null,116,217,729,124,1,6,null,'div',null,0 )
+text16621 = new ObjText('text16621',null,116,217,729,124,1,7,null,'div',null,0 )
 text16621.initSLine(0)
 text16621.initHasBullet(0)
 text16621.initRotateAngle(0,0,0)
@@ -525,13 +554,13 @@ text16621.arrCSSStyles.push('span.text16621Font1 { font-size:16px; font-family:"
 text16621.addInnerText('<legend><div id=\"text16621\" aria-live=\"off\"  ><label id=\"label16622id\" for=\"entry16622id\" ><p lang=\"en\"  legLH=\"1.409\" style=\"margin-left:0px;text-indent:0px;line-height:1.350;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text16621Font1\" style=\"position:relative;top:-2px;\" >1) How could peer reviews or group discussions help build evaluation skills in training?</span ><span class=\"text16621Font0\" style=\"background-color:transparentposition:relative;top:-2px;\" >\n</span ></p >\n<p  legLH=\"1.409\" style=\"margin-left:0px;text-indent:0px;line-height:1.350;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text16621Font1\" style=\"position:relative;top:-2px;\" >2) How would you teach learners to support their opinions with evidence?\n</span ></p >\n<p  legLH=\"1.409\" style=\"margin-left:0px;text-indent:0px;line-height:1.350;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text16621Font1\" style=\"background-color:transparentposition:relative;top:-2px;\" >\n&nbsp;</span ></p >\n<p  legLH=\"1.409\" style=\"margin-left:0px;text-indent:0px;line-height:1.350;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text16621Font1\" style=\"position:relative;top:-2px;\" >Write your answers in the box, and click on the blue triangle to review a sample answer for the question.</span ><span class=\"text16621Font0\" style=\"background-color:transparentposition:relative;top:-2px;\" >\n</span ></p ></label></div>\n</legend>\n');
 text16621.build()
 
-entry16622 = new ObjInline('entry16622',null,(is.ie?116:116),(is.ie?320:319),null,null,1,7, 0, null, null, 0)
+entry16622 = new ObjInline('entry16622',null,(is.ie?116:116),(is.ie?320:319),null,null,1,8, 0, null, null, 0)
 entry16622.onSelChg = entry16622onSelChg
 entry16622.arrCSSStyles = new Array();
 entry16622.arrCSSStyles.push('textarea.entry16622 { font-size:16px; font-family:"Arial", sans-serif; color:#21314d; width:681px; height:197px; -webkit-appearance:none; background-color:#ffffff; }');
 entry16622.build()
 
-shape15152 = new ObjImage('shape15152','images/shape15152.png','Triangle Right',827,440,28.000000,25.000000,0,8,'div','',0 )
+shape15152 = new ObjImage('shape15152','images/shape15152.png','Triangle Right',827,440,28.000000,25.000000,0,9,'div','',0 )
 shape15152.initRotateAngle(0,0,0,-1.000000,-1.000000,26,23)
 shape15152.initHasShadow(0)
 shape15152.initHasReflection(0)
@@ -549,7 +578,8 @@ shape15152.capture=4
 shape15152.build()
 
 var trivQuestionArray=[qu16619];
-arObjs.push(button15160);
+arObjs.push(text57784);
+arObjs.push(button64904);
 arObjs.push(image15142);
 arObjs.push(image15144);
 arObjs.push(image15147);
@@ -583,7 +613,8 @@ if( is.min ){
 
 <script>
 if( is.min ){
-    appendElement(button15160, null, null);
+    appendElement(text57784, null, null);
+    appendElement(button64904, null, null);
     appendElement(image15142, null, null);
     appendElement(image15144, null, null);
     appendElement(image15147, null, null);

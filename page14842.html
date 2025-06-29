@@ -169,6 +169,8 @@ function ReFlow() {
 
 
 VarTrivSelCap = new Variable( 'VarTrivSelCap', 'none', 0, 0, null, null, 'buildbettertraining', true )
+VarPageInTitle = new Variable( 'VarPageInTitle', null, 0, 0, null, null, 'buildbettertraining' )
+VarPageInTitle.set( '23' )
 VarQuestion_0005 = new Variable( 'VarQuestion_0005', '', 0, 0, null, null, 'buildbettertraining', false )
 VarTriMuteAllFLV = new Variable( 'VarTriMuteAllFLV', '', 0, 0, null, null, 'buildbettertraining', true )
 
@@ -193,10 +195,11 @@ function init11() {
   findWH()
   if( is.min ){
     trivPageTracking.InitPageTracking();
-    PreloadResources(new Array(shape14854,button14862,image14844,image14846,image14849,text14850,qu14888,text14890,entry14891))
+    PreloadResources(new Array(text57748,shape14854,button64432,image14844,image14846,image14849,text14850,qu14888,text14890,entry14891))
     pageLayer.show(true);
+    text57748.init()
     shape14854.init()
-    button14862.init()
+    button64432.init()
     image14844.init()
     image14846.init()
     image14849.init()
@@ -204,8 +207,9 @@ function init11() {
     qu14888.init()
     text14890.init()
     entry14891.init()
+    text57748.activate()
     shape14854.activate()
-    button14862.activate()
+    button64432.activate()
     image14844.activate()
     image14846.activate()
     image14849.activate()
@@ -213,8 +217,8 @@ function init11() {
     qu14888.activate()
     text14890.activate()
     entry14891.activate()
-button14862.strCookieState = (trivBtnTracking.GetRangeStatus(14862,true));
-button14862.loadStateFromSes("normalState");
+button64432.strCookieState = (trivBtnTracking.GetRangeStatus(64432,true));
+button64432.loadStateFromSes("normalState");
 		    try{
 		     var objToScroll = trivGetScrollObj(window.location.href) ;
 		     trivScrollTo(window, objToScroll);
@@ -224,6 +228,7 @@ button14862.loadStateFromSes("normalState");
     var valVarQuestion_0005 = VarQuestion_0005.getValue()
     if(valVarQuestion_0005!='~~~null~~~')entry14891.objLyr.doc.forms["entry14891form"]["Entry field"].value=valVarQuestion_0005
 
+    action57749();action57750();
     if(!isSinglePagePlayerAvail()) postPageShowAction();
     if( location.hash )
     {
@@ -346,7 +351,7 @@ function doImmFeedback( objId ) {
       qu14888PrevAns = ans_VarQuestion_0005;
    if( ans_VarQuestion_0005 != '~~~null~~~' ) {
     { //1 
-        trivActFBCnt++; action14888_5(onAfterFBAction);  return 0;
+        trivActFBCnt++; action14888_4(onAfterFBAction);  return 0;
   } //1
 
       }
@@ -357,6 +362,18 @@ function doImmFeedback( objId ) {
 
 function OnDeviceRotate() {
 
+}
+
+function action57749(fn){
+    text57748.actionChangeContents( "Page  " +  VarPageInTitle.getValue() + "","alignleft","1" ); 
+    if(fn && typeof(fn) == 'string' ) eval(fn);
+    else if(fn && typeof(fn) == 'function' ) fn();
+}
+
+function action57750(fn){
+    text57748.actionShow(); 
+    if(fn && typeof(fn) == 'string' ) eval(fn);
+    else if(fn && typeof(fn) == 'function' ) fn();
 }
 
 function action14978(fn){
@@ -379,28 +396,22 @@ function shape14854actionShow() {
   setTimeout("if(!shape14854.isVisible()) { shape14854.objLyr.doTrans( 0, 33, 4, null, shape14854.objLyr.x, shape14854.objLyr.y, -43, -39, winW+20, winH+20, 0, -1, 0 ); }", 1 )
 }
 
-function action14863(fn){
-    trivExitPage('page5889.html',true); 
+function action64433(fn){
+    trivExitPage('page12346.html',false); 
     if(fn && typeof(fn) == 'string' ) eval(fn);
     else if(fn && typeof(fn) == 'function' ) fn();
 }
 
-function action14864(fn){
-    
-    if(fn && typeof(fn) == 'string' ) eval(fn);
-    else if(fn && typeof(fn) == 'function' ) fn();
-}
-
-function button14862onUp() {
-  action14863();action14864();
+function button64432onUp() {
+  action64433();
 }
 
 function Offset_qu14888(bDevRotate) {
 }
 
 
-function action14888_5(fn){
-    if(!document.getElementById("DLG_Div_14888"))trivAlert( 'action14888_5', 'BuildBetterTraining', 'Sample Answer 1:\n In a past equipment training, we only covered steps and definitions. Later, techs couldn’t figure out why systems failed because they never practiced analyzing the process. I would add case-based exercises showing system breakdowns for them to examine.\n\nSample Answer 2:\nA case study with conflicting information and a failed outcome, like a missed safety check, would force learners to break it down and trace the root cause.', fn );
+function action14888_4(fn){
+    if(!document.getElementById("DLG_Div_14888"))trivAlert( 'action14888_4', 'BuildBetterTraining', 'Sample Answer 1:\n In a past equipment training, we only covered steps and definitions. Later, techs couldn’t figure out why systems failed because they never practiced analyzing the process. I would add case-based exercises showing system breakdowns for them to examine.\n\nSample Answer 2:\nA case study with conflicting information and a failed outcome, like a missed safety check, would force learners to break it down and trace the root cause.', fn );
 }
 
 function action14968(fn){
@@ -426,7 +437,25 @@ function Update_entry14891( upd ) {
 }
 
 if( is.min ){
-shape14854 = new ObjImage('shape14854','images/shape14854.png','Triangle Right',928,457,28.000000,25.000000,0,20,'div','',0 )
+text57748 = new ObjText('text57748',null,50,685,116,21,0,21,null,'div',null,1 )
+text57748.initSLine(1)
+text57748.initHasBullet(0)
+text57748.initRotateAngle(0,0,0)
+text57748.initHasOuterShadow(0)
+text57748.initHasTextShadow(0)
+text57748.initHasBorder(0)
+text57748.initHasOutline(0)
+text57748.initHasMargin(0)
+text57748.addIe8Attr(50, 685, 116, 21, 0, 0)
+text57748.addHeading(0)
+text57748.addOpacity(100)
+text57748.arrCSSStyles = new Array();
+text57748.arrCSSStyles.push('span.text57748Font1 { font-size:13px; font-family:"Arial", sans-serif; color:#21314d;}');
+text57748.arrCSSStyles.push('span.text57748Font2 { font-size:13px; font-family:"Arial", sans-serif; color:#000000;}');
+text57748.addInnerText('<div id=\"text57748\" aria-live=\"off\"  ><p lang=\"en\"  style=\"margin-left:0px;text-indent:0px;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text57748Font1\"  >Page n</span ><span class=\"text57748Font2\" style=\"background-color:transparent\" >\n</span ></p ></div>\n');
+text57748.build()
+
+shape14854 = new ObjImage('shape14854','images/shape14854.png','Triangle Right',928,457,28.000000,25.000000,0,22,'div','',0 )
 shape14854.initRotateAngle(0,0,0,-1.000000,-1.000000,26,23)
 shape14854.initHasShadow(0)
 shape14854.initHasReflection(0)
@@ -443,32 +472,32 @@ shape14854.actionShow = shape14854actionShow
 shape14854.capture=4
 shape14854.build()
 
-button14862 = new ObjButton('button14862', 'Back',71,61,82.000000,35.000000,1,21,'div','',1,0)
-button14862.setUseSvgFile(1)
-button14862.setFillStyle(1)
-button14862.setUniqueFillID('page14842_button14862')
-button14862.initRotateAngle(0,0,0,-0.000000,-0.000000,81,34)
-button14862.initHasShadow(0)
-button14862.initHasReflection(0)
-button14862.setImages({"disabledState":"","downState":"","normalState":"images/button14862.png","overState":"","selectedState":"","visitedState":""});
-button14862.setStateOpacity({"disabledState":1.0,"downState":1.0,"normalState":1.0,"overState":1.0,"selectedState":1.0,"visitedState":1.0});
-button14862.addOpacity(100)
-button14862.initImageMap('81,10,17,10,17,0,0,17,17,34,17,24,81,24,81,10','M 81.000000 9.690001 L 17.000000 9.690001 L 17.000000 0.000000 L 0.000000 17.000000 L 17.000000 34.000000 L 17.000000 24.309999 L 81.000000 24.309999 L 81.000000 9.690001 z')
-button14862.setFills({"disabledState":{"fillInfo":"","stylePath":"fill:#708DC1;\""},"downState":{"fillInfo":"","stylePath":"fill:#223D6C;\""},"normalState":{"fillInfo":"","stylePath":"fill:#21314D;\""},"overState":{"fillInfo":"","stylePath":"fill:#223D6C;\""},"selectedState":{"fillInfo":"","screenRdr":"Selected","stylePath":"fill:#1B4FAA;\""},"visitedState":{"fillInfo":"","screenRdr":"Visited","stylePath":"fill:#1B4FAA;\""}});
-button14862.setImgFillVal({"disabledState":{"B64":"","fill":"","style":""},"downState":{"B64":"","fill":"","style":""},"normalState":{"B64":"","fill":"","style":""},"overState":{"B64":"","fill":"","style":""},"selectedState":{"B64":"","fill":"","style":""},"visitedState":{"B64":"","fill":"","style":""}});
-button14862.initLineWeight('0')
-button14862.onUp = button14862onUp
-button14862.hasOnUp = true
-button14862.capture=4
-button14862.setTextVal({"disabledState":{"div":"div.button14862disabledStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:81.000000px; height:34.000000px;}","span":"span.button14862disabledStateText { width:77.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"downState":{"div":"div.button14862downStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:81.000000px; height:34.000000px;}","span":"span.button14862downStateText { width:77.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"normalState":{"div":"div.button14862Text { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:81.000000px; height:34.000000px;}","span":"span.button14862Text { width:77.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"overState":{"div":"div.button14862overStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:81.000000px; height:34.000000px;}","span":"span.button14862overStateText { width:77.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"selectedState":{"div":"div.button14862selectedStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:81.000000px; height:34.000000px;}","span":"span.button14862selectedStateText { width:77.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"visitedState":{"div":"div.button14862visitedStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:81.000000px; height:34.000000px;}","span":"span.button14862visitedStateText { width:77.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"}});
-button14862.text = 'Back'
-button14862.bSelectedEnabled = false;
-button14862.bVisitedEnabled = false;
-button14862.bOverEnabled = true;
-button14862.bDownEnabled = true;
-button14862.build()
+button64432 = new ObjButton('button64432', 'Back',50,50,81.000000,43.000000,1,23,'div','',1,0)
+button64432.setUseSvgFile(1)
+button64432.setFillStyle(1)
+button64432.setUniqueFillID('page14842_button64432')
+button64432.initRotateAngle(0,0,0,-0.000000,-0.000000,80,42)
+button64432.initHasShadow(0)
+button64432.initHasReflection(0)
+button64432.setImages({"disabledState":"","downState":"","normalState":"images/button64432.png","overState":"","selectedState":"","visitedState":""});
+button64432.setStateOpacity({"disabledState":1.0,"downState":1.0,"normalState":1.0,"overState":1.0,"selectedState":1.0,"visitedState":1.0});
+button64432.addOpacity(100)
+button64432.initImageMap('80,12,21,12,21,0,0,21,21,42,21,30,80,30,80,12','M 80.000000 11.970000 L 21.000000 11.970000 L 21.000000 0.000000 L 0.000000 21.000000 L 21.000000 42.000000 L 21.000000 30.029999 L 80.000000 30.029999 L 80.000000 11.970000 z')
+button64432.setFills({"disabledState":{"fillInfo":"","stylePath":"fill:#708DC1;\""},"downState":{"fillInfo":"","stylePath":"fill:#223D6C;\""},"normalState":{"fillInfo":"","stylePath":"fill:#21314D;\""},"overState":{"fillInfo":"","stylePath":"fill:#223D6C;\""},"selectedState":{"fillInfo":"","screenRdr":"Selected","stylePath":"fill:#1B4FAA;\""},"visitedState":{"fillInfo":"","screenRdr":"Visited","stylePath":"fill:#1B4FAA;\""}});
+button64432.setImgFillVal({"disabledState":{"B64":"","fill":"","style":""},"downState":{"B64":"","fill":"","style":""},"normalState":{"B64":"","fill":"","style":""},"overState":{"B64":"","fill":"","style":""},"selectedState":{"B64":"","fill":"","style":""},"visitedState":{"B64":"","fill":"","style":""}});
+button64432.initLineWeight('0')
+button64432.onUp = button64432onUp
+button64432.hasOnUp = true
+button64432.capture=4
+button64432.setTextVal({"disabledState":{"div":"div.button64432disabledStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:80.000000px; height:42.000000px;}","span":"span.button64432disabledStateText { width:76.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"downState":{"div":"div.button64432downStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:80.000000px; height:42.000000px;}","span":"span.button64432downStateText { width:76.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"normalState":{"div":"div.button64432Text { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:80.000000px; height:42.000000px;}","span":"span.button64432Text { width:76.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"overState":{"div":"div.button64432overStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:80.000000px; height:42.000000px;}","span":"span.button64432overStateText { width:76.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"selectedState":{"div":"div.button64432selectedStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:80.000000px; height:42.000000px;}","span":"span.button64432selectedStateText { width:76.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"visitedState":{"div":"div.button64432visitedStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:80.000000px; height:42.000000px;}","span":"span.button64432visitedStateText { width:76.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"}});
+button64432.text = 'Back'
+button64432.bSelectedEnabled = false;
+button64432.bVisitedEnabled = false;
+button64432.bOverEnabled = true;
+button64432.bDownEnabled = true;
+button64432.build()
 
-image14844 = new ObjImage('image14844','images/litchen_background.png','Kitchen background',0,2,1280,719,1,3,'div',null, 0 )
+image14844 = new ObjImage('image14844','images/litchen_background.png','Kitchen background',0,2,1280,719,1,4,'div',null, 0 )
 image14844.initRotateAngle(0,0,0,0,0,0,0)
 image14844.initHasShadow(0)
 image14844.initHasReflection(0)
@@ -478,7 +507,7 @@ image14844.addBorder(0)
 image14844.addOpacity(100)
 image14844.build()
 
-image14846 = new ObjImage('image14846','images/recipe_cardcrop_image9621.png','Recipe card',152,124,858,462,1,4,'div',null, 0 )
+image14846 = new ObjImage('image14846','images/recipe_cardcrop_image9621.png','Recipe card',152,124,858,462,1,5,'div',null, 0 )
 image14846.initRotateAngle(0,0,0,0,0,0,0)
 image14846.initHasShadow(0)
 image14846.initHasReflection(0)
@@ -488,7 +517,7 @@ image14846.addBorder(0)
 image14846.addOpacity(100)
 image14846.build()
 
-image14849 = new ObjImage('image14849','images/knifecrop_image9630.png','knife',635,78,224,211,1,5,'div',null, 0 )
+image14849 = new ObjImage('image14849','images/knifecrop_image9630.png','knife',635,78,224,211,1,6,'div',null, 0 )
 image14849.initRotateAngle(44,0,0,0,0,0,0)
 image14849.initHasShadow(0)
 image14849.initHasReflection(0)
@@ -498,7 +527,7 @@ image14849.addBorder(0)
 image14849.addOpacity(100)
 image14849.build()
 
-text14850 = new ObjText('text14850',null,736,178,93,23,1,6,null,'div',null,0 )
+text14850 = new ObjText('text14850',null,736,178,93,23,1,7,null,'div',null,0 )
 text14850.initSLine(1)
 text14850.initHasBullet(0)
 text14850.initRotateAngle(0,0,0)
@@ -523,7 +552,7 @@ qu14888.addChild('entry14891')
 qu14888.ansVar=VarQuestion_0005;
 qu14888.build()
 
-text14890 = new ObjText('text14890',null,200,234,729,101,1,7,null,'div',null,0 )
+text14890 = new ObjText('text14890',null,200,234,729,101,1,8,null,'div',null,0 )
 text14890.initSLine(0)
 text14890.initHasBullet(0)
 text14890.initRotateAngle(0,0,0)
@@ -540,15 +569,16 @@ text14890.arrCSSStyles.push('span.text14890Font1 { font-size:16px; font-family:"
 text14890.addInnerText('<legend><div id=\"text14890\" aria-live=\"off\"  ><label id=\"label14891id\" for=\"entry14891id\" ><p lang=\"en\"  legLH=\"1.409\" style=\"margin-left:0px;text-indent:0px;line-height:1.350;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text14890Font1\" style=\"position:relative;top:-2px;\" >1) Think of a time when training failed because analysis wasn\'t included. What would you change?\n</span ></p >\n<p  legLH=\"1.409\" style=\"margin-left:0px;text-indent:0px;line-height:1.350;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text14890Font1\" style=\"position:relative;top:-2px;\" >2) What type of case study or data set could help learners build analytical thinking? \n</span ></p >\n<p  legLH=\"1.409\" style=\"margin-left:0px;text-indent:0px;line-height:1.350;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text14890Font1\" style=\"position:relative;top:-2px;\" >Write your answers in the box, and click on the blue triangle to review a sample answer for the question.\n</span ></p ></label></div>\n</legend>\n');
 text14890.build()
 
-entry14891 = new ObjInline('entry14891',null,(is.ie?200:200),(is.ie?342:341),null,null,1,8, 0, null, null, 0)
+entry14891 = new ObjInline('entry14891',null,(is.ie?200:200),(is.ie?342:341),null,null,1,9, 0, null, null, 0)
 entry14891.onSelChg = entry14891onSelChg
 entry14891.arrCSSStyles = new Array();
 entry14891.arrCSSStyles.push('textarea.entry14891 { font-size:16px; font-family:"Arial", sans-serif; color:#21314d; width:693px; height:202px; -webkit-appearance:none; background-color:#ffffff; }');
 entry14891.build()
 
 var trivQuestionArray=[qu14888];
+arObjs.push(text57748);
 arObjs.push(shape14854);
-arObjs.push(button14862);
+arObjs.push(button64432);
 arObjs.push(image14844);
 arObjs.push(image14846);
 arObjs.push(image14849);
@@ -581,8 +611,9 @@ if( is.min ){
 
 <script>
 if( is.min ){
+    appendElement(text57748, null, null);
     appendElement(shape14854, null, null);
-    appendElement(button14862, null, null);
+    appendElement(button64432, null, null);
     appendElement(image14844, null, null);
     appendElement(image14846, null, null);
     appendElement(image14849, null, null);

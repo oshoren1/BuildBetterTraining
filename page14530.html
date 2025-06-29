@@ -169,6 +169,8 @@ function ReFlow() {
 
 
 VarTrivSelCap = new Variable( 'VarTrivSelCap', 'none', 0, 0, null, null, 'buildbettertraining', true )
+VarPageInTitle = new Variable( 'VarPageInTitle', null, 0, 0, null, null, 'buildbettertraining' )
+VarPageInTitle.set( '20' )
 VarQuestion_0004 = new Variable( 'VarQuestion_0004', '', 0, 0, null, null, 'buildbettertraining', false )
 VarTriMuteAllFLV = new Variable( 'VarTriMuteAllFLV', '', 0, 0, null, null, 'buildbettertraining', true )
 
@@ -193,10 +195,11 @@ function init11() {
   findWH()
   if( is.min ){
     trivPageTracking.InitPageTracking();
-    PreloadResources(new Array(shape14542,button14550,image14532,image14534,og14535,image14537,text14538,qu14578,text14580,entry14581))
+    PreloadResources(new Array(text57641,shape14542,button63952,image14532,image14534,og14535,image14537,text14538,qu14578,text14580,entry14581))
     pageLayer.show(true);
+    text57641.init()
     shape14542.init()
-    button14550.init()
+    button63952.init()
     image14532.init()
     image14534.init()
     og14535.init()
@@ -205,8 +208,9 @@ function init11() {
     qu14578.init()
     text14580.init()
     entry14581.init()
+    text57641.activate()
     shape14542.activate()
-    button14550.activate()
+    button63952.activate()
     image14532.activate()
     image14534.activate()
     og14535.activate()
@@ -215,8 +219,8 @@ function init11() {
     qu14578.activate()
     text14580.activate()
     entry14581.activate()
-button14550.strCookieState = (trivBtnTracking.GetRangeStatus(14550,true));
-button14550.loadStateFromSes("normalState");
+button63952.strCookieState = (trivBtnTracking.GetRangeStatus(63952,true));
+button63952.loadStateFromSes("normalState");
 		    try{
 		     var objToScroll = trivGetScrollObj(window.location.href) ;
 		     trivScrollTo(window, objToScroll);
@@ -226,6 +230,7 @@ button14550.loadStateFromSes("normalState");
     var valVarQuestion_0004 = VarQuestion_0004.getValue()
     if(valVarQuestion_0004!='~~~null~~~')entry14581.objLyr.doc.forms["entry14581form"]["Entry field"].value=valVarQuestion_0004
 
+    action57642();action57643();
     if(!isSinglePagePlayerAvail()) postPageShowAction();
     if( location.hash )
     {
@@ -348,7 +353,7 @@ function doImmFeedback( objId ) {
       qu14578PrevAns = ans_VarQuestion_0004;
    if( ans_VarQuestion_0004 != '~~~null~~~' ) {
     { //1 
-        trivActFBCnt++; action14578_3(onAfterFBAction);  return 0;
+        trivActFBCnt++; action14578_4(onAfterFBAction);  return 0;
   } //1
 
       }
@@ -359,6 +364,18 @@ function doImmFeedback( objId ) {
 
 function OnDeviceRotate() {
 
+}
+
+function action57642(fn){
+    text57641.actionChangeContents( "Page  " +  VarPageInTitle.getValue() + "","alignleft","1" ); 
+    if(fn && typeof(fn) == 'string' ) eval(fn);
+    else if(fn && typeof(fn) == 'function' ) fn();
+}
+
+function action57643(fn){
+    text57641.actionShow(); 
+    if(fn && typeof(fn) == 'string' ) eval(fn);
+    else if(fn && typeof(fn) == 'function' ) fn();
 }
 
 function action14637(fn){
@@ -381,28 +398,22 @@ function shape14542actionShow() {
   setTimeout("if(!shape14542.isVisible()) { shape14542.objLyr.doTrans( 0, 33, 4, null, shape14542.objLyr.x, shape14542.objLyr.y, -40, -38, winW+20, winH+20, 0, -1, 0 ); }", 1 )
 }
 
-function action14551(fn){
-    trivExitPage('page5889.html',true); 
+function action63953(fn){
+    trivExitPage('page11948.html',false); 
     if(fn && typeof(fn) == 'string' ) eval(fn);
     else if(fn && typeof(fn) == 'function' ) fn();
 }
 
-function action14552(fn){
-    
-    if(fn && typeof(fn) == 'string' ) eval(fn);
-    else if(fn && typeof(fn) == 'function' ) fn();
-}
-
-function button14550onUp() {
-  action14551();action14552();
+function button63952onUp() {
+  action63953();
 }
 
 function Offset_qu14578(bDevRotate) {
 }
 
 
-function action14578_3(fn){
-    if(!document.getElementById("DLG_Div_14578"))trivAlert( 'action14578_3', 'BuildBetterTraining', 'Sample Answer 1:\nIn a safety training I attended, we were taught emergency procedures through slides and diagrams, but never practiced them. When an actual incident occurred, people hesitated. A hands-on drill or role-play during training would have helped us apply the steps under pressure, making us more confident and prepared.\n\nSample Answer 2:\nThey should be able to use the skill independently in a realistic task, like running a procedure correctly without prompts, or solving a common problem using what they’ve learned.', fn );
+function action14578_4(fn){
+    if(!document.getElementById("DLG_Div_14578"))trivAlert( 'action14578_4', 'BuildBetterTraining', 'Sample Answer 1:\nIn a safety training I attended, we were taught emergency procedures through slides and diagrams, but never practiced them. When an actual incident occurred, people hesitated. A hands-on drill or role-play during training would have helped us apply the steps under pressure, making us more confident and prepared.\n\nSample Answer 2:\nThey should be able to use the skill independently in a realistic task, like running a procedure correctly without prompts, or solving a common problem using what they’ve learned.', fn );
 }
 
 function action14621(fn){
@@ -428,7 +439,25 @@ function Update_entry14581( upd ) {
 }
 
 if( is.min ){
-shape14542 = new ObjImage('shape14542','images/shape14542.png','Triangle Right',901,456,28.000000,25.000000,0,21,'div','',0 )
+text57641 = new ObjText('text57641',null,50,685,116,21,0,22,null,'div',null,1 )
+text57641.initSLine(1)
+text57641.initHasBullet(0)
+text57641.initRotateAngle(0,0,0)
+text57641.initHasOuterShadow(0)
+text57641.initHasTextShadow(0)
+text57641.initHasBorder(0)
+text57641.initHasOutline(0)
+text57641.initHasMargin(0)
+text57641.addIe8Attr(50, 685, 116, 21, 0, 0)
+text57641.addHeading(0)
+text57641.addOpacity(100)
+text57641.arrCSSStyles = new Array();
+text57641.arrCSSStyles.push('span.text57641Font1 { font-size:13px; font-family:"Arial", sans-serif; color:#21314d;}');
+text57641.arrCSSStyles.push('span.text57641Font2 { font-size:13px; font-family:"Arial", sans-serif; color:#000000;}');
+text57641.addInnerText('<div id=\"text57641\" aria-live=\"off\"  ><p lang=\"en\"  style=\"margin-left:0px;text-indent:0px;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text57641Font1\"  >Page n</span ><span class=\"text57641Font2\" style=\"background-color:transparent\" >\n</span ></p ></div>\n');
+text57641.build()
+
+shape14542 = new ObjImage('shape14542','images/shape14542.png','Triangle Right',901,456,28.000000,25.000000,0,23,'div','',0 )
 shape14542.initRotateAngle(0,0,0,-1.000000,-1.000000,26,23)
 shape14542.initHasShadow(0)
 shape14542.initHasReflection(0)
@@ -445,32 +474,32 @@ shape14542.actionShow = shape14542actionShow
 shape14542.capture=4
 shape14542.build()
 
-button14550 = new ObjButton('button14550', 'Back',50,50,82.000000,35.000000,1,22,'div','',1,0)
-button14550.setUseSvgFile(1)
-button14550.setFillStyle(1)
-button14550.setUniqueFillID('page14530_button14550')
-button14550.initRotateAngle(0,0,0,-0.000000,-0.000000,81,34)
-button14550.initHasShadow(0)
-button14550.initHasReflection(0)
-button14550.setImages({"disabledState":"","downState":"","normalState":"images/button14550.png","overState":"","selectedState":"","visitedState":""});
-button14550.setStateOpacity({"disabledState":1.0,"downState":1.0,"normalState":1.0,"overState":1.0,"selectedState":1.0,"visitedState":1.0});
-button14550.addOpacity(100)
-button14550.initImageMap('81,10,17,10,17,0,0,17,17,34,17,24,81,24,81,10','M 81.000000 9.690001 L 17.000000 9.690001 L 17.000000 0.000000 L 0.000000 17.000000 L 17.000000 34.000000 L 17.000000 24.309999 L 81.000000 24.309999 L 81.000000 9.690001 z')
-button14550.setFills({"disabledState":{"fillInfo":"","stylePath":"fill:#708DC1;\""},"downState":{"fillInfo":"","stylePath":"fill:#223D6C;\""},"normalState":{"fillInfo":"","stylePath":"fill:#21314D;\""},"overState":{"fillInfo":"","stylePath":"fill:#223D6C;\""},"selectedState":{"fillInfo":"","screenRdr":"Selected","stylePath":"fill:#1B4FAA;\""},"visitedState":{"fillInfo":"","screenRdr":"Visited","stylePath":"fill:#1B4FAA;\""}});
-button14550.setImgFillVal({"disabledState":{"B64":"","fill":"","style":""},"downState":{"B64":"","fill":"","style":""},"normalState":{"B64":"","fill":"","style":""},"overState":{"B64":"","fill":"","style":""},"selectedState":{"B64":"","fill":"","style":""},"visitedState":{"B64":"","fill":"","style":""}});
-button14550.initLineWeight('0')
-button14550.onUp = button14550onUp
-button14550.hasOnUp = true
-button14550.capture=4
-button14550.setTextVal({"disabledState":{"div":"div.button14550disabledStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:81.000000px; height:34.000000px;}","span":"span.button14550disabledStateText { width:77.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"downState":{"div":"div.button14550downStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:81.000000px; height:34.000000px;}","span":"span.button14550downStateText { width:77.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"normalState":{"div":"div.button14550Text { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:81.000000px; height:34.000000px;}","span":"span.button14550Text { width:77.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"overState":{"div":"div.button14550overStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:81.000000px; height:34.000000px;}","span":"span.button14550overStateText { width:77.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"selectedState":{"div":"div.button14550selectedStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:81.000000px; height:34.000000px;}","span":"span.button14550selectedStateText { width:77.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"visitedState":{"div":"div.button14550visitedStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:81.000000px; height:34.000000px;}","span":"span.button14550visitedStateText { width:77.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"}});
-button14550.text = 'Back'
-button14550.bSelectedEnabled = false;
-button14550.bVisitedEnabled = false;
-button14550.bOverEnabled = true;
-button14550.bDownEnabled = true;
-button14550.build()
+button63952 = new ObjButton('button63952', 'Back',50,50,81.000000,43.000000,1,24,'div','',1,0)
+button63952.setUseSvgFile(1)
+button63952.setFillStyle(1)
+button63952.setUniqueFillID('page14530_button63952')
+button63952.initRotateAngle(0,0,0,-0.000000,-0.000000,80,42)
+button63952.initHasShadow(0)
+button63952.initHasReflection(0)
+button63952.setImages({"disabledState":"","downState":"","normalState":"images/button63952.png","overState":"","selectedState":"","visitedState":""});
+button63952.setStateOpacity({"disabledState":1.0,"downState":1.0,"normalState":1.0,"overState":1.0,"selectedState":1.0,"visitedState":1.0});
+button63952.addOpacity(100)
+button63952.initImageMap('80,12,21,12,21,0,0,21,21,42,21,30,80,30,80,12','M 80.000000 11.970000 L 21.000000 11.970000 L 21.000000 0.000000 L 0.000000 21.000000 L 21.000000 42.000000 L 21.000000 30.029999 L 80.000000 30.029999 L 80.000000 11.970000 z')
+button63952.setFills({"disabledState":{"fillInfo":"","stylePath":"fill:#708DC1;\""},"downState":{"fillInfo":"","stylePath":"fill:#223D6C;\""},"normalState":{"fillInfo":"","stylePath":"fill:#21314D;\""},"overState":{"fillInfo":"","stylePath":"fill:#223D6C;\""},"selectedState":{"fillInfo":"","screenRdr":"Selected","stylePath":"fill:#1B4FAA;\""},"visitedState":{"fillInfo":"","screenRdr":"Visited","stylePath":"fill:#1B4FAA;\""}});
+button63952.setImgFillVal({"disabledState":{"B64":"","fill":"","style":""},"downState":{"B64":"","fill":"","style":""},"normalState":{"B64":"","fill":"","style":""},"overState":{"B64":"","fill":"","style":""},"selectedState":{"B64":"","fill":"","style":""},"visitedState":{"B64":"","fill":"","style":""}});
+button63952.initLineWeight('0')
+button63952.onUp = button63952onUp
+button63952.hasOnUp = true
+button63952.capture=4
+button63952.setTextVal({"disabledState":{"div":"div.button63952disabledStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:80.000000px; height:42.000000px;}","span":"span.button63952disabledStateText { width:76.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"downState":{"div":"div.button63952downStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:80.000000px; height:42.000000px;}","span":"span.button63952downStateText { width:76.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"normalState":{"div":"div.button63952Text { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:80.000000px; height:42.000000px;}","span":"span.button63952Text { width:76.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"overState":{"div":"div.button63952overStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:80.000000px; height:42.000000px;}","span":"span.button63952overStateText { width:76.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"selectedState":{"div":"div.button63952selectedStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:80.000000px; height:42.000000px;}","span":"span.button63952selectedStateText { width:76.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"visitedState":{"div":"div.button63952visitedStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:80.000000px; height:42.000000px;}","span":"span.button63952visitedStateText { width:76.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"}});
+button63952.text = 'Back'
+button63952.bSelectedEnabled = false;
+button63952.bVisitedEnabled = false;
+button63952.bOverEnabled = true;
+button63952.bDownEnabled = true;
+button63952.build()
 
-image14532 = new ObjImage('image14532','images/litchen_background.png','Kitchen background',0,0,1280,719,1,3,'div',null, 0 )
+image14532 = new ObjImage('image14532','images/litchen_background.png','Kitchen background',0,0,1280,719,1,4,'div',null, 0 )
 image14532.initRotateAngle(0,0,0,0,0,0,0)
 image14532.initHasShadow(0)
 image14532.initHasReflection(0)
@@ -480,7 +509,7 @@ image14532.addBorder(0)
 image14532.addOpacity(100)
 image14532.build()
 
-image14534 = new ObjImage('image14534','images/recipe_cardcrop_image9621.png','Recipe card',160,138,858,462,1,4,'div',null, 0 )
+image14534 = new ObjImage('image14534','images/recipe_cardcrop_image9621.png','Recipe card',160,138,858,462,1,5,'div',null, 0 )
 image14534.initRotateAngle(0,0,0,0,0,0,0)
 image14534.initHasShadow(0)
 image14534.initHasReflection(0)
@@ -496,7 +525,7 @@ og14535.addChild('image14537')
 og14535.addChild('text14538')
 og14535.build()
 
-image14537 = new ObjImage('image14537','images/knifecrop_image9630.png','knife',630,84,224,211,1,5,'div',null, 0 )
+image14537 = new ObjImage('image14537','images/knifecrop_image9630.png','knife',630,84,224,211,1,6,'div',null, 0 )
 image14537.initRotateAngle(44,0,0,0,0,0,0)
 image14537.initHasShadow(0)
 image14537.initHasReflection(0)
@@ -506,7 +535,7 @@ image14537.addBorder(0)
 image14537.addOpacity(100)
 image14537.build()
 
-text14538 = new ObjText('text14538',null,731,184,93,23,1,6,null,'div',null,0 )
+text14538 = new ObjText('text14538',null,731,184,93,23,1,7,null,'div',null,0 )
 text14538.initSLine(1)
 text14538.initHasBullet(0)
 text14538.initRotateAngle(0,0,0)
@@ -531,7 +560,7 @@ qu14578.addChild('entry14581')
 qu14578.ansVar=VarQuestion_0004;
 qu14578.build()
 
-text14580 = new ObjText('text14580',null,199,240,729,169,1,7,null,'div',null,0 )
+text14580 = new ObjText('text14580',null,199,240,729,169,1,8,null,'div',null,0 )
 text14580.initSLine(0)
 text14580.initHasBullet(0)
 text14580.initRotateAngle(0,0,0)
@@ -549,15 +578,16 @@ text14580.arrCSSStyles.push('span.text14580Font1 { font-size:16px; font-family:"
 text14580.addInnerText('<legend><div id=\"text14580\" aria-live=\"off\"  ><label id=\"label14581id\" for=\"entry14581id\" ><p lang=\"en\"  legLH=\"1.409\" style=\"margin-left:0px;text-indent:0px;line-height:1.350;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text14580Font1\" style=\"position:relative;top:-2px;\" >1) Think of a past training you\'ve delivered or attended. Was there a point where learners were expected to apply knowledge but struggled? What could have been done differently to support successful application?</span ><span class=\"text14580Font0\" style=\"background-color:transparentposition:relative;top:-2px;\" >\n</span ></p >\n<p  legLH=\"1.409\" style=\"margin-left:0px;text-indent:0px;line-height:1.350;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text14580Font1\" style=\"position:relative;top:-2px;\" >2) How would you know if a learner is successfully applying a skill in a real-world setting?\n</span ></p >\n<p  legLH=\"1.409\" style=\"margin-left:0px;text-indent:0px;line-height:1.350;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text14580Font1\" style=\"background-color:transparentposition:relative;top:-2px;\" >\n&nbsp;</span ></p >\n<p  legLH=\"1.409\" style=\"margin-left:0px;text-indent:0px;line-height:1.350;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text14580Font1\" style=\"position:relative;top:-2px;\" >Write your answers in the box, and click on the blue triangle to review a sample answer for the question.</span ><span class=\"text14580Font0\" style=\"background-color:transparentposition:relative;top:-2px;\" >\n</span ></p ></label></div>\n</legend>\n');
 text14580.build()
 
-entry14581 = new ObjInline('entry14581',null,(is.ie?228:228),(is.ie?387:386),null,null,1,8, 0, null, null, 0)
+entry14581 = new ObjInline('entry14581',null,(is.ie?228:228),(is.ie?387:386),null,null,1,9, 0, null, null, 0)
 entry14581.onSelChg = entry14581onSelChg
 entry14581.arrCSSStyles = new Array();
 entry14581.arrCSSStyles.push('textarea.entry14581 { font-size:16px; font-family:"Arial", sans-serif; color:#21314d; width:631px; height:181px; -webkit-appearance:none; background-color:#ffffff; }');
 entry14581.build()
 
 var trivQuestionArray=[qu14578];
+arObjs.push(text57641);
 arObjs.push(shape14542);
-arObjs.push(button14550);
+arObjs.push(button63952);
 arObjs.push(image14532);
 arObjs.push(image14534);
 arObjs.push(og14535);
@@ -592,8 +622,9 @@ if( is.min ){
 
 <script>
 if( is.min ){
+    appendElement(text57641, null, null);
     appendElement(shape14542, null, null);
-    appendElement(button14550, null, null);
+    appendElement(button63952, null, null);
     appendElement(image14532, null, null);
     appendElement(image14534, null, null);
     appendElement(image14537, null, null);

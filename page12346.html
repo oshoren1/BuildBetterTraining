@@ -165,6 +165,8 @@ function ReFlow() {
 
 
 VarTrivSelCap = new Variable( 'VarTrivSelCap', 'none', 0, 0, null, null, 'buildbettertraining', true )
+VarPageInTitle = new Variable( 'VarPageInTitle', null, 0, 0, null, null, 'buildbettertraining' )
+VarPageInTitle.set( '22' )
 VarTriMuteAllFLV = new Variable( 'VarTriMuteAllFLV', '', 0, 0, null, null, 'buildbettertraining', true )
 
 onload = responsiveInit
@@ -188,9 +190,10 @@ function init11() {
   findWH()
   if( is.min ){
     trivPageTracking.InitPageTracking();
-    PreloadResources(new Array(button12366,image12348,image12350,image12353,text12354,text12355,text12356,shape12358))
+    PreloadResources(new Array(text57736,button64276,image12348,image12350,image12353,text12354,text12355,text12356,shape12358))
     pageLayer.show(true);
-    button12366.init()
+    text57736.init()
+    button64276.init()
     image12348.init()
     image12350.init()
     image12353.init()
@@ -198,7 +201,8 @@ function init11() {
     text12355.init()
     text12356.init()
     shape12358.init()
-    button12366.activate()
+    text57736.activate()
+    button64276.activate()
     image12348.activate()
     image12350.activate()
     image12353.activate()
@@ -206,14 +210,15 @@ function init11() {
     text12355.activate()
     text12356.activate()
     shape12358.activate()
-button12366.strCookieState = (trivBtnTracking.GetRangeStatus(12366,true));
-button12366.loadStateFromSes("normalState");
+button64276.strCookieState = (trivBtnTracking.GetRangeStatus(64276,true));
+button64276.loadStateFromSes("normalState");
 		    try{
 		     var objToScroll = trivGetScrollObj(window.location.href) ;
 		     trivScrollTo(window, objToScroll);
 		     var titleManagerIndexWindow = (window && window.parent && window.parent.bIsTitleManagerIndexFile) ? window.parent : null;
 		     if(titleManagerIndexWindow)  trivScrollTo(titleManagerIndexWindow, objToScroll);
 		    } catch (e) { }
+    action57737();action57738();
     if(!isSinglePagePlayerAvail()) postPageShowAction();
     if( location.hash )
     {
@@ -318,20 +323,26 @@ function OnDeviceRotate() {
 
 }
 
-function action12367(fn){
-    trivExitPage('page5889.html',true); 
+function action57737(fn){
+    text57736.actionChangeContents( "Page  " +  VarPageInTitle.getValue() + "","alignleft","1" ); 
     if(fn && typeof(fn) == 'string' ) eval(fn);
     else if(fn && typeof(fn) == 'function' ) fn();
 }
 
-function action12368(fn){
-    
+function action57738(fn){
+    text57736.actionShow(); 
     if(fn && typeof(fn) == 'string' ) eval(fn);
     else if(fn && typeof(fn) == 'function' ) fn();
 }
 
-function button12366onUp() {
-  action12367();action12368();
+function action64277(fn){
+    trivExitPage('page14658.html',false); 
+    if(fn && typeof(fn) == 'string' ) eval(fn);
+    else if(fn && typeof(fn) == 'function' ) fn();
+}
+
+function button64276onUp() {
+  action64277();
 }
 
 function action12359(fn){
@@ -349,32 +360,50 @@ function shape12358actionShow() {
 }
 
 if( is.min ){
-button12366 = new ObjButton('button12366', 'Back',70,61,82.000000,35.000000,1,19,'div','',1,0)
-button12366.setUseSvgFile(1)
-button12366.setFillStyle(1)
-button12366.setUniqueFillID('page12346_button12366')
-button12366.initRotateAngle(0,0,0,-0.000000,-0.000000,81,34)
-button12366.initHasShadow(0)
-button12366.initHasReflection(0)
-button12366.setImages({"disabledState":"","downState":"","normalState":"images/button12366.png","overState":"","selectedState":"","visitedState":""});
-button12366.setStateOpacity({"disabledState":1.0,"downState":1.0,"normalState":1.0,"overState":1.0,"selectedState":1.0,"visitedState":1.0});
-button12366.addOpacity(100)
-button12366.initImageMap('81,10,17,10,17,0,0,17,17,34,17,24,81,24,81,10','M 81.000000 9.690001 L 17.000000 9.690001 L 17.000000 0.000000 L 0.000000 17.000000 L 17.000000 34.000000 L 17.000000 24.309999 L 81.000000 24.309999 L 81.000000 9.690001 z')
-button12366.setFills({"disabledState":{"fillInfo":"","stylePath":"fill:#708DC1;\""},"downState":{"fillInfo":"","stylePath":"fill:#223D6C;\""},"normalState":{"fillInfo":"","stylePath":"fill:#21314D;\""},"overState":{"fillInfo":"","stylePath":"fill:#223D6C;\""},"selectedState":{"fillInfo":"","screenRdr":"Selected","stylePath":"fill:#1B4FAA;\""},"visitedState":{"fillInfo":"","screenRdr":"Visited","stylePath":"fill:#1B4FAA;\""}});
-button12366.setImgFillVal({"disabledState":{"B64":"","fill":"","style":""},"downState":{"B64":"","fill":"","style":""},"normalState":{"B64":"","fill":"","style":""},"overState":{"B64":"","fill":"","style":""},"selectedState":{"B64":"","fill":"","style":""},"visitedState":{"B64":"","fill":"","style":""}});
-button12366.initLineWeight('0')
-button12366.onUp = button12366onUp
-button12366.hasOnUp = true
-button12366.capture=4
-button12366.setTextVal({"disabledState":{"div":"div.button12366disabledStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:81.000000px; height:34.000000px;}","span":"span.button12366disabledStateText { width:77.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"downState":{"div":"div.button12366downStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:81.000000px; height:34.000000px;}","span":"span.button12366downStateText { width:77.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"normalState":{"div":"div.button12366Text { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:81.000000px; height:34.000000px;}","span":"span.button12366Text { width:77.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"overState":{"div":"div.button12366overStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:81.000000px; height:34.000000px;}","span":"span.button12366overStateText { width:77.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"selectedState":{"div":"div.button12366selectedStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:81.000000px; height:34.000000px;}","span":"span.button12366selectedStateText { width:77.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"visitedState":{"div":"div.button12366visitedStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:81.000000px; height:34.000000px;}","span":"span.button12366visitedStateText { width:77.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"}});
-button12366.text = 'Back'
-button12366.bSelectedEnabled = false;
-button12366.bVisitedEnabled = false;
-button12366.bOverEnabled = true;
-button12366.bDownEnabled = true;
-button12366.build()
+text57736 = new ObjText('text57736',null,50,685,116,21,0,20,null,'div',null,1 )
+text57736.initSLine(1)
+text57736.initHasBullet(0)
+text57736.initRotateAngle(0,0,0)
+text57736.initHasOuterShadow(0)
+text57736.initHasTextShadow(0)
+text57736.initHasBorder(0)
+text57736.initHasOutline(0)
+text57736.initHasMargin(0)
+text57736.addIe8Attr(50, 685, 116, 21, 0, 0)
+text57736.addHeading(0)
+text57736.addOpacity(100)
+text57736.arrCSSStyles = new Array();
+text57736.arrCSSStyles.push('span.text57736Font1 { font-size:13px; font-family:"Arial", sans-serif; color:#21314d;}');
+text57736.arrCSSStyles.push('span.text57736Font2 { font-size:13px; font-family:"Arial", sans-serif; color:#000000;}');
+text57736.addInnerText('<div id=\"text57736\" aria-live=\"off\"  ><p lang=\"en\"  style=\"margin-left:0px;text-indent:0px;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text57736Font1\"  >Page n</span ><span class=\"text57736Font2\" style=\"background-color:transparent\" >\n</span ></p ></div>\n');
+text57736.build()
 
-image12348 = new ObjImage('image12348','images/litchen_backgroundcrop_image12348.png','Kitchen background',0,0,1280,719,1,2,'div',null, 0 )
+button64276 = new ObjButton('button64276', 'Back',50,50,81.000000,43.000000,1,21,'div','',1,0)
+button64276.setUseSvgFile(1)
+button64276.setFillStyle(1)
+button64276.setUniqueFillID('page12346_button64276')
+button64276.initRotateAngle(0,0,0,-0.000000,-0.000000,80,42)
+button64276.initHasShadow(0)
+button64276.initHasReflection(0)
+button64276.setImages({"disabledState":"","downState":"","normalState":"images/button64276.png","overState":"","selectedState":"","visitedState":""});
+button64276.setStateOpacity({"disabledState":1.0,"downState":1.0,"normalState":1.0,"overState":1.0,"selectedState":1.0,"visitedState":1.0});
+button64276.addOpacity(100)
+button64276.initImageMap('80,12,21,12,21,0,0,21,21,42,21,30,80,30,80,12','M 80.000000 11.970000 L 21.000000 11.970000 L 21.000000 0.000000 L 0.000000 21.000000 L 21.000000 42.000000 L 21.000000 30.029999 L 80.000000 30.029999 L 80.000000 11.970000 z')
+button64276.setFills({"disabledState":{"fillInfo":"","stylePath":"fill:#708DC1;\""},"downState":{"fillInfo":"","stylePath":"fill:#223D6C;\""},"normalState":{"fillInfo":"","stylePath":"fill:#21314D;\""},"overState":{"fillInfo":"","stylePath":"fill:#223D6C;\""},"selectedState":{"fillInfo":"","screenRdr":"Selected","stylePath":"fill:#1B4FAA;\""},"visitedState":{"fillInfo":"","screenRdr":"Visited","stylePath":"fill:#1B4FAA;\""}});
+button64276.setImgFillVal({"disabledState":{"B64":"","fill":"","style":""},"downState":{"B64":"","fill":"","style":""},"normalState":{"B64":"","fill":"","style":""},"overState":{"B64":"","fill":"","style":""},"selectedState":{"B64":"","fill":"","style":""},"visitedState":{"B64":"","fill":"","style":""}});
+button64276.initLineWeight('0')
+button64276.onUp = button64276onUp
+button64276.hasOnUp = true
+button64276.capture=4
+button64276.setTextVal({"disabledState":{"div":"div.button64276disabledStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:80.000000px; height:42.000000px;}","span":"span.button64276disabledStateText { width:76.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"downState":{"div":"div.button64276downStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:80.000000px; height:42.000000px;}","span":"span.button64276downStateText { width:76.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"normalState":{"div":"div.button64276Text { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:80.000000px; height:42.000000px;}","span":"span.button64276Text { width:76.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"overState":{"div":"div.button64276overStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:80.000000px; height:42.000000px;}","span":"span.button64276overStateText { width:76.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"selectedState":{"div":"div.button64276selectedStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:80.000000px; height:42.000000px;}","span":"span.button64276selectedStateText { width:76.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"visitedState":{"div":"div.button64276visitedStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:80.000000px; height:42.000000px;}","span":"span.button64276visitedStateText { width:76.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"}});
+button64276.text = 'Back'
+button64276.bSelectedEnabled = false;
+button64276.bVisitedEnabled = false;
+button64276.bOverEnabled = true;
+button64276.bDownEnabled = true;
+button64276.build()
+
+image12348 = new ObjImage('image12348','images/litchen_backgroundcrop_image12348.png','Kitchen background',0,0,1280,719,1,3,'div',null, 0 )
 image12348.initRotateAngle(0,0,0,0,0,0,0)
 image12348.initHasShadow(0)
 image12348.initHasReflection(0)
@@ -384,7 +413,7 @@ image12348.addBorder(0)
 image12348.addOpacity(100)
 image12348.build()
 
-image12350 = new ObjImage('image12350','images/recipe_cardcrop_image9621.png','Recipe card',134,111,888,478,1,3,'div',null, 0 )
+image12350 = new ObjImage('image12350','images/recipe_cardcrop_image9621.png','Recipe card',134,111,888,478,1,4,'div',null, 0 )
 image12350.initRotateAngle(0,0,0,0,0,0,0)
 image12350.initHasShadow(0)
 image12350.initHasReflection(0)
@@ -394,7 +423,7 @@ image12350.addBorder(0)
 image12350.addOpacity(100)
 image12350.build()
 
-image12353 = new ObjImage('image12353','images/knifecrop_image9630.png','knife',630,61,224,211,1,4,'div',null, 0 )
+image12353 = new ObjImage('image12353','images/knifecrop_image9630.png','knife',630,61,224,211,1,5,'div',null, 0 )
 image12353.initRotateAngle(44,0,0,0,0,0,0)
 image12353.initHasShadow(0)
 image12353.initHasReflection(0)
@@ -404,7 +433,7 @@ image12353.addBorder(0)
 image12353.addOpacity(100)
 image12353.build()
 
-text12354 = new ObjText('text12354',null,731,161,93,23,1,5,null,'div',null,0 )
+text12354 = new ObjText('text12354',null,731,161,93,23,1,6,null,'div',null,0 )
 text12354.initSLine(1)
 text12354.initHasBullet(0)
 text12354.initRotateAngle(0,0,0)
@@ -422,7 +451,7 @@ text12354.arrCSSStyles.push('span.text12354Font2 { font-size:16px; font-family:"
 text12354.addInnerText('<div id=\"text12354\" aria-live=\"off\"  ><p lang=\"en\"  legLH=\"1.409\" style=\"margin-left:0px;text-indent:0px;line-height:1.350;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text12354Font1\" style=\"position:relative;top:-2px;\" >Analyze</span ><span class=\"text12354Font2\" style=\"background-color:transparentposition:relative;top:-2px;\" >\n</span ></p ></div>\n');
 text12354.build()
 
-text12355 = new ObjText('text12355',null,174,221,787,213,1,6,null,'div',null,0 )
+text12355 = new ObjText('text12355',null,174,221,787,213,1,7,null,'div',null,0 )
 text12355.initSLine(0)
 text12355.initHasBullet(0)
 text12355.initRotateAngle(0,0,0)
@@ -439,7 +468,7 @@ text12355.arrCSSStyles.push('span.text12355Font1 { font-size:15px; font-family:"
 text12355.addInnerText('<div id=\"text12355\" aria-live=\"off\"  ><p lang=\"en\"  legLH=\"1.419\" style=\"margin-left:0px;text-indent:0px;line-height:1.312;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text12355Font1\" style=\"position:relative;top:-1px;\" >The Analyze level involves breaking information into parts to explore relationships, patterns, and underlying structures. At this stage, learners examine how elements connect, identify causes and effects, distinguish between facts and assumptions, and evaluate the logic or structure of an argument or process. This level requires more than just understanding, it calls for critical thinking and the ability to interpret complex information. Effective implementation involves activities like troubleshooting, comparing components, identifying inconsistencies, or analyzing scenarios for flaws or gaps. Learners may debate issues, dissect case studies, or examine data sets to practice recognizing how different parts relate and contribute to the whole. These activities help them develop the logical reasoning skills needed to assess information and make informed judgments.\n</span ></p >\n<p  legLH=\"1.419\" style=\"margin-left:0px;text-indent:0px;line-height:1.312;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text12355Font1\" style=\"background-color:transparentposition:relative;top:-1px;\" >\n&nbsp;</span ></p >\n<p  legLH=\"1.419\" style=\"margin-left:0px;text-indent:0px;line-height:1.312;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text12355Font1\" style=\"position:relative;top:-1px;\" >The appropriate learning outcome verbs for this level include:\n</span ></p ></div>\n');
 text12355.build()
 
-text12356 = new ObjText('text12356',null,228,441,211,115,1,7,null,'div',null,0 )
+text12356 = new ObjText('text12356',null,228,441,211,115,1,8,null,'div',null,0 )
 text12356.initSLine(0)
 text12356.initHasBullet(0)
 text12356.initRotateAngle(0,0,0)
@@ -456,7 +485,7 @@ text12356.arrCSSStyles.push('span.text12356Font1 { font-size:15px; font-family:"
 text12356.addInnerText('<div id=\"text12356\" aria-live=\"off\"  ><table style=\"border-collapse:collapse; border-spacing:0\" >\n<tr style=\"vertical-align:top\"  >\n<td  style=\"width:100px;height:129px; padding-left:4px;padding-right:4px;padding-bottom:0px;padding-top:0px;vertical-align:top;\" >\n<p lang=\"en\"  legLH=\"1.419\" style=\"margin-left:0px;text-indent:0px;line-height:1.312;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text12356Font1\" style=\"position:relative;top:-1px;\" >Analyze</span ></p >\n<p  legLH=\"1.419\" style=\"margin-left:0px;text-indent:0px;line-height:1.312;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text12356Font1\" style=\"position:relative;top:-1px;\" >Compare</span ></p >\n<p  legLH=\"1.419\" style=\"margin-left:0px;text-indent:0px;line-height:1.312;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text12356Font1\" style=\"position:relative;top:-1px;\" >Contrast</span ></p >\n<p  legLH=\"1.419\" style=\"margin-left:0px;text-indent:0px;line-height:1.312;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text12356Font1\" style=\"position:relative;top:-1px;\" >Categorize</span ></p >\n<p  legLH=\"1.419\" style=\"margin-left:0px;text-indent:0px;line-height:1.312;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text12356Font1\" style=\"position:relative;top:-1px;\" >Differentiate</span ></p >\n<span style=\"line-height:2px;\">&nbsp;</span >\n</td >\n<td  style=\"width:100px;height:129px; padding-left:4px;padding-right:4px;padding-bottom:0px;padding-top:0px;vertical-align:top;\" >\n<p  legLH=\"1.419\" style=\"margin-left:0px;text-indent:0px;line-height:1.312;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text12356Font1\" style=\"position:relative;top:-1px;\" >Examine</span ></p >\n<p  legLH=\"1.419\" style=\"margin-left:0px;text-indent:0px;line-height:1.312;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text12356Font1\" style=\"position:relative;top:-1px;\" >Investigate</span ></p >\n<p  legLH=\"1.419\" style=\"margin-left:0px;text-indent:0px;line-height:1.312;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text12356Font1\" style=\"position:relative;top:-1px;\" >Organize</span ></p >\n<p  legLH=\"1.419\" style=\"margin-left:0px;text-indent:0px;line-height:1.312;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text12356Font1\" style=\"position:relative;top:-1px;\" >Break down</span ></p >\n<p  legLH=\"1.419\" style=\"margin-left:0px;text-indent:0px;line-height:1.312;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text12356Font1\" style=\"position:relative;top:-1px;\" >Infer</span ></p >\n</td >\n</tr >\n</table ></div>\n');
 text12356.build()
 
-shape12358 = new ObjImage('shape12358','images/shape12358.png','Triangle Right',824,440,31.000000,29.000000,1,8,'div','',0 )
+shape12358 = new ObjImage('shape12358','images/shape12358.png','Triangle Right',824,440,31.000000,29.000000,1,9,'div','',0 )
 shape12358.initRotateAngle(0,0,0,-1.000000,-1.000000,29,27)
 shape12358.initHasShadow(0)
 shape12358.initHasReflection(0)
@@ -473,7 +502,8 @@ shape12358.actionShow = shape12358actionShow
 shape12358.capture=4
 shape12358.build()
 
-arObjs.push(button12366);
+arObjs.push(text57736);
+arObjs.push(button64276);
 arObjs.push(image12348);
 arObjs.push(image12350);
 arObjs.push(image12353);
@@ -506,7 +536,8 @@ if( is.min ){
 
 <script>
 if( is.min ){
-    appendElement(button12366, null, null);
+    appendElement(text57736, null, null);
+    appendElement(button64276, null, null);
     appendElement(image12348, null, null);
     appendElement(image12350, null, null);
     appendElement(image12353, null, null);

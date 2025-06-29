@@ -168,6 +168,8 @@ function ReFlow() {
 
 
 VarTrivSelCap = new Variable( 'VarTrivSelCap', 'none', 0, 0, null, null, 'buildbettertraining', true )
+VarPageInTitle = new Variable( 'VarPageInTitle', null, 0, 0, null, null, 'buildbettertraining' )
+VarPageInTitle.set( '29' )
 VarTriMuteAllFLV = new Variable( 'VarTriMuteAllFLV', '', 0, 0, null, null, 'buildbettertraining', true )
 VarQuestion_0007 = new Variable( 'VarQuestion_0007', '', 0, 0, null, null, 'buildbettertraining', false )
 
@@ -192,9 +194,10 @@ function init11() {
   findWH()
   if( is.min ){
     trivPageTracking.InitPageTracking();
-    PreloadResources(new Array(button17604,image17591,image17593,og17594,image17596,text17597,qu17808,text17810,entry17811,shape17892))
+    PreloadResources(new Array(text57820,button65378,image17591,image17593,og17594,image17596,text17597,qu17808,text17810,entry17811,shape17892))
     pageLayer.show(true);
-    button17604.init()
+    text57820.init()
+    button65378.init()
     image17591.init()
     image17593.init()
     og17594.init()
@@ -204,7 +207,8 @@ function init11() {
     text17810.init()
     entry17811.init()
     shape17892.init()
-    button17604.activate()
+    text57820.activate()
+    button65378.activate()
     image17591.activate()
     image17593.activate()
     og17594.activate()
@@ -214,8 +218,8 @@ function init11() {
     text17810.activate()
     entry17811.activate()
     shape17892.activate()
-button17604.strCookieState = (trivBtnTracking.GetRangeStatus(17604,true));
-button17604.loadStateFromSes("normalState");
+button65378.strCookieState = (trivBtnTracking.GetRangeStatus(65378,true));
+button65378.loadStateFromSes("normalState");
 		    try{
 		     var objToScroll = trivGetScrollObj(window.location.href) ;
 		     trivScrollTo(window, objToScroll);
@@ -225,6 +229,7 @@ button17604.loadStateFromSes("normalState");
     var valVarQuestion_0007 = VarQuestion_0007.getValue()
     if(valVarQuestion_0007!='~~~null~~~')entry17811.objLyr.doc.forms["entry17811form"]["Entry field"].value=valVarQuestion_0007
 
+    action57821();action57822();
     if(!isSinglePagePlayerAvail()) postPageShowAction();
     if( location.hash )
     {
@@ -360,20 +365,26 @@ function OnDeviceRotate() {
 
 }
 
-function action17605(fn){
-    trivExitPage('page5889.html',true); 
+function action57821(fn){
+    text57820.actionChangeContents( "Page  " +  VarPageInTitle.getValue() + "","alignleft","1" ); 
     if(fn && typeof(fn) == 'string' ) eval(fn);
     else if(fn && typeof(fn) == 'function' ) fn();
 }
 
-function action17606(fn){
-    
+function action57822(fn){
+    text57820.actionShow(); 
     if(fn && typeof(fn) == 'string' ) eval(fn);
     else if(fn && typeof(fn) == 'function' ) fn();
 }
 
-function button17604onUp() {
-  action17605();action17606();
+function action65379(fn){
+    trivExitPage('page12684.html',false); 
+    if(fn && typeof(fn) == 'string' ) eval(fn);
+    else if(fn && typeof(fn) == 'function' ) fn();
+}
+
+function button65378onUp() {
+  action65379();
 }
 
 function Offset_qu17808(bDevRotate) {
@@ -423,32 +434,50 @@ function shape17892onUp() {
 }
 
 if( is.min ){
-button17604 = new ObjButton('button17604', 'Back',79,61,82.000000,35.000000,1,21,'div','',1,0)
-button17604.setUseSvgFile(1)
-button17604.setFillStyle(1)
-button17604.setUniqueFillID('page17589_button17604')
-button17604.initRotateAngle(0,0,0,-0.000000,-0.000000,81,34)
-button17604.initHasShadow(0)
-button17604.initHasReflection(0)
-button17604.setImages({"disabledState":"","downState":"","normalState":"images/button17604.png","overState":"","selectedState":"","visitedState":""});
-button17604.setStateOpacity({"disabledState":1.0,"downState":1.0,"normalState":1.0,"overState":1.0,"selectedState":1.0,"visitedState":1.0});
-button17604.addOpacity(100)
-button17604.initImageMap('81,10,17,10,17,0,0,17,17,34,17,24,81,24,81,10','M 81.000000 9.690001 L 17.000000 9.690001 L 17.000000 0.000000 L 0.000000 17.000000 L 17.000000 34.000000 L 17.000000 24.309999 L 81.000000 24.309999 L 81.000000 9.690001 z')
-button17604.setFills({"disabledState":{"fillInfo":"","stylePath":"fill:#708DC1;\""},"downState":{"fillInfo":"","stylePath":"fill:#223D6C;\""},"normalState":{"fillInfo":"","stylePath":"fill:#21314D;\""},"overState":{"fillInfo":"","stylePath":"fill:#223D6C;\""},"selectedState":{"fillInfo":"","screenRdr":"Selected","stylePath":"fill:#1B4FAA;\""},"visitedState":{"fillInfo":"","screenRdr":"Visited","stylePath":"fill:#1B4FAA;\""}});
-button17604.setImgFillVal({"disabledState":{"B64":"","fill":"","style":""},"downState":{"B64":"","fill":"","style":""},"normalState":{"B64":"","fill":"","style":""},"overState":{"B64":"","fill":"","style":""},"selectedState":{"B64":"","fill":"","style":""},"visitedState":{"B64":"","fill":"","style":""}});
-button17604.initLineWeight('0')
-button17604.onUp = button17604onUp
-button17604.hasOnUp = true
-button17604.capture=4
-button17604.setTextVal({"disabledState":{"div":"div.button17604disabledStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:81.000000px; height:34.000000px;}","span":"span.button17604disabledStateText { width:77.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"downState":{"div":"div.button17604downStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:81.000000px; height:34.000000px;}","span":"span.button17604downStateText { width:77.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"normalState":{"div":"div.button17604Text { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:81.000000px; height:34.000000px;}","span":"span.button17604Text { width:77.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"overState":{"div":"div.button17604overStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:81.000000px; height:34.000000px;}","span":"span.button17604overStateText { width:77.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"selectedState":{"div":"div.button17604selectedStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:81.000000px; height:34.000000px;}","span":"span.button17604selectedStateText { width:77.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"visitedState":{"div":"div.button17604visitedStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:81.000000px; height:34.000000px;}","span":"span.button17604visitedStateText { width:77.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"}});
-button17604.text = 'Back'
-button17604.bSelectedEnabled = false;
-button17604.bVisitedEnabled = false;
-button17604.bOverEnabled = true;
-button17604.bDownEnabled = true;
-button17604.build()
+text57820 = new ObjText('text57820',null,50,685,116,21,0,22,null,'div',null,1 )
+text57820.initSLine(1)
+text57820.initHasBullet(0)
+text57820.initRotateAngle(0,0,0)
+text57820.initHasOuterShadow(0)
+text57820.initHasTextShadow(0)
+text57820.initHasBorder(0)
+text57820.initHasOutline(0)
+text57820.initHasMargin(0)
+text57820.addIe8Attr(50, 685, 116, 21, 0, 0)
+text57820.addHeading(0)
+text57820.addOpacity(100)
+text57820.arrCSSStyles = new Array();
+text57820.arrCSSStyles.push('span.text57820Font1 { font-size:13px; font-family:"Arial", sans-serif; color:#21314d;}');
+text57820.arrCSSStyles.push('span.text57820Font2 { font-size:13px; font-family:"Arial", sans-serif; color:#000000;}');
+text57820.addInnerText('<div id=\"text57820\" aria-live=\"off\"  ><p lang=\"en\"  style=\"margin-left:0px;text-indent:0px;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text57820Font1\"  >Page n</span ><span class=\"text57820Font2\" style=\"background-color:transparent\" >\n</span ></p ></div>\n');
+text57820.build()
 
-image17591 = new ObjImage('image17591','images/litchen_background.png','Kitchen background',0,2,1280,719,1,2,'div',null, 0 )
+button65378 = new ObjButton('button65378', 'Back',50,50,81.000000,43.000000,1,23,'div','',1,0)
+button65378.setUseSvgFile(1)
+button65378.setFillStyle(1)
+button65378.setUniqueFillID('page17589_button65378')
+button65378.initRotateAngle(0,0,0,-0.000000,-0.000000,80,42)
+button65378.initHasShadow(0)
+button65378.initHasReflection(0)
+button65378.setImages({"disabledState":"","downState":"","normalState":"images/button65378.png","overState":"","selectedState":"","visitedState":""});
+button65378.setStateOpacity({"disabledState":1.0,"downState":1.0,"normalState":1.0,"overState":1.0,"selectedState":1.0,"visitedState":1.0});
+button65378.addOpacity(100)
+button65378.initImageMap('80,12,21,12,21,0,0,21,21,42,21,30,80,30,80,12','M 80.000000 11.970000 L 21.000000 11.970000 L 21.000000 0.000000 L 0.000000 21.000000 L 21.000000 42.000000 L 21.000000 30.029999 L 80.000000 30.029999 L 80.000000 11.970000 z')
+button65378.setFills({"disabledState":{"fillInfo":"","stylePath":"fill:#708DC1;\""},"downState":{"fillInfo":"","stylePath":"fill:#223D6C;\""},"normalState":{"fillInfo":"","stylePath":"fill:#21314D;\""},"overState":{"fillInfo":"","stylePath":"fill:#223D6C;\""},"selectedState":{"fillInfo":"","screenRdr":"Selected","stylePath":"fill:#1B4FAA;\""},"visitedState":{"fillInfo":"","screenRdr":"Visited","stylePath":"fill:#1B4FAA;\""}});
+button65378.setImgFillVal({"disabledState":{"B64":"","fill":"","style":""},"downState":{"B64":"","fill":"","style":""},"normalState":{"B64":"","fill":"","style":""},"overState":{"B64":"","fill":"","style":""},"selectedState":{"B64":"","fill":"","style":""},"visitedState":{"B64":"","fill":"","style":""}});
+button65378.initLineWeight('0')
+button65378.onUp = button65378onUp
+button65378.hasOnUp = true
+button65378.capture=4
+button65378.setTextVal({"disabledState":{"div":"div.button65378disabledStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:80.000000px; height:42.000000px;}","span":"span.button65378disabledStateText { width:76.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"downState":{"div":"div.button65378downStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:80.000000px; height:42.000000px;}","span":"span.button65378downStateText { width:76.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"normalState":{"div":"div.button65378Text { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:80.000000px; height:42.000000px;}","span":"span.button65378Text { width:76.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"overState":{"div":"div.button65378overStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:80.000000px; height:42.000000px;}","span":"span.button65378overStateText { width:76.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"selectedState":{"div":"div.button65378selectedStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:80.000000px; height:42.000000px;}","span":"span.button65378selectedStateText { width:76.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"visitedState":{"div":"div.button65378visitedStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:80.000000px; height:42.000000px;}","span":"span.button65378visitedStateText { width:76.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"}});
+button65378.text = 'Back'
+button65378.bSelectedEnabled = false;
+button65378.bVisitedEnabled = false;
+button65378.bOverEnabled = true;
+button65378.bDownEnabled = true;
+button65378.build()
+
+image17591 = new ObjImage('image17591','images/litchen_background.png','Kitchen background',0,2,1280,719,1,3,'div',null, 0 )
 image17591.initRotateAngle(0,0,0,0,0,0,0)
 image17591.initHasShadow(0)
 image17591.initHasReflection(0)
@@ -458,7 +487,7 @@ image17591.addBorder(0)
 image17591.addOpacity(100)
 image17591.build()
 
-image17593 = new ObjImage('image17593','images/recipe_cardcrop_image9621.png','Recipe card',143,124,858,462,1,3,'div',null, 0 )
+image17593 = new ObjImage('image17593','images/recipe_cardcrop_image9621.png','Recipe card',143,124,858,462,1,4,'div',null, 0 )
 image17593.initRotateAngle(0,0,0,0,0,0,0)
 image17593.initHasShadow(0)
 image17593.initHasReflection(0)
@@ -474,7 +503,7 @@ og17594.addChild('image17596')
 og17594.addChild('text17597')
 og17594.build()
 
-image17596 = new ObjImage('image17596','images/knifecrop_image9630.png','knife',626,78,224,211,1,4,'div',null, 0 )
+image17596 = new ObjImage('image17596','images/knifecrop_image9630.png','knife',626,78,224,211,1,5,'div',null, 0 )
 image17596.initRotateAngle(44,0,0,0,0,0,0)
 image17596.initHasShadow(0)
 image17596.initHasReflection(0)
@@ -484,7 +513,7 @@ image17596.addBorder(0)
 image17596.addOpacity(100)
 image17596.build()
 
-text17597 = new ObjText('text17597',null,727,178,93,23,1,5,null,'div',null,0 )
+text17597 = new ObjText('text17597',null,727,178,93,23,1,6,null,'div',null,0 )
 text17597.initSLine(1)
 text17597.initHasBullet(0)
 text17597.initRotateAngle(0,0,0)
@@ -509,7 +538,7 @@ qu17808.addChild('entry17811')
 qu17808.ansVar=VarQuestion_0007;
 qu17808.build()
 
-text17810 = new ObjText('text17810',null,200,234,729,110,1,6,null,'div',null,0 )
+text17810 = new ObjText('text17810',null,200,234,729,110,1,7,null,'div',null,0 )
 text17810.initSLine(0)
 text17810.initHasBullet(0)
 text17810.initRotateAngle(0,0,0)
@@ -527,13 +556,13 @@ text17810.arrCSSStyles.push('span.text17810Font1 { font-size:16px; font-family:"
 text17810.addInnerText('<legend><div id=\"text17810\" aria-live=\"off\"  ><label id=\"label17811id\" for=\"entry17811id\" ><p lang=\"en\"  legLH=\"1.691\" style=\"margin-left:0px;text-indent:0px;line-height:1.620;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text17810Font1\" style=\"position:relative;top:-4px;\" >1) What’s a real-world challenge you could give learners to engage this level?</span ><span class=\"text17810Font0\" style=\"background-color:transparentposition:relative;top:-4px;\" >\n</span ></p >\n<p  legLH=\"1.691\" style=\"margin-left:0px;text-indent:0px;line-height:1.620;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text17810Font1\" style=\"position:relative;top:-4px;\" >2) How would you scaffold learning to build up to the “Create” stage?\n</span ></p >\n<p  legLH=\"1.409\" style=\"margin-left:0px;text-indent:0px;line-height:1.350;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text17810Font1\" style=\"background-color:transparentposition:relative;top:-2px;\" >\n&nbsp;</span ></p >\n<p  legLH=\"1.409\" style=\"margin-left:0px;text-indent:0px;line-height:1.350;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text17810Font1\" style=\"position:relative;top:-2px;\" >Write your answers in the box, and click on the blue triangle to review a sample answer for the question.</span ><span class=\"text17810Font0\" style=\"background-color:transparentposition:relative;top:-2px;\" >\n</span ></p ></label></div>\n</legend>\n');
 text17810.build()
 
-entry17811 = new ObjInline('entry17811',null,(is.ie?200:200),(is.ie?354:353),null,null,1,7, 0, null, null, 0)
+entry17811 = new ObjInline('entry17811',null,(is.ie?200:200),(is.ie?354:353),null,null,1,8, 0, null, null, 0)
 entry17811.onSelChg = entry17811onSelChg
 entry17811.arrCSSStyles = new Array();
 entry17811.arrCSSStyles.push('textarea.entry17811 { font-size:16px; font-family:"Arial", sans-serif; color:#21314d; width:629px; height:197px; -webkit-appearance:none; background-color:#ffffff; }');
 entry17811.build()
 
-shape17892 = new ObjImage('shape17892','images/shape17892.png','Triangle Right',890,431,28.000000,25.000000,0,8,'div','',0 )
+shape17892 = new ObjImage('shape17892','images/shape17892.png','Triangle Right',890,431,28.000000,25.000000,0,9,'div','',0 )
 shape17892.initRotateAngle(0,0,0,-1.000000,-1.000000,26,23)
 shape17892.initHasShadow(0)
 shape17892.initHasReflection(0)
@@ -550,7 +579,8 @@ shape17892.capture=4
 shape17892.build()
 
 var trivQuestionArray=[qu17808];
-arObjs.push(button17604);
+arObjs.push(text57820);
+arObjs.push(button65378);
 arObjs.push(image17591);
 arObjs.push(image17593);
 arObjs.push(og17594);
@@ -586,7 +616,8 @@ if( is.min ){
 
 <script>
 if( is.min ){
-    appendElement(button17604, null, null);
+    appendElement(text57820, null, null);
+    appendElement(button65378, null, null);
     appendElement(image17591, null, null);
     appendElement(image17593, null, null);
     appendElement(image17596, null, null);

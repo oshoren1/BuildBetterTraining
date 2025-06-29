@@ -172,6 +172,8 @@ function ReFlow() {
 
 
 VarTrivSelCap = new Variable( 'VarTrivSelCap', 'none', 0, 0, null, null, 'buildbettertraining', true )
+VarPageInTitle = new Variable( 'VarPageInTitle', null, 0, 0, null, null, 'buildbettertraining' )
+VarPageInTitle.set( '2' )
 VarTriMuteAllFLV = new Variable( 'VarTriMuteAllFLV', '', 0, 0, null, null, 'buildbettertraining', true )
 
 onload = responsiveInit
@@ -195,8 +197,9 @@ function init11() {
   findWH()
   if( is.min ){
     trivPageTracking.InitPageTracking();
-    PreloadResources(new Array(button25651,shape477,audio535,image43,image130,shape193,text329))
+    PreloadResources(new Array(text54304,button25651,shape477,audio535,image43,image130,shape193,text329))
     pageLayer.show(true);
+    text54304.init()
     button25651.init()
     shape477.init()
     audio535.init()
@@ -204,6 +207,7 @@ function init11() {
     image130.init()
     shape193.init()
     text329.init()
+    text54304.activate()
     button25651.activate()
     shape477.activate()
     audio535.activate()
@@ -219,6 +223,7 @@ button25651.loadStateFromSes("normalState");
 		     var titleManagerIndexWindow = (window && window.parent && window.parent.bIsTitleManagerIndexFile) ? window.parent : null;
 		     if(titleManagerIndexWindow)  trivScrollTo(titleManagerIndexWindow, objToScroll);
 		    } catch (e) { }
+    action54305();action54306();
     if(!isSinglePagePlayerAvail()) postPageShowAction();
     if( location.hash )
     {
@@ -327,6 +332,18 @@ function playerReady(obj){
   	if(obj['id'] == 'swfaudio535') { audio535.setFlashPlayer(); audio535.flsPlayer.addModelListener("STATE", "OnStateChange"); }
 }
 
+function action54305(fn){
+    text54304.actionChangeContents( "Page  " +  VarPageInTitle.getValue() + "","alignleft","1" ); 
+    if(fn && typeof(fn) == 'string' ) eval(fn);
+    else if(fn && typeof(fn) == 'function' ) fn();
+}
+
+function action54306(fn){
+    text54304.actionShow(); 
+    if(fn && typeof(fn) == 'string' ) eval(fn);
+    else if(fn && typeof(fn) == 'function' ) fn();
+}
+
 function action25652(fn){
     trivExitPage('index.html',false); 
     if(fn && typeof(fn) == 'string' ) eval(fn);
@@ -372,24 +389,42 @@ function setPlayerMute(plrObj, bMute){
 }
 
 if( is.min ){
-button25651 = new ObjButton('button25651', 'Back',50,50,82.000000,35.000000,1,18,'div','',1,0)
+text54304 = new ObjText('text54304',null,50,685,116,21,0,19,null,'div',null,1 )
+text54304.initSLine(1)
+text54304.initHasBullet(0)
+text54304.initRotateAngle(0,0,0)
+text54304.initHasOuterShadow(0)
+text54304.initHasTextShadow(0)
+text54304.initHasBorder(0)
+text54304.initHasOutline(0)
+text54304.initHasMargin(0)
+text54304.addIe8Attr(50, 685, 116, 21, 0, 0)
+text54304.addHeading(0)
+text54304.addOpacity(100)
+text54304.arrCSSStyles = new Array();
+text54304.arrCSSStyles.push('span.text54304Font1 { font-size:13px; font-family:"Arial", sans-serif; color:#21314d;}');
+text54304.arrCSSStyles.push('span.text54304Font2 { font-size:13px; font-family:"Arial", sans-serif; color:#000000;}');
+text54304.addInnerText('<div id=\"text54304\" aria-live=\"off\"  ><p lang=\"en\"  style=\"margin-left:0px;text-indent:0px;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text54304Font1\"  >Page n</span ><span class=\"text54304Font2\" style=\"background-color:transparent\" >\n</span ></p ></div>\n');
+text54304.build()
+
+button25651 = new ObjButton('button25651', 'Back',50,50,81.000000,43.000000,1,20,'div','',1,0)
 button25651.setUseSvgFile(1)
 button25651.setFillStyle(1)
 button25651.setUniqueFillID('page2_button25651')
-button25651.initRotateAngle(0,0,0,-0.000000,-0.000000,81,34)
+button25651.initRotateAngle(0,0,0,-0.000000,-0.000000,80,42)
 button25651.initHasShadow(0)
 button25651.initHasReflection(0)
 button25651.setImages({"disabledState":"","downState":"","normalState":"images/button25651.png","overState":"","selectedState":"","visitedState":""});
 button25651.setStateOpacity({"disabledState":1.0,"downState":1.0,"normalState":1.0,"overState":1.0,"selectedState":1.0,"visitedState":1.0});
 button25651.addOpacity(100)
-button25651.initImageMap('81,10,17,10,17,0,0,17,17,34,17,24,81,24,81,10','M 81.000000 9.690001 L 17.000000 9.690001 L 17.000000 0.000000 L 0.000000 17.000000 L 17.000000 34.000000 L 17.000000 24.309999 L 81.000000 24.309999 L 81.000000 9.690001 z')
+button25651.initImageMap('80,12,21,12,21,0,0,21,21,42,21,30,80,30,80,12','M 80.000000 11.970000 L 21.000000 11.970000 L 21.000000 0.000000 L 0.000000 21.000000 L 21.000000 42.000000 L 21.000000 30.029999 L 80.000000 30.029999 L 80.000000 11.970000 z')
 button25651.setFills({"disabledState":{"fillInfo":"","stylePath":"fill:#708DC1;\""},"downState":{"fillInfo":"","stylePath":"fill:#223D6C;\""},"normalState":{"fillInfo":"","stylePath":"fill:#21314D;\""},"overState":{"fillInfo":"","stylePath":"fill:#223D6C;\""},"selectedState":{"fillInfo":"","screenRdr":"Selected","stylePath":"fill:#1B4FAA;\""},"visitedState":{"fillInfo":"","screenRdr":"Visited","stylePath":"fill:#1B4FAA;\""}});
 button25651.setImgFillVal({"disabledState":{"B64":"","fill":"","style":""},"downState":{"B64":"","fill":"","style":""},"normalState":{"B64":"","fill":"","style":""},"overState":{"B64":"","fill":"","style":""},"selectedState":{"B64":"","fill":"","style":""},"visitedState":{"B64":"","fill":"","style":""}});
 button25651.initLineWeight('0')
 button25651.onUp = button25651onUp
 button25651.hasOnUp = true
 button25651.capture=4
-button25651.setTextVal({"disabledState":{"div":"div.button25651disabledStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:81.000000px; height:34.000000px;}","span":"span.button25651disabledStateText { width:77.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"downState":{"div":"div.button25651downStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:81.000000px; height:34.000000px;}","span":"span.button25651downStateText { width:77.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"normalState":{"div":"div.button25651Text { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:81.000000px; height:34.000000px;}","span":"span.button25651Text { width:77.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"overState":{"div":"div.button25651overStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:81.000000px; height:34.000000px;}","span":"span.button25651overStateText { width:77.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"selectedState":{"div":"div.button25651selectedStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:81.000000px; height:34.000000px;}","span":"span.button25651selectedStateText { width:77.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"visitedState":{"div":"div.button25651visitedStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:81.000000px; height:34.000000px;}","span":"span.button25651visitedStateText { width:77.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"}});
+button25651.setTextVal({"disabledState":{"div":"div.button25651disabledStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:80.000000px; height:42.000000px;}","span":"span.button25651disabledStateText { width:76.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"downState":{"div":"div.button25651downStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:80.000000px; height:42.000000px;}","span":"span.button25651downStateText { width:76.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"normalState":{"div":"div.button25651Text { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:80.000000px; height:42.000000px;}","span":"span.button25651Text { width:76.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"overState":{"div":"div.button25651overStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:80.000000px; height:42.000000px;}","span":"span.button25651overStateText { width:76.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"selectedState":{"div":"div.button25651selectedStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:80.000000px; height:42.000000px;}","span":"span.button25651selectedStateText { width:76.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"visitedState":{"div":"div.button25651visitedStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:80.000000px; height:42.000000px;}","span":"span.button25651visitedStateText { width:76.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"}});
 button25651.text = 'Back'
 button25651.bSelectedEnabled = false;
 button25651.bVisitedEnabled = false;
@@ -397,7 +432,7 @@ button25651.bOverEnabled = true;
 button25651.bDownEnabled = true;
 button25651.build()
 
-shape477 = new ObjImage('shape477','images/shape477.png','Triangle Right',686,285,28.000000,25.000000,0,19,'div','',0 )
+shape477 = new ObjImage('shape477','images/shape477.png','Triangle Right',686,285,28.000000,25.000000,0,21,'div','',0 )
 shape477.initRotateAngle(0,0,0,-1.000000,-1.000000,26,23)
 shape477.initHasShadow(0)
 shape477.initHasReflection(0)
@@ -413,13 +448,13 @@ shape477.hasOnUp = true
 shape477.capture=4
 shape477.build()
 
-audio535 = new ObjMedia('audio535','luvvoice.com-20250526-lIHxxz',50,515,225,24,1,20,'media/luvvoice.com-20250526-lihxxz.mp3',0,1,0,0,1,0.800000,1,'div',0);
+audio535 = new ObjMedia('audio535','luvvoice.com-20250526-lIHxxz',50,515,225,24,1,22,'media/luvvoice.com-20250526-lihxxz.mp3',0,1,0,0,1,0.800000,1,'div',0);
 audio535.bNeedPool = true;
 audio535.bSpeedControl = true;
 audio535.BuildMediaString()
 audio535.build()
 
-image43 = new ObjImage('image43','images/litchen_background.png','Kitchen background',0,0,1280,720,1,4,'div',null, 0 )
+image43 = new ObjImage('image43','images/litchen_background.png','Kitchen background',0,0,1280,720,1,5,'div',null, 0 )
 image43.initRotateAngle(0,0,0,0,0,0,0)
 image43.initHasShadow(0)
 image43.initHasReflection(0)
@@ -429,7 +464,7 @@ image43.addBorder(0)
 image43.addOpacity(100)
 image43.build()
 
-image130 = new ObjImage('image130','images/1.png','a smiling chef in a white uniform and hat stirring colorful vegetables in a skillet',-46,83,1009,568,1,5,'div',null, 0 )
+image130 = new ObjImage('image130','images/1.png','a smiling chef in a white uniform and hat stirring colorful vegetables in a skillet',-46,83,1009,568,1,6,'div',null, 0 )
 image130.initRotateAngle(0,0,0,0,0,0,0)
 image130.initHasShadow(0)
 image130.initHasReflection(0)
@@ -439,7 +474,7 @@ image130.addBorder(0)
 image130.addOpacity(100)
 image130.build()
 
-shape193 = new ObjImage('shape193','images/shape193.png','Callout Ellipse',536,109,328.000000,224.000000,1,6,'div','',0 )
+shape193 = new ObjImage('shape193','images/shape193.png','Callout Ellipse',536,109,328.000000,224.000000,1,7,'div','',0 )
 shape193.initRotateAngle(0,0,0,-1.000000,0.000000,326,222)
 shape193.initHasShadow(0)
 shape193.initHasReflection(0)
@@ -452,7 +487,7 @@ shape193.initLineWeight(1)
 shape193.addOpacity(100)
 shape193.build()
 
-text329 = new ObjText('text329',null,571,162,258,165,1,7,null,'div',null,0 )
+text329 = new ObjText('text329',null,571,162,258,165,1,8,null,'div',null,0 )
 text329.initSLine(0)
 text329.initHasBullet(0)
 text329.initRotateAngle(0,0,0)
@@ -467,9 +502,10 @@ text329.addOpacity(100)
 text329.arrCSSStyles = new Array();
 text329.arrCSSStyles.push('span.text329Font1 { font-size:16px; font-family:"Arial", sans-serif; color:#21314d;}');
 text329.arrCSSStyles.push('span.text329Font2 { font-size:16px; font-family:"Arial", sans-serif; color:#010101;}');
-text329.addInnerText('<div id=\"text329\" aria-live=\"off\"  ><p lang=\"en\"  legLH=\"1.409\" style=\"margin-left:0px;text-indent:0px;line-height:1.350;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text329Font1\" style=\"position:relative;top:-2px;\" >Welcome to the Training Kitchen! I\'m Sage, your Chef Instructor for this course, but instead of chopping onions, we\'re going to slice through training challenges</span ><span class=\"text329Font2\" style=\"background-color:transparentposition:relative;top:-2px;\" >\n</span ></p ></div>\n');
+text329.addInnerText('<div id=\"text329\" aria-live=\"off\"  ><p lang=\"en\"  legLH=\"1.409\" style=\"margin-left:0px;text-indent:0px;line-height:1.350;margin-top:0px;margin-bottom:0px;text-align:center;\" >\n<span class=\"text329Font1\" style=\"position:relative;top:-2px;\" >Welcome to the Training Kitchen! I\'m Sage, your Chef Instructor for this course, but instead of chopping onions, we\'re going to slice through training challenges.</span ><span class=\"text329Font2\" style=\"background-color:transparentposition:relative;top:-2px;\" >\n</span ></p ></div>\n');
 text329.build()
 
+arObjs.push(text54304);
 arObjs.push(button25651);
 arObjs.push(shape477);
 arObjs.push(audio535);
@@ -502,6 +538,7 @@ if( is.min ){
 
 <script>
 if( is.min ){
+    appendElement(text54304, null, null);
     appendElement(button25651, null, null);
     appendElement(shape477, null, null);
     appendElement(audio535, null, null);

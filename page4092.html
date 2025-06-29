@@ -172,6 +172,8 @@ function ReFlow() {
 
 
 VarTrivSelCap = new Variable( 'VarTrivSelCap', 'none', 0, 0, null, null, 'buildbettertraining', true )
+VarPageInTitle = new Variable( 'VarPageInTitle', null, 0, 0, null, null, 'buildbettertraining' )
+VarPageInTitle.set( '8' )
 VarTriMuteAllFLV = new Variable( 'VarTriMuteAllFLV', '', 0, 0, null, null, 'buildbettertraining', true )
 
 onload = responsiveInit
@@ -195,30 +197,33 @@ function init11() {
   findWH()
   if( is.min ){
     trivPageTracking.InitPageTracking();
-    PreloadResources(new Array(button26795,audio13068,shape4311,image4122,image4136,shape4235,text4252))
+    PreloadResources(new Array(text56936,button59023,audio13068,shape4311,image4122,image4136,shape4235,text4252))
     pageLayer.show(true);
-    button26795.init()
+    text56936.init()
+    button59023.init()
     audio13068.init()
     shape4311.init()
     image4122.init()
     image4136.init()
     shape4235.init()
     text4252.init()
-    button26795.activate()
+    text56936.activate()
+    button59023.activate()
     audio13068.activate()
     shape4311.activate()
     image4122.activate()
     image4136.activate()
     shape4235.activate()
     text4252.activate()
-button26795.strCookieState = (trivBtnTracking.GetRangeStatus(26795,true));
-button26795.loadStateFromSes("normalState");
+button59023.strCookieState = (trivBtnTracking.GetRangeStatus(59023,true));
+button59023.loadStateFromSes("normalState");
 		    try{
 		     var objToScroll = trivGetScrollObj(window.location.href) ;
 		     trivScrollTo(window, objToScroll);
 		     var titleManagerIndexWindow = (window && window.parent && window.parent.bIsTitleManagerIndexFile) ? window.parent : null;
 		     if(titleManagerIndexWindow)  trivScrollTo(titleManagerIndexWindow, objToScroll);
 		    } catch (e) { }
+    action56937();action56938();
     if(!isSinglePagePlayerAvail()) postPageShowAction();
     if( location.hash )
     {
@@ -327,14 +332,26 @@ function playerReady(obj){
   	if(obj['id'] == 'swfaudio13068') { audio13068.setFlashPlayer(); audio13068.flsPlayer.addModelListener("STATE", "OnStateChange"); }
 }
 
-function action26796(fn){
+function action56937(fn){
+    text56936.actionChangeContents( "Page  " +  VarPageInTitle.getValue() + "","alignleft","1" ); 
+    if(fn && typeof(fn) == 'string' ) eval(fn);
+    else if(fn && typeof(fn) == 'function' ) fn();
+}
+
+function action56938(fn){
+    text56936.actionShow(); 
+    if(fn && typeof(fn) == 'string' ) eval(fn);
+    else if(fn && typeof(fn) == 'function' ) fn();
+}
+
+function action59024(fn){
     trivExitPage('page3709.html',false); 
     if(fn && typeof(fn) == 'string' ) eval(fn);
     else if(fn && typeof(fn) == 'function' ) fn();
 }
 
-function button26795onUp() {
-  action26796();
+function button59023onUp() {
+  action59024();
 }
 
 function action38202(fn){
@@ -372,43 +389,61 @@ function setPlayerMute(plrObj, bMute){
 }
 
 if( is.min ){
-button26795 = new ObjButton('button26795', 'Back',50,50,82.000000,35.000000,1,18,'div','',1,0)
-button26795.setUseSvgFile(1)
-button26795.setFillStyle(1)
-button26795.setUniqueFillID('page4092_button26795')
-button26795.initRotateAngle(0,0,0,-0.000000,-0.000000,81,34)
-button26795.initHasShadow(0)
-button26795.initHasReflection(0)
-button26795.setImages({"disabledState":"","downState":"","normalState":"images/button26795.png","overState":"","selectedState":"","visitedState":""});
-button26795.setStateOpacity({"disabledState":1.0,"downState":1.0,"normalState":1.0,"overState":1.0,"selectedState":1.0,"visitedState":1.0});
-button26795.addOpacity(100)
-button26795.initImageMap('81,10,17,10,17,0,0,17,17,34,17,24,81,24,81,10','M 81.000000 9.690001 L 17.000000 9.690001 L 17.000000 0.000000 L 0.000000 17.000000 L 17.000000 34.000000 L 17.000000 24.309999 L 81.000000 24.309999 L 81.000000 9.690001 z')
-button26795.setFills({"disabledState":{"fillInfo":"","stylePath":"fill:#708DC1;\""},"downState":{"fillInfo":"","stylePath":"fill:#223D6C;\""},"normalState":{"fillInfo":"","stylePath":"fill:#21314D;\""},"overState":{"fillInfo":"","stylePath":"fill:#223D6C;\""},"selectedState":{"fillInfo":"","screenRdr":"Selected","stylePath":"fill:#1B4FAA;\""},"visitedState":{"fillInfo":"","screenRdr":"Visited","stylePath":"fill:#1B4FAA;\""}});
-button26795.setImgFillVal({"disabledState":{"B64":"","fill":"","style":""},"downState":{"B64":"","fill":"","style":""},"normalState":{"B64":"","fill":"","style":""},"overState":{"B64":"","fill":"","style":""},"selectedState":{"B64":"","fill":"","style":""},"visitedState":{"B64":"","fill":"","style":""}});
-button26795.initLineWeight('0')
-button26795.onUp = button26795onUp
-button26795.hasOnUp = true
-button26795.capture=4
-button26795.setTextVal({"disabledState":{"div":"div.button26795disabledStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:81.000000px; height:34.000000px;}","span":"span.button26795disabledStateText { width:77.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"downState":{"div":"div.button26795downStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:81.000000px; height:34.000000px;}","span":"span.button26795downStateText { width:77.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"normalState":{"div":"div.button26795Text { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:81.000000px; height:34.000000px;}","span":"span.button26795Text { width:77.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"overState":{"div":"div.button26795overStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:81.000000px; height:34.000000px;}","span":"span.button26795overStateText { width:77.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"selectedState":{"div":"div.button26795selectedStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:81.000000px; height:34.000000px;}","span":"span.button26795selectedStateText { width:77.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"visitedState":{"div":"div.button26795visitedStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:81.000000px; height:34.000000px;}","span":"span.button26795visitedStateText { width:77.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"}});
-button26795.text = 'Back'
-button26795.bSelectedEnabled = false;
-button26795.bVisitedEnabled = false;
-button26795.bOverEnabled = true;
-button26795.bDownEnabled = true;
-button26795.build()
+text56936 = new ObjText('text56936',null,50,685,116,21,0,19,null,'div',null,1 )
+text56936.initSLine(1)
+text56936.initHasBullet(0)
+text56936.initRotateAngle(0,0,0)
+text56936.initHasOuterShadow(0)
+text56936.initHasTextShadow(0)
+text56936.initHasBorder(0)
+text56936.initHasOutline(0)
+text56936.initHasMargin(0)
+text56936.addIe8Attr(50, 685, 116, 21, 0, 0)
+text56936.addHeading(0)
+text56936.addOpacity(100)
+text56936.arrCSSStyles = new Array();
+text56936.arrCSSStyles.push('span.text56936Font1 { font-size:13px; font-family:"Arial", sans-serif; color:#21314d;}');
+text56936.arrCSSStyles.push('span.text56936Font2 { font-size:13px; font-family:"Arial", sans-serif; color:#000000;}');
+text56936.addInnerText('<div id=\"text56936\" aria-live=\"off\"  ><p lang=\"en\"  style=\"margin-left:0px;text-indent:0px;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text56936Font1\"  >Page n</span ><span class=\"text56936Font2\" style=\"background-color:transparent\" >\n</span ></p ></div>\n');
+text56936.build()
 
-audio13068 = new ObjMedia('audio13068','Welcome 7',50,517,300,24,1,19,'media/welcome_7.mp3',0,1,0,0,1,0.800000,1,'div',0);
+button59023 = new ObjButton('button59023', 'Back',50,50,81.000000,43.000000,1,20,'div','',1,0)
+button59023.setUseSvgFile(1)
+button59023.setFillStyle(1)
+button59023.setUniqueFillID('page4092_button59023')
+button59023.initRotateAngle(0,0,0,-0.000000,-0.000000,80,42)
+button59023.initHasShadow(0)
+button59023.initHasReflection(0)
+button59023.setImages({"disabledState":"","downState":"","normalState":"images/button59023.png","overState":"","selectedState":"","visitedState":""});
+button59023.setStateOpacity({"disabledState":1.0,"downState":1.0,"normalState":1.0,"overState":1.0,"selectedState":1.0,"visitedState":1.0});
+button59023.addOpacity(100)
+button59023.initImageMap('80,12,21,12,21,0,0,21,21,42,21,30,80,30,80,12','M 80.000000 11.970000 L 21.000000 11.970000 L 21.000000 0.000000 L 0.000000 21.000000 L 21.000000 42.000000 L 21.000000 30.029999 L 80.000000 30.029999 L 80.000000 11.970000 z')
+button59023.setFills({"disabledState":{"fillInfo":"","stylePath":"fill:#708DC1;\""},"downState":{"fillInfo":"","stylePath":"fill:#223D6C;\""},"normalState":{"fillInfo":"","stylePath":"fill:#21314D;\""},"overState":{"fillInfo":"","stylePath":"fill:#223D6C;\""},"selectedState":{"fillInfo":"","screenRdr":"Selected","stylePath":"fill:#1B4FAA;\""},"visitedState":{"fillInfo":"","screenRdr":"Visited","stylePath":"fill:#1B4FAA;\""}});
+button59023.setImgFillVal({"disabledState":{"B64":"","fill":"","style":""},"downState":{"B64":"","fill":"","style":""},"normalState":{"B64":"","fill":"","style":""},"overState":{"B64":"","fill":"","style":""},"selectedState":{"B64":"","fill":"","style":""},"visitedState":{"B64":"","fill":"","style":""}});
+button59023.initLineWeight('0')
+button59023.onUp = button59023onUp
+button59023.hasOnUp = true
+button59023.capture=4
+button59023.setTextVal({"disabledState":{"div":"div.button59023disabledStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:80.000000px; height:42.000000px;}","span":"span.button59023disabledStateText { width:76.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"downState":{"div":"div.button59023downStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:80.000000px; height:42.000000px;}","span":"span.button59023downStateText { width:76.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"normalState":{"div":"div.button59023Text { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:80.000000px; height:42.000000px;}","span":"span.button59023Text { width:76.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"overState":{"div":"div.button59023overStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:80.000000px; height:42.000000px;}","span":"span.button59023overStateText { width:76.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"selectedState":{"div":"div.button59023selectedStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:80.000000px; height:42.000000px;}","span":"span.button59023selectedStateText { width:76.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"visitedState":{"div":"div.button59023visitedStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:80.000000px; height:42.000000px;}","span":"span.button59023visitedStateText { width:76.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"}});
+button59023.text = 'Back'
+button59023.bSelectedEnabled = false;
+button59023.bVisitedEnabled = false;
+button59023.bOverEnabled = true;
+button59023.bDownEnabled = true;
+button59023.build()
+
+audio13068 = new ObjMedia('audio13068','Welcome 7',50,517,300,24,1,21,'media/welcome_7.mp3',0,1,0,0,1,0.800000,1,'div',0);
 audio13068.bNeedPool = true;
 audio13068.bSpeedControl = true;
 audio13068.BuildMediaString()
 audio13068.build()
 
-shape4311 = new ObjImage('shape4311','images/shape4311.png','Triangle Right',353,215,26.000000,25.000000,0,20,'div','',0 )
+shape4311 = new ObjImage('shape4311','images/shape4311.png','Triangle Right',353,207,26.000000,25.000000,0,22,'div','',0 )
 shape4311.initRotateAngle(0,0,0,-1.000000,-1.000000,24,23)
 shape4311.initHasShadow(0)
 shape4311.initHasReflection(0)
 shape4311.setUniqueFillID('page4092_shape4311')
-shape4311.addIe8Attr(353.000000, 215.000000, 26.000000, 25.000000, 0, 0)
+shape4311.addIe8Attr(353.000000, 207.000000, 26.000000, 25.000000, 0, 0)
 shape4311.initImageMap(1,'25,12,1,24,1,1,25,12','M 25.000000 12.000000 L 1.000000 24.000000 L 1.000000 1.000000 L 25.000000 12.000000 z', '', 'stroke:#010000; stroke-width:1; stroke-linejoin:round;stroke-dasharray: none; fill:#21314D;"' , '')
 shape4311.setUseSvgFile(1)
 shape4311.addBorder(0)
@@ -419,7 +454,7 @@ shape4311.hasOnUp = true
 shape4311.capture=4
 shape4311.build()
 
-image4122 = new ObjImage('image4122','images/litchen_background.png','Kitchen background',0,0,1281,720,1,4,'div',null, 0 )
+image4122 = new ObjImage('image4122','images/litchen_background.png','Kitchen background',0,0,1281,720,1,5,'div',null, 0 )
 image4122.initRotateAngle(0,0,0,0,0,0,0)
 image4122.initHasShadow(0)
 image4122.initHasReflection(0)
@@ -429,7 +464,7 @@ image4122.addBorder(0)
 image4122.addOpacity(100)
 image4122.build()
 
-image4136 = new ObjImage('image4136','images/recipe_1crop_image4136.png','female chef cartoon in a white coat and hat holding a brown recipe book',462,146,280,365,1,5,'div',null, 0 )
+image4136 = new ObjImage('image4136','images/recipe_1crop_image4136.png','female chef cartoon in a white coat and hat holding a brown recipe book',462,146,280,365,1,6,'div',null, 0 )
 image4136.initRotateAngle(0,0,0,0,0,0,0)
 image4136.initHasShadow(0)
 image4136.initHasReflection(0)
@@ -439,7 +474,7 @@ image4136.addBorder(0)
 image4136.addOpacity(100)
 image4136.build()
 
-shape4235 = new ObjImage('shape4235','images/shape4235.png','Callout Ellipse',216,62,302.000000,200.000000,1,6,'div','',0 )
+shape4235 = new ObjImage('shape4235','images/shape4235.png','Callout Ellipse',216,62,302.000000,200.000000,1,7,'div','',0 )
 shape4235.initRotateAngle(0,0,0,0.000000,0.000000,300,198)
 shape4235.initHasShadow(0)
 shape4235.initHasReflection(0)
@@ -452,7 +487,7 @@ shape4235.initLineWeight(1)
 shape4235.addOpacity(100)
 shape4235.build()
 
-text4252 = new ObjText('text4252',null,236,127,277,89,1,7,null,'div',null,0 )
+text4252 = new ObjText('text4252',null,228,115,277,74,1,8,null,'div',null,0 )
 text4252.initSLine(0)
 text4252.initHasBullet(0)
 text4252.initRotateAngle(0,0,0)
@@ -461,15 +496,16 @@ text4252.initHasTextShadow(0)
 text4252.initHasBorder(0)
 text4252.initHasOutline(0)
 text4252.initHasMargin(0)
-text4252.addIe8Attr(236, 127, 277, 89, 0, 0)
+text4252.addIe8Attr(228, 115, 277, 74, 0, 0)
 text4252.addHeading(0)
 text4252.addOpacity(100)
 text4252.arrCSSStyles = new Array();
 text4252.arrCSSStyles.push('span.text4252Font1 { font-size:16px; font-family:"Arial", sans-serif; color:#21314d;}');
-text4252.addInnerText('<div id=\"text4252\" aria-live=\"off\"  ><p lang=\"en\"  legLH=\"1.409\" style=\"margin-left:0px;text-indent:0px;line-height:1.350;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text4252Font1\" style=\"position:relative;top:-2px;\" >So, sharpen your knives, or rather, your learning design skills, and let\'s get cooking.\n</span ></p ></div>\n');
+text4252.addInnerText('<div id=\"text4252\" aria-live=\"off\"  ><p lang=\"en\"  legLH=\"1.409\" style=\"margin-left:0px;text-indent:0px;line-height:1.350;margin-top:0px;margin-bottom:0px;text-align:center;\" >\n<span class=\"text4252Font1\" style=\"position:relative;top:-2px;\" >So, sharpen your knives, or rather, your learning design skills, and let\'s get cooking.\n</span ></p ></div>\n');
 text4252.build()
 
-arObjs.push(button26795);
+arObjs.push(text56936);
+arObjs.push(button59023);
 arObjs.push(audio13068);
 arObjs.push(shape4311);
 arObjs.push(image4122);
@@ -501,7 +537,8 @@ if( is.min ){
 
 <script>
 if( is.min ){
-    appendElement(button26795, null, null);
+    appendElement(text56936, null, null);
+    appendElement(button59023, null, null);
     appendElement(audio13068, null, null);
     appendElement(shape4311, null, null);
     appendElement(image4122, null, null);

@@ -165,6 +165,8 @@ function ReFlow() {
 
 
 VarTrivSelCap = new Variable( 'VarTrivSelCap', 'none', 0, 0, null, null, 'buildbettertraining', true )
+VarPageInTitle = new Variable( 'VarPageInTitle', null, 0, 0, null, null, 'buildbettertraining' )
+VarPageInTitle.set( '16' )
 VarTriMuteAllFLV = new Variable( 'VarTriMuteAllFLV', '', 0, 0, null, null, 'buildbettertraining', true )
 
 onload = responsiveInit
@@ -188,32 +190,35 @@ function init11() {
   findWH()
   if( is.min ){
     trivPageTracking.InitPageTracking();
-    PreloadResources(new Array(shape10971,button11829,image10961,image10963,image10966,text10967,text10968,text10969))
+    PreloadResources(new Array(text57298,shape10971,button63316,image10961,image10963,image10966,text10967,text10968,text10969))
     pageLayer.show(true);
+    text57298.init()
     shape10971.init()
-    button11829.init()
+    button63316.init()
     image10961.init()
     image10963.init()
     image10966.init()
     text10967.init()
     text10968.init()
     text10969.init()
+    text57298.activate()
     shape10971.activate()
-    button11829.activate()
+    button63316.activate()
     image10961.activate()
     image10963.activate()
     image10966.activate()
     text10967.activate()
     text10968.activate()
     text10969.activate()
-button11829.strCookieState = (trivBtnTracking.GetRangeStatus(11829,true));
-button11829.loadStateFromSes("normalState");
+button63316.strCookieState = (trivBtnTracking.GetRangeStatus(63316,true));
+button63316.loadStateFromSes("normalState");
 		    try{
 		     var objToScroll = trivGetScrollObj(window.location.href) ;
 		     trivScrollTo(window, objToScroll);
 		     var titleManagerIndexWindow = (window && window.parent && window.parent.bIsTitleManagerIndexFile) ? window.parent : null;
 		     if(titleManagerIndexWindow)  trivScrollTo(titleManagerIndexWindow, objToScroll);
 		    } catch (e) { }
+    action57299();action57300();
     if(!isSinglePagePlayerAvail()) postPageShowAction();
     if( location.hash )
     {
@@ -318,6 +323,18 @@ function OnDeviceRotate() {
 
 }
 
+function action57299(fn){
+    text57298.actionChangeContents( "Page  " +  VarPageInTitle.getValue() + "","alignleft","1" ); 
+    if(fn && typeof(fn) == 'string' ) eval(fn);
+    else if(fn && typeof(fn) == 'function' ) fn();
+}
+
+function action57300(fn){
+    text57298.actionShow(); 
+    if(fn && typeof(fn) == 'string' ) eval(fn);
+    else if(fn && typeof(fn) == 'function' ) fn();
+}
+
 function action10972(fn){
     trivExitPage('page13767.html',true); 
     if(fn && typeof(fn) == 'string' ) eval(fn);
@@ -329,32 +346,44 @@ function shape10971onUp() {
 }
 
 function shape10971actionShow() {
-  setTimeout("if(!shape10971.isVisible()) { shape10971.objLyr.doTrans( 0, 33, 4, null, shape10971.objLyr.x, shape10971.objLyr.y, -36, -34, winW+20, winH+20, 0, -1, 0 ); }", 1 )
+  setTimeout("if(!shape10971.isVisible()) { shape10971.objLyr.doTrans( 0, 33, 4, null, shape10971.objLyr.x, shape10971.objLyr.y, -40, -39, winW+20, winH+20, 0, -1, 0 ); }", 1 )
 }
 
-function action11830(fn){
-    trivExitPage('page5889.html',true); 
+function action63317(fn){
+    trivExitPage('page13942.html',false); 
     if(fn && typeof(fn) == 'string' ) eval(fn);
     else if(fn && typeof(fn) == 'function' ) fn();
 }
 
-function action11831(fn){
-    
-    if(fn && typeof(fn) == 'string' ) eval(fn);
-    else if(fn && typeof(fn) == 'function' ) fn();
-}
-
-function button11829onUp() {
-  action11830();action11831();
+function button63316onUp() {
+  action63317();
 }
 
 if( is.min ){
-shape10971 = new ObjImage('shape10971','images/shape10971.png','Triangle Right',791,433,28.000000,25.000000,1,19,'div','',0 )
+text57298 = new ObjText('text57298',null,50,685,116,21,0,20,null,'div',null,1 )
+text57298.initSLine(1)
+text57298.initHasBullet(0)
+text57298.initRotateAngle(0,0,0)
+text57298.initHasOuterShadow(0)
+text57298.initHasTextShadow(0)
+text57298.initHasBorder(0)
+text57298.initHasOutline(0)
+text57298.initHasMargin(0)
+text57298.addIe8Attr(50, 685, 116, 21, 0, 0)
+text57298.addHeading(0)
+text57298.addOpacity(100)
+text57298.arrCSSStyles = new Array();
+text57298.arrCSSStyles.push('span.text57298Font1 { font-size:13px; font-family:"Arial", sans-serif; color:#21314d;}');
+text57298.arrCSSStyles.push('span.text57298Font2 { font-size:13px; font-family:"Arial", sans-serif; color:#000000;}');
+text57298.addInnerText('<div id=\"text57298\" aria-live=\"off\"  ><p lang=\"en\"  style=\"margin-left:0px;text-indent:0px;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text57298Font1\"  >Page n</span ><span class=\"text57298Font2\" style=\"background-color:transparent\" >\n</span ></p ></div>\n');
+text57298.build()
+
+shape10971 = new ObjImage('shape10971','images/shape10971.png','Triangle Right',791,460,28.000000,25.000000,1,21,'div','',0 )
 shape10971.initRotateAngle(0,0,0,-1.000000,-1.000000,26,23)
 shape10971.initHasShadow(0)
 shape10971.initHasReflection(0)
 shape10971.setUniqueFillID('page10959_shape10971')
-shape10971.addIe8Attr(791.000000, 433.000000, 28.000000, 25.000000, 0, 0)
+shape10971.addIe8Attr(791.000000, 460.000000, 28.000000, 25.000000, 0, 0)
 shape10971.initImageMap(1,'27,14,1,24,1,1,27,14','M 27.000000 14.000000 L 1.000000 24.000000 L 1.000000 1.000000 L 27.000000 14.000000 z', '', 'stroke:#010000; stroke-width:1; stroke-linejoin:round;stroke-dasharray: none; fill:#21314D;"' , '')
 shape10971.setUseSvgFile(1)
 shape10971.addBorder(0)
@@ -366,32 +395,32 @@ shape10971.actionShow = shape10971actionShow
 shape10971.capture=4
 shape10971.build()
 
-button11829 = new ObjButton('button11829', 'Back',79,61,82.000000,35.000000,1,20,'div','',1,0)
-button11829.setUseSvgFile(1)
-button11829.setFillStyle(1)
-button11829.setUniqueFillID('page10959_button11829')
-button11829.initRotateAngle(0,0,0,-0.000000,-0.000000,81,34)
-button11829.initHasShadow(0)
-button11829.initHasReflection(0)
-button11829.setImages({"disabledState":"","downState":"","normalState":"images/button11829.png","overState":"","selectedState":"","visitedState":""});
-button11829.setStateOpacity({"disabledState":1.0,"downState":1.0,"normalState":1.0,"overState":1.0,"selectedState":1.0,"visitedState":1.0});
-button11829.addOpacity(100)
-button11829.initImageMap('81,10,17,10,17,0,0,17,17,34,17,24,81,24,81,10','M 81.000000 9.690001 L 17.000000 9.690001 L 17.000000 0.000000 L 0.000000 17.000000 L 17.000000 34.000000 L 17.000000 24.309999 L 81.000000 24.309999 L 81.000000 9.690001 z')
-button11829.setFills({"disabledState":{"fillInfo":"","stylePath":"fill:#708DC1;\""},"downState":{"fillInfo":"","stylePath":"fill:#223D6C;\""},"normalState":{"fillInfo":"","stylePath":"fill:#21314D;\""},"overState":{"fillInfo":"","stylePath":"fill:#223D6C;\""},"selectedState":{"fillInfo":"","screenRdr":"Selected","stylePath":"fill:#1B4FAA;\""},"visitedState":{"fillInfo":"","screenRdr":"Visited","stylePath":"fill:#1B4FAA;\""}});
-button11829.setImgFillVal({"disabledState":{"B64":"","fill":"","style":""},"downState":{"B64":"","fill":"","style":""},"normalState":{"B64":"","fill":"","style":""},"overState":{"B64":"","fill":"","style":""},"selectedState":{"B64":"","fill":"","style":""},"visitedState":{"B64":"","fill":"","style":""}});
-button11829.initLineWeight('0')
-button11829.onUp = button11829onUp
-button11829.hasOnUp = true
-button11829.capture=4
-button11829.setTextVal({"disabledState":{"div":"div.button11829disabledStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:81.000000px; height:34.000000px;}","span":"span.button11829disabledStateText { width:77.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"downState":{"div":"div.button11829downStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:81.000000px; height:34.000000px;}","span":"span.button11829downStateText { width:77.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"normalState":{"div":"div.button11829Text { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:81.000000px; height:34.000000px;}","span":"span.button11829Text { width:77.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"overState":{"div":"div.button11829overStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:81.000000px; height:34.000000px;}","span":"span.button11829overStateText { width:77.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"selectedState":{"div":"div.button11829selectedStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:81.000000px; height:34.000000px;}","span":"span.button11829selectedStateText { width:77.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"visitedState":{"div":"div.button11829visitedStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:81.000000px; height:34.000000px;}","span":"span.button11829visitedStateText { width:77.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"}});
-button11829.text = 'Back'
-button11829.bSelectedEnabled = false;
-button11829.bVisitedEnabled = false;
-button11829.bOverEnabled = true;
-button11829.bDownEnabled = true;
-button11829.build()
+button63316 = new ObjButton('button63316', 'Back',50,50,81.000000,43.000000,1,22,'div','',1,0)
+button63316.setUseSvgFile(1)
+button63316.setFillStyle(1)
+button63316.setUniqueFillID('page10959_button63316')
+button63316.initRotateAngle(0,0,0,-0.000000,-0.000000,80,42)
+button63316.initHasShadow(0)
+button63316.initHasReflection(0)
+button63316.setImages({"disabledState":"","downState":"","normalState":"images/button63316.png","overState":"","selectedState":"","visitedState":""});
+button63316.setStateOpacity({"disabledState":1.0,"downState":1.0,"normalState":1.0,"overState":1.0,"selectedState":1.0,"visitedState":1.0});
+button63316.addOpacity(100)
+button63316.initImageMap('80,12,21,12,21,0,0,21,21,42,21,30,80,30,80,12','M 80.000000 11.970000 L 21.000000 11.970000 L 21.000000 0.000000 L 0.000000 21.000000 L 21.000000 42.000000 L 21.000000 30.029999 L 80.000000 30.029999 L 80.000000 11.970000 z')
+button63316.setFills({"disabledState":{"fillInfo":"","stylePath":"fill:#708DC1;\""},"downState":{"fillInfo":"","stylePath":"fill:#223D6C;\""},"normalState":{"fillInfo":"","stylePath":"fill:#21314D;\""},"overState":{"fillInfo":"","stylePath":"fill:#223D6C;\""},"selectedState":{"fillInfo":"","screenRdr":"Selected","stylePath":"fill:#1B4FAA;\""},"visitedState":{"fillInfo":"","screenRdr":"Visited","stylePath":"fill:#1B4FAA;\""}});
+button63316.setImgFillVal({"disabledState":{"B64":"","fill":"","style":""},"downState":{"B64":"","fill":"","style":""},"normalState":{"B64":"","fill":"","style":""},"overState":{"B64":"","fill":"","style":""},"selectedState":{"B64":"","fill":"","style":""},"visitedState":{"B64":"","fill":"","style":""}});
+button63316.initLineWeight('0')
+button63316.onUp = button63316onUp
+button63316.hasOnUp = true
+button63316.capture=4
+button63316.setTextVal({"disabledState":{"div":"div.button63316disabledStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:80.000000px; height:42.000000px;}","span":"span.button63316disabledStateText { width:76.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"downState":{"div":"div.button63316downStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:80.000000px; height:42.000000px;}","span":"span.button63316downStateText { width:76.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"normalState":{"div":"div.button63316Text { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:80.000000px; height:42.000000px;}","span":"span.button63316Text { width:76.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"overState":{"div":"div.button63316overStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:80.000000px; height:42.000000px;}","span":"span.button63316overStateText { width:76.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"selectedState":{"div":"div.button63316selectedStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:80.000000px; height:42.000000px;}","span":"span.button63316selectedStateText { width:76.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"visitedState":{"div":"div.button63316visitedStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:80.000000px; height:42.000000px;}","span":"span.button63316visitedStateText { width:76.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"}});
+button63316.text = 'Back'
+button63316.bSelectedEnabled = false;
+button63316.bVisitedEnabled = false;
+button63316.bOverEnabled = true;
+button63316.bDownEnabled = true;
+button63316.build()
 
-image10961 = new ObjImage('image10961','images/litchen_backgroundcrop_image10961.png','Kitchen background',0,2,1280,719,1,3,'div',null, 0 )
+image10961 = new ObjImage('image10961','images/litchen_backgroundcrop_image10961.png','Kitchen background',0,2,1280,719,1,4,'div',null, 0 )
 image10961.initRotateAngle(0,0,0,0,0,0,0)
 image10961.initHasShadow(0)
 image10961.initHasReflection(0)
@@ -401,7 +430,7 @@ image10961.addBorder(0)
 image10961.addOpacity(100)
 image10961.build()
 
-image10963 = new ObjImage('image10963','images/recipe_cardcrop_image9621.png','Recipe card',51,107,858,462,1,4,'div',null, 0 )
+image10963 = new ObjImage('image10963','images/recipe_cardcrop_image9621.png','Recipe card',51,107,858,462,1,5,'div',null, 0 )
 image10963.initRotateAngle(0,0,0,0,0,0,0)
 image10963.initHasShadow(0)
 image10963.initHasReflection(0)
@@ -411,7 +440,7 @@ image10963.addBorder(0)
 image10963.addOpacity(100)
 image10963.build()
 
-image10966 = new ObjImage('image10966','images/knifecrop_image9630.png','knife',534,61,224,211,1,5,'div',null, 0 )
+image10966 = new ObjImage('image10966','images/knifecrop_image9630.png','knife',534,61,224,211,1,6,'div',null, 0 )
 image10966.initRotateAngle(44,0,0,0,0,0,0)
 image10966.initHasShadow(0)
 image10966.initHasReflection(0)
@@ -421,7 +450,7 @@ image10966.addBorder(0)
 image10966.addOpacity(100)
 image10966.build()
 
-text10967 = new ObjText('text10967',null,635,161,93,23,1,6,null,'div',null,0 )
+text10967 = new ObjText('text10967',null,635,161,93,23,1,7,null,'div',null,0 )
 text10967.initSLine(1)
 text10967.initHasBullet(0)
 text10967.initRotateAngle(0,0,0)
@@ -439,7 +468,7 @@ text10967.arrCSSStyles.push('span.text10967Font2 { font-size:16px; font-family:"
 text10967.addInnerText('<div id=\"text10967\" aria-live=\"off\"  ><p lang=\"en\"  legLH=\"1.409\" style=\"margin-left:0px;text-indent:0px;line-height:1.350;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text10967Font1\" style=\"position:relative;top:-2px;\" >Understand</span ><span class=\"text10967Font2\" style=\"background-color:transparentposition:relative;top:-2px;\" >\n</span ></p ></div>\n');
 text10967.build()
 
-text10968 = new ObjText('text10968',null,87,213,787,233,1,7,null,'div',null,0 )
+text10968 = new ObjText('text10968',null,87,213,787,233,1,8,null,'div',null,0 )
 text10968.initSLine(0)
 text10968.initHasBullet(0)
 text10968.initRotateAngle(0,0,0)
@@ -457,7 +486,7 @@ text10968.arrCSSStyles.push('span.text10968Font2 { font-size:16px; font-family:"
 text10968.addInnerText('<div id=\"text10968\" aria-live=\"off\"  ><p lang=\"en\"  legLH=\"1.419\" style=\"margin-left:0px;text-indent:0px;line-height:1.312;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text10968Font1\" style=\"position:relative;top:-1px;\" >The Understand level in Bloom\'s Taxonomy goes beyond simple recall by focusing on learners\' ability to construct meaning from information. This includes interpreting, summarizing, classifying, comparing, and explaining ideas in their own words. At this stage, learners demonstrate that they grasp the meaning of the material and can rephrase or relate it to other concepts. Effective training at this level involves activities such as paraphrasing content, interpreting diagrams or data, predicting outcomes, or summarizing main ideas. Adult learners benefit from strategies like storytelling, group discussions, or note-taking, which allow them to connect new knowledge to their own experiences and deepen their comprehension. This level lays the groundwork for learners to begin applying their understanding in practical contexts. Although \"understand\" describes the goal of this level, it is not a measurable action verb on its own. When writing objectives, choose observable verbs like the ones below to clearly define how learners will show what they\'ve understood.\n</span ></p >\n<p  legLH=\"1.419\" style=\"margin-left:0px;text-indent:0px;line-height:1.312;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text10968Font1\" style=\"background-color:transparentposition:relative;top:-1px;\" >\n&nbsp;</span ></p >\n<p  legLH=\"1.419\" style=\"margin-left:0px;text-indent:0px;line-height:1.312;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text10968Font1\" style=\"position:relative;top:-1px;\" >The appropriate learning outcome verbs for this level include:</span ><span class=\"text10968Font2\" style=\"background-color:transparentposition:relative;top:-1px;\" >\n</span ></p ></div>\n');
 text10968.build()
 
-text10969 = new ObjText('text10969',null,496,414,241,128,1,8,null,'div',null,0 )
+text10969 = new ObjText('text10969',null,496,414,241,128,1,9,null,'div',null,0 )
 text10969.initSLine(0)
 text10969.initHasBullet(0)
 text10969.initRotateAngle(0,0,0)
@@ -474,8 +503,9 @@ text10969.arrCSSStyles.push('span.text10969Font1 { font-size:15px; font-family:"
 text10969.addInnerText('<div id=\"text10969\" aria-live=\"off\"  ><table style=\"border-collapse:collapse; border-spacing:0\" >\n<tr style=\"vertical-align:top\"  >\n<td  style=\"width:133px;height:129px; padding-left:4px;padding-right:4px;padding-bottom:0px;padding-top:0px;vertical-align:top;\" >\n<p lang=\"en\"  legLH=\"1.419\" style=\"margin-left:0px;text-indent:0px;line-height:1.312;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text10969Font1\" style=\"position:relative;top:-1px;\" >Describe</span ></p >\n<p  legLH=\"1.419\" style=\"margin-left:0px;text-indent:0px;line-height:1.312;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text10969Font1\" style=\"position:relative;top:-1px;\" >Summarize</span ></p >\n<p  legLH=\"1.419\" style=\"margin-left:0px;text-indent:0px;line-height:1.312;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text10969Font1\" style=\"position:relative;top:-1px;\" >Interpret</span ></p >\n<p  legLH=\"1.419\" style=\"margin-left:0px;text-indent:0px;line-height:1.312;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text10969Font1\" style=\"position:relative;top:-1px;\" >Classify</span ></p >\n<p  legLH=\"1.419\" style=\"margin-left:0px;text-indent:0px;line-height:1.312;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text10969Font1\" style=\"position:relative;top:-1px;\" >Explain</span ></p >\n<p  legLH=\"1.419\" style=\"margin-left:0px;text-indent:0px;line-height:1.312;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text10969Font1\" style=\"position:relative;top:-1px;\" >Infer</span ></p >\n</td >\n<td  style=\"width:108px;height:129px; padding-left:4px;padding-right:4px;padding-bottom:0px;padding-top:0px;vertical-align:top;\" >\n<p  legLH=\"1.419\" style=\"margin-left:0px;text-indent:0px;line-height:1.312;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text10969Font1\" style=\"position:relative;top:-1px;\" >Paraphrase</span ></p >\n<p  legLH=\"1.419\" style=\"margin-left:0px;text-indent:0px;line-height:1.312;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text10969Font1\" style=\"position:relative;top:-1px;\" >Discuss</span ></p >\n<p  legLH=\"1.419\" style=\"margin-left:0px;text-indent:0px;line-height:1.312;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text10969Font1\" style=\"position:relative;top:-1px;\" >Compare</span ></p >\n<p  legLH=\"1.419\" style=\"margin-left:0px;text-indent:0px;line-height:1.312;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text10969Font1\" style=\"position:relative;top:-1px;\" >Illustrate</span ></p >\n<p  legLH=\"1.419\" style=\"margin-left:0px;text-indent:0px;line-height:1.312;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text10969Font1\" style=\"position:relative;top:-1px;\" >Report</span ></p >\n<p  legLH=\"1.419\" style=\"margin-left:0px;text-indent:0px;line-height:1.312;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text10969Font1\" style=\"position:relative;top:-1px;\" >Demonstrate</span ></p >\n</td >\n</tr >\n</table ></div>\n');
 text10969.build()
 
+arObjs.push(text57298);
 arObjs.push(shape10971);
-arObjs.push(button11829);
+arObjs.push(button63316);
 arObjs.push(image10961);
 arObjs.push(image10963);
 arObjs.push(image10966);
@@ -507,8 +537,9 @@ if( is.min ){
 
 <script>
 if( is.min ){
+    appendElement(text57298, null, null);
     appendElement(shape10971, null, null);
-    appendElement(button11829, null, null);
+    appendElement(button63316, null, null);
     appendElement(image10961, null, null);
     appendElement(image10963, null, null);
     appendElement(image10966, null, null);

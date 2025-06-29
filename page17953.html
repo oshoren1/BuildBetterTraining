@@ -172,6 +172,8 @@ function ReFlow() {
 
 
 VarTrivSelCap = new Variable( 'VarTrivSelCap', 'none', 0, 0, null, null, 'buildbettertraining', true )
+VarPageInTitle = new Variable( 'VarPageInTitle', null, 0, 0, null, null, 'buildbettertraining' )
+VarPageInTitle.set( '30' )
 VarTriMuteAllFLV = new Variable( 'VarTriMuteAllFLV', '', 0, 0, null, null, 'buildbettertraining', true )
 
 onload = responsiveInit
@@ -195,30 +197,33 @@ function init11() {
   findWH()
   if( is.min ){
     trivPageTracking.InitPageTracking();
-    PreloadResources(new Array(button28749,audio18489,image17955,image18362,shape17957,text17958,shape17962))
+    PreloadResources(new Array(text57832,button65538,audio18489,shape17962,image17955,image18362,shape17957,text17958))
     pageLayer.show(true);
-    button28749.init()
+    text57832.init()
+    button65538.init()
     audio18489.init()
+    shape17962.init()
     image17955.init()
     image18362.init()
     shape17957.init()
     text17958.init()
-    shape17962.init()
-    button28749.activate()
+    text57832.activate()
+    button65538.activate()
     audio18489.activate()
+    shape17962.activate()
     image17955.activate()
     image18362.activate()
     shape17957.activate()
     text17958.activate()
-    shape17962.activate()
-button28749.strCookieState = (trivBtnTracking.GetRangeStatus(28749,true));
-button28749.loadStateFromSes("normalState");
+button65538.strCookieState = (trivBtnTracking.GetRangeStatus(65538,true));
+button65538.loadStateFromSes("normalState");
 		    try{
 		     var objToScroll = trivGetScrollObj(window.location.href) ;
 		     trivScrollTo(window, objToScroll);
 		     var titleManagerIndexWindow = (window && window.parent && window.parent.bIsTitleManagerIndexFile) ? window.parent : null;
 		     if(titleManagerIndexWindow)  trivScrollTo(titleManagerIndexWindow, objToScroll);
 		    } catch (e) { }
+    action57833();action57834();
     if(!isSinglePagePlayerAvail()) postPageShowAction();
     if( location.hash )
     {
@@ -327,14 +332,26 @@ function playerReady(obj){
   	if(obj['id'] == 'swfaudio18489') { audio18489.setFlashPlayer(); audio18489.flsPlayer.addModelListener("STATE", "OnStateChange"); }
 }
 
-function action28750(fn){
+function action57833(fn){
+    text57832.actionChangeContents( "Page  " +  VarPageInTitle.getValue() + "","alignleft","1" ); 
+    if(fn && typeof(fn) == 'string' ) eval(fn);
+    else if(fn && typeof(fn) == 'function' ) fn();
+}
+
+function action57834(fn){
+    text57832.actionShow(); 
+    if(fn && typeof(fn) == 'string' ) eval(fn);
+    else if(fn && typeof(fn) == 'function' ) fn();
+}
+
+function action65539(fn){
     trivExitPage('page17589.html',false); 
     if(fn && typeof(fn) == 'string' ) eval(fn);
     else if(fn && typeof(fn) == 'function' ) fn();
 }
 
-function button28749onUp() {
-  action28750();
+function button65538onUp() {
+  action65539();
 }
 
 function action49525(fn){
@@ -378,38 +395,72 @@ function setPlayerMute(plrObj, bMute){
 }
 
 if( is.min ){
-button28749 = new ObjButton('button28749', 'Back',50,50,82.000000,35.000000,1,18,'div','',1,0)
-button28749.setUseSvgFile(1)
-button28749.setFillStyle(1)
-button28749.setUniqueFillID('page17953_button28749')
-button28749.initRotateAngle(0,0,0,-0.000000,-0.000000,81,34)
-button28749.initHasShadow(0)
-button28749.initHasReflection(0)
-button28749.setImages({"disabledState":"","downState":"","normalState":"images/button28749.png","overState":"","selectedState":"","visitedState":""});
-button28749.setStateOpacity({"disabledState":1.0,"downState":1.0,"normalState":1.0,"overState":1.0,"selectedState":1.0,"visitedState":1.0});
-button28749.addOpacity(100)
-button28749.initImageMap('81,10,17,10,17,0,0,17,17,34,17,24,81,24,81,10','M 81.000000 9.690001 L 17.000000 9.690001 L 17.000000 0.000000 L 0.000000 17.000000 L 17.000000 34.000000 L 17.000000 24.309999 L 81.000000 24.309999 L 81.000000 9.690001 z')
-button28749.setFills({"disabledState":{"fillInfo":"","stylePath":"fill:#708DC1;\""},"downState":{"fillInfo":"","stylePath":"fill:#223D6C;\""},"normalState":{"fillInfo":"","stylePath":"fill:#21314D;\""},"overState":{"fillInfo":"","stylePath":"fill:#223D6C;\""},"selectedState":{"fillInfo":"","screenRdr":"Selected","stylePath":"fill:#1B4FAA;\""},"visitedState":{"fillInfo":"","screenRdr":"Visited","stylePath":"fill:#1B4FAA;\""}});
-button28749.setImgFillVal({"disabledState":{"B64":"","fill":"","style":""},"downState":{"B64":"","fill":"","style":""},"normalState":{"B64":"","fill":"","style":""},"overState":{"B64":"","fill":"","style":""},"selectedState":{"B64":"","fill":"","style":""},"visitedState":{"B64":"","fill":"","style":""}});
-button28749.initLineWeight('0')
-button28749.onUp = button28749onUp
-button28749.hasOnUp = true
-button28749.capture=4
-button28749.setTextVal({"disabledState":{"div":"div.button28749disabledStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:81.000000px; height:34.000000px;}","span":"span.button28749disabledStateText { width:77.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"downState":{"div":"div.button28749downStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:81.000000px; height:34.000000px;}","span":"span.button28749downStateText { width:77.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"normalState":{"div":"div.button28749Text { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:81.000000px; height:34.000000px;}","span":"span.button28749Text { width:77.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"overState":{"div":"div.button28749overStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:81.000000px; height:34.000000px;}","span":"span.button28749overStateText { width:77.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"selectedState":{"div":"div.button28749selectedStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:81.000000px; height:34.000000px;}","span":"span.button28749selectedStateText { width:77.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"visitedState":{"div":"div.button28749visitedStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:81.000000px; height:34.000000px;}","span":"span.button28749visitedStateText { width:77.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"}});
-button28749.text = 'Back'
-button28749.bSelectedEnabled = false;
-button28749.bVisitedEnabled = false;
-button28749.bOverEnabled = true;
-button28749.bDownEnabled = true;
-button28749.build()
+text57832 = new ObjText('text57832',null,50,685,116,21,0,19,null,'div',null,1 )
+text57832.initSLine(1)
+text57832.initHasBullet(0)
+text57832.initRotateAngle(0,0,0)
+text57832.initHasOuterShadow(0)
+text57832.initHasTextShadow(0)
+text57832.initHasBorder(0)
+text57832.initHasOutline(0)
+text57832.initHasMargin(0)
+text57832.addIe8Attr(50, 685, 116, 21, 0, 0)
+text57832.addHeading(0)
+text57832.addOpacity(100)
+text57832.arrCSSStyles = new Array();
+text57832.arrCSSStyles.push('span.text57832Font1 { font-size:13px; font-family:"Arial", sans-serif; color:#21314d;}');
+text57832.arrCSSStyles.push('span.text57832Font2 { font-size:13px; font-family:"Arial", sans-serif; color:#000000;}');
+text57832.addInnerText('<div id=\"text57832\" aria-live=\"off\"  ><p lang=\"en\"  style=\"margin-left:0px;text-indent:0px;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text57832Font1\"  >Page n</span ><span class=\"text57832Font2\" style=\"background-color:transparent\" >\n</span ></p ></div>\n');
+text57832.build()
 
-audio18489 = new ObjMedia('audio18489','smoked paprika',50,517,225,24,1,19,'media/smoked_paprika.mp3',0,1,0,0,1,0.800000,1,'div',0);
+button65538 = new ObjButton('button65538', 'Back',50,50,81.000000,43.000000,1,20,'div','',1,0)
+button65538.setUseSvgFile(1)
+button65538.setFillStyle(1)
+button65538.setUniqueFillID('page17953_button65538')
+button65538.initRotateAngle(0,0,0,-0.000000,-0.000000,80,42)
+button65538.initHasShadow(0)
+button65538.initHasReflection(0)
+button65538.setImages({"disabledState":"","downState":"","normalState":"images/button65538.png","overState":"","selectedState":"","visitedState":""});
+button65538.setStateOpacity({"disabledState":1.0,"downState":1.0,"normalState":1.0,"overState":1.0,"selectedState":1.0,"visitedState":1.0});
+button65538.addOpacity(100)
+button65538.initImageMap('80,12,21,12,21,0,0,21,21,42,21,30,80,30,80,12','M 80.000000 11.970000 L 21.000000 11.970000 L 21.000000 0.000000 L 0.000000 21.000000 L 21.000000 42.000000 L 21.000000 30.029999 L 80.000000 30.029999 L 80.000000 11.970000 z')
+button65538.setFills({"disabledState":{"fillInfo":"","stylePath":"fill:#708DC1;\""},"downState":{"fillInfo":"","stylePath":"fill:#223D6C;\""},"normalState":{"fillInfo":"","stylePath":"fill:#21314D;\""},"overState":{"fillInfo":"","stylePath":"fill:#223D6C;\""},"selectedState":{"fillInfo":"","screenRdr":"Selected","stylePath":"fill:#1B4FAA;\""},"visitedState":{"fillInfo":"","screenRdr":"Visited","stylePath":"fill:#1B4FAA;\""}});
+button65538.setImgFillVal({"disabledState":{"B64":"","fill":"","style":""},"downState":{"B64":"","fill":"","style":""},"normalState":{"B64":"","fill":"","style":""},"overState":{"B64":"","fill":"","style":""},"selectedState":{"B64":"","fill":"","style":""},"visitedState":{"B64":"","fill":"","style":""}});
+button65538.initLineWeight('0')
+button65538.onUp = button65538onUp
+button65538.hasOnUp = true
+button65538.capture=4
+button65538.setTextVal({"disabledState":{"div":"div.button65538disabledStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:80.000000px; height:42.000000px;}","span":"span.button65538disabledStateText { width:76.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"downState":{"div":"div.button65538downStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:80.000000px; height:42.000000px;}","span":"span.button65538downStateText { width:76.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"normalState":{"div":"div.button65538Text { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:80.000000px; height:42.000000px;}","span":"span.button65538Text { width:76.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"overState":{"div":"div.button65538overStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:80.000000px; height:42.000000px;}","span":"span.button65538overStateText { width:76.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"selectedState":{"div":"div.button65538selectedStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:80.000000px; height:42.000000px;}","span":"span.button65538selectedStateText { width:76.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"visitedState":{"div":"div.button65538visitedStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:80.000000px; height:42.000000px;}","span":"span.button65538visitedStateText { width:76.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"}});
+button65538.text = 'Back'
+button65538.bSelectedEnabled = false;
+button65538.bVisitedEnabled = false;
+button65538.bOverEnabled = true;
+button65538.bDownEnabled = true;
+button65538.build()
+
+audio18489 = new ObjMedia('audio18489','smoked paprika',50,517,225,24,1,21,'media/smoked_paprika.mp3',0,1,0,0,1,0.800000,1,'div',0);
 audio18489.bNeedPool = true;
 audio18489.bSpeedControl = true;
 audio18489.BuildMediaString()
 audio18489.build()
 
-image17955 = new ObjImage('image17955','images/pantry.jpg','pantry',0,0,1280,722,1,3,'div',null, 0 )
+shape17962 = new ObjImage('shape17962','images/shape17962.png','Triangle Right',725,278,26.000000,25.000000,0,22,'div','',0 )
+shape17962.initRotateAngle(0,0,0,-1.000000,-1.000000,24,23)
+shape17962.initHasShadow(0)
+shape17962.initHasReflection(0)
+shape17962.setUniqueFillID('page17953_shape17962')
+shape17962.addIe8Attr(725.000000, 278.000000, 26.000000, 25.000000, 0, 0)
+shape17962.initImageMap(1,'25,12,1,24,1,1,25,12','M 25.000000 12.000000 L 1.000000 24.000000 L 1.000000 1.000000 L 25.000000 12.000000 z', '', 'stroke:#010000; stroke-width:1; stroke-linejoin:round;stroke-dasharray: none; fill:#21314D;"' , '')
+shape17962.setUseSvgFile(1)
+shape17962.addBorder(0)
+shape17962.initLineWeight(1)
+shape17962.addOpacity(100)
+shape17962.onUp = shape17962onUp
+shape17962.hasOnUp = true
+shape17962.capture=4
+shape17962.build()
+
+image17955 = new ObjImage('image17955','images/pantry.jpg','pantry',0,0,1280,722,1,5,'div',null, 0 )
 image17955.initRotateAngle(0,0,0,0,0,0,0)
 image17955.initHasShadow(0)
 image17955.initHasReflection(0)
@@ -419,7 +470,7 @@ image17955.addBorder(0)
 image17955.addOpacity(100)
 image17955.build()
 
-image18362 = new ObjImage('image18362','images/paprika_ingredient1crop_image18362.png','Paprika ingredient1',340,259,265,410,1,4,'div',null, 0 )
+image18362 = new ObjImage('image18362','images/paprika_ingredient1crop_image18362.png','Paprika ingredient1',340,259,265,410,1,6,'div',null, 0 )
 image18362.initRotateAngle(0,0,0,0,0,0,0)
 image18362.initHasShadow(0)
 image18362.initHasReflection(0)
@@ -429,7 +480,7 @@ image18362.addBorder(0)
 image18362.addOpacity(100)
 image18362.build()
 
-shape17957 = new ObjImage('shape17957','images/shape17957.png','Callout Ellipse',575,125,326.000000,188.000000,1,5,'div','',0 )
+shape17957 = new ObjImage('shape17957','images/shape17957.png','Callout Ellipse',575,125,326.000000,188.000000,1,7,'div','',0 )
 shape17957.initRotateAngle(0,0,0,-1.000000,0.000000,325,186)
 shape17957.initHasShadow(0)
 shape17957.initHasReflection(0)
@@ -442,7 +493,7 @@ shape17957.initLineWeight(1)
 shape17957.addOpacity(100)
 shape17957.build()
 
-text17958 = new ObjText('text17958',null,607,170,263,97,1,6,null,'div',null,0 )
+text17958 = new ObjText('text17958',null,607,170,263,97,1,8,null,'div',null,0 )
 text17958.initSLine(0)
 text17958.initHasBullet(0)
 text17958.initRotateAngle(0,0,0)
@@ -456,32 +507,17 @@ text17958.addHeading(0)
 text17958.addOpacity(100)
 text17958.arrCSSStyles = new Array();
 text17958.arrCSSStyles.push('span.text17958Font1 { font-size:16px; font-family:"Arial", sans-serif; color:#21314d;}');
-text17958.addInnerText('<div id=\"text17958\" aria-live=\"off\"  ><p lang=\"en\"  legLH=\"1.409\" style=\"margin-left:0px;text-indent:0px;line-height:1.350;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text17958Font1\" style=\"position:relative;top:-2px;\" >You\'ve earned Smoked Paprika- bold, colorful, and full of character, just like creativity brings richness and originality to new ideas.\n</span ></p ></div>\n');
+text17958.addInnerText('<div id=\"text17958\" aria-live=\"off\"  ><p lang=\"en\"  legLH=\"1.409\" style=\"margin-left:0px;text-indent:0px;line-height:1.350;margin-top:0px;margin-bottom:0px;text-align:center;\" >\n<span class=\"text17958Font1\" style=\"position:relative;top:-2px;\" >You\'ve earned Smoked Paprika- bold, colorful, and full of character, just like creativity brings richness and originality to new ideas.\n</span ></p ></div>\n');
 text17958.build()
 
-shape17962 = new ObjImage('shape17962','images/shape17962.png','Triangle Right',725,266,26.000000,25.000000,0,7,'div','',0 )
-shape17962.initRotateAngle(0,0,0,-1.000000,-1.000000,24,23)
-shape17962.initHasShadow(0)
-shape17962.initHasReflection(0)
-shape17962.setUniqueFillID('page17953_shape17962')
-shape17962.addIe8Attr(725.000000, 266.000000, 26.000000, 25.000000, 0, 0)
-shape17962.initImageMap(1,'25,12,1,24,1,1,25,12','M 25.000000 12.000000 L 1.000000 24.000000 L 1.000000 1.000000 L 25.000000 12.000000 z', '', 'stroke:#010000; stroke-width:1; stroke-linejoin:round;stroke-dasharray: none; fill:#21314D;"' , '')
-shape17962.setUseSvgFile(1)
-shape17962.addBorder(0)
-shape17962.initLineWeight(1)
-shape17962.addOpacity(100)
-shape17962.onUp = shape17962onUp
-shape17962.hasOnUp = true
-shape17962.capture=4
-shape17962.build()
-
-arObjs.push(button28749);
+arObjs.push(text57832);
+arObjs.push(button65538);
 arObjs.push(audio18489);
+arObjs.push(shape17962);
 arObjs.push(image17955);
 arObjs.push(image18362);
 arObjs.push(shape17957);
 arObjs.push(text17958);
-arObjs.push(shape17962);
 
 
 writeStyleSheets(arObjs);}
@@ -507,13 +543,14 @@ if( is.min ){
 
 <script>
 if( is.min ){
-    appendElement(button28749, null, null);
+    appendElement(text57832, null, null);
+    appendElement(button65538, null, null);
     appendElement(audio18489, null, null);
+    appendElement(shape17962, null, null);
     appendElement(image17955, null, null);
     appendElement(image18362, null, null);
     appendElement(shape17957, null, null);
     appendElement(text17958, null, null);
-    appendElement(shape17962, null, null);
 }
 </script>
 

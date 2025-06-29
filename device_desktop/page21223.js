@@ -1,6 +1,8 @@
 DesktopResponsive={"1009":{
 "pageLayer":{"w":1280,"h":720,"bgColor":"#ffffff"}
 ,
+"text57868":{"x":50,"y":685,"w":116,"h":21,"txtscale":100,"bOffBottom":1}
+,
 "audio29882":{"x":314,"y":289,"w":225,"h":24,"ctrlH":24,"bOffBottom":0}
 ,
 "shape21251":{"x":551,"y":174,"w":27.000000,"h":28.000000,"stylemods":[{"sel":"div.shape21251Text","decl":" { position:absolute; top:1.000000px; left:1.000000px; display:flex; justify-content:center; align-items:center; width:25.000000px; height:26.000000px;}"},{"sel":"span.shape21251Text","decl":" { width:21.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Lucida Sans Unicode\", sans-serif; color:#21314d;}"}],"bOffBottom":0 ,"td": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABsAAAAcCAYAAACQ0cTtAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAZSURBVEhL7cEBDQAAAMKg909tDwcUAADwaAvsAAFr9+3+AAAAAElFTkSuQmCC"  ,"fd": "" ,"p": "M 26.000000 14.000000 L 1.000000 27.000000 L 1.000000 1.000000 L 26.000000 14.000000 z" ,"i":"images/shape21251.png"}

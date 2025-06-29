@@ -173,6 +173,8 @@ function ReFlow() {
 
 
 VarTrivSelCap = new Variable( 'VarTrivSelCap', 'none', 0, 0, null, null, 'buildbettertraining', true )
+VarPageInTitle = new Variable( 'VarPageInTitle', null, 0, 0, null, null, 'buildbettertraining' )
+VarPageInTitle.set( '33' )
 VarTriMuteAllFLV = new Variable( 'VarTriMuteAllFLV', '', 0, 0, null, null, 'buildbettertraining', true )
 
 onload = responsiveInit
@@ -196,8 +198,9 @@ function init11() {
   findWH()
   if( is.min ){
     trivPageTracking.InitPageTracking();
-    PreloadResources(new Array(audio29882,shape21251,audio29904,audio30008,button21943,image21225,image21274,shape21558,text21587,shape21855,text21910,shape22489,text22504))
+    PreloadResources(new Array(text57868,audio29882,shape21251,audio29904,audio30008,button21943,image21225,image21274,shape21558,text21587,shape21855,text21910,shape22489,text22504))
     pageLayer.show(true);
+    text57868.init()
     audio29882.init()
     shape21251.init()
     audio29904.init()
@@ -211,6 +214,7 @@ function init11() {
     text21910.init()
     shape22489.init()
     text22504.init()
+    text57868.activate()
     audio29882.activate()
     shape21251.activate()
     audio29904.activate()
@@ -232,6 +236,7 @@ button21943.loadStateFromSes("normalState");
 		     var titleManagerIndexWindow = (window && window.parent && window.parent.bIsTitleManagerIndexFile) ? window.parent : null;
 		     if(titleManagerIndexWindow)  trivScrollTo(titleManagerIndexWindow, objToScroll);
 		    } catch (e) { }
+    action57869();action57870();
     if(!isSinglePagePlayerAvail()) postPageShowAction();
     if( location.hash )
     {
@@ -344,6 +349,18 @@ function playerReady(obj){
 
 function getUpdate(typ, pr1, pr2, swf) {
   	if( typ == 'item' && swf == 'swfaudio29904' ) {setTimeout("action51650();",100);}
+}
+
+function action57869(fn){
+    text57868.actionChangeContents( "Page  " +  VarPageInTitle.getValue() + "","alignleft","1" ); 
+    if(fn && typeof(fn) == 'string' ) eval(fn);
+    else if(fn && typeof(fn) == 'function' ) fn();
+}
+
+function action57870(fn){
+    text57868.actionShow(); 
+    if(fn && typeof(fn) == 'string' ) eval(fn);
+    else if(fn && typeof(fn) == 'function' ) fn();
 }
 
 function action51559(fn){
@@ -531,13 +548,31 @@ function setPlayerMute(plrObj, bMute){
 }
 
 if( is.min ){
-audio29882 = new ObjMedia('audio29882','Congrats1',314,289,225,24,1,24,'media/congrats1.mp3',0,1,0,0,1,0.800000,1,'div',0);
+text57868 = new ObjText('text57868',null,50,685,116,21,0,25,null,'div',null,1 )
+text57868.initSLine(1)
+text57868.initHasBullet(0)
+text57868.initRotateAngle(0,0,0)
+text57868.initHasOuterShadow(0)
+text57868.initHasTextShadow(0)
+text57868.initHasBorder(0)
+text57868.initHasOutline(0)
+text57868.initHasMargin(0)
+text57868.addIe8Attr(50, 685, 116, 21, 0, 0)
+text57868.addHeading(0)
+text57868.addOpacity(100)
+text57868.arrCSSStyles = new Array();
+text57868.arrCSSStyles.push('span.text57868Font1 { font-size:13px; font-family:"Arial", sans-serif; color:#21314d;}');
+text57868.arrCSSStyles.push('span.text57868Font2 { font-size:13px; font-family:"Arial", sans-serif; color:#000000;}');
+text57868.addInnerText('<div id=\"text57868\" aria-live=\"off\"  ><p lang=\"en\"  style=\"margin-left:0px;text-indent:0px;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text57868Font1\"  >Page n</span ><span class=\"text57868Font2\" style=\"background-color:transparent\" >\n</span ></p ></div>\n');
+text57868.build()
+
+audio29882 = new ObjMedia('audio29882','Congrats1',314,289,225,24,1,26,'media/congrats1.mp3',0,1,0,0,1,0.800000,1,'div',0);
 audio29882.bNeedPool = true;
 audio29882.bSpeedControl = true;
 audio29882.BuildMediaString()
 audio29882.build()
 
-shape21251 = new ObjImage('shape21251','images/shape21251.png','Triangle Right',551,174,27.000000,28.000000,0,25,'div','',0 )
+shape21251 = new ObjImage('shape21251','images/shape21251.png','Triangle Right',551,174,27.000000,28.000000,0,27,'div','',0 )
 shape21251.initRotateAngle(0,0,0,-1.000000,-1.000000,25,26)
 shape21251.initHasShadow(0)
 shape21251.initHasReflection(0)
@@ -553,14 +588,14 @@ shape21251.hasOnUp = true
 shape21251.capture=4
 shape21251.build()
 
-audio29904 = new ObjMedia('audio29904','Congrats 2',314,313,225,24,1,26,'media/congrats_2.mp3',0,0,0,0,1,0.800000,1,'div',0);
+audio29904 = new ObjMedia('audio29904','Congrats 2',314,313,225,24,1,28,'media/congrats_2.mp3',0,0,0,0,1,0.800000,1,'div',0);
 audio29904.bSpeedControl = true;
 audio29904.BuildMediaString()
 audio29904.actionShow = audio29904actionShow
 audio29904.build()
 
 audio29904.addEvent('0.00', 'audio29904evEvent_2')
-audio30008 = new ObjMedia('audio30008','You learned',663,414,225,24,0,27,'media/you_learned.mp3',0,0,0,0,1,0.800000,1,'div',0);
+audio30008 = new ObjMedia('audio30008','You learned',663,414,225,24,0,29,'media/you_learned.mp3',0,0,0,0,1,0.800000,1,'div',0);
 audio30008.bNeedPool = true;
 audio30008.bSpeedControl = true;
 audio30008.BuildMediaString()
@@ -568,7 +603,7 @@ audio30008.actionShow = audio30008actionShow
 audio30008.build()
 
 audio30008.addEvent('0.00', 'audio30008evEvent_1')
-button21943 = new ObjButton('button21943', 'End',383,226,82.000000,35.000000,0,28,'div','',1,0)
+button21943 = new ObjButton('button21943', 'End',383,226,82.000000,35.000000,0,30,'div','',1,0)
 button21943.setUseSvgFile(1)
 button21943.setFillStyle(1)
 button21943.setUniqueFillID('page21223_button21943')
@@ -593,7 +628,7 @@ button21943.bOverEnabled = true;
 button21943.bDownEnabled = true;
 button21943.build()
 
-image21225 = new ObjImage('image21225','images/litchen_backgroundcrop_image21225.png','kitchen background',0,0,1280,719,1,6,'div',null, 0 )
+image21225 = new ObjImage('image21225','images/litchen_backgroundcrop_image21225.png','kitchen background',0,0,1280,719,1,7,'div',null, 0 )
 image21225.initRotateAngle(0,0,0,0,0,0,0)
 image21225.initHasShadow(0)
 image21225.initHasReflection(0)
@@ -603,7 +638,7 @@ image21225.addBorder(0)
 image21225.addOpacity(100)
 image21225.build()
 
-image21274 = new ObjImage('image21274','images/3crop_image21274.png','a smiling female chef clapping her hands with joy',112,192,180,331,1,7,'div',null, 0 )
+image21274 = new ObjImage('image21274','images/3crop_image21274.png','a smiling female chef clapping her hands with joy',112,192,180,331,1,8,'div',null, 0 )
 image21274.initRotateAngle(0,0,0,0,0,0,0)
 image21274.initHasShadow(0)
 image21274.initHasReflection(0)
@@ -613,7 +648,7 @@ image21274.addBorder(0)
 image21274.addOpacity(100)
 image21274.build()
 
-shape21558 = new ObjImage('shape21558','images/shape21558.png','Callout Ellipse',266,70,338.000000,210.000000,1,8,'div','',0 )
+shape21558 = new ObjImage('shape21558','images/shape21558.png','Callout Ellipse',266,70,338.000000,210.000000,1,9,'div','',0 )
 shape21558.initRotateAngle(0,0,0,-1.000000,0.000000,336,209)
 shape21558.initHasShadow(0)
 shape21558.initHasReflection(0)
@@ -626,7 +661,7 @@ shape21558.initLineWeight(1)
 shape21558.addOpacity(100)
 shape21558.build()
 
-text21587 = new ObjText('text21587',null,314,111,250,162,1,9,null,'div',null,0 )
+text21587 = new ObjText('text21587',null,314,111,250,162,1,10,null,'div',null,0 )
 text21587.initSLine(0)
 text21587.initHasBullet(0)
 text21587.initRotateAngle(0,0,0)
@@ -643,7 +678,7 @@ text21587.arrCSSStyles.push('span.text21587Font1 { font-size:16px; font-family:"
 text21587.addInnerText('<div id=\"text21587\" aria-live=\"off\"  ><p lang=\"en\"  legLH=\"1.409\" style=\"margin-left:0px;text-indent:0px;line-height:1.350;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text21587Font1\" style=\"position:relative;top:-2px;\" >Congratulations, Chef-in-Training! You\'ve completed your journey through The Training Kitchen, mastering the key ingredients needed to design effective, skill-building workplace training.\n</span ></p ></div>\n');
 text21587.build()
 
-shape21855 = new ObjImage('shape21855','images/shape21855.png','Callout Ellipse2',266,81,330.000000,198.000000,0,10,'div','',0 )
+shape21855 = new ObjImage('shape21855','images/shape21855.png','Callout Ellipse2',266,81,330.000000,198.000000,0,11,'div','',0 )
 shape21855.initRotateAngle(0,0,0,-1.000000,0.000000,329,196)
 shape21855.initHasShadow(0)
 shape21855.initHasReflection(0)
@@ -656,7 +691,7 @@ shape21855.initLineWeight(1)
 shape21855.addOpacity(100)
 shape21855.build()
 
-text21910 = new ObjText('text21910',null,314,111,250,139,0,11,null,'div',null,0 )
+text21910 = new ObjText('text21910',null,314,111,250,139,0,12,null,'div',null,0 )
 text21910.initSLine(0)
 text21910.initHasBullet(0)
 text21910.initRotateAngle(0,0,0)
@@ -670,10 +705,10 @@ text21910.addHeading(0)
 text21910.addOpacity(100)
 text21910.arrCSSStyles = new Array();
 text21910.arrCSSStyles.push('span.text21910Font1 { font-size:16px; font-family:"Arial", sans-serif; color:#21314d;}');
-text21910.addInnerText('<div id=\"text21910\" aria-live=\"off\"  ><p lang=\"en\"  legLH=\"1.409\" style=\"margin-left:0px;text-indent:0px;line-height:1.350;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text21910Font1\" style=\"position:relative;top:-2px;\" >With a full pantry and sharpened tools, you\'re ready to create structured, purposeful training that helps learners not just memorize, but think, apply, and grow.\n</span ></p ></div>\n');
+text21910.addInnerText('<div id=\"text21910\" aria-live=\"off\"  ><p lang=\"en\"  legLH=\"1.409\" style=\"margin-left:0px;text-indent:0px;line-height:1.350;margin-top:0px;margin-bottom:0px;text-align:center;\" >\n<span class=\"text21910Font1\" style=\"position:relative;top:-2px;\" >With a full pantry and sharpened tools, you\'re ready to create structured, purposeful training that helps learners not just memorize, but think, apply, and grow.\n</span ></p ></div>\n');
 text21910.build()
 
-shape22489 = new ObjImage('shape22489','images/shape22489.png','Rectangle',643,35,265.000000,410.000000,0,12,'div','',0 )
+shape22489 = new ObjImage('shape22489','images/shape22489.png','Rectangle',643,35,265.000000,410.000000,0,13,'div','',0 )
 shape22489.initRotateAngle(0,0,0,-1.000000,-1.000000,263,408)
 shape22489.initHasShadow(0)
 shape22489.initHasReflection(0)
@@ -687,7 +722,7 @@ shape22489.addOpacity(100)
 shape22489.actionShow = shape22489actionShow
 shape22489.build()
 
-text22504 = new ObjText('text22504',null,652,54,247,372,0,13,null,'div',null,0 )
+text22504 = new ObjText('text22504',null,652,54,247,372,0,14,null,'div',null,0 )
 text22504.initSLine(0)
 text22504.initHasBullet(1)
 text22504.initRotateAngle(0,0,0)
@@ -705,9 +740,10 @@ text22504.arrCSSStyles.push('span.text22504Font1 { font-size:16px; font-family:"
 text22504.arrCSSStyles.push('li.text22504Font1 { font-size:16px; font-family:"Arial", sans-serif; color:#21314d; font-weight:bold; font-style:normal; text-decoration:normal;}');
 text22504.arrCSSStyles.push('span.text22504Font2 { font-size:16px; font-family:"Arial", sans-serif; color:#21314d; font-weight:normal; font-style:normal; text-decoration:normal;}');
 text22504.arrCSSStyles.push('li.text22504Font2 { font-size:16px; font-family:"Arial", sans-serif; color:#21314d; font-weight:normal; font-style:normal; text-decoration:normal;}');
-text22504.addInnerText('<div id=\"text22504\" aria-live=\"off\"  ><p lang=\"en\"  legLH=\"1.409\" style=\"margin-left:0px;text-indent:0px;line-height:1.350;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text22504Font1\" style=\"position:relative;top:-2px;\" >In this course you have: </span ><span class=\"text22504Font2\" style=\"background-color:transparentposition:relative;top:-2px;\" >\n</span ></p >\n<ul  style=\"list-style-position:outside;text-align:left;\" >\n<li  class=\"text22504Font2\" data-bltIndnt=\"0\" style=\"line-height:1.409;position:relative;margin-left:15px;margin-top:0px;margin-bottom:0px; list-style-image:url(\'images/text22504CircleBulletFont7.png\'); padding-left:8px;\"><!--{ \ndata-bltIndnt:0\n} --><span class=\"text22504Font2\"  >Identified real-world training needs by analyzing and categorizing tasks using Bloom\'s Taxonomy.\n</span ></li >\n<li  class=\"text22504Font2\" data-bltIndnt=\"0\" style=\"line-height:1.409;position:relative;margin-left:15px;margin-top:0px;margin-bottom:0px; list-style-image:url(\'images/text22504CircleBulletFont7.png\'); padding-left:8px;\"><!--{ \ndata-bltIndnt:0\n} --><span class=\"text22504Font2\"  >Developed clear learning objectives aligned to specific cognitive levels.\n</span ></li >\n<li  class=\"text22504Font2\" data-bltIndnt=\"0\" style=\"line-height:1.409;position:relative;margin-left:15px;margin-top:0px;margin-bottom:0px; list-style-image:url(\'images/text22504CircleBulletFont7.png\'); padding-left:8px;\"><!--{ \ndata-bltIndnt:0\n} --><span class=\"text22504Font2\"  >Designed workplace activities that engage learners across multiple levels of thinking.\n</span ></li >\n<li  class=\"text22504Font2\" data-bltIndnt=\"0\" style=\"line-height:1.409;position:relative;margin-left:15px;margin-top:0px;margin-bottom:0px; list-style-image:url(\'images/text22504CircleBulletFont7.png\'); padding-left:8px;\"><!--{ \ndata-bltIndnt:0\n} --><span class=\"text22504Font2\"  >Evaluated training strategies to ensure they foster learning, skill application, and independent problem-solving\n</span ></li >\n</ul ></div>\n');
+text22504.addInnerText('<div id=\"text22504\" aria-live=\"off\"  ><p lang=\"en\"  legLH=\"1.409\" style=\"margin-left:0px;text-indent:0px;line-height:1.350;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text22504Font1\" style=\"position:relative;top:-2px;\" >In this course you have: </span ><span class=\"text22504Font2\" style=\"background-color:transparentposition:relative;top:-2px;\" >\n</span ></p >\n<ul  style=\"list-style-position:outside;text-align:left;\" >\n<li  class=\"text22504Font2\" data-bltIndnt=\"0\" style=\"line-height:1.409;position:relative;margin-left:15px;margin-top:0px;margin-bottom:0px; list-style-image:url(\'images/text22504CircleBulletFont7.png\'); padding-left:8px;\"><!--{ \ndata-bltIndnt:0\n} --><span class=\"text22504Font2\"  >Identified real-world training needs by analyzing and categorizing tasks using Bloom\'s Taxonomy.\n</span ></li >\n<li  class=\"text22504Font2\" data-bltIndnt=\"0\" style=\"line-height:1.409;position:relative;margin-left:15px;margin-top:0px;margin-bottom:0px; list-style-image:url(\'images/text22504CircleBulletFont7.png\'); padding-left:8px;\"><!--{ \ndata-bltIndnt:0\n} --><span class=\"text22504Font2\"  >Developed clear learning objectives aligned to specific cognitive levels.\n</span ></li >\n<li  class=\"text22504Font2\" data-bltIndnt=\"0\" style=\"line-height:1.409;position:relative;margin-left:15px;margin-top:0px;margin-bottom:0px; list-style-image:url(\'images/text22504CircleBulletFont7.png\'); padding-left:8px;\"><!--{ \ndata-bltIndnt:0\n} --><span class=\"text22504Font2\"  >Designed workplace activities that engage learners across multiple levels of thinking.\n</span ></li >\n<li  class=\"text22504Font2\" data-bltIndnt=\"0\" style=\"line-height:1.409;position:relative;margin-left:15px;margin-top:0px;margin-bottom:0px; list-style-image:url(\'images/text22504CircleBulletFont7.png\'); padding-left:8px;\"><!--{ \ndata-bltIndnt:0\n} --><span class=\"text22504Font2\"  >Evaluated training strategies to ensure they foster learning, skill application, and independent problem-solving.\n</span ></li >\n</ul ></div>\n');
 text22504.build()
 
+arObjs.push(text57868);
 arObjs.push(audio29882);
 arObjs.push(shape21251);
 arObjs.push(audio29904);
@@ -746,6 +782,7 @@ if( is.min ){
 
 <script>
 if( is.min ){
+    appendElement(text57868, null, null);
     appendElement(audio29882, null, null);
     appendElement(shape21251, null, null);
     appendElement(audio29904, null, null);

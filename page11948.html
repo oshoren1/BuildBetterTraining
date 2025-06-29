@@ -165,6 +165,8 @@ function ReFlow() {
 
 
 VarTrivSelCap = new Variable( 'VarTrivSelCap', 'none', 0, 0, null, null, 'buildbettertraining', true )
+VarPageInTitle = new Variable( 'VarPageInTitle', null, 0, 0, null, null, 'buildbettertraining' )
+VarPageInTitle.set( '19' )
 VarTriMuteAllFLV = new Variable( 'VarTriMuteAllFLV', '', 0, 0, null, null, 'buildbettertraining', true )
 
 onload = responsiveInit
@@ -188,9 +190,10 @@ function init11() {
   findWH()
   if( is.min ){
     trivPageTracking.InitPageTracking();
-    PreloadResources(new Array(button11968,image11950,image11952,image11955,text11956,text11957,text12016,shape11960))
+    PreloadResources(new Array(text57337,button63802,image11950,image11952,image11955,text11956,text11957,text12016,shape11960))
     pageLayer.show(true);
-    button11968.init()
+    text57337.init()
+    button63802.init()
     image11950.init()
     image11952.init()
     image11955.init()
@@ -198,7 +201,8 @@ function init11() {
     text11957.init()
     text12016.init()
     shape11960.init()
-    button11968.activate()
+    text57337.activate()
+    button63802.activate()
     image11950.activate()
     image11952.activate()
     image11955.activate()
@@ -206,14 +210,15 @@ function init11() {
     text11957.activate()
     text12016.activate()
     shape11960.activate()
-button11968.strCookieState = (trivBtnTracking.GetRangeStatus(11968,true));
-button11968.loadStateFromSes("normalState");
+button63802.strCookieState = (trivBtnTracking.GetRangeStatus(63802,true));
+button63802.loadStateFromSes("normalState");
 		    try{
 		     var objToScroll = trivGetScrollObj(window.location.href) ;
 		     trivScrollTo(window, objToScroll);
 		     var titleManagerIndexWindow = (window && window.parent && window.parent.bIsTitleManagerIndexFile) ? window.parent : null;
 		     if(titleManagerIndexWindow)  trivScrollTo(titleManagerIndexWindow, objToScroll);
 		    } catch (e) { }
+    action57338();action57339();
     if(!isSinglePagePlayerAvail()) postPageShowAction();
     if( location.hash )
     {
@@ -318,20 +323,26 @@ function OnDeviceRotate() {
 
 }
 
-function action11969(fn){
-    trivExitPage('page5889.html',true); 
+function action57338(fn){
+    text57337.actionChangeContents( "Page  " +  VarPageInTitle.getValue() + "","alignleft","1" ); 
     if(fn && typeof(fn) == 'string' ) eval(fn);
     else if(fn && typeof(fn) == 'function' ) fn();
 }
 
-function action11970(fn){
-    
+function action57339(fn){
+    text57337.actionShow(); 
     if(fn && typeof(fn) == 'string' ) eval(fn);
     else if(fn && typeof(fn) == 'function' ) fn();
 }
 
-function button11968onUp() {
-  action11969();action11970();
+function action63803(fn){
+    trivExitPage('page14145.html',false); 
+    if(fn && typeof(fn) == 'string' ) eval(fn);
+    else if(fn && typeof(fn) == 'function' ) fn();
+}
+
+function button63802onUp() {
+  action63803();
 }
 
 function action11961(fn){
@@ -349,32 +360,50 @@ function shape11960actionShow() {
 }
 
 if( is.min ){
-button11968 = new ObjButton('button11968', 'Back',50,50,82.000000,35.000000,1,19,'div','',1,0)
-button11968.setUseSvgFile(1)
-button11968.setFillStyle(1)
-button11968.setUniqueFillID('page11948_button11968')
-button11968.initRotateAngle(0,0,0,-0.000000,-0.000000,81,34)
-button11968.initHasShadow(0)
-button11968.initHasReflection(0)
-button11968.setImages({"disabledState":"","downState":"","normalState":"images/button11968.png","overState":"","selectedState":"","visitedState":""});
-button11968.setStateOpacity({"disabledState":1.0,"downState":1.0,"normalState":1.0,"overState":1.0,"selectedState":1.0,"visitedState":1.0});
-button11968.addOpacity(100)
-button11968.initImageMap('81,10,17,10,17,0,0,17,17,34,17,24,81,24,81,10','M 81.000000 9.690001 L 17.000000 9.690001 L 17.000000 0.000000 L 0.000000 17.000000 L 17.000000 34.000000 L 17.000000 24.309999 L 81.000000 24.309999 L 81.000000 9.690001 z')
-button11968.setFills({"disabledState":{"fillInfo":"","stylePath":"fill:#708DC1;\""},"downState":{"fillInfo":"","stylePath":"fill:#223D6C;\""},"normalState":{"fillInfo":"","stylePath":"fill:#21314D;\""},"overState":{"fillInfo":"","stylePath":"fill:#223D6C;\""},"selectedState":{"fillInfo":"","screenRdr":"Selected","stylePath":"fill:#1B4FAA;\""},"visitedState":{"fillInfo":"","screenRdr":"Visited","stylePath":"fill:#1B4FAA;\""}});
-button11968.setImgFillVal({"disabledState":{"B64":"","fill":"","style":""},"downState":{"B64":"","fill":"","style":""},"normalState":{"B64":"","fill":"","style":""},"overState":{"B64":"","fill":"","style":""},"selectedState":{"B64":"","fill":"","style":""},"visitedState":{"B64":"","fill":"","style":""}});
-button11968.initLineWeight('0')
-button11968.onUp = button11968onUp
-button11968.hasOnUp = true
-button11968.capture=4
-button11968.setTextVal({"disabledState":{"div":"div.button11968disabledStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:81.000000px; height:34.000000px;}","span":"span.button11968disabledStateText { width:77.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"downState":{"div":"div.button11968downStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:81.000000px; height:34.000000px;}","span":"span.button11968downStateText { width:77.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"normalState":{"div":"div.button11968Text { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:81.000000px; height:34.000000px;}","span":"span.button11968Text { width:77.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"overState":{"div":"div.button11968overStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:81.000000px; height:34.000000px;}","span":"span.button11968overStateText { width:77.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"selectedState":{"div":"div.button11968selectedStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:81.000000px; height:34.000000px;}","span":"span.button11968selectedStateText { width:77.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"visitedState":{"div":"div.button11968visitedStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:81.000000px; height:34.000000px;}","span":"span.button11968visitedStateText { width:77.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"}});
-button11968.text = 'Back'
-button11968.bSelectedEnabled = false;
-button11968.bVisitedEnabled = false;
-button11968.bOverEnabled = true;
-button11968.bDownEnabled = true;
-button11968.build()
+text57337 = new ObjText('text57337',null,50,685,116,21,0,20,null,'div',null,1 )
+text57337.initSLine(1)
+text57337.initHasBullet(0)
+text57337.initRotateAngle(0,0,0)
+text57337.initHasOuterShadow(0)
+text57337.initHasTextShadow(0)
+text57337.initHasBorder(0)
+text57337.initHasOutline(0)
+text57337.initHasMargin(0)
+text57337.addIe8Attr(50, 685, 116, 21, 0, 0)
+text57337.addHeading(0)
+text57337.addOpacity(100)
+text57337.arrCSSStyles = new Array();
+text57337.arrCSSStyles.push('span.text57337Font1 { font-size:13px; font-family:"Arial", sans-serif; color:#21314d;}');
+text57337.arrCSSStyles.push('span.text57337Font2 { font-size:13px; font-family:"Arial", sans-serif; color:#000000;}');
+text57337.addInnerText('<div id=\"text57337\" aria-live=\"off\"  ><p lang=\"en\"  style=\"margin-left:0px;text-indent:0px;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text57337Font1\"  >Page n</span ><span class=\"text57337Font2\" style=\"background-color:transparent\" >\n</span ></p ></div>\n');
+text57337.build()
 
-image11950 = new ObjImage('image11950','images/litchen_backgroundcrop_image11950.png','Kitchen background',0,0,1280,719,1,2,'div',null, 0 )
+button63802 = new ObjButton('button63802', 'Back',50,50,81.000000,43.000000,1,21,'div','',1,0)
+button63802.setUseSvgFile(1)
+button63802.setFillStyle(1)
+button63802.setUniqueFillID('page11948_button63802')
+button63802.initRotateAngle(0,0,0,-0.000000,-0.000000,80,42)
+button63802.initHasShadow(0)
+button63802.initHasReflection(0)
+button63802.setImages({"disabledState":"","downState":"","normalState":"images/button63802.png","overState":"","selectedState":"","visitedState":""});
+button63802.setStateOpacity({"disabledState":1.0,"downState":1.0,"normalState":1.0,"overState":1.0,"selectedState":1.0,"visitedState":1.0});
+button63802.addOpacity(100)
+button63802.initImageMap('80,12,21,12,21,0,0,21,21,42,21,30,80,30,80,12','M 80.000000 11.970000 L 21.000000 11.970000 L 21.000000 0.000000 L 0.000000 21.000000 L 21.000000 42.000000 L 21.000000 30.029999 L 80.000000 30.029999 L 80.000000 11.970000 z')
+button63802.setFills({"disabledState":{"fillInfo":"","stylePath":"fill:#708DC1;\""},"downState":{"fillInfo":"","stylePath":"fill:#223D6C;\""},"normalState":{"fillInfo":"","stylePath":"fill:#21314D;\""},"overState":{"fillInfo":"","stylePath":"fill:#223D6C;\""},"selectedState":{"fillInfo":"","screenRdr":"Selected","stylePath":"fill:#1B4FAA;\""},"visitedState":{"fillInfo":"","screenRdr":"Visited","stylePath":"fill:#1B4FAA;\""}});
+button63802.setImgFillVal({"disabledState":{"B64":"","fill":"","style":""},"downState":{"B64":"","fill":"","style":""},"normalState":{"B64":"","fill":"","style":""},"overState":{"B64":"","fill":"","style":""},"selectedState":{"B64":"","fill":"","style":""},"visitedState":{"B64":"","fill":"","style":""}});
+button63802.initLineWeight('0')
+button63802.onUp = button63802onUp
+button63802.hasOnUp = true
+button63802.capture=4
+button63802.setTextVal({"disabledState":{"div":"div.button63802disabledStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:80.000000px; height:42.000000px;}","span":"span.button63802disabledStateText { width:76.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"downState":{"div":"div.button63802downStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:80.000000px; height:42.000000px;}","span":"span.button63802downStateText { width:76.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"normalState":{"div":"div.button63802Text { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:80.000000px; height:42.000000px;}","span":"span.button63802Text { width:76.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"overState":{"div":"div.button63802overStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:80.000000px; height:42.000000px;}","span":"span.button63802overStateText { width:76.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"selectedState":{"div":"div.button63802selectedStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:80.000000px; height:42.000000px;}","span":"span.button63802selectedStateText { width:76.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"},"visitedState":{"div":"div.button63802visitedStateText { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:80.000000px; height:42.000000px;}","span":"span.button63802visitedStateText { width:76.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}"}});
+button63802.text = 'Back'
+button63802.bSelectedEnabled = false;
+button63802.bVisitedEnabled = false;
+button63802.bOverEnabled = true;
+button63802.bDownEnabled = true;
+button63802.build()
+
+image11950 = new ObjImage('image11950','images/litchen_backgroundcrop_image11950.png','Kitchen background',0,0,1280,719,1,3,'div',null, 0 )
 image11950.initRotateAngle(0,0,0,0,0,0,0)
 image11950.initHasShadow(0)
 image11950.initHasReflection(0)
@@ -384,7 +413,7 @@ image11950.addBorder(0)
 image11950.addOpacity(100)
 image11950.build()
 
-image11952 = new ObjImage('image11952','images/recipe_cardcrop_image9621.png','Recipe card',51,107,973,523,1,3,'div',null, 0 )
+image11952 = new ObjImage('image11952','images/recipe_cardcrop_image9621.png','Recipe card',51,107,973,523,1,4,'div',null, 0 )
 image11952.initRotateAngle(0,0,0,0,0,0,0)
 image11952.initHasShadow(0)
 image11952.initHasReflection(0)
@@ -394,7 +423,7 @@ image11952.addBorder(0)
 image11952.addOpacity(100)
 image11952.build()
 
-image11955 = new ObjImage('image11955','images/knifecrop_image9630.png','knife',600,73,224,211,1,4,'div',null, 0 )
+image11955 = new ObjImage('image11955','images/knifecrop_image9630.png','knife',600,73,224,211,1,5,'div',null, 0 )
 image11955.initRotateAngle(44,0,0,0,0,0,0)
 image11955.initHasShadow(0)
 image11955.initHasReflection(0)
@@ -404,7 +433,7 @@ image11955.addBorder(0)
 image11955.addOpacity(100)
 image11955.build()
 
-text11956 = new ObjText('text11956',null,701,173,93,23,1,5,null,'div',null,0 )
+text11956 = new ObjText('text11956',null,701,173,93,23,1,6,null,'div',null,0 )
 text11956.initSLine(1)
 text11956.initHasBullet(0)
 text11956.initRotateAngle(0,0,0)
@@ -422,7 +451,7 @@ text11956.arrCSSStyles.push('span.text11956Font2 { font-size:16px; font-family:"
 text11956.addInnerText('<div id=\"text11956\" aria-live=\"off\"  ><p lang=\"en\"  legLH=\"1.409\" style=\"margin-left:0px;text-indent:0px;line-height:1.350;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text11956Font1\" style=\"position:relative;top:-2px;\" >Apply</span ><span class=\"text11956Font2\" style=\"background-color:transparentposition:relative;top:-2px;\" >\n</span ></p ></div>\n');
 text11956.build()
 
-text11957 = new ObjText('text11957',null,104,233,860,253,1,6,null,'div',null,0 )
+text11957 = new ObjText('text11957',null,104,233,860,253,1,7,null,'div',null,0 )
 text11957.initSLine(0)
 text11957.initHasBullet(0)
 text11957.initRotateAngle(0,0,0)
@@ -439,7 +468,7 @@ text11957.arrCSSStyles.push('span.text11957Font1 { font-size:15px; font-family:"
 text11957.addInnerText('<div id=\"text11957\" aria-live=\"off\"  ><p lang=\"en\"  legLH=\"1.419\" style=\"margin-left:0px;text-indent:0px;line-height:1.312;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text11957Font1\" style=\"position:relative;top:-1px;\" >Helping learners reach the Apply and Analyze levels, or higher, is especially important in professional environments. At these stages, learners move from knowing and explaining to doing, adapting, and thinking critically. These are the skills that allow employees to respond to unexpected challenges, solve real problems, and make independent decisions.\n</span ></p >\n<p  legLH=\"1.419\" style=\"margin-left:0px;text-indent:0px;line-height:1.312;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text11957Font1\" style=\"position:relative;top:-1px;\" >The Apply level of Bloom\'s Taxonomy involves learners using their knowledge to solve problems or complete tasks in real-world situations. At this stage, learners take the concepts or ideas they\'ve learned and apply them to new, practical contexts. The focus is on general application rather than deep analysis. For example, a worker may use an instructional manual to complete a task correctly or apply a method learned in training to solve a problem in the workplace. Learning activities that encourage students to practice these skills, such as role-playing, case studies, or group projects, are key at this stage. Adult learners are more likely to engage in these activities when they are directly relevant to their real-world experiences and goals, making it essential to design practical, context-driven tasks. The appropriate learning outcome verbs for this level include:\n</span ></p ></div>\n');
 text11957.build()
 
-text12016 = new ObjText('text12016',null,503,465,377,89,1,7,null,'div',null,0 )
+text12016 = new ObjText('text12016',null,255,465,377,89,1,8,null,'div',null,0 )
 text12016.initSLine(0)
 text12016.initHasBullet(0)
 text12016.initRotateAngle(0,0,0)
@@ -448,15 +477,15 @@ text12016.initHasTextShadow(0)
 text12016.initHasBorder(0)
 text12016.initHasOutline(0)
 text12016.initHasMargin(0)
-text12016.addIe8Attr(503, 465, 377, 89, 0, 0)
+text12016.addIe8Attr(255, 465, 377, 89, 0, 0)
 text12016.addHeading(0)
 text12016.addOpacity(100)
 text12016.arrCSSStyles = new Array();
 text12016.arrCSSStyles.push('span.text12016Font1 { font-size:15px; font-family:"Arial", sans-serif; color:#21314d;}');
-text12016.addInnerText('<div id=\"text12016\" aria-live=\"off\"  ><table style=\"border-collapse:collapse; border-spacing:0\" >\n<tr style=\"vertical-align:top\"  >\n<td  style=\"width:100px;height:87px; padding-left:4px;padding-right:4px;padding-bottom:0px;padding-top:0px;vertical-align:top;\" >\n<p lang=\"en\"  legLH=\"1.419\" style=\"margin-left:0px;text-indent:0px;line-height:1.312;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text12016Font1\" style=\"position:relative;top:-1px;\" >Use</span ></p >\n<p  legLH=\"1.419\" style=\"margin-left:0px;text-indent:0px;line-height:1.312;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text12016Font1\" style=\"position:relative;top:-1px;\" >Demonstrate</span ></p >\n<p  legLH=\"1.419\" style=\"margin-left:0px;text-indent:0px;line-height:1.312;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text12016Font1\" style=\"position:relative;top:-1px;\" >Execute</span ></p >\n<span style=\"line-height:2px;\">&nbsp;</span >\n</td >\n<td  style=\"width:100px;height:87px; padding-left:4px;padding-right:4px;padding-bottom:0px;padding-top:0px;vertical-align:top;\" >\n<p  legLH=\"1.419\" style=\"margin-left:0px;text-indent:0px;line-height:1.312;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text12016Font1\" style=\"position:relative;top:-1px;\" >Implement</span ></p >\n<p  legLH=\"1.419\" style=\"margin-left:0px;text-indent:0px;line-height:1.312;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text12016Font1\" style=\"position:relative;top:-1px;\" >Solve</span ></p >\n<p  legLH=\"1.419\" style=\"margin-left:0px;text-indent:0px;line-height:1.312;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text12016Font1\" style=\"position:relative;top:-1px;\" >Show</span ></p >\n<span style=\"line-height:2px;\">&nbsp;</span >\n</td >\n<td  style=\"width:100px;height:87px; padding-left:4px;padding-right:4px;padding-bottom:0px;padding-top:0px;vertical-align:top;\" >\n<p  legLH=\"1.419\" style=\"margin-left:0px;text-indent:0px;line-height:1.312;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text12016Font1\" style=\"position:relative;top:-1px;\" >Apply</span ></p >\n<p  legLH=\"1.419\" style=\"margin-left:0px;text-indent:0px;line-height:1.312;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text12016Font1\" style=\"position:relative;top:-1px;\" >Operate</span ></p >\n<p  legLH=\"1.419\" style=\"margin-left:0px;text-indent:0px;line-height:1.312;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text12016Font1\" style=\"position:relative;top:-1px;\" >Modify</span ></p >\n<span style=\"line-height:2px;\">&nbsp;</span >\n</td >\n<td  style=\"width:77px;height:87px; padding-left:4px;padding-right:4px;padding-bottom:0px;padding-top:0px;vertical-align:top;\" >\n<p  legLH=\"1.419\" style=\"margin-left:0px;text-indent:0px;line-height:1.312;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text12016Font1\" style=\"position:relative;top:-1px;\" >Discover</span ></p >\n<p  legLH=\"1.419\" style=\"margin-left:0px;text-indent:0px;line-height:1.312;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text12016Font1\" style=\"position:relative;top:-1px;\" >Respond</span ></p >\n</td >\n<p  legLH=\"1.419\" style=\"margin-left:0px;text-indent:0px;line-height:1.312;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text12016Font1\" style=\"position:relative;top:-1px;\" >Construct</span ></p >\n</tr >\n</table ></div>\n');
+text12016.addInnerText('<div id=\"text12016\" aria-live=\"off\"  ><table style=\"border-collapse:collapse; border-spacing:0\" >\n<tr style=\"vertical-align:top\"  >\n<td  style=\"width:100px;height:87px; padding-left:4px;padding-right:4px;padding-bottom:0px;padding-top:0px;vertical-align:top;\" >\n<p lang=\"en\"  legLH=\"1.419\" style=\"margin-left:0px;text-indent:0px;line-height:1.312;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text12016Font1\" style=\"position:relative;top:-1px;\" >Use</span ></p >\n<p  legLH=\"1.419\" style=\"margin-left:0px;text-indent:0px;line-height:1.312;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text12016Font1\" style=\"position:relative;top:-1px;\" >Demonstrate</span ></p >\n<p  legLH=\"1.419\" style=\"margin-left:0px;text-indent:0px;line-height:1.312;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text12016Font1\" style=\"position:relative;top:-1px;\" >Execute</span ></p >\n<span style=\"line-height:2px;\">&nbsp;</span >\n</td >\n<td  style=\"width:100px;height:87px; padding-left:4px;padding-right:4px;padding-bottom:0px;padding-top:0px;vertical-align:top;\" >\n<p  legLH=\"1.419\" style=\"margin-left:0px;text-indent:0px;line-height:1.312;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text12016Font1\" style=\"position:relative;top:-1px;\" >Implement</span ></p >\n<p  legLH=\"1.419\" style=\"margin-left:0px;text-indent:0px;line-height:1.312;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text12016Font1\" style=\"position:relative;top:-1px;\" >Solve</span ></p >\n<p  legLH=\"1.419\" style=\"margin-left:0px;text-indent:0px;line-height:1.312;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text12016Font1\" style=\"position:relative;top:-1px;\" >Show</span ></p >\n<span style=\"line-height:2px;\">&nbsp;</span >\n</td >\n<td  style=\"width:100px;height:87px; padding-left:4px;padding-right:4px;padding-bottom:0px;padding-top:0px;vertical-align:top;\" >\n<p  legLH=\"1.419\" style=\"margin-left:0px;text-indent:0px;line-height:1.312;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text12016Font1\" style=\"position:relative;top:-1px;\" >Apply</span ></p >\n<p  legLH=\"1.419\" style=\"margin-left:0px;text-indent:0px;line-height:1.312;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text12016Font1\" style=\"position:relative;top:-1px;\" >Operate</span ></p >\n<p  legLH=\"1.419\" style=\"margin-left:0px;text-indent:0px;line-height:1.312;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text12016Font1\" style=\"position:relative;top:-1px;\" >Modify</span ></p >\n</td >\n<td  style=\"width:77px;height:87px; padding-left:4px;padding-right:4px;padding-bottom:0px;padding-top:0px;vertical-align:top;\" >\n<p  legLH=\"1.419\" style=\"margin-left:0px;text-indent:0px;line-height:1.312;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text12016Font1\" style=\"position:relative;top:-1px;\" >Discover</span ></p >\n<p  legLH=\"1.419\" style=\"margin-left:0px;text-indent:0px;line-height:1.312;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text12016Font1\" style=\"position:relative;top:-1px;\" >Respond</span ></p >\n<p  legLH=\"1.419\" style=\"margin-left:0px;text-indent:0px;line-height:1.312;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text12016Font1\" style=\"position:relative;top:-1px;\" >Construct</span ></p >\n</td >\n</tr >\n</table ></div>\n');
 text12016.build()
 
-shape11960 = new ObjImage('shape11960','images/shape11960.png','Triangle Right',921,497,28.000000,25.000000,1,8,'div','',0 )
+shape11960 = new ObjImage('shape11960','images/shape11960.png','Triangle Right',921,497,28.000000,25.000000,1,9,'div','',0 )
 shape11960.initRotateAngle(0,0,0,-1.000000,-1.000000,26,23)
 shape11960.initHasShadow(0)
 shape11960.initHasReflection(0)
@@ -473,7 +502,8 @@ shape11960.actionShow = shape11960actionShow
 shape11960.capture=4
 shape11960.build()
 
-arObjs.push(button11968);
+arObjs.push(text57337);
+arObjs.push(button63802);
 arObjs.push(image11950);
 arObjs.push(image11952);
 arObjs.push(image11955);
@@ -506,7 +536,8 @@ if( is.min ){
 
 <script>
 if( is.min ){
-    appendElement(button11968, null, null);
+    appendElement(text57337, null, null);
+    appendElement(button63802, null, null);
     appendElement(image11950, null, null);
     appendElement(image11952, null, null);
     appendElement(image11955, null, null);
