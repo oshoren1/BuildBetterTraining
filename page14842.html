@@ -350,10 +350,7 @@ function doImmFeedback( objId ) {
     if(!qu14888.hasBeenProcessed && ans_VarQuestion_0005 != qu14888PrevAns) {
       qu14888PrevAns = ans_VarQuestion_0005;
    if( ans_VarQuestion_0005 != '~~~null~~~' ) {
-    { //1 
-        trivActFBCnt++; action14888_6(onAfterFBAction);  return 0;
-  } //1
-
+  
       }
     }
   }
@@ -377,9 +374,7 @@ function action57750(fn){
 }
 
 function action14978(fn){
-    text14850.actionShow(); 
-    if(fn && typeof(fn) == 'string' ) eval(fn);
-    else if(fn && typeof(fn) == 'function' ) fn();
+    if(!document.getElementById("DLG_Div_14854"))trivAlert( '14854', 'BuildBetterTraining', 'Sample Answer 1:\n In a past equipment training, we only covered steps and definitions. Later, techs couldn’t figure out why systems failed because they never practiced analyzing the process. I would add case-based exercises showing system breakdowns for them to examine.\n\nSample Answer 2:\nA case study with conflicting information and a failed outcome, like a missed safety check, would force learners to break it down and trace the root cause.', fn );
 }
 
 function action14855(fn){
@@ -389,7 +384,7 @@ function action14855(fn){
 }
 
 function shape14854onUp() {
-  action14978();action14855();
+  action14978(function(){action14855();/*TRIVDLGCALLBACKS*/});
 }
 
 function shape14854actionShow() {
@@ -409,10 +404,6 @@ function button64432onUp() {
 function Offset_qu14888(bDevRotate) {
 }
 
-
-function action14888_6(fn){
-    if(!document.getElementById("DLG_Div_14888"))trivAlert( 'action14888_6', 'BuildBetterTraining', 'Sample Answer 1:\n In a past equipment training, we only covered steps and definitions. Later, techs couldn’t figure out why systems failed because they never practiced analyzing the process. I would add case-based exercises showing system breakdowns for them to examine.\n\nSample Answer 2:\nA case study with conflicting information and a failed outcome, like a missed safety check, would force learners to break it down and trace the root cause.', fn );
-}
 
 function action14968(fn){
     shape14854.actionShow(); 

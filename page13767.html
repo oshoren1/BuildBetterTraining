@@ -350,10 +350,7 @@ function doImmFeedback( objId ) {
     if(!qu13813.hasBeenProcessed && ans_VarQuestion_0003 != qu13813PrevAns) {
       qu13813PrevAns = ans_VarQuestion_0003;
    if( ans_VarQuestion_0003 != '~~~null~~~' ) {
-    { //1 
-        trivActFBCnt++; action13813_6(onAfterFBAction);  return 0;
-  } //1
-
+  
       }
     }
   }
@@ -390,10 +387,6 @@ function Offset_qu13813(bDevRotate) {
 }
 
 
-function action13813_6(fn){
-    if(!document.getElementById("DLG_Div_13813"))trivAlert( 'action13813_6', 'BuildBetterTraining', 'Sample answer 1:\n Ask learners to explain the concept in their own words or give an example of it in their work. If they can’t explain it without repeating the exact wording from the slide, they likely don’t understand it yet..\n\nSample Answer 2:\nI’d include group discussions or storytelling prompts where learners connect a concept to a real work example. This makes them interpret the idea instead of just repeating it.', fn );
-}
-
 function action13909(fn){
     shape13869.actionShow(); 
     if(fn && typeof(fn) == 'string' ) eval(fn);
@@ -417,9 +410,7 @@ function Update_entry13816( upd ) {
 }
 
 function action13871(fn){
-    text13775.actionShow(); 
-    if(fn && typeof(fn) == 'string' ) eval(fn);
-    else if(fn && typeof(fn) == 'function' ) fn();
+    if(!document.getElementById("DLG_Div_13869"))trivAlert( '13869', 'BuildBetterTraining', 'Sample answer 1:\n Ask learners to explain the concept in their own words or give an example of it in their work. If they can’t explain it without repeating the exact wording from the slide, they likely don’t understand it yet..\n\nSample Answer 2:\nI’d include group discussions or storytelling prompts where learners connect a concept to a real work example. This makes them interpret the idea instead of just repeating it.', fn );
 }
 
 function action13870(fn){
@@ -429,7 +420,7 @@ function action13870(fn){
 }
 
 function shape13869onUp() {
-  action13871();action13870();
+  action13871(function(){action13870();/*TRIVDLGCALLBACKS*/});
 }
 
 function shape13869actionShow() {

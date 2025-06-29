@@ -350,10 +350,7 @@ function doImmFeedback( objId ) {
     if(!qu13655.hasBeenProcessed && ans_VarQuestion_0002 != qu13655PrevAns) {
       qu13655PrevAns = ans_VarQuestion_0002;
    if( ans_VarQuestion_0002 != '~~~null~~~' ) {
-    { //1 
-        trivActFBCnt++; action13655_6(onAfterFBAction);  return 0;
-  } //1
-
+  
       }
     }
   }
@@ -390,10 +387,6 @@ function Offset_qu13655(bDevRotate) {
 }
 
 
-function action13655_6(fn){
-    if(!document.getElementById("DLG_Div_13655"))trivAlert( 'action13655_6', 'BuildBetterTraining', 'Sample answer 1:\nI would use a rapid-fire quiz at the start of the session where learners have to match key terms with definitions. This helps activate prior knowledge and reinforce basic facts without requiring deeper analysis.\n\nSample Answer 2:\nIf learners only remember procedures but don’t understand why they matter, they may struggle to adapt when something changes. For example, remembering a checklist doesn’t help if a machine behaves unexpectedly.', fn );
-}
-
 function action13671(fn){
     shape13558.actionShow(); 
     if(fn && typeof(fn) == 'string' ) eval(fn);
@@ -416,20 +409,18 @@ function Update_entry13658( upd ) {
   return true;
 }
 
+function action13719(fn){
+    if(!document.getElementById("DLG_Div_13558"))trivAlert( '13558', 'BuildBetterTraining', 'Sample answer 1:\nI would use a rapid-fire quiz at the start of the session where learners have to match key terms with definitions. This helps activate prior knowledge and reinforce basic facts without requiring deeper analysis.\n\nSample Answer 2:\nIf learners only remember procedures but don’t understand why they matter, they may struggle to adapt when something changes. For example, remembering a checklist doesn’t help if a machine behaves unexpectedly.', fn );
+}
+
 function action13559(fn){
     trivExitPage('page10959.html',true); 
     if(fn && typeof(fn) == 'string' ) eval(fn);
     else if(fn && typeof(fn) == 'function' ) fn();
 }
 
-function action13719(fn){
-    qu13655.actionShow(); 
-    if(fn && typeof(fn) == 'string' ) eval(fn);
-    else if(fn && typeof(fn) == 'function' ) fn();
-}
-
 function shape13558onUp() {
-  action13559();action13719();
+  action13719(function(){action13559();/*TRIVDLGCALLBACKS*/});
 }
 
 function shape13558actionShow() {

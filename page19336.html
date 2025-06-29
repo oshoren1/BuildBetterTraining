@@ -385,9 +385,9 @@ function checkQuestions( bFeedback, bForce, bNotLeavingPage ) {
       if( offset < 0 ) wrong = true
       else offset = offset + arrAns[idx].length
     }
-    if( !wrong ) {        trivActFBCnt++; action19380_75(onAfterFBAction); return 0;  } //1
+    if( !wrong ) {        trivActFBCnt++; action19380_79(onAfterFBAction); return 0;  } //1
 
-    if( wrong ) {trivActFBCnt++; action19380_76(onAfterFBAction); return 0;  } //2 
+    if( wrong ) {trivActFBCnt++; action19380_80(onAfterFBAction); return 0;  } //2 
 
   }
   if( !bFeedback ) currFeedbackIdx = 1;
@@ -543,12 +543,12 @@ function Update_qu19380() {
   qu19380Object.hasBeenProcessed=false;
 }
 
-function action19380_75(fn){
-    if(!document.getElementById("DLG_Div_19380"))trivAlert( 'action19380_75', 'BuildBetterTraining', 'Correct!\nExplanation: \nRemembering focuses on recalling facts, basic concepts, or procedures from memory without necessarily understanding or using them. Listing steps is purely about retrieval.\n\nUnderstanding goes beyond memory; it means grasping the meaning. Summarizing shows that the learner can interpret information in their own words.\n\nApplying means using knowledge or procedures in a real situation. Following a checklist to perform a task correctly is a direct application of learned knowledge.\n\n Analyzing requires breaking information into parts and examining . relationships. Identifying what went wrong in a project demands deep analysis of different components and factors.\n\nEvaluating asks learners to make judgments based on criteria and standards. Critiquing requires comparing, assessing value, and defending a choice based on evidence.\n\n Creating is about producing new or original work. Designing a brand-new process from scratch demands synthesizing knowledge, inventing ideas, and structuring them into a coherent result', fn );
+function action19380_79(fn){
+    if(!document.getElementById("DLG_Div_19380"))trivAlert( 'action19380_79', 'BuildBetterTraining', 'Correct!\nExplanation: \nRemembering focuses on recalling facts, basic concepts, or procedures from memory without necessarily understanding or using them. Listing steps is purely about retrieval.\n\nUnderstanding goes beyond memory; it means grasping the meaning. Summarizing shows that the learner can interpret information in their own words.\n\nApplying means using knowledge or procedures in a real situation. Following a checklist to perform a task correctly is a direct application of learned knowledge.\n\n Analyzing requires breaking information into parts and examining . relationships. Identifying what went wrong in a project demands deep analysis of different components and factors.\n\nEvaluating asks learners to make judgments based on criteria and standards. Critiquing requires comparing, assessing value, and defending a choice based on evidence.\n\n Creating is about producing new or original work. Designing a brand-new process from scratch demands synthesizing knowledge, inventing ideas, and structuring them into a coherent result', fn );
 }
 
-function action19380_76(fn){
-    if(!document.getElementById("DLG_Div_19380"))trivAlert( 'action19380_76', 'BuildBetterTraining', 'You answered the question incorrectly. Please try again!', fn );
+function action19380_80(fn){
+    if(!document.getElementById("DLG_Div_19380"))trivAlert( 'action19380_80', 'BuildBetterTraining', 'You answered the question incorrectly. Please try again!', fn );
 }
 
 if( is.min ){
