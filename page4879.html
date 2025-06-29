@@ -14,10 +14,6 @@
 <link rel="stylesheet" href="dialog.css" type="text/css"/>
 
 <link rel="stylesheet" href="trivantis-focus.css" type="text/css"/>
-
-<link rel="stylesheet" href="trivantis-player.css" type="text/css"/>
-
-<link rel="stylesheet" href="speed.css" type="text/css"/>
 <style type="text/css">
   .trivInputLL { margin : 0px 0px 0px 9px; padding : 0px; display : inline-block; vertical-align : middle; }
   .trivInputLR { margin : 0px 9px 0px 3px; padding : 0px; display : inline-block; vertical-align : middle; }
@@ -33,9 +29,6 @@
 <script src="trivantis-image.js"></script>
 <script src="trivantis-inline.js"></script>
 <script src="trivantis-text.js"></script>
-<script src="mediaelement-and-player.js"></script>
-<script src="trivantis-media.js"></script>
-<script src="speed.js"></script>
 <script src="trivantis-pagetracking.js"></script>
 <script src="trivantis-buttontracking.js"></script>
 <script src="device_desktop/page4879.js"></script>
@@ -63,7 +56,6 @@ var bScaleToWindow = false;
 var bFitToWidth = false;
 var bFitToMobile = true;
 var iScaleMaxWidth = 0;
-window.bAutoStartOnPage = true;
 var lTimelineStart  = -1;
 var lTimelineFinish  = 60000;
 var pageHeight = 720;
@@ -195,18 +187,17 @@ function responsiveInit() {
 
 function init() {
   lectoraPreInit();
-  enableAutoStart(init11);
+  init11();
 }
 
 function init11() {
   findWH()
   if( is.min ){
     trivPageTracking.InitPageTracking();
-    PreloadResources(new Array(text56990,button59337,audio13248,image4888,shape4904,qu4883,text4885,entry4886,text5510,text5032,shape5121))
+    PreloadResources(new Array(text56990,button59337,image4888,shape4904,qu4883,text4885,entry4886,text5510,text5032,shape5121))
     pageLayer.show(true);
     text56990.init()
     button59337.init()
-    audio13248.init()
     image4888.init()
     shape4904.init()
     qu4883.init()
@@ -217,7 +208,6 @@ function init11() {
     shape5121.init()
     text56990.activate()
     button59337.activate()
-    audio13248.activate()
     image4888.activate()
     shape4904.activate()
     qu4883.activate()
@@ -354,13 +344,6 @@ function OnDeviceRotate() {
 
 }
 
-function playerReady(obj){
-}
-
-function getUpdate(typ, pr1, pr2, swf) {
-  	if( typ == 'item' && swf == 'swfaudio13248' ) {setTimeout("action39877();",100);}
-}
-
 function action56991(fn){
     text56990.actionChangeContents( "Page  " +  VarPageInTitle.getValue() + "","alignleft","1" ); 
     if(fn && typeof(fn) == 'string' ) eval(fn);
@@ -381,16 +364,6 @@ function action59338(fn){
 
 function button59337onUp() {
   action59338();
-}
-
-function action39877(fn){
-    
-    if(fn && typeof(fn) == 'string' ) eval(fn);
-    else if(fn && typeof(fn) == 'function' ) fn();
-}
-
-function audio13248actionShow() {
-  setTimeout("if(!audio13248.isVisible()) { audio13248.objLyr.moveTo(audio13248.x, audio13248.y);audio13248.onShow();action39877(); }", 1 )
 }
 
 function Offset_qu4883(bDevRotate) {
@@ -433,22 +406,8 @@ function shape5121onUp() {
   action5122(function(){action5438();/*TRIVDLGCALLBACKS*/});
 }
 
-function updateFLVPlayer(bMute){
-  if(typeof bMute === 'undefined') { 
-    if(typeof VarTriMuteAllFLV !=='undefined') bMute = (VarTriMuteAllFLV.getValue()=='1')
-    else bMute = false
-  }
-  var pIdArr = new Array(audio13248)
-  for (i=0;i<pIdArr.length;i++) setPlayerMute(pIdArr[i], bMute);
-}
-
-function setPlayerMute(plrObj, bMute){
-  if( bMute) plrObj.actionMute();
-  else plrObj.actionUnmute();
-}
-
 if( is.min ){
-text56990 = new ObjText('text56990',null,50,685,116,21,0,22,null,'div',null,1 )
+text56990 = new ObjText('text56990',null,50,685,116,21,0,21,null,'div',null,1 )
 text56990.initSLine(1)
 text56990.initHasBullet(0)
 text56990.initRotateAngle(0,0,0)
@@ -466,7 +425,7 @@ text56990.arrCSSStyles.push('span.text56990Font2 { font-size:13px; font-family:"
 text56990.addInnerText('<div id=\"text56990\" aria-live=\"off\"  ><p lang=\"en\"  style=\"margin-left:0px;text-indent:0px;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text56990Font1\"  >Page n</span ><span class=\"text56990Font2\" style=\"background-color:transparent\" >\n</span ></p ></div>\n');
 text56990.build()
 
-button59337 = new ObjButton('button59337', 'Back',50,50,81.000000,43.000000,1,23,'div','',1,0)
+button59337 = new ObjButton('button59337', 'Back',50,50,81.000000,43.000000,1,22,'div','',1,0)
 button59337.setUseSvgFile(1)
 button59337.setFillStyle(1)
 button59337.setUniqueFillID('page4879_button59337')
@@ -491,14 +450,7 @@ button59337.bOverEnabled = true;
 button59337.bDownEnabled = true;
 button59337.build()
 
-audio13248 = new ObjMedia('audio13248','Engagement 1',516,670,225,24,1,24,'media/engagement_1.mp3',0,1,0,0,1,0.800000,1,'div',0);
-audio13248.bNeedPool = true;
-audio13248.bSpeedControl = true;
-audio13248.BuildMediaString()
-audio13248.actionShow = audio13248actionShow
-audio13248.build()
-
-image4888 = new ObjImage('image4888','images/pantry.jpg','pantry',0,0,1277,720,1,4,'div',null, 0 )
+image4888 = new ObjImage('image4888','images/pantry.jpg','pantry',0,0,1277,720,1,3,'div',null, 0 )
 image4888.initRotateAngle(0,0,0,0,0,0,0)
 image4888.initHasShadow(0)
 image4888.initHasReflection(0)
@@ -508,7 +460,7 @@ image4888.addBorder(0)
 image4888.addOpacity(100)
 image4888.build()
 
-shape4904 = new ObjImage('shape4904','images/shape4904.png','Rounded Rectangle',394,162,510.000000,247.000000,1,5,'div','',0 )
+shape4904 = new ObjImage('shape4904','images/shape4904.png','Rounded Rectangle',394,162,510.000000,247.000000,1,4,'div','',0 )
 shape4904.initRotateAngle(0,0,0,-1.000000,-1.000000,508,245)
 shape4904.initHasShadow(0)
 shape4904.initHasReflection(0)
@@ -521,14 +473,14 @@ shape4904.initLineWeight(1)
 shape4904.addOpacity(100)
 shape4904.build()
 
-qu4883 = new ObjInline('qu4883',null,144,64,498,388,1,0)
+qu4883 = new ObjInline('qu4883',null,283,206,786,500,1,0)
 qu4883.isGrp = true
 qu4883.addChild('text4885')
 qu4883.addChild('entry4886')
 qu4883.ansVar=VarQuestion_0001;
 qu4883.build()
 
-text4885 = new ObjText('text4885',null,409,206,534,202,1,6,null,'div',null,0 )
+text4885 = new ObjText('text4885',null,409,206,534,202,1,5,null,'div',null,0 )
 text4885.initSLine(0)
 text4885.initHasBullet(0)
 text4885.initRotateAngle(0,0,0)
@@ -546,13 +498,13 @@ text4885.arrCSSStyles.push('span.text4885Font2 { font-size:15px; font-family:"Ar
 text4885.addInnerText('<legend><div id=\"text4885\" aria-live=\"off\"  ><label id=\"label4886id\" for=\"entry4886id\" ><p lang=\"en\"  legLH=\"1.127\" style=\"margin-left:0px;text-indent:0px;line-height:1.080;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text4885Font1\" style=\"background-color:transparent\" >\n&nbsp;</span ></p >\n<p  legLH=\"1.419\" style=\"margin-left:0px;text-indent:0px;line-height:1.312;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text4885Font2\" style=\"position:relative;top:-1px;\" >Have you ever delivered a training that felt clear to you, but left learners \n</span ></p >\n<p  legLH=\"1.419\" style=\"margin-left:0px;text-indent:0px;line-height:1.312;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text4885Font2\" style=\"position:relative;top:-1px;\" >confused or unmotivated? \n</span ></p >\n<p  legLH=\"1.419\" style=\"margin-left:0px;text-indent:0px;line-height:1.312;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text4885Font2\" style=\"position:relative;top:-1px;\" >Alternatively, have you ever taken a training that left you feeling confused or unfulfilled?\n</span ></p >\n<p  legLH=\"1.419\" style=\"margin-left:0px;text-indent:0px;line-height:1.312;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text4885Font2\" style=\"position:relative;top:-1px;\" >What do you think went wrong?\n</span ></p >\n<p  legLH=\"1.419\" style=\"margin-left:0px;text-indent:0px;line-height:1.312;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text4885Font2\" style=\"position:relative;top:-1px;\" >Write your answer in the below text box.</span ><span class=\"text4885Font1\" style=\"background-color:transparentposition:relative;top:-1px;\" >\n</span ></p ></label></div>\n</legend>\n');
 text4885.build()
 
-entry4886 = new ObjInline('entry4886',null,(is.ie?283:283),(is.ie?418:417),null,null,1,7, 0, null, null, 0)
+entry4886 = new ObjInline('entry4886',null,(is.ie?283:283),(is.ie?418:417),null,null,1,6, 0, null, null, 0)
 entry4886.onSelChg = entry4886onSelChg
 entry4886.arrCSSStyles = new Array();
 entry4886.arrCSSStyles.push('textarea.entry4886 { font-size:16px; font-family:"Arial", sans-serif; color:#21314d; width:711px; height:239px; -webkit-appearance:none; background-color:#ffffff; }');
 entry4886.build()
 
-text5510 = new ObjText('text5510',null,448,155,419,72,1,8,null,'div',null,0 )
+text5510 = new ObjText('text5510',null,448,155,419,72,1,7,null,'div',null,0 )
 text5510.initSLine(0)
 text5510.initHasBullet(0)
 text5510.initRotateAngle(0,0,0)
@@ -570,7 +522,7 @@ text5510.arrCSSStyles.push('span.text5510Font2 { font-size:15px; font-family:"Ar
 text5510.addInnerText('<div id=\"text5510\" aria-live=\"off\"  ><p lang=\"en\"  legLH=\"1.135\" style=\"margin-left:0px;text-indent:0px;line-height:1.050;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text5510Font1\" style=\"background-color:transparent\" >\n&nbsp;</span ></p >\n<p  legLH=\"1.419\" style=\"margin-left:0px;text-indent:0px;line-height:1.312;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text5510Font2\" style=\"position:relative;top:-1px;\" >What Do You Already Know About Adult Learning?</span ><span class=\"text5510Font1\" style=\"background-color:transparentposition:relative;top:-1px;\" >\n</span ></p ></div>\n');
 text5510.build()
 
-text5032 = new ObjText('text5032',null,296,632,454,31,1,9,null,'div',null,0 )
+text5032 = new ObjText('text5032',null,296,632,454,31,1,8,null,'div',null,0 )
 text5032.initSLine(1)
 text5032.initHasBullet(0)
 text5032.initRotateAngle(0,0,0)
@@ -587,7 +539,7 @@ text5032.arrCSSStyles.push('span.text5032Font1 { font-size:13px; font-family:"Ar
 text5032.addInnerText('<div id=\"text5032\" aria-live=\"off\"  ><p lang=\"en\"  legLH=\"1.445\" style=\"margin-left:0px;text-indent:0px;line-height:1.173;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text5032Font1\" style=\"position:relative;top:-1px;\" >Note: This is a private submission; no one will be able to view your response.\n</span ></p ></div>\n');
 text5032.build()
 
-shape5121 = new ObjImage('shape5121','images/shape5121.png','Triangle Right',942,623,26.000000,25.000000,0,10,'div','',0 )
+shape5121 = new ObjImage('shape5121','images/shape5121.png','Triangle Right',942,623,26.000000,25.000000,0,9,'div','',0 )
 shape5121.initRotateAngle(0,0,0,-1.000000,-1.000000,24,23)
 shape5121.initHasShadow(0)
 shape5121.initHasReflection(0)
@@ -606,7 +558,6 @@ shape5121.build()
 var trivQuestionArray=[qu4883];
 arObjs.push(text56990);
 arObjs.push(button59337);
-arObjs.push(audio13248);
 arObjs.push(image4888);
 arObjs.push(shape4904);
 arObjs.push(qu4883);
@@ -642,7 +593,6 @@ if( is.min ){
 if( is.min ){
     appendElement(text56990, null, null);
     appendElement(button59337, null, null);
-    appendElement(audio13248, null, null);
     appendElement(image4888, null, null);
     appendElement(shape4904, null, null);
     appendElement( qu4883, '<fieldset id="qu4883_fieldset" style="border:0;"></fieldset>', '<div id="qu4883"><a id="qu4883anc"></a></div>');

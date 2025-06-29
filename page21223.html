@@ -11,6 +11,7 @@
 <title>Congratulations!</title>
 
 <link rel="stylesheet" href="trivantis.css" type="text/css"/>
+<link rel="stylesheet" href="dialog.css" type="text/css"/>
 
 <link rel="stylesheet" href="trivantis-focus.css" type="text/css"/>
 
@@ -40,7 +41,9 @@
 <script src="trivantis-buttontracking.js"></script>
 <script src="device_desktop/page21223.js"></script>
 <script src="device_phone/page21223.js"></script>
-<script src="trivantis-strings.js"></script>
+<script src="trivantis-dialog.js"></script>
+<script src="aria-utils.js"></script>
+<script src="trivantis-strings.js" charset="UTF-8"></script>
 <script src="hammer.js"></script>
 <script>
 
@@ -174,7 +177,7 @@ function ReFlow() {
 
 VarTrivSelCap = new Variable( 'VarTrivSelCap', 'none', 0, 0, null, null, 'buildbettertraining', true )
 VarPageInTitle = new Variable( 'VarPageInTitle', null, 0, 0, null, null, 'buildbettertraining' )
-VarPageInTitle.set( '33' )
+VarPageInTitle.set( '29' )
 VarTriMuteAllFLV = new Variable( 'VarTriMuteAllFLV', '', 0, 0, null, null, 'buildbettertraining', true )
 
 onload = responsiveInit
@@ -320,7 +323,7 @@ function trivLeavePage() {
 }
 
 function trivPrevPage() {
-    trivExitPage( 'page19336.html', true )
+    trivExitPage( 'page72824.html', true )
 }
 
 function trivNextPage() {
@@ -431,6 +434,18 @@ function action51650(fn){
     else if(fn && typeof(fn) == 'function' ) fn();
 }
 
+function action68826(fn){
+    shape21855.actionHide(); 
+    if(fn && typeof(fn) == 'string' ) eval(fn);
+    else if(fn && typeof(fn) == 'function' ) fn();
+}
+
+function action68832(fn){
+    text21910.actionHide(); 
+    if(fn && typeof(fn) == 'string' ) eval(fn);
+    else if(fn && typeof(fn) == 'function' ) fn();
+}
+
 function action51621(fn){
     audio30008.actionPlay(); 
     if(fn && typeof(fn) == 'string' ) eval(fn);
@@ -464,7 +479,7 @@ function audio29904onSelChg(evt,name,i) {
 }
 
 function audio29904onDone(obj) {
-	if(is.iOS || obj.bMediaEle || obj.YTPlayer || obj.VimeoPlayer ){action51621();action51609();action51597();action51714();}else{if(obj['newstate'] == 'COMPLETED'){action51621();action51609();action51597();action51714();}}
+	if(is.iOS || obj.bMediaEle || obj.YTPlayer || obj.VimeoPlayer ){action68826();action68832();action51621();action51609();action51597();action51714();}else{if(obj['newstate'] == 'COMPLETED'){action68826();action68832();action51621();action51609();action51597();action51714();}}
 }
 
 function audio30008evEvent_1(fn){
@@ -515,6 +530,10 @@ function audio30008onDone(obj) {
 	if(is.iOS || obj.bMediaEle || obj.YTPlayer || obj.VimeoPlayer ){action51635();}else{if(obj['newstate'] == 'COMPLETED'){action51635();}}
 }
 
+function action67912(fn){
+    if(!document.getElementById("DLG_Div_21943"))trivAlert( '21943', 'BuildBetterTraining', 'You\'re done with your course. You may close and exit the window. ', fn );
+}
+
 function action21950(fn){
     {cleanupTitle('buildbettertraining'); trivExitPage('ObjLayerActionExit()',false);} 
     if(fn && typeof(fn) == 'string' ) eval(fn);
@@ -522,15 +541,15 @@ function action21950(fn){
 }
 
 function button21943onUp() {
-  action21950();
+  action67912(function(){action21950();/*TRIVDLGCALLBACKS*/});
 }
 
 function shape22489actionShow() {
-  setTimeout("if(!shape22489.isVisible()) { shape22489.objLyr.doTrans( 0, 33, 4, null, shape22489.objLyr.x, shape22489.objLyr.y, -225, -486, winW+20, winH+20, 0, -1, 0 ); }", 1 )
+  setTimeout("if(!shape22489.isVisible()) { shape22489.objLyr.doTrans( 0, 33, 4, null, shape22489.objLyr.x, shape22489.objLyr.y, -296, -454, winW+20, winH+20, 0, -1, 0 ); }", 1 )
 }
 
 function text22504actionShow() {
-  setTimeout("if(!text22504.isVisible()) { text22504.objLyr.doTrans( 0, 33, 4, null, text22504.objLyr.x, text22504.objLyr.y, -218, -664, winW+20, winH+20, 0, -1, 1 ); }", 1 )
+  setTimeout("if(!text22504.isVisible()) { text22504.objLyr.doTrans( 0, 33, 4, null, text22504.objLyr.x, text22504.objLyr.y, -281, -349, winW+20, winH+20, 0, -1, 1 ); }", 1 )
 }
 
 function updateFLVPlayer(bMute){
@@ -572,12 +591,12 @@ audio29882.bSpeedControl = true;
 audio29882.BuildMediaString()
 audio29882.build()
 
-shape21251 = new ObjImage('shape21251','images/shape21251.png','Triangle Right',551,174,27.000000,28.000000,0,27,'div','',0 )
+shape21251 = new ObjImage('shape21251','images/shape21251.png','Triangle Right',562,165,27.000000,28.000000,0,27,'div','',0 )
 shape21251.initRotateAngle(0,0,0,-1.000000,-1.000000,25,26)
 shape21251.initHasShadow(0)
 shape21251.initHasReflection(0)
 shape21251.setUniqueFillID('page21223_shape21251')
-shape21251.addIe8Attr(551.000000, 174.000000, 27.000000, 28.000000, 0, 0)
+shape21251.addIe8Attr(562.000000, 165.000000, 27.000000, 28.000000, 0, 0)
 shape21251.initImageMap(1,'26,14,1,27,1,1,26,14','M 26.000000 14.000000 L 1.000000 27.000000 L 1.000000 1.000000 L 26.000000 14.000000 z', '', 'stroke:#010000; stroke-width:1; stroke-linejoin:round;stroke-dasharray: none; fill:#21314D;"' , '')
 shape21251.setUseSvgFile(1)
 shape21251.addBorder(0)
@@ -595,7 +614,7 @@ audio29904.actionShow = audio29904actionShow
 audio29904.build()
 
 audio29904.addEvent('0.00', 'audio29904evEvent_2')
-audio30008 = new ObjMedia('audio30008','You learned',663,414,225,24,0,29,'media/you_learned.mp3',0,0,0,0,1,0.800000,1,'div',0);
+audio30008 = new ObjMedia('audio30008','You learned',663,438,225,24,0,29,'media/you_learned.mp3',0,0,0,0,1,0.800000,1,'div',0);
 audio30008.bNeedPool = true;
 audio30008.bSpeedControl = true;
 audio30008.BuildMediaString()
@@ -603,7 +622,7 @@ audio30008.actionShow = audio30008actionShow
 audio30008.build()
 
 audio30008.addEvent('0.00', 'audio30008evEvent_1')
-button21943 = new ObjButton('button21943', 'End',383,226,82.000000,35.000000,0,30,'div','',1,0)
+button21943 = new ObjButton('button21943', 'End',742,390,82.000000,35.000000,0,30,'div','',1,0)
 button21943.setUseSvgFile(1)
 button21943.setFillStyle(1)
 button21943.setUniqueFillID('page21223_button21943')
@@ -638,11 +657,11 @@ image21225.addBorder(0)
 image21225.addOpacity(100)
 image21225.build()
 
-image21274 = new ObjImage('image21274','images/3crop_image21274.png','a smiling female chef clapping her hands with joy',112,192,180,331,1,8,'div',null, 0 )
+image21274 = new ObjImage('image21274','images/3crop_image21274.png','a smiling female chef clapping her hands with joy',108,186,180,331,1,8,'div',null, 0 )
 image21274.initRotateAngle(0,0,0,0,0,0,0)
 image21274.initHasShadow(0)
 image21274.initHasReflection(0)
-image21274.addIe8Attr(112, 192, 180, 331, 0, 0)
+image21274.addIe8Attr(108, 186, 180, 331, 0, 0)
 image21274.initImageMap(1,'0,0,180,0,180,331,0,331,0,0','M 0 0 L 180 0 L 180 331 L 0 331 L 0 0 z')
 image21274.addBorder(0)
 image21274.addOpacity(100)
@@ -661,7 +680,7 @@ shape21558.initLineWeight(1)
 shape21558.addOpacity(100)
 shape21558.build()
 
-text21587 = new ObjText('text21587',null,314,111,250,162,1,10,null,'div',null,0 )
+text21587 = new ObjText('text21587',null,310,111,237,147,1,10,null,'div',null,0 )
 text21587.initSLine(0)
 text21587.initHasBullet(0)
 text21587.initRotateAngle(0,0,0)
@@ -670,7 +689,7 @@ text21587.initHasTextShadow(0)
 text21587.initHasBorder(0)
 text21587.initHasOutline(0)
 text21587.initHasMargin(0)
-text21587.addIe8Attr(314, 111, 250, 162, 0, 0)
+text21587.addIe8Attr(310, 111, 237, 147, 0, 0)
 text21587.addHeading(0)
 text21587.addOpacity(100)
 text21587.arrCSSStyles = new Array();
@@ -691,7 +710,7 @@ shape21855.initLineWeight(1)
 shape21855.addOpacity(100)
 shape21855.build()
 
-text21910 = new ObjText('text21910',null,314,111,250,139,0,12,null,'div',null,0 )
+text21910 = new ObjText('text21910',null,302,111,250,116,0,12,null,'div',null,0 )
 text21910.initSLine(0)
 text21910.initHasBullet(0)
 text21910.initRotateAngle(0,0,0)
@@ -700,7 +719,7 @@ text21910.initHasTextShadow(0)
 text21910.initHasBorder(0)
 text21910.initHasOutline(0)
 text21910.initHasMargin(0)
-text21910.addIe8Attr(314, 111, 250, 139, 0, 0)
+text21910.addIe8Attr(302, 111, 250, 116, 0, 0)
 text21910.addHeading(0)
 text21910.addOpacity(100)
 text21910.arrCSSStyles = new Array();
@@ -708,13 +727,13 @@ text21910.arrCSSStyles.push('span.text21910Font1 { font-size:16px; font-family:"
 text21910.addInnerText('<div id=\"text21910\" aria-live=\"off\"  ><p lang=\"en\"  legLH=\"1.409\" style=\"margin-left:0px;text-indent:0px;line-height:1.350;margin-top:0px;margin-bottom:0px;text-align:center;\" >\n<span class=\"text21910Font1\" style=\"position:relative;top:-2px;\" >With a full pantry and sharpened tools, you\'re ready to create structured, purposeful training that helps learners not just memorize, but think, apply, and grow.\n</span ></p ></div>\n');
 text21910.build()
 
-shape22489 = new ObjImage('shape22489','images/shape22489.png','Rectangle',643,35,265.000000,410.000000,0,13,'div','',0 )
-shape22489.initRotateAngle(0,0,0,-1.000000,-1.000000,263,408)
+shape22489 = new ObjImage('shape22489','images/shape22489.png','Rectangle',643,35,278.000000,436.000000,0,13,'div','',0 )
+shape22489.initRotateAngle(0,0,0,-1.000000,-1.000000,276,434)
 shape22489.initHasShadow(0)
 shape22489.initHasReflection(0)
 shape22489.setUniqueFillID('page21223_shape22489')
-shape22489.addIe8Attr(643.000000, 35.000000, 265.000000, 410.000000, 0, 0)
-shape22489.initImageMap(1,'1,1,264,1,264,409,1,409,1,1','M 1.000000 1.000000 L 264.000000 1.000000 L 264.000000 409.000000 L 1.000000 409.000000 L 1.000000 1.000000 z', '', 'stroke:#010000; stroke-width:1; stroke-linejoin:round;stroke-dasharray: none; fill:#FFFFFF;"' , '')
+shape22489.addIe8Attr(643.000000, 35.000000, 278.000000, 436.000000, 0, 0)
+shape22489.initImageMap(1,'1,1,277,1,277,435,1,435,1,1','M 1.000000 1.000000 L 277.000000 1.000000 L 277.000000 435.000000 L 1.000000 435.000000 L 1.000000 1.000000 z', '', 'stroke:#010000; stroke-width:1; stroke-linejoin:round;stroke-dasharray: none; fill:#FFFFFF;"' , '')
 shape22489.setUseSvgFile(1)
 shape22489.addBorder(0)
 shape22489.initLineWeight(1)
@@ -722,7 +741,7 @@ shape22489.addOpacity(100)
 shape22489.actionShow = shape22489actionShow
 shape22489.build()
 
-text22504 = new ObjText('text22504',null,652,54,247,372,0,14,null,'div',null,0 )
+text22504 = new ObjText('text22504',null,652,54,261,329,0,14,null,'div',null,0 )
 text22504.initSLine(0)
 text22504.initHasBullet(1)
 text22504.initRotateAngle(0,0,0)
@@ -731,7 +750,7 @@ text22504.initHasTextShadow(0)
 text22504.initHasBorder(0)
 text22504.initHasOutline(0)
 text22504.initHasMargin(0)
-text22504.addIe8Attr(652, 54, 247, 372, 0, 0)
+text22504.addIe8Attr(652, 54, 261, 329, 0, 0)
 text22504.addHeading(0)
 text22504.addOpacity(100)
 text22504.actionShow = text22504actionShow

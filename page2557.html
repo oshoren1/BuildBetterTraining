@@ -374,6 +374,24 @@ function action56826(fn){
     else if(fn && typeof(fn) == 'function' ) fn();
 }
 
+function action72578(fn){
+    shape3156.actionHide(); 
+    if(fn && typeof(fn) == 'string' ) eval(fn);
+    else if(fn && typeof(fn) == 'function' ) fn();
+}
+
+function action72581(fn){
+    text3173.actionHide(); 
+    if(fn && typeof(fn) == 'string' ) eval(fn);
+    else if(fn && typeof(fn) == 'function' ) fn();
+}
+
+function action72584(fn){
+    shape3288.actionHide(); 
+    if(fn && typeof(fn) == 'string' ) eval(fn);
+    else if(fn && typeof(fn) == 'function' ) fn();
+}
+
 function action3612(fn){
     audio30851.actionPlay(); 
     if(fn && typeof(fn) == 'string' ) eval(fn);
@@ -381,7 +399,7 @@ function action3612(fn){
 }
 
 function shape3288onUp() {
-  action3612();
+  action72578();action72581();action72584();action3612();
 }
 
 function action36437(fn){
@@ -411,15 +429,15 @@ function action3475(fn){
 }
 
 function text3034actionShow() {
-  setTimeout("if(!text3034.isVisible()) { text3034.objLyr.doTrans( 0, 35, 5, 'action3475();', text3034.objLyr.x, text3034.objLyr.y, -178, -141, winW+20, winH+20, 0, 2, 1 ); }", 1 )
+  setTimeout("if(!text3034.isVisible()) { text3034.objLyr.doTrans( 0, 35, 5, 'action3475();', text3034.objLyr.x, text3034.objLyr.y, -224, -70, winW+20, winH+20, 0, 2, 1 ); }", 1 )
 }
 
 function text3065actionShow() {
-  setTimeout("if(!text3065.isVisible()) { text3065.objLyr.doTrans( 0, 35, 5, null, text3065.objLyr.x, text3065.objLyr.y, -181, -83, winW+20, winH+20, 0, 2, 1 ); }", 1 )
+  setTimeout("if(!text3065.isVisible()) { text3065.objLyr.doTrans( 0, 35, 5, null, text3065.objLyr.x, text3065.objLyr.y, -224, -64, winW+20, winH+20, 0, 2, 1 ); }", 1 )
 }
 
 function text3093actionShow() {
-  setTimeout("if(!text3093.isVisible()) { text3093.objLyr.doTrans( 0, 35, 5, null, text3093.objLyr.x, text3093.objLyr.y, -167, -93, winW+20, winH+20, 0, 2, 1 ); }", 1 )
+  setTimeout("if(!text3093.isVisible()) { text3093.objLyr.doTrans( 0, 35, 5, null, text3093.objLyr.x, text3093.objLyr.y, -224, -69, winW+20, winH+20, 0, 2, 1 ); }", 1 )
 }
 
 function action12951(fn){
@@ -429,7 +447,7 @@ function action12951(fn){
 }
 
 function text3127actionShow() {
-  setTimeout("if(!text3127.isVisible()) { text3127.objLyr.doTrans( 0, 35, 5, 'action12951();', text3127.objLyr.x, text3127.objLyr.y, -177, -125, winW+20, winH+20, 0, 2, 1 ); }", 1 )
+  setTimeout("if(!text3127.isVisible()) { text3127.objLyr.doTrans( 0, 35, 5, 'action12951();', text3127.objLyr.x, text3127.objLyr.y, -224, -69, winW+20, winH+20, 0, 2, 1 ); }", 1 )
 }
 
 function audio3538evEvent_2(fn){
@@ -532,12 +550,12 @@ text56824.arrCSSStyles.push('span.text56824Font2 { font-size:13px; font-family:"
 text56824.addInnerText('<div id=\"text56824\" aria-live=\"off\"  ><p lang=\"en\"  style=\"margin-left:0px;text-indent:0px;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text56824Font1\"  >Page n</span ><span class=\"text56824Font2\" style=\"background-color:transparent\" >\n</span ></p ></div>\n');
 text56824.build()
 
-shape3288 = new ObjImage('shape3288','images/shape3288.png','Triangle 1',886,293,26.000000,25.000000,0,30,'div','',0 )
+shape3288 = new ObjImage('shape3288','images/shape3288.png','Triangle 1',894,296,26.000000,25.000000,0,30,'div','',0 )
 shape3288.initRotateAngle(0,0,0,-1.000000,-1.000000,24,23)
 shape3288.initHasShadow(0)
 shape3288.initHasReflection(0)
 shape3288.setUniqueFillID('page2557_shape3288')
-shape3288.addIe8Attr(886.000000, 293.000000, 26.000000, 25.000000, 0, 0)
+shape3288.addIe8Attr(894.000000, 296.000000, 26.000000, 25.000000, 0, 0)
 shape3288.initImageMap(1,'25,12,1,24,1,1,25,12','M 25.000000 12.000000 L 1.000000 24.000000 L 1.000000 1.000000 L 25.000000 12.000000 z', '', 'stroke:#010000; stroke-width:1; stroke-linejoin:round;stroke-dasharray: none; fill:#21314D;"' , '')
 shape3288.setUseSvgFile(1)
 shape3288.addBorder(0)
@@ -548,7 +566,7 @@ shape3288.hasOnUp = true
 shape3288.capture=4
 shape3288.build()
 
-audio3324 = new ObjMedia('audio3324','Welcome 5_!',31,517,150,24,1,31,'media/welcome_5_.mp3',0,1,0,0,1,0.800000,1,'div',0);
+audio3324 = new ObjMedia('audio3324','Welcome 5_!',820,355,150,24,1,31,'media/welcome_5_.mp3',0,1,0,0,1,0.800000,1,'div',0);
 audio3324.bNeedPool = true;
 audio3324.bSpeedControl = true;
 audio3324.BuildMediaString()
@@ -590,7 +608,7 @@ image15872.addBorder(0)
 image15872.addOpacity(100)
 image15872.build()
 
-text3034 = new ObjText('text3034',null,216,154,204,97,0,8,null,'div',null,0 )
+text3034 = new ObjText('text3034',null,216,143,204,50,0,8,null,'div',null,0 )
 text3034.initSLine(0)
 text3034.initHasBullet(0)
 text3034.initRotateAngle(0,0,0)
@@ -599,7 +617,7 @@ text3034.initHasTextShadow(0)
 text3034.initHasBorder(0)
 text3034.initHasOutline(0)
 text3034.initHasMargin(0)
-text3034.addIe8Attr(216, 154, 204, 97, 0, 0)
+text3034.addIe8Attr(216, 143, 204, 50, 0, 0)
 text3034.addHeading(0)
 text3034.addOpacity(100)
 text3034.actionShow = text3034actionShow
@@ -662,20 +680,20 @@ text3127.arrCSSStyles.push('span.text3127Font1 { font-size:15px; font-family:"Ar
 text3127.addInnerText('<div id=\"text3127\" aria-live=\"off\"  ><p lang=\"en\"  legLH=\"1.419\" style=\"margin-left:0px;text-indent:0px;line-height:1.312;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text3127Font1\" style=\"position:relative;top:-1px;\" >Apply Bloom\'s taxonomy levels to workplace scenarios\n</span ></p ></div>\n');
 text3127.build()
 
-shape3156 = new ObjImage('shape3156','images/shape3156.png','Callout Ellipse',753,161,268.000000,166.000000,1,12,'div','',0 )
-shape3156.initRotateAngle(0,0,0,-1.000000,0.000000,266,165)
+shape3156 = new ObjImage('shape3156','images/shape3156.png','Callout Ellipse',753,139,284.000000,188.000000,1,12,'div','',0 )
+shape3156.initRotateAngle(0,0,0,-1.000000,0.000000,282,187)
 shape3156.initHasShadow(0)
 shape3156.initHasReflection(0)
 shape3156.setUniqueFillID('page2557_shape3156')
-shape3156.addIe8Attr(753.000000, 161.000000, 268.000000, 166.000000, 0, 0)
-shape3156.initImageMap(1,'60,150,71,154,82,158,93,160,105,162,117,163,129,164,141,164,153,163,165,162,176,160,188,157,199,154,209,150,219,145,228,140,237,134,244,128,251,121,256,115,260,108,264,100,266,93,267,86,267,78,266,71,264,64,260,56,256,50,251,43,244,36,237,30,228,24,219,19,209,14,199,10,188,7,176,4,165,2,153,1,141,0,129,0,117,1,105,2,93,4,82,7,71,10,60,14,50,19,41,24,32,29,25,35,18,42,13,49,8,55,5,63,3,70,1,77,1,85,2,92,4,99,7,107,11,114,17,121,23,127,1,164,60,150','M 59.812500 150.062500 L 70.687500 154.125000 L 81.937500 157.500000 L 93.437500 160.125000 L 105.250000 162.125000 L 117.187500 163.375000 L 129.187500 164.000000 L 141.187500 163.937500 L 153.125000 163.187500 L 164.937500 161.812500 L 176.437500 159.750000 L 187.687500 157.062500 L 198.562500 153.750000 L 208.937500 149.812500 L 218.812500 145.250000 L 228.000000 140.062500 L 236.562500 134.250000 L 244.187500 128.000000 L 250.687500 121.437500 L 256.125000 114.562500 L 260.437500 107.562500 L 263.687500 100.375000 L 265.812500 93.062500 L 266.875000 85.687500 L 266.875000 78.250000 L 265.812500 70.875000 L 263.625000 63.625000 L 260.375000 56.437500 L 256.125000 49.500000 L 250.750000 42.687500 L 244.375000 36.250000 L 236.875000 30.062500 L 228.375000 24.250000 L 219.000000 18.937500 L 209.000000 14.312500 L 198.562500 10.312500 L 187.625000 7.000000 L 176.312500 4.250000 L 164.687500 2.250000 L 152.875000 0.875000 L 140.937500 0.125000 L 128.937500 0.062500 L 117.000000 0.687500 L 105.125000 2.000000 L 93.437500 3.937500 L 82.000000 6.562500 L 70.875000 9.875000 L 60.125000 13.812500 L 49.937500 18.500000 L 40.500000 23.750000 L 32.000000 29.375000 L 24.562500 35.437500 L 18.062500 41.812500 L 12.625000 48.500000 L 8.187500 55.375000 L 4.812500 62.500000 L 2.500000 69.750000 L 1.250000 77.125000 L 1.062500 84.500000 L 2.000000 91.937500 L 4.000000 99.312500 L 7.125000 106.562500 L 11.375000 113.687500 L 16.750000 120.687500 L 23.250000 127.375000 L 1.000000 164.000000 L 59.812500 150.062500 z', '', 'stroke:#010000; stroke-width:1; stroke-linejoin:round;stroke-dasharray: none; fill:#FFFFFF;"' , '')
+shape3156.addIe8Attr(753.000000, 139.000000, 284.000000, 188.000000, 0, 0)
+shape3156.initImageMap(1,'63,170,75,175,87,179,99,182,112,184,124,185,137,186,150,186,162,185,175,184,187,181,199,178,211,174,222,170,232,165,242,159,251,152,259,145,266,138,272,130,276,122,280,114,282,106,283,97,283,89,282,80,279,72,276,64,271,56,266,48,259,41,251,34,242,27,232,21,222,16,210,12,199,8,187,5,175,3,162,1,149,0,137,0,124,1,111,2,99,5,87,7,75,11,64,16,53,21,43,27,34,33,26,40,19,47,13,55,9,63,5,71,3,79,1,88,1,96,2,104,4,113,7,121,12,129,18,137,25,145,1,186,63,170','M 63.375000 170.187500 L 74.875000 174.812500 L 86.812500 178.562500 L 99.062500 181.625000 L 111.562500 183.812500 L 124.187500 185.250000 L 136.937500 185.937500 L 149.687500 185.875000 L 162.375000 185.062500 L 174.812500 183.500000 L 187.062500 181.187500 L 199.000000 178.125000 L 210.500000 174.375000 L 221.500000 169.875000 L 231.937500 164.687500 L 241.750000 158.812500 L 250.812500 152.250000 L 258.875000 145.125000 L 265.750000 137.687500 L 271.500000 129.937500 L 276.062500 121.937500 L 279.500000 113.750000 L 281.750000 105.500000 L 282.875000 97.125000 L 282.875000 88.750000 L 281.687500 80.375000 L 279.437500 72.125000 L 276.000000 64.000000 L 271.437500 56.062500 L 265.750000 48.375000 L 258.937500 41.000000 L 251.000000 34.000000 L 242.000000 27.437500 L 232.062500 21.437500 L 221.500000 16.187500 L 210.375000 11.687500 L 198.812500 7.875000 L 186.812500 4.812500 L 174.500000 2.562500 L 162.000000 1.000000 L 149.312500 0.187500 L 136.625000 0.125000 L 123.937500 0.812500 L 111.312500 2.250000 L 98.937500 4.500000 L 86.812500 7.437500 L 75.062500 11.187500 L 63.687500 15.687500 L 52.875000 21.000000 L 42.875000 26.937500 L 33.875000 33.375000 L 25.937500 40.187500 L 19.125000 47.437500 L 13.312500 55.000000 L 8.625000 62.875000 L 5.062500 70.937500 L 2.625000 79.125000 L 1.250000 87.500000 L 1.062500 95.875000 L 2.062500 104.250000 L 4.187500 112.625000 L 7.437500 120.875000 L 11.937500 129.000000 L 17.625000 136.875000 L 24.562500 144.500000 L 1.000000 186.000000 L 63.375000 170.187500 z', '', 'stroke:#010000; stroke-width:1; stroke-linejoin:round;stroke-dasharray: none; fill:#FFFFFF;"' , '')
 shape3156.setUseSvgFile(1)
 shape3156.addBorder(0)
 shape3156.initLineWeight(1)
 shape3156.addOpacity(100)
 shape3156.build()
 
-audio3538 = new ObjMedia('audio3538','Welcome 5',783,338,225,24,1,13,'media/welcome_5.mp3',0,0,0,0,1,0.800000,1,'div',0);
+audio3538 = new ObjMedia('audio3538','Welcome 5',50,517,225,24,1,13,'media/welcome_5.mp3',0,0,0,0,1,0.800000,1,'div',0);
 audio3538.bNeedPool = true;
 audio3538.bSpeedControl = true;
 audio3538.BuildMediaString()
@@ -684,7 +702,7 @@ audio3538.build()
 audio3538.addEvent('3.27', 'audio3538evEvent_2')
 audio3538.addEvent('6.00', 'audio3538evEvent_3')
 audio3538.addEvent('9.00', 'audio3538evEvent_4')
-text3173 = new ObjText('text3173',null,783,198,221,97,1,14,null,'div',null,0 )
+text3173 = new ObjText('text3173',null,783,172,221,105,1,14,null,'div',null,0 )
 text3173.initSLine(0)
 text3173.initHasBullet(0)
 text3173.initRotateAngle(0,0,0)
@@ -693,16 +711,16 @@ text3173.initHasTextShadow(0)
 text3173.initHasBorder(0)
 text3173.initHasOutline(0)
 text3173.initHasMargin(0)
-text3173.addIe8Attr(783, 198, 221, 97, 0, 0)
+text3173.addIe8Attr(783, 172, 221, 105, 0, 0)
 text3173.addHeading(0)
 text3173.addOpacity(100)
 text3173.arrCSSStyles = new Array();
 text3173.arrCSSStyles.push('span.text3173Font1 { font-size:16px; font-family:"Arial", sans-serif; color:#21314d;}');
-text3173.addInnerText('<div id=\"text3173\" aria-live=\"off\"  ><p lang=\"en\"  legLH=\"1.409\" style=\"margin-left:0px;text-indent:0px;line-height:1.350;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text3173Font1\" style=\"position:relative;top:-2px;\" >By the end, you won\'t just understand Bloom\'s Taxonomy, you\'ll use it to create learning experiences that truly work.\n</span ></p ></div>\n');
+text3173.addInnerText('<div id=\"text3173\" aria-live=\"off\"  ><p lang=\"en\"  legLH=\"1.409\" style=\"margin-left:0px;text-indent:0px;line-height:1.350;margin-top:0px;margin-bottom:0px;text-align:center;\" >\n<span class=\"text3173Font1\" style=\"position:relative;top:-2px;\" >By the end, you won\'t just understand Bloom\'s Taxonomy, you\'ll use it to create learning experiences that truly work.\n</span ></p ></div>\n');
 text3173.build()
 
 text3675 = new ObjText('text3675',null,179,107,244,35,1,15,null,'div',null,0 )
-text3675.initSLine(1)
+text3675.initSLine(0)
 text3675.initHasBullet(0)
 text3675.initRotateAngle(0,0,0)
 text3675.initHasOuterShadow(0)
@@ -716,7 +734,7 @@ text3675.addOpacity(100)
 text3675.arrCSSStyles = new Array();
 text3675.arrCSSStyles.push('span.text3675Font1 { font-size:16px; font-family:"Arial", sans-serif; color:#21314d; font-weight:bold;}');
 text3675.arrCSSStyles.push('span.text3675Font2 { font-size:16px; font-family:"Arial", sans-serif; color:#21314d;}');
-text3675.addInnerText('<div id=\"text3675\" aria-live=\"off\"  ><p lang=\"en\"  legLH=\"1.409\" style=\"margin-left:0px;text-indent:0px;line-height:1.350;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text3675Font1\" style=\"position:relative;top:-2px;\" >Learning Objectives:</span ><span class=\"text3675Font2\" style=\"background-color:transparentposition:relative;top:-2px;\" >\n</span ></p ></div>\n');
+text3675.addInnerText('<div id=\"text3675\" aria-live=\"off\"  ><p lang=\"en\"  legLH=\"1.409\" style=\"margin-left:0px;text-indent:0px;line-height:1.350;margin-top:0px;margin-bottom:0px;text-align:center;\" >\n<span class=\"text3675Font1\" style=\"position:relative;top:-2px;\" >Learning Objectives:</span ><span class=\"text3675Font2\" style=\"background-color:transparentposition:relative;top:-2px;\" >\n</span ></p ></div>\n');
 text3675.build()
 
 audio30851 = new ObjMedia('audio30851','Learning objectives',358,210,1,1,0,16,'media/learning_objectives.mp3',0,0,0,0,1,0.800000,0,'div',0);

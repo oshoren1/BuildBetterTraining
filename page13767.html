@@ -170,7 +170,7 @@ function ReFlow() {
 
 VarTrivSelCap = new Variable( 'VarTrivSelCap', 'none', 0, 0, null, null, 'buildbettertraining', true )
 VarPageInTitle = new Variable( 'VarPageInTitle', null, 0, 0, null, null, 'buildbettertraining' )
-VarPageInTitle.set( '17' )
+VarPageInTitle.set( '16' )
 VarQuestion_0003 = new Variable( 'VarQuestion_0003', '', 0, 0, null, null, 'buildbettertraining', false )
 VarTriMuteAllFLV = new Variable( 'VarTriMuteAllFLV', '', 0, 0, null, null, 'buildbettertraining', true )
 
@@ -318,7 +318,7 @@ function trivPrevPage() {
 }
 
 function trivNextPage() {
-    trivExitPage( 'page14145.html', true )
+    trivExitPage( 'page11948.html', true )
 }
 
 function trivUpdateTOC( bRecurse ) {
@@ -351,7 +351,7 @@ function doImmFeedback( objId ) {
       qu13813PrevAns = ans_VarQuestion_0003;
    if( ans_VarQuestion_0003 != '~~~null~~~' ) {
     { //1 
-        trivActFBCnt++; action13813_5(onAfterFBAction);  return 0;
+        trivActFBCnt++; action13813_6(onAfterFBAction);  return 0;
   } //1
 
       }
@@ -390,8 +390,8 @@ function Offset_qu13813(bDevRotate) {
 }
 
 
-function action13813_5(fn){
-    if(!document.getElementById("DLG_Div_13813"))trivAlert( 'action13813_5', 'BuildBetterTraining', 'Sample answer 1:\n Ask learners to explain the concept in their own words or give an example of it in their work. If they can’t explain it without repeating the exact wording from the slide, they likely don’t understand it yet..\n\nSample Answer 2:\nI’d include group discussions or storytelling prompts where learners connect a concept to a real work example. This makes them interpret the idea instead of just repeating it.', fn );
+function action13813_6(fn){
+    if(!document.getElementById("DLG_Div_13813"))trivAlert( 'action13813_6', 'BuildBetterTraining', 'Sample answer 1:\n Ask learners to explain the concept in their own words or give an example of it in their work. If they can’t explain it without repeating the exact wording from the slide, they likely don’t understand it yet..\n\nSample Answer 2:\nI’d include group discussions or storytelling prompts where learners connect a concept to a real work example. This makes them interpret the idea instead of just repeating it.', fn );
 }
 
 function action13909(fn){
@@ -423,7 +423,7 @@ function action13871(fn){
 }
 
 function action13870(fn){
-    trivExitPage('page14145.html',true); 
+    trivExitPage('page11948.html',true); 
     if(fn && typeof(fn) == 'string' ) eval(fn);
     else if(fn && typeof(fn) == 'function' ) fn();
 }
@@ -433,7 +433,7 @@ function shape13869onUp() {
 }
 
 function shape13869actionShow() {
-  setTimeout("if(!shape13869.isVisible()) { shape13869.objLyr.doTrans( 0, 33, 4, null, shape13869.objLyr.x, shape13869.objLyr.y, -36, -34, winW+20, winH+20, 0, -1, 0 ); }", 1 )
+  setTimeout("if(!shape13869.isVisible()) { shape13869.objLyr.doTrans( 0, 33, 4, null, shape13869.objLyr.x, shape13869.objLyr.y, -46, -43, winW+20, winH+20, 0, -1, 0 ); }", 1 )
 }
 
 if( is.min ){
@@ -528,7 +528,7 @@ text13775.arrCSSStyles.push('span.text13775Font2 { font-size:16px; font-family:"
 text13775.addInnerText('<div id=\"text13775\" aria-live=\"off\"  ><p lang=\"en\"  legLH=\"1.409\" style=\"margin-left:0px;text-indent:0px;line-height:1.350;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text13775Font1\" style=\"position:relative;top:-2px;\" >Understand</span ><span class=\"text13775Font2\" style=\"background-color:transparentposition:relative;top:-2px;\" >\n</span ></p ></div>\n');
 text13775.build()
 
-qu13813 = new ObjInline('qu13813',null,60,154,700,277,1,0)
+qu13813 = new ObjInline('qu13813',null,98,210,847,360,1,0)
 qu13813.isGrp = true
 qu13813.addChild('text13815')
 qu13813.addChild('entry13816')
