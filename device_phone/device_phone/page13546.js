@@ -1,0 +1,56 @@
+PhoneResponsive={"785":{
+"pageLayer":{"w":785,"h":450,"bgColor":"#ffffff"}
+,
+"text57190":{"x":10,"y":412,"w":71,"h":15,"txtscale":100,"bOffBottom":1}
+,
+"button62989":{"B64":{"disabledState":"","downState":"","normalState":"","overState":"","selectedState":"","visitedState":""},"bOffBottom":0,"h":36.0,"p":"M 52.000000 9.475000 L 17.000000 9.475000 L 17.000000 0.000000 L 0.000000 17.000000 L 17.000000 35.000000 L 17.000000 24.525000 L 52.000000 24.525000 L 52.000000 9.475000 z","stylemods":[{"decl":" { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:52.000000px; height:35.000000px;}","sel":"div.button62989Text"},{"decl":" { width:48.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:12px; font-size:12px; font-family:\"Arial\", sans-serif; color:#ffffff;}","sel":"span.button62989Text"},{"decl":" { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:52.000000px; height:35.000000px;}","sel":"div.button62989overStateText"},{"decl":" { width:48.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:12px; font-size:12px; font-family:\"Arial\", sans-serif; color:#ffffff;}","sel":"span.button62989overStateText"},{"decl":" { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:52.000000px; height:35.000000px;}","sel":"div.button62989downStateText"},{"decl":" { width:48.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:12px; font-size:12px; font-family:\"Arial\", sans-serif; color:#ffffff;}","sel":"span.button62989downStateText"},{"decl":" { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:52.000000px; height:35.000000px;}","sel":"div.button62989disabledStateText"},{"decl":" { width:48.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:12px; font-size:12px; font-family:\"Arial\", sans-serif; color:#ffffff;}","sel":"span.button62989disabledStateText"},{"decl":" { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:52.000000px; height:35.000000px;}","sel":"div.button62989visitedStateText"},{"decl":" { width:48.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:12px; font-size:12px; font-family:\"Arial\", sans-serif; color:#ffffff;}","sel":"span.button62989visitedStateText"},{"decl":" { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:52.000000px; height:35.000000px;}","sel":"div.button62989selectedStateText"},{"decl":" { width:48.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:12px; font-size:12px; font-family:\"Arial\", sans-serif; color:#ffffff;}","sel":"span.button62989selectedStateText"}],"w":53.0,"x":31,"y":28}
+,
+"image13548":{"x":0,"y":0,"w":785,"h":441,"bOffBottom":0,"i":"images/litchen_background.png"}
+,
+"image13550":{"x":30,"y":58,"w":728,"h":392,"bOffBottom":0,"i":"images/recipe_cardcrop_image9621.png"}
+,
+"text13657":{"x":65,"y":144,"w":664,"h":161,"txtscale":100,"bOffBottom":0}
+,
+"entry13658":{"x":71,"y":255,"w":612,"h":170,"fsize":16,"bOffBottom":0}
+,
+"image13553":{"x":433,"y":30,"w":170,"h":160,"bOffBottom":0,"i":"images/knifecrop_image9630.png"}
+,
+"text13554":{"x":504,"y":99,"w":92,"h":23,"txtscale":100,"bOffBottom":0}
+,
+"shape13558":{"x":698,"y":348,"w":18.000000,"h":16.000000,"stylemods":[{"sel":"div.shape13558Text","decl":" { position:absolute; top:1.000000px; left:1.000000px; display:flex; justify-content:center; align-items:center; width:16.000000px; height:14.000000px;}"},{"sel":"span.shape13558Text","decl":" { width:12.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:9px; font-size:9px; font-family:\"Lucida Sans Unicode\", sans-serif; color:#21314d;}"}],"bOffBottom":0 ,"td": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAQCAYAAAAbBi9cAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAASSURBVDhPY2AYBaNgFIyCwQEABJAAAWxs0fIAAAAASUVORK5CYII="  ,"fd": "" ,"p": "M 17.000000 8.000000 L 1.000000 15.000000 L 1.000000 1.000000 L 17.000000 8.000000 z"}
+,
+"RCDResetQuestion":function(){
+try{if(window.dragMgr)window.dragMgr.clearDropZones();}catch(e){if(e&&e.message)console.log(e.message);}
+}
+,
+"RCDResultResize":function(){}
+,"preload":['images/recipe_cardcrop_image9621.png','images/knifecrop_image9630.png']
+},
+"480":{
+"pageLayer":{"w":1280,"h":720,"bgColor":"#ffffff"}
+,
+"text57190":{"x":50,"y":685,"w":116,"h":21,"txtscale":100,"bOffBottom":1}
+,
+"button62989":{"B64":{"disabledState":"","downState":"","normalState":"","overState":"","selectedState":"","visitedState":""},"bOffBottom":0,"h":43.0,"i":"images/button62989.png","p":"M 80.000000 11.970000 L 21.000000 11.970000 L 21.000000 0.000000 L 0.000000 21.000000 L 21.000000 42.000000 L 21.000000 30.029999 L 80.000000 30.029999 L 80.000000 11.970000 z","stylemods":[{"decl":" { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:80.000000px; height:42.000000px;}","sel":"div.button62989Text"},{"decl":" { width:76.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}","sel":"span.button62989Text"},{"decl":" { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:80.000000px; height:42.000000px;}","sel":"div.button62989overStateText"},{"decl":" { width:76.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}","sel":"span.button62989overStateText"},{"decl":" { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:80.000000px; height:42.000000px;}","sel":"div.button62989downStateText"},{"decl":" { width:76.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}","sel":"span.button62989downStateText"},{"decl":" { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:80.000000px; height:42.000000px;}","sel":"div.button62989disabledStateText"},{"decl":" { width:76.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}","sel":"span.button62989disabledStateText"},{"decl":" { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:80.000000px; height:42.000000px;}","sel":"div.button62989visitedStateText"},{"decl":" { width:76.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}","sel":"span.button62989visitedStateText"},{"decl":" { position:absolute; top:0.000000px; left:0.000000px; display:flex; justify-content:center; align-items:center; width:80.000000px; height:42.000000px;}","sel":"div.button62989selectedStateText"},{"decl":" { width:76.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Arial\", sans-serif; color:#ffffff;}","sel":"span.button62989selectedStateText"}],"w":81.0,"x":50,"y":50}
+,
+"image13548":{"x":0,"y":0,"w":1280,"h":719,"bOffBottom":0,"i":"images/litchen_background.png"}
+,
+"image13550":{"x":108,"y":118,"w":858,"h":462,"bOffBottom":0,"i":"images/recipe_cardcrop_image9621.png"}
+,
+"text13657":{"x":153,"y":238,"w":728,"h":121,"txtscale":100,"bOffBottom":0}
+,
+"entry13658":{"x":166,"y":374,"w":680,"h":171,"fsize":16,"bOffBottom":0}
+,
+"image13553":{"x":591,"y":72,"w":224,"h":211,"bOffBottom":0,"i":"images/knifecrop_image9630.png"}
+,
+"text13554":{"x":686,"y":171,"w":91,"h":18,"txtscale":100,"bOffBottom":0}
+,
+"shape13558":{"x":867,"y":426,"w":28.000000,"h":25.000000,"stylemods":[{"sel":"div.shape13558Text","decl":" { position:absolute; top:1.000000px; left:1.000000px; display:flex; justify-content:center; align-items:center; width:26.000000px; height:23.000000px;}"},{"sel":"span.shape13558Text","decl":" { width:22.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Lucida Sans Unicode\", sans-serif; color:#21314d;}"}],"bOffBottom":0 ,"td": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAZCAYAAAAiwE4nAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAZSURBVEhL7cEBAQAAAIIg/69uSEABAMChAQsJAAFn4LH+AAAAAElFTkSuQmCC"  ,"fd": "" ,"p": "M 27.000000 12.000000 L 1.000000 24.000000 L 1.000000 1.000000 L 27.000000 12.000000 z" ,"i":"images/shape13558.png"}
+,
+"RCDResetQuestion":function(){
+try{if(window.dragMgr)window.dragMgr.clearDropZones();}catch(e){if(e&&e.message)console.log(e.message);}
+}
+,
+"RCDResultResize":function(){}
+,"preload":['images/recipe_cardcrop_image9621.png','images/knifecrop_image9630.png']
+}}
