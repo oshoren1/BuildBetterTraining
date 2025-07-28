@@ -173,6 +173,7 @@ VarPageInTitle = new Variable( 'VarPageInTitle', null, 0, 0, null, null, 'buildb
 VarPageInTitle.set( '27' )
 VarTriMuteAllFLV = new Variable( 'VarTriMuteAllFLV', '', 0, 0, null, null, 'buildbettertraining', true )
 VarQuestion_0008 = new Variable( 'VarQuestion_0008', '', 0, 0, null, 365, 'buildbettertraining', false )
+VarTriQA_19380 = new Variable( 'VarTriQA_19380', '0', 0, 0, null, 365, 'buildbettertraining', true )
 
 onload = responsiveInit
 detect();
@@ -254,6 +255,7 @@ button68916.loadStateFromSes("normalState");
 		     if(titleManagerIndexWindow)  trivScrollTo(titleManagerIndexWindow, objToScroll);
 		    } catch (e) { }
     Init_qu19380()
+    DisableQu_19380()
 
     action57857();action57858();
     if(!isSinglePagePlayerAvail()) postPageShowAction();
@@ -288,6 +290,7 @@ var trivActFBCnt = 0;
 var currFeedbackIdx = 0;
 var trivPageExited = false;
 var trivInTest = false;
+var d_19380 = false;
 
 function finish() {
    if (window.finishCalled) return; 
@@ -371,6 +374,7 @@ function checkQuestions( bFeedback, bForce, bNotLeavingPage ) {
   var onAfterFBAction = ( bNotLeavingPage ? (function(){trivActFBCnt--;}) : (function(){trivActFBCnt--;window.checkLeavePage();}) );
   var ans_VarQuestion_0008 = VarQuestion_0008.getValue()
   if( bFeedback && currFeedbackIdx == 0 && ans_VarQuestion_0008 != '~~~null~~~' && !qu19380.hasBeenProcessed) {
+  if(d_19380) return 1;
     var arrAns = new Array
     arrAns[0]='\u0031\u004C\u002D\u0031\u0052'
     arrAns[1]='\u0032\u004C\u002D\u0032\u0052'
@@ -385,9 +389,18 @@ function checkQuestions( bFeedback, bForce, bNotLeavingPage ) {
       if( offset < 0 ) wrong = true
       else offset = offset + arrAns[idx].length
     }
-    if( !wrong ) {        trivActFBCnt++; action19380_79(onAfterFBAction); return 0;  } //1
+    if( !wrong ) {        VarTriQA_19380.add('1')
+		var at = parseInt(VarTriQA_19380.getValue())
+		if( at >= 5 ) { DisableQu_19380(); }
+        trivActFBCnt++; action19380_6(onAfterFBAction); return 0;  } //1
 
-    if( wrong ) {trivActFBCnt++; action19380_80(onAfterFBAction); return 0;  } //2 
+    if( wrong ) {        VarTriQA_19380.add('1')
+		var at = parseInt(VarTriQA_19380.getValue())
+		if( at >= 5 ) { DisableQu_19380(); trivActFBCnt++;action19380_8(onAfterFBAction); return 1;
+}
+        else { trivActFBCnt++; action19380_7(onAfterFBAction); return 0;
+        }
+  } //2 
 
   }
   if( !bFeedback ) currFeedbackIdx = 1;
@@ -543,12 +556,53 @@ function Update_qu19380() {
   qu19380Object.hasBeenProcessed=false;
 }
 
-function action19380_79(fn){
-    if(!document.getElementById("DLG_Div_19380"))trivAlert( 'action19380_79', 'BuildBetterTraining', 'Correct!\nExplanation: \nRemembering focuses on recalling facts, basic concepts, or procedures from memory without necessarily understanding or using them. Listing steps is purely about retrieval.\n\nUnderstanding goes beyond memory; it means grasping the meaning. Summarizing shows that the learner can interpret information in their own words.\n\nApplying means using knowledge or procedures in a real situation. Following a checklist to perform a task correctly is a direct application of learned knowledge.\n\n Analyzing requires breaking information into parts and examining . relationships. Identifying what went wrong in a project demands deep analysis of different components and factors.\n\nEvaluating asks learners to make judgments based on criteria and standards. Critiquing requires comparing, assessing value, and defending a choice based on evidence.\n\n Creating is about producing new or original work. Designing a brand-new process from scratch demands synthesizing knowledge, inventing ideas, and structuring them into a coherent result', fn );
+function DisableQu_19380() {
+  d_19380 = (parseInt(VarTriQA_19380.getValue()) >= 5);
+  qu19380.disable(d_19380);
+  var newVal = "," + VarQuestion_0008.getValue() + ","
+  for( var idx = 0; idx < 6; idx++ )
+  {
+    var test
+    if( idx == 0 ) test = text19383
+    else if( idx == 1 ) test = text19385
+    else if( idx == 2 ) test = text19387
+    else if( idx == 3 ) test = text19389
+    else if( idx == 4 ) test = text19391
+    else if( idx == 5 ) test = text19393
+    if( test.bBorder ){ test.showBorder(false); LML=null; LMR=null; }
+    test.dis = d_19380
+    var check = "," + test.leftSel + "-"
+    var offset = newVal.indexOf( check )
+    if( offset >= 0 )
+    {
+      var rightSel = newVal.substring( offset + check.length )
+      var comma    = rightSel.indexOf( ',' )
+      var rightId  = rightSel.substring( 0, comma )
+      for( var idx2 = 0; idx2 < 6; idx2++ )
+      {
+        var test2
+        if( idx2 == 0 ) test2 = text19386
+        else if( idx2 == 1 ) test2 = text19394
+        else if( idx2 == 2 ) test2 = text19388
+        else if( idx2 == 3 ) test2 = text19392
+        else if( idx2 == 4 ) test2 = text19384
+        else if( idx2 == 5 ) test2 = text19390
+         if( test2.bBorder ){ test2.showBorder(false); LML=null; LMR=null; }
+        test2.dis = d_19380
+      }
+    }
+  }
+}
+function action19380_6(fn){
+    if(!document.getElementById("DLG_Div_19380"))trivAlert( 'action19380_6', 'BuildBetterTraining', 'Correct!\nExplanation: \nRemembering focuses on recalling facts, basic concepts, or procedures from memory without necessarily understanding or using them. Listing steps is purely about retrieval.\n\nUnderstanding goes beyond memory; it means grasping the meaning. Summarizing shows that the learner can interpret information in their own words.\n\nApplying means using knowledge or procedures in a real situation. Following a checklist to perform a task correctly is a direct application of learned knowledge.\n\n Analyzing requires breaking information into parts and examining . relationships. Identifying what went wrong in a project demands deep analysis of different components and factors.\n\nEvaluating asks learners to make judgments based on criteria and standards. Critiquing requires comparing, assessing value, and defending a choice based on evidence.\n\n Creating is about producing new or original work. Designing a brand-new process from scratch demands synthesizing knowledge, inventing ideas, and structuring them into a coherent result', fn );
 }
 
-function action19380_80(fn){
-    if(!document.getElementById("DLG_Div_19380"))trivAlert( 'action19380_80', 'BuildBetterTraining', 'You answered the question incorrectly. Please try again!', fn );
+function action19380_7(fn){
+    if(!document.getElementById("DLG_Div_19380"))trivAlert( 'action19380_7', 'BuildBetterTraining', 'You answered the question incorrectly. Please try again!', fn );
+}
+
+function action19380_8(fn){
+    if(!document.getElementById("DLG_Div_19380"))trivAlert( 'action19380_8', 'BuildBetterTraining', 'Your answer is still not correct and you have exhausted all of your attempts. Please go back and review the cognitive levels before you contimue with the course. ', fn );
 }
 
 if( is.min ){

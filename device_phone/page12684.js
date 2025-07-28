@@ -11,7 +11,7 @@ PhoneResponsive={"785":{
 ,
 "image12691":{"x":420,"y":37,"w":137,"h":129,"bOffBottom":0,"i":"images/knifecrop_image9630.png"}
 ,
-"text12692":{"x":482,"y":99,"w":57,"h":23,"txtscale":100,"bOffBottom":0}
+"text12692":{"x":482,"y":99,"w":48,"h":23,"txtscale":100,"bOffBottom":0}
 ,
 "text12693":{"x":34,"y":136,"w":658,"h":315,"txtscale":100,"bOffBottom":0}
 ,
@@ -35,15 +35,15 @@ try{if(window.dragMgr)window.dragMgr.clearDropZones();}catch(e){if(e&&e.message)
 ,
 "image12686":{"x":0,"y":0,"w":1280,"h":719,"bOffBottom":0,"i":"images/litchen_background.png"}
 ,
-"image12688":{"x":156,"y":130,"w":858,"h":462,"bOffBottom":0,"i":"images/recipe_cardcrop_image9621.png"}
+"image12688":{"x":108,"y":118,"w":858,"h":462,"bOffBottom":0,"i":"images/recipe_cardcrop_image9621.png"}
 ,
-"image12691":{"x":617,"y":78,"w":224,"h":211,"bOffBottom":0,"i":"images/knifecrop_image9630.png"}
+"image12691":{"x":591,"y":72,"w":224,"h":211,"bOffBottom":0,"i":"images/knifecrop_image9630.png"}
 ,
-"text12692":{"x":718,"y":178,"w":93,"h":23,"txtscale":100,"bOffBottom":0}
+"text12692":{"x":695,"y":168,"w":78,"h":18,"txtscale":100,"bOffBottom":0}
 ,
-"text12693":{"x":196,"y":239,"w":787,"h":213,"txtscale":100,"bOffBottom":0}
+"text12693":{"x":144,"y":228,"w":787,"h":213,"txtscale":100,"bOffBottom":0}
 ,
-"text12694":{"x":208,"y":441,"w":184,"h":127,"txtscale":100,"bOffBottom":0, "tablWidth": 200  , "tablHeight" :129}
+"text12694":{"x":353,"y":441,"w":184,"h":113,"txtscale":100,"bOffBottom":0, "tablWidth": 200  , "tablHeight" :129}
 ,
 "shape12696":{"x":827,"y":440,"w":28.000000,"h":25.000000,"stylemods":[{"sel":"div.shape12696Text","decl":" { position:absolute; top:1.000000px; left:1.000000px; display:flex; justify-content:center; align-items:center; width:26.000000px; height:23.000000px;}"},{"sel":"span.shape12696Text","decl":" { width:22.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Lucida Sans Unicode\", sans-serif; color:#21314d;}"}],"bOffBottom":0 ,"td": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAZCAYAAAAiwE4nAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAZSURBVEhL7cEBAQAAAIIg/69uSEABAMChAQsJAAFn4LH+AAAAAElFTkSuQmCC"  ,"fd": "" ,"p": "M 27.000000 12.000000 L 1.000000 24.000000 L 1.000000 1.000000 L 27.000000 12.000000 z" ,"i":"images/shape12696.png"}
 ,

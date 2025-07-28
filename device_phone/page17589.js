@@ -7,11 +7,11 @@ PhoneResponsive={"785":{
 ,
 "image17591":{"x":0,"y":1,"w":785,"h":441,"bOffBottom":0,"i":"images/litchen_background.png"}
 ,
-"image17593":{"x":88,"y":76,"w":689,"h":370,"bOffBottom":0,"i":"images/recipe_cardcrop_image9621.png"}
+"image17593":{"x":66,"y":72,"w":689,"h":370,"bOffBottom":0,"i":"images/recipe_cardcrop_image9621.png"}
 ,
 "image17596":{"x":422,"y":47,"w":137,"h":129,"bOffBottom":0,"i":"images/knifecrop_image9630.png"}
 ,
-"text17597":{"x":484,"y":109,"w":57,"h":23,"txtscale":100,"bOffBottom":0}
+"text17597":{"x":484,"y":109,"w":54,"h":23,"txtscale":100,"bOffBottom":0}
 ,
 "text17810":{"x":66,"y":152,"w":623,"h":200,"txtscale":100,"bOffBottom":0}
 ,
@@ -35,15 +35,15 @@ try{if(window.dragMgr)window.dragMgr.clearDropZones();}catch(e){if(e&&e.message)
 ,
 "image17591":{"x":0,"y":2,"w":1280,"h":719,"bOffBottom":0,"i":"images/litchen_background.png"}
 ,
-"image17593":{"x":143,"y":124,"w":858,"h":462,"bOffBottom":0,"i":"images/recipe_cardcrop_image9621.png"}
+"image17593":{"x":108,"y":118,"w":858,"h":462,"bOffBottom":0,"i":"images/recipe_cardcrop_image9621.png"}
 ,
-"image17596":{"x":626,"y":78,"w":224,"h":211,"bOffBottom":0,"i":"images/knifecrop_image9630.png"}
+"image17596":{"x":591,"y":72,"w":224,"h":211,"bOffBottom":0,"i":"images/knifecrop_image9630.png"}
 ,
-"text17597":{"x":727,"y":178,"w":93,"h":23,"txtscale":100,"bOffBottom":0}
+"text17597":{"x":694,"y":170,"w":88,"h":17,"txtscale":100,"bOffBottom":0}
 ,
-"text17810":{"x":200,"y":234,"w":729,"h":110,"txtscale":100,"bOffBottom":0}
+"text17810":{"x":162,"y":239,"w":729,"h":110,"txtscale":100,"bOffBottom":0}
 ,
-"entry17811":{"x":200,"y":353,"w":633,"h":200,"fsize":16,"bOffBottom":0}
+"entry17811":{"x":166,"y":374,"w":680,"h":171,"fsize":16,"bOffBottom":0}
 ,
 "shape17892":{"x":890,"y":431,"w":28.000000,"h":25.000000,"stylemods":[{"sel":"div.shape17892Text","decl":" { position:absolute; top:1.000000px; left:1.000000px; display:flex; justify-content:center; align-items:center; width:26.000000px; height:23.000000px;}"},{"sel":"span.shape17892Text","decl":" { width:22.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:16px; font-size:16px; font-family:\"Lucida Sans Unicode\", sans-serif; color:#21314d;}"}],"bOffBottom":0 ,"td": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAZCAYAAAAiwE4nAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAZSURBVEhL7cEBAQAAAIIg/69uSEABAMChAQsJAAFn4LH+AAAAAElFTkSuQmCC"  ,"fd": "" ,"p": "M 27.000000 12.000000 L 1.000000 24.000000 L 1.000000 1.000000 L 27.000000 12.000000 z" ,"i":"images/shape17892.png"}
 ,

@@ -13,7 +13,7 @@ PhoneResponsive={"785":{
 ,
 "image12508":{"x":440,"y":24,"w":137,"h":129,"bOffBottom":0,"i":"images/knifecrop_image9630.png"}
 ,
-"text12509":{"x":502,"y":86,"w":57,"h":23,"txtscale":100,"bOffBottom":0}
+"text12509":{"x":502,"y":86,"w":54,"h":23,"txtscale":100,"bOffBottom":0}
 ,
 "text12510":{"x":44,"y":123,"w":676,"h":294,"txtscale":100,"bOffBottom":0}
 ,
@@ -37,15 +37,15 @@ try{if(window.dragMgr)window.dragMgr.clearDropZones();}catch(e){if(e&&e.message)
 ,
 "image12503":{"x":0,"y":0,"w":1280,"h":719,"bOffBottom":0,"i":"images/litchen_background.png"}
 ,
-"image12505":{"x":149,"y":107,"w":866,"h":466,"bOffBottom":0,"i":"images/recipe_cardcrop_image9621.png"}
+"image12505":{"x":108,"y":118,"w":858,"h":462,"bOffBottom":0,"i":"images/recipe_cardcrop_image9621.png"}
 ,
-"image12508":{"x":617,"y":61,"w":224,"h":211,"bOffBottom":0,"i":"images/knifecrop_image9630.png"}
+"image12508":{"x":591,"y":72,"w":224,"h":211,"bOffBottom":0,"i":"images/knifecrop_image9630.png"}
 ,
-"text12509":{"x":718,"y":161,"w":93,"h":23,"txtscale":100,"bOffBottom":0}
+"text12509":{"x":694,"y":170,"w":88,"h":19,"txtscale":100,"bOffBottom":0}
 ,
-"text12510":{"x":187,"y":229,"w":790,"h":168,"txtscale":100,"bOffBottom":0}
+"text12510":{"x":142,"y":231,"w":790,"h":168,"txtscale":100,"bOffBottom":0}
 ,
-"text12511":{"x":248,"y":417,"w":184,"h":127,"txtscale":100,"bOffBottom":0, "tablWidth": 200  , "tablHeight" :129}
+"text12511":{"x":325,"y":424,"w":212,"h":127,"txtscale":100,"bOffBottom":0, "tablWidth": 200  , "tablHeight" :129}
 ,
 "RCDResetQuestion":function(){
 try{if(window.dragMgr)window.dragMgr.clearDropZones();}catch(e){if(e&&e.message)console.log(e.message);}

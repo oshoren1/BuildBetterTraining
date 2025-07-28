@@ -190,14 +190,13 @@ function init11() {
   findWH()
   if( is.min ){
     trivPageTracking.InitPageTracking();
-    PreloadResources(new Array(text57772,shape12513,button64754,image12503,image12505,og12506,image12508,text12509,text12510,text12511))
+    PreloadResources(new Array(text57772,shape12513,button64754,image12503,image12505,image12508,text12509,text12510,text12511))
     pageLayer.show(true);
     text57772.init()
     shape12513.init()
     button64754.init()
     image12503.init()
     image12505.init()
-    og12506.init()
     image12508.init()
     text12509.init()
     text12510.init()
@@ -207,7 +206,6 @@ function init11() {
     button64754.activate()
     image12503.activate()
     image12505.activate()
-    og12506.activate()
     image12508.activate()
     text12509.activate()
     text12510.activate()
@@ -362,7 +360,7 @@ function button64754onUp() {
 }
 
 if( is.min ){
-text57772 = new ObjText('text57772',null,50,685,116,21,0,21,null,'div',null,1 )
+text57772 = new ObjText('text57772',null,50,685,116,21,0,20,null,'div',null,1 )
 text57772.initSLine(1)
 text57772.initHasBullet(0)
 text57772.initRotateAngle(0,0,0)
@@ -380,7 +378,7 @@ text57772.arrCSSStyles.push('span.text57772Font2 { font-size:13px; font-family:"
 text57772.addInnerText('<div id=\"text57772\" aria-live=\"off\"  ><p lang=\"en\"  style=\"margin-left:0px;text-indent:0px;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text57772Font1\"  >Page n</span ><span class=\"text57772Font2\" style=\"background-color:transparent\" >\n</span ></p ></div>\n');
 text57772.build()
 
-shape12513 = new ObjImage('shape12513','images/shape12513.png','Triangle Right',827,440,28.000000,25.000000,1,22,'div','',0 )
+shape12513 = new ObjImage('shape12513','images/shape12513.png','Triangle Right',827,440,28.000000,25.000000,1,21,'div','',0 )
 shape12513.initRotateAngle(0,0,0,-1.000000,-1.000000,26,23)
 shape12513.initHasShadow(0)
 shape12513.initHasReflection(0)
@@ -397,7 +395,7 @@ shape12513.actionShow = shape12513actionShow
 shape12513.capture=4
 shape12513.build()
 
-button64754 = new ObjButton('button64754', 'Back',50,50,81.000000,43.000000,1,23,'div','',1,0)
+button64754 = new ObjButton('button64754', 'Back',50,50,81.000000,43.000000,1,22,'div','',1,0)
 button64754.setUseSvgFile(1)
 button64754.setFillStyle(1)
 button64754.setUniqueFillID('page12501_button64754')
@@ -432,33 +430,27 @@ image12503.addBorder(0)
 image12503.addOpacity(100)
 image12503.build()
 
-image12505 = new ObjImage('image12505','images/recipe_cardcrop_image9621.png','Recipe card',149,107,866,466,1,5,'div',null, 0 )
+image12505 = new ObjImage('image12505','images/recipe_cardcrop_image9621.png','Recipe card',108,118,858,462,1,5,'div',null, 0 )
 image12505.initRotateAngle(0,0,0,0,0,0,0)
 image12505.initHasShadow(0)
 image12505.initHasReflection(0)
-image12505.addIe8Attr(149, 107, 866, 466, 0, 0)
-image12505.initImageMap(1,'0,0,866,0,866,466,0,466,0,0','M 0 0 L 866 0 L 866 466 L 0 466 L 0 0 z')
+image12505.addIe8Attr(108, 118, 858, 462, 0, 0)
+image12505.initImageMap(1,'0,0,858,0,858,462,0,462,0,0','M 0 0 L 858 0 L 858 462 L 0 462 L 0 0 z')
 image12505.addBorder(0)
 image12505.addOpacity(100)
 image12505.build()
 
-og12506 = new ObjInline('og12506',null,0,0,841,272,1,0)
-og12506.isGrp = true
-og12506.addChild('image12508')
-og12506.addChild('text12509')
-og12506.build()
-
-image12508 = new ObjImage('image12508','images/knifecrop_image9630.png','knife',617,61,224,211,1,6,'div',null, 0 )
+image12508 = new ObjImage('image12508','images/knifecrop_image9630.png','knife',591,72,224,211,1,6,'div',null, 0 )
 image12508.initRotateAngle(44,0,0,0,0,0,0)
 image12508.initHasShadow(0)
 image12508.initHasReflection(0)
-image12508.addIe8Attr(574, 12, 308, 308, 0, 0)
+image12508.addIe8Attr(548, 23, 308, 308, 0, 0)
 image12508.initImageMap(1,'0,0,224,0,224,211,0,211,0,0','M 0 0 L 224 0 L 224 211 L 0 211 L 0 0 z')
 image12508.addBorder(0)
 image12508.addOpacity(100)
 image12508.build()
 
-text12509 = new ObjText('text12509',null,718,161,93,23,1,7,null,'div',null,0 )
+text12509 = new ObjText('text12509',null,694,170,88,19,1,7,null,'div',null,0 )
 text12509.initSLine(1)
 text12509.initHasBullet(0)
 text12509.initRotateAngle(0,0,0)
@@ -467,7 +459,7 @@ text12509.initHasTextShadow(0)
 text12509.initHasBorder(0)
 text12509.initHasOutline(0)
 text12509.initHasMargin(0)
-text12509.addIe8Attr(718, 161, 93, 23, 0, 0)
+text12509.addIe8Attr(694, 170, 88, 19, 0, 0)
 text12509.addHeading(0)
 text12509.addOpacity(100)
 text12509.arrCSSStyles = new Array();
@@ -476,7 +468,7 @@ text12509.arrCSSStyles.push('span.text12509Font2 { font-size:16px; font-family:"
 text12509.addInnerText('<div id=\"text12509\" aria-live=\"off\"  ><p lang=\"en\"  legLH=\"1.409\" style=\"margin-left:0px;text-indent:0px;line-height:1.350;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text12509Font1\" style=\"position:relative;top:-2px;\" >Evaluate</span ><span class=\"text12509Font2\" style=\"background-color:transparentposition:relative;top:-2px;\" >\n</span ></p ></div>\n');
 text12509.build()
 
-text12510 = new ObjText('text12510',null,187,229,790,168,1,8,null,'div',null,0 )
+text12510 = new ObjText('text12510',null,142,231,790,168,1,8,null,'div',null,0 )
 text12510.initSLine(0)
 text12510.initHasBullet(0)
 text12510.initRotateAngle(0,0,0)
@@ -485,7 +477,7 @@ text12510.initHasTextShadow(0)
 text12510.initHasBorder(0)
 text12510.initHasOutline(0)
 text12510.initHasMargin(0)
-text12510.addIe8Attr(187, 229, 790, 168, 0, 0)
+text12510.addIe8Attr(142, 231, 790, 168, 0, 0)
 text12510.addHeading(0)
 text12510.addOpacity(100)
 text12510.arrCSSStyles = new Array();
@@ -493,7 +485,7 @@ text12510.arrCSSStyles.push('span.text12510Font1 { font-size:15px; font-family:"
 text12510.addInnerText('<div id=\"text12510\" aria-live=\"off\"  ><p lang=\"en\"  legLH=\"1.419\" style=\"margin-left:0px;text-indent:0px;line-height:1.312;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text12510Font1\" style=\"position:relative;top:-1px;\" >The Evaluate level involves making judgments based on defined criteria and standards. At this stage, learners critically assess the quality, credibility, or effectiveness of ideas, processes, or solutions. This includes checking for inconsistencies, comparing alternatives, justifying choices, and critiquing outcomes. Effective learning activities might involve analyzing case studies, assessing reports, ranking options, or defending a position in group discussions. Learners are expected to draw on their prior understanding to apply logical reasoning, evaluate evidence, and form well-supported conclusions. This level deepens critical thinking by requiring learners not just to analyze, but to take a stance and justify it.\n</span ></p >\n<p  legLH=\"1.419\" style=\"margin-left:0px;text-indent:0px;line-height:1.312;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text12510Font1\" style=\"background-color:transparentposition:relative;top:-1px;\" >\n&nbsp;</span ></p >\n<p  legLH=\"1.419\" style=\"margin-left:0px;text-indent:0px;line-height:1.312;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text12510Font1\" style=\"position:relative;top:-1px;\" >The appropriate learning outcome verbs for this level include:\n</span ></p ></div>\n');
 text12510.build()
 
-text12511 = new ObjText('text12511',null,248,417,184,127,1,9,null,'div',null,0 )
+text12511 = new ObjText('text12511',null,325,424,212,127,1,9,null,'div',null,0 )
 text12511.initSLine(0)
 text12511.initHasBullet(0)
 text12511.initRotateAngle(0,0,0)
@@ -502,12 +494,12 @@ text12511.initHasTextShadow(0)
 text12511.initHasBorder(0)
 text12511.initHasOutline(0)
 text12511.initHasMargin(0)
-text12511.addIe8Attr(248, 417, 184, 127, 0, 0)
+text12511.addIe8Attr(325, 424, 212, 127, 0, 0)
 text12511.addHeading(0)
 text12511.addOpacity(100)
 text12511.arrCSSStyles = new Array();
 text12511.arrCSSStyles.push('span.text12511Font1 { font-size:15px; font-family:"Arial", sans-serif; color:#21314d;}');
-text12511.addInnerText('<div id=\"text12511\" aria-live=\"off\"  ><table style=\"border-collapse:collapse; border-spacing:0\" >\n<tr style=\"vertical-align:top\"  >\n<td  style=\"width:100px;height:129px; padding-left:4px;padding-right:4px;padding-bottom:0px;padding-top:0px;vertical-align:top;\" >\n<p lang=\"en\"  legLH=\"1.419\" style=\"margin-left:0px;text-indent:0px;line-height:1.312;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text12511Font1\" style=\"position:relative;top:-1px;\" >Evaluate</span ></p >\n<p  legLH=\"1.419\" style=\"margin-left:0px;text-indent:0px;line-height:1.312;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text12511Font1\" style=\"position:relative;top:-1px;\" >Judge</span ></p >\n<p  legLH=\"1.419\" style=\"margin-left:0px;text-indent:0px;line-height:1.312;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text12511Font1\" style=\"position:relative;top:-1px;\" >Critique</span ></p >\n<p  legLH=\"1.419\" style=\"margin-left:0px;text-indent:0px;line-height:1.312;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text12511Font1\" style=\"position:relative;top:-1px;\" >Justify</span ></p >\n<p  legLH=\"1.419\" style=\"margin-left:0px;text-indent:0px;line-height:1.312;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text12511Font1\" style=\"position:relative;top:-1px;\" >Recommend</span ></p >\n<span style=\"line-height:2px;\">&nbsp;</span >\n</td >\n<td  style=\"width:84px;height:129px; padding-left:4px;padding-right:4px;padding-bottom:0px;padding-top:0px;vertical-align:top;\" >\n<p  legLH=\"1.419\" style=\"margin-left:0px;text-indent:0px;line-height:1.312;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text12511Font1\" style=\"position:relative;top:-1px;\" >Argue</span ></p >\n<p  legLH=\"1.419\" style=\"margin-left:0px;text-indent:0px;line-height:1.312;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text12511Font1\" style=\"position:relative;top:-1px;\" >Support</span ></p >\n<p  legLH=\"1.419\" style=\"margin-left:0px;text-indent:0px;line-height:1.312;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text12511Font1\" style=\"position:relative;top:-1px;\" >Assess</span ></p >\n<p  legLH=\"1.419\" style=\"margin-left:0px;text-indent:0px;line-height:1.312;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text12511Font1\" style=\"position:relative;top:-1px;\" >Rate</span ></p >\n<p  legLH=\"1.419\" style=\"margin-left:0px;text-indent:0px;line-height:1.312;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text12511Font1\" style=\"position:relative;top:-1px;\" >Defend</span ></p >\n<p  legLH=\"1.419\" style=\"margin-left:0px;text-indent:0px;line-height:1.312;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text12511Font1\" style=\"position:relative;top:-1px;\" >Prioritize</span ></p >\n</td >\n</tr >\n</table ></div>\n');
+text12511.addInnerText('<div id=\"text12511\" aria-live=\"off\"  ><table style=\"border-collapse:collapse; border-spacing:0\" >\n<tr style=\"vertical-align:top\"  >\n<td  style=\"width:108px;height:129px; padding-left:4px;padding-right:4px;padding-bottom:0px;padding-top:0px;vertical-align:top;\" >\n<p lang=\"en\"  legLH=\"1.419\" style=\"margin-left:0px;text-indent:0px;line-height:1.312;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text12511Font1\" style=\"position:relative;top:-1px;\" >Evaluate</span ></p >\n<p  legLH=\"1.419\" style=\"margin-left:0px;text-indent:0px;line-height:1.312;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text12511Font1\" style=\"position:relative;top:-1px;\" >Judge</span ></p >\n<p  legLH=\"1.419\" style=\"margin-left:0px;text-indent:0px;line-height:1.312;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text12511Font1\" style=\"position:relative;top:-1px;\" >Critique</span ></p >\n<p  legLH=\"1.419\" style=\"margin-left:0px;text-indent:0px;line-height:1.312;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text12511Font1\" style=\"position:relative;top:-1px;\" >Justify</span ></p >\n<p  legLH=\"1.419\" style=\"margin-left:0px;text-indent:0px;line-height:1.312;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text12511Font1\" style=\"position:relative;top:-1px;\" >Recommend</span ></p >\n<span style=\"line-height:2px;\">&nbsp;</span >\n</td >\n<td  style=\"width:92px;height:129px; padding-left:4px;padding-right:4px;padding-bottom:0px;padding-top:0px;vertical-align:top;\" >\n<p  legLH=\"1.419\" style=\"margin-left:0px;text-indent:0px;line-height:1.312;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text12511Font1\" style=\"position:relative;top:-1px;\" >Argue</span ></p >\n<p  legLH=\"1.419\" style=\"margin-left:0px;text-indent:0px;line-height:1.312;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text12511Font1\" style=\"position:relative;top:-1px;\" >Support</span ></p >\n<p  legLH=\"1.419\" style=\"margin-left:0px;text-indent:0px;line-height:1.312;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text12511Font1\" style=\"position:relative;top:-1px;\" >Assess</span ></p >\n<p  legLH=\"1.419\" style=\"margin-left:0px;text-indent:0px;line-height:1.312;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text12511Font1\" style=\"position:relative;top:-1px;\" >Rate</span ></p >\n<p  legLH=\"1.419\" style=\"margin-left:0px;text-indent:0px;line-height:1.312;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text12511Font1\" style=\"position:relative;top:-1px;\" >Defend</span ></p >\n<p  legLH=\"1.419\" style=\"margin-left:0px;text-indent:0px;line-height:1.312;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text12511Font1\" style=\"position:relative;top:-1px;\" >Prioritize</span ></p >\n</td >\n</tr >\n</table ></div>\n');
 text12511.build()
 
 arObjs.push(text57772);
@@ -515,7 +507,6 @@ arObjs.push(shape12513);
 arObjs.push(button64754);
 arObjs.push(image12503);
 arObjs.push(image12505);
-arObjs.push(og12506);
 arObjs.push(image12508);
 arObjs.push(text12509);
 arObjs.push(text12510);
@@ -531,7 +522,6 @@ writeStyleSheets(arObjs);}
 <body onfocus="trivOnFocus()" onResize="ReFlow()">
 
     <DIV style="visibility:hidden;" id="pageDIV" >
-<div id="og12506"><a id="og12506anc"></a></div>
    </DIV>
 <script>
 if( is.min ){

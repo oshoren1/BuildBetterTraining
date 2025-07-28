@@ -195,14 +195,13 @@ function init11() {
   findWH()
   if( is.min ){
     trivPageTracking.InitPageTracking();
-    PreloadResources(new Array(text57641,shape14542,button63952,image14532,image14534,og14535,image14537,text14538,qu14578,text14580,entry14581))
+    PreloadResources(new Array(text57641,shape14542,button63952,image14532,image14534,image14537,text14538,qu14578,text14580,entry14581))
     pageLayer.show(true);
     text57641.init()
     shape14542.init()
     button63952.init()
     image14532.init()
     image14534.init()
-    og14535.init()
     image14537.init()
     text14538.init()
     qu14578.init()
@@ -213,7 +212,6 @@ function init11() {
     button63952.activate()
     image14532.activate()
     image14534.activate()
-    og14535.activate()
     image14537.activate()
     text14538.activate()
     qu14578.activate()
@@ -430,7 +428,7 @@ function Update_entry14581( upd ) {
 }
 
 if( is.min ){
-text57641 = new ObjText('text57641',null,50,685,116,21,0,22,null,'div',null,1 )
+text57641 = new ObjText('text57641',null,50,685,116,21,0,21,null,'div',null,1 )
 text57641.initSLine(1)
 text57641.initHasBullet(0)
 text57641.initRotateAngle(0,0,0)
@@ -448,12 +446,12 @@ text57641.arrCSSStyles.push('span.text57641Font2 { font-size:13px; font-family:"
 text57641.addInnerText('<div id=\"text57641\" aria-live=\"off\"  ><p lang=\"en\"  style=\"margin-left:0px;text-indent:0px;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text57641Font1\"  >Page n</span ><span class=\"text57641Font2\" style=\"background-color:transparent\" >\n</span ></p ></div>\n');
 text57641.build()
 
-shape14542 = new ObjImage('shape14542','images/shape14542.png','Triangle Right',901,456,28.000000,25.000000,0,23,'div','',0 )
+shape14542 = new ObjImage('shape14542','images/shape14542.png','Triangle Right',871,437,28.000000,25.000000,0,22,'div','',0 )
 shape14542.initRotateAngle(0,0,0,-1.000000,-1.000000,26,23)
 shape14542.initHasShadow(0)
 shape14542.initHasReflection(0)
 shape14542.setUniqueFillID('page14530_shape14542')
-shape14542.addIe8Attr(901.000000, 456.000000, 28.000000, 25.000000, 0, 0)
+shape14542.addIe8Attr(871.000000, 437.000000, 28.000000, 25.000000, 0, 0)
 shape14542.initImageMap(1,'27,12,1,24,1,1,27,12','M 27.000000 12.000000 L 1.000000 24.000000 L 1.000000 1.000000 L 27.000000 12.000000 z', '', 'stroke:#010000; stroke-width:1; stroke-linejoin:round;stroke-dasharray: none; fill:#21314D;"' , '')
 shape14542.setUseSvgFile(1)
 shape14542.addBorder(0)
@@ -465,7 +463,7 @@ shape14542.actionShow = shape14542actionShow
 shape14542.capture=4
 shape14542.build()
 
-button63952 = new ObjButton('button63952', 'Back',50,50,81.000000,43.000000,1,24,'div','',1,0)
+button63952 = new ObjButton('button63952', 'Back',50,50,81.000000,43.000000,1,23,'div','',1,0)
 button63952.setUseSvgFile(1)
 button63952.setFillStyle(1)
 button63952.setUniqueFillID('page14530_button63952')
@@ -500,33 +498,27 @@ image14532.addBorder(0)
 image14532.addOpacity(100)
 image14532.build()
 
-image14534 = new ObjImage('image14534','images/recipe_cardcrop_image9621.png','Recipe card',160,138,858,462,1,5,'div',null, 0 )
+image14534 = new ObjImage('image14534','images/recipe_cardcrop_image9621.png','Recipe card',108,118,858,462,1,5,'div',null, 0 )
 image14534.initRotateAngle(0,0,0,0,0,0,0)
 image14534.initHasShadow(0)
 image14534.initHasReflection(0)
-image14534.addIe8Attr(160, 138, 858, 462, 0, 0)
+image14534.addIe8Attr(108, 118, 858, 462, 0, 0)
 image14534.initImageMap(1,'0,0,858,0,858,462,0,462,0,0','M 0 0 L 858 0 L 858 462 L 0 462 L 0 0 z')
 image14534.addBorder(0)
 image14534.addOpacity(100)
 image14534.build()
 
-og14535 = new ObjInline('og14535',null,0,0,854,295,1,0)
-og14535.isGrp = true
-og14535.addChild('image14537')
-og14535.addChild('text14538')
-og14535.build()
-
-image14537 = new ObjImage('image14537','images/knifecrop_image9630.png','knife',630,84,224,211,1,6,'div',null, 0 )
+image14537 = new ObjImage('image14537','images/knifecrop_image9630.png','knife',591,72,224,211,1,6,'div',null, 0 )
 image14537.initRotateAngle(44,0,0,0,0,0,0)
 image14537.initHasShadow(0)
 image14537.initHasReflection(0)
-image14537.addIe8Attr(587, 35, 308, 308, 0, 0)
+image14537.addIe8Attr(548, 23, 308, 308, 0, 0)
 image14537.initImageMap(1,'0,0,224,0,224,211,0,211,0,0','M 0 0 L 224 0 L 224 211 L 0 211 L 0 0 z')
 image14537.addBorder(0)
 image14537.addOpacity(100)
 image14537.build()
 
-text14538 = new ObjText('text14538',null,731,184,93,23,1,7,null,'div',null,0 )
+text14538 = new ObjText('text14538',null,694,171,92,18,1,7,null,'div',null,0 )
 text14538.initSLine(1)
 text14538.initHasBullet(0)
 text14538.initRotateAngle(0,0,0)
@@ -535,7 +527,7 @@ text14538.initHasTextShadow(0)
 text14538.initHasBorder(0)
 text14538.initHasOutline(0)
 text14538.initHasMargin(0)
-text14538.addIe8Attr(731, 184, 93, 23, 0, 0)
+text14538.addIe8Attr(694, 171, 92, 18, 0, 0)
 text14538.addHeading(0)
 text14538.addOpacity(100)
 text14538.arrCSSStyles = new Array();
@@ -544,14 +536,14 @@ text14538.arrCSSStyles.push('span.text14538Font2 { font-size:16px; font-family:"
 text14538.addInnerText('<div id=\"text14538\" aria-live=\"off\"  ><p lang=\"en\"  legLH=\"1.409\" style=\"margin-left:0px;text-indent:0px;line-height:1.350;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text14538Font1\" style=\"position:relative;top:-2px;\" >Apply</span ><span class=\"text14538Font2\" style=\"background-color:transparentposition:relative;top:-2px;\" >\n</span ></p ></div>\n');
 text14538.build()
 
-qu14578 = new ObjInline('qu14578',null,199,240,801,365,1,0)
+qu14578 = new ObjInline('qu14578',null,156,219,801,360,1,0)
 qu14578.isGrp = true
 qu14578.addChild('text14580')
 qu14578.addChild('entry14581')
 qu14578.ansVar=VarQuestion_0004;
 qu14578.build()
 
-text14580 = new ObjText('text14580',null,199,240,729,169,1,8,null,'div',null,0 )
+text14580 = new ObjText('text14580',null,156,219,729,140,1,8,null,'div',null,0 )
 text14580.initSLine(0)
 text14580.initHasBullet(0)
 text14580.initRotateAngle(0,0,0)
@@ -560,7 +552,7 @@ text14580.initHasTextShadow(0)
 text14580.initHasBorder(0)
 text14580.initHasOutline(0)
 text14580.initHasMargin(0)
-text14580.addIe8Attr(199, 240, 729, 169, 0, 0)
+text14580.addIe8Attr(156, 219, 729, 140, 0, 0)
 text14580.addHeading(0)
 text14580.addOpacity(100)
 text14580.arrCSSStyles = new Array();
@@ -569,10 +561,10 @@ text14580.arrCSSStyles.push('span.text14580Font1 { font-size:16px; font-family:"
 text14580.addInnerText('<legend><div id=\"text14580\" aria-live=\"off\"  ><label id=\"label14581id\" for=\"entry14581id\" ><p lang=\"en\"  legLH=\"1.409\" style=\"margin-left:0px;text-indent:0px;line-height:1.350;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text14580Font1\" style=\"position:relative;top:-2px;\" >1) Think of a past training you\'ve delivered or attended. Was there a point where learners were expected to apply knowledge but struggled? What could have been done differently to support successful application?</span ><span class=\"text14580Font0\" style=\"background-color:transparentposition:relative;top:-2px;\" >\n</span ></p >\n<p  legLH=\"1.409\" style=\"margin-left:0px;text-indent:0px;line-height:1.350;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text14580Font1\" style=\"position:relative;top:-2px;\" >2) How would you know if a learner is successfully applying a skill in a real-world setting?\n</span ></p >\n<p  legLH=\"1.409\" style=\"margin-left:0px;text-indent:0px;line-height:1.350;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text14580Font1\" style=\"background-color:transparentposition:relative;top:-2px;\" >\n&nbsp;</span ></p >\n<p  legLH=\"1.409\" style=\"margin-left:0px;text-indent:0px;line-height:1.350;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text14580Font1\" style=\"position:relative;top:-2px;\" >Write your answers in the box, and click on the blue triangle to review a sample answer for the question.</span ><span class=\"text14580Font0\" style=\"background-color:transparentposition:relative;top:-2px;\" >\n</span ></p ></label></div>\n</legend>\n');
 text14580.build()
 
-entry14581 = new ObjInline('entry14581',null,(is.ie?228:228),(is.ie?387:386),null,null,1,9, 0, null, null, 0)
+entry14581 = new ObjInline('entry14581',null,(is.ie?166:166),(is.ie?375:374),null,null,1,9, 0, null, null, 0)
 entry14581.onSelChg = entry14581onSelChg
 entry14581.arrCSSStyles = new Array();
-entry14581.arrCSSStyles.push('textarea.entry14581 { font-size:16px; font-family:"Arial", sans-serif; color:#21314d; width:631px; height:181px; -webkit-appearance:none; background-color:#ffffff; }');
+entry14581.arrCSSStyles.push('textarea.entry14581 { font-size:16px; font-family:"Arial", sans-serif; color:#21314d; width:676px; height:168px; -webkit-appearance:none; background-color:#ffffff; }');
 entry14581.build()
 
 var trivQuestionArray=[qu14578];
@@ -581,7 +573,6 @@ arObjs.push(shape14542);
 arObjs.push(button63952);
 arObjs.push(image14532);
 arObjs.push(image14534);
-arObjs.push(og14535);
 arObjs.push(image14537);
 arObjs.push(text14538);
 arObjs.push(qu14578);
@@ -598,7 +589,6 @@ writeStyleSheets(arObjs);}
 <body onfocus="trivOnFocus()" onResize="ReFlow()">
 
     <DIV style="visibility:hidden;" id="pageDIV" >
-<div id="og14535"><a id="og14535anc"></a></div>
    </DIV>
 <script>
 if( is.min ){
@@ -624,7 +614,7 @@ if( is.min ){
     appendElement(text14580, '<fieldset id="qu14578_fieldset" style="border:0;"></fieldset>', null);
     appendElement(null, '<fieldset id="qu14578_fieldset" style="border:0;"></fieldset>', '<div id="entry14581"><a id="entry14581anc"></a></div>');
     appendElement(null, '<div id="entry14581"><a id="entry14581anc"></a></div>', '<form id="entry14581form"  name="entry14581form" onSubmit="return false;"></form>');
-    appendElement(null, '<form id="entry14581form"  name="entry14581form" onSubmit="return false;"></form>', '<textarea class="entry14581" name="Entry field" title="Entry field" id="entry14581id" maxlength="1024" rows="31" cols="49" onPropertyChange="if( !VarQuestion_0004.equals(this.value) ) { Update_entry14581( this );entry14581Object.onSelChg(); }" onChange="if( !VarQuestion_0004.equals(this.value) ) { Update_entry14581( this );entry14581Object.onSelChg(); }qu14578Object.hasBeenProcessed=false;" onKeyUp="Update_entry14581( this );entry14581Object.onSelChg();;qu14578Object.hasBeenProcessed=false;" onBlur="doImmFeedback(\'qu14578\');"></textarea>');
+    appendElement(null, '<form id="entry14581form"  name="entry14581form" onSubmit="return false;"></form>', '<textarea class="entry14581" name="Entry field" title="Entry field" id="entry14581id" maxlength="1024" rows="34" cols="53" onPropertyChange="if( !VarQuestion_0004.equals(this.value) ) { Update_entry14581( this );entry14581Object.onSelChg(); }" onChange="if( !VarQuestion_0004.equals(this.value) ) { Update_entry14581( this );entry14581Object.onSelChg(); }qu14578Object.hasBeenProcessed=false;" onKeyUp="Update_entry14581( this );entry14581Object.onSelChg();;qu14578Object.hasBeenProcessed=false;" onBlur="doImmFeedback(\'qu14578\');"></textarea>');
 }
 </script>
 

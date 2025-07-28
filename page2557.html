@@ -350,6 +350,7 @@ function OnDeviceRotate() {
 function playerReady(obj){
   	if(obj['id'] == 'swfaudio3324') { audio3324.setFlashPlayer(); audio3324.flsPlayer.addModelListener("STATE", "OnStateChange"); }
   	if(obj['id'] == 'swfaudio3538') { audio3538.setFlashPlayer(); audio3538.flsPlayer.addModelListener("STATE", "OnStateChange"); }
+  	if(obj['id'] == 'swfaudio30851') { audio30851.setFlashPlayer(); audio30851.flsPlayer.addModelListener("STATE", "OnStateChange"); }
 }
 
 function action58355(fn){
@@ -408,8 +409,14 @@ function action36437(fn){
     else if(fn && typeof(fn) == 'function' ) fn();
 }
 
+function action73892(fn){
+    audio3324.actionHide(); 
+    if(fn && typeof(fn) == 'string' ) eval(fn);
+    else if(fn && typeof(fn) == 'function' ) fn();
+}
+
 function audio3324onDone(obj) {
-	if(is.iOS || obj.bMediaEle || obj.YTPlayer || obj.VimeoPlayer ){action36437();}else{if(obj['newstate'] == 'COMPLETED'){action36437();}}
+	if(is.iOS || obj.bMediaEle || obj.YTPlayer || obj.VimeoPlayer ){action36437();action73892();}else{if(obj['newstate'] == 'COMPLETED'){action36437();action73892();}}
 }
 
 function action36199(fn){
@@ -488,8 +495,18 @@ function audio30851evEvent_1(fn){
     else if(fn && typeof(fn) == 'function' ) fn();
 }
 
+function action73870(fn){
+    audio3538.actionShow(); 
+    if(fn && typeof(fn) == 'string' ) eval(fn);
+    else if(fn && typeof(fn) == 'function' ) fn();
+}
+
 function audio30851onSelChg(evt,name,i) {
   if(name=='Event 1') audio30851evEvent_1(); 
+}
+
+function audio30851onDone(obj) {
+	if(is.iOS || obj.bMediaEle || obj.YTPlayer || obj.VimeoPlayer ){action73870();}else{if(obj['newstate'] == 'COMPLETED'){action73870();}}
 }
 
 function updateFLVPlayer(bMute){
@@ -693,7 +710,7 @@ shape3156.initLineWeight(1)
 shape3156.addOpacity(100)
 shape3156.build()
 
-audio3538 = new ObjMedia('audio3538','Welcome 5',50,517,225,24,1,13,'media/welcome_5.mp3',0,0,0,0,1,0.800000,1,'div',0);
+audio3538 = new ObjMedia('audio3538','Welcome 5',50,517,225,24,0,13,'media/welcome_5.mp3',0,0,0,0,1,0.800000,1,'div',0);
 audio3538.bNeedPool = true;
 audio3538.bSpeedControl = true;
 audio3538.BuildMediaString()

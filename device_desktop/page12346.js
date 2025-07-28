@@ -7,13 +7,13 @@ DesktopResponsive={"1009":{
 ,
 "image12348":{"x":0,"y":0,"w":1280,"h":719,"bOffBottom":0,"i":"images/litchen_backgroundcrop_image12348.png"}
 ,
-"image12350":{"x":134,"y":111,"w":888,"h":478,"bOffBottom":0,"i":"images/recipe_cardcrop_image9621.png"}
+"image12350":{"x":108,"y":118,"w":858,"h":462,"bOffBottom":0,"i":"images/recipe_cardcrop_image9621.png"}
 ,
-"image12353":{"x":630,"y":61,"w":224,"h":211,"bOffBottom":0,"i":"images/knifecrop_image9630.png"}
+"image12353":{"x":591,"y":72,"w":224,"h":211,"bOffBottom":0,"i":"images/knifecrop_image9630.png"}
 ,
-"text12354":{"x":731,"y":161,"w":93,"h":23,"txtscale":100,"bOffBottom":0}
+"text12354":{"x":694,"y":168,"w":88,"h":19,"txtscale":100,"bOffBottom":0}
 ,
-"text12355":{"x":174,"y":221,"w":787,"h":213,"txtscale":100,"bOffBottom":0}
+"text12355":{"x":144,"y":228,"w":787,"h":213,"txtscale":100,"bOffBottom":0}
 ,
 "text12356":{"x":228,"y":441,"w":211,"h":115,"txtscale":100,"bOffBottom":0, "tablWidth": 200  , "tablHeight" :129}
 ,

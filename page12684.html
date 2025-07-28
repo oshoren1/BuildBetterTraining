@@ -190,13 +190,12 @@ function init11() {
   findWH()
   if( is.min ){
     trivPageTracking.InitPageTracking();
-    PreloadResources(new Array(text57808,button65228,image12686,image12688,og12689,image12691,text12692,text12693,text12694,shape12696))
+    PreloadResources(new Array(text57808,button65228,image12686,image12688,image12691,text12692,text12693,text12694,shape12696))
     pageLayer.show(true);
     text57808.init()
     button65228.init()
     image12686.init()
     image12688.init()
-    og12689.init()
     image12691.init()
     text12692.init()
     text12693.init()
@@ -206,7 +205,6 @@ function init11() {
     button65228.activate()
     image12686.activate()
     image12688.activate()
-    og12689.activate()
     image12691.activate()
     text12692.activate()
     text12693.activate()
@@ -362,7 +360,7 @@ function shape12696actionShow() {
 }
 
 if( is.min ){
-text57808 = new ObjText('text57808',null,50,685,116,21,0,21,null,'div',null,1 )
+text57808 = new ObjText('text57808',null,50,685,116,21,0,20,null,'div',null,1 )
 text57808.initSLine(1)
 text57808.initHasBullet(0)
 text57808.initRotateAngle(0,0,0)
@@ -380,7 +378,7 @@ text57808.arrCSSStyles.push('span.text57808Font2 { font-size:13px; font-family:"
 text57808.addInnerText('<div id=\"text57808\" aria-live=\"off\"  ><p lang=\"en\"  style=\"margin-left:0px;text-indent:0px;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text57808Font1\"  >Page n</span ><span class=\"text57808Font2\" style=\"background-color:transparent\" >\n</span ></p ></div>\n');
 text57808.build()
 
-button65228 = new ObjButton('button65228', 'Back',50,50,81.000000,43.000000,1,22,'div','',1,0)
+button65228 = new ObjButton('button65228', 'Back',50,50,81.000000,43.000000,1,21,'div','',1,0)
 button65228.setUseSvgFile(1)
 button65228.setFillStyle(1)
 button65228.setUniqueFillID('page12684_button65228')
@@ -415,33 +413,27 @@ image12686.addBorder(0)
 image12686.addOpacity(100)
 image12686.build()
 
-image12688 = new ObjImage('image12688','images/recipe_cardcrop_image9621.png','Recipe card',156,130,858,462,1,4,'div',null, 0 )
+image12688 = new ObjImage('image12688','images/recipe_cardcrop_image9621.png','Recipe card',108,118,858,462,1,4,'div',null, 0 )
 image12688.initRotateAngle(0,0,0,0,0,0,0)
 image12688.initHasShadow(0)
 image12688.initHasReflection(0)
-image12688.addIe8Attr(156, 130, 858, 462, 0, 0)
+image12688.addIe8Attr(108, 118, 858, 462, 0, 0)
 image12688.initImageMap(1,'0,0,858,0,858,462,0,462,0,0','M 0 0 L 858 0 L 858 462 L 0 462 L 0 0 z')
 image12688.addBorder(0)
 image12688.addOpacity(100)
 image12688.build()
 
-og12689 = new ObjInline('og12689',null,0,0,841,289,1,0)
-og12689.isGrp = true
-og12689.addChild('image12691')
-og12689.addChild('text12692')
-og12689.build()
-
-image12691 = new ObjImage('image12691','images/knifecrop_image9630.png','knife',617,78,224,211,1,5,'div',null, 0 )
+image12691 = new ObjImage('image12691','images/knifecrop_image9630.png','knife',591,72,224,211,1,5,'div',null, 0 )
 image12691.initRotateAngle(44,0,0,0,0,0,0)
 image12691.initHasShadow(0)
 image12691.initHasReflection(0)
-image12691.addIe8Attr(574, 29, 308, 308, 0, 0)
+image12691.addIe8Attr(548, 23, 308, 308, 0, 0)
 image12691.initImageMap(1,'0,0,224,0,224,211,0,211,0,0','M 0 0 L 224 0 L 224 211 L 0 211 L 0 0 z')
 image12691.addBorder(0)
 image12691.addOpacity(100)
 image12691.build()
 
-text12692 = new ObjText('text12692',null,718,178,93,23,1,6,null,'div',null,0 )
+text12692 = new ObjText('text12692',null,695,168,78,18,1,6,null,'div',null,0 )
 text12692.initSLine(1)
 text12692.initHasBullet(0)
 text12692.initRotateAngle(0,0,0)
@@ -450,7 +442,7 @@ text12692.initHasTextShadow(0)
 text12692.initHasBorder(0)
 text12692.initHasOutline(0)
 text12692.initHasMargin(0)
-text12692.addIe8Attr(718, 178, 93, 23, 0, 0)
+text12692.addIe8Attr(695, 168, 78, 18, 0, 0)
 text12692.addHeading(0)
 text12692.addOpacity(100)
 text12692.arrCSSStyles = new Array();
@@ -459,7 +451,7 @@ text12692.arrCSSStyles.push('span.text12692Font2 { font-size:16px; font-family:"
 text12692.addInnerText('<div id=\"text12692\" aria-live=\"off\"  ><p lang=\"en\"  legLH=\"1.409\" style=\"margin-left:0px;text-indent:0px;line-height:1.350;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text12692Font1\" style=\"position:relative;top:-2px;\" >Create</span ><span class=\"text12692Font2\" style=\"background-color:transparentposition:relative;top:-2px;\" >\n</span ></p ></div>\n');
 text12692.build()
 
-text12693 = new ObjText('text12693',null,196,239,787,213,1,7,null,'div',null,0 )
+text12693 = new ObjText('text12693',null,144,228,787,213,1,7,null,'div',null,0 )
 text12693.initSLine(0)
 text12693.initHasBullet(0)
 text12693.initRotateAngle(0,0,0)
@@ -468,7 +460,7 @@ text12693.initHasTextShadow(0)
 text12693.initHasBorder(0)
 text12693.initHasOutline(0)
 text12693.initHasMargin(0)
-text12693.addIe8Attr(196, 239, 787, 213, 0, 0)
+text12693.addIe8Attr(144, 228, 787, 213, 0, 0)
 text12693.addHeading(0)
 text12693.addOpacity(100)
 text12693.arrCSSStyles = new Array();
@@ -476,7 +468,7 @@ text12693.arrCSSStyles.push('span.text12693Font1 { font-size:15px; font-family:"
 text12693.addInnerText('<div id=\"text12693\" aria-live=\"off\"  ><p lang=\"en\"  legLH=\"1.419\" style=\"margin-left:0px;text-indent:0px;line-height:1.312;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text12693Font1\" style=\"position:relative;top:-1px;\" >The Create level is the highest in Bloom\'s Taxonomy. It involves generating new ideas, products, or ways of doing things by combining elements in novel ways. At this stage, learners are expected to design, plan, construct, or invent something original that draws on what they\'ve learned. This level demands synthesis and innovation, bringing together knowledge, skills, and reasoning to produce something purposeful and new. Effective learning activities at this stage might involve designing a new process, creating a prototype, drafting a proposal, or developing a strategic plan. These tasks give learners the opportunity to apply higher-order thinking to real-world challenges, demonstrating not just what they know, but what they can create from it.\n</span ></p >\n<p  legLH=\"1.419\" style=\"margin-left:0px;text-indent:0px;line-height:1.312;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text12693Font1\" style=\"background-color:transparentposition:relative;top:-1px;\" >\n&nbsp;</span ></p >\n<p  legLH=\"1.419\" style=\"margin-left:0px;text-indent:0px;line-height:1.312;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text12693Font1\" style=\"position:relative;top:-1px;\" >The appropriate learning outcome verbs for this level include:\n</span ></p ></div>\n');
 text12693.build()
 
-text12694 = new ObjText('text12694',null,208,441,184,127,1,8,null,'div',null,0 )
+text12694 = new ObjText('text12694',null,353,441,184,113,1,8,null,'div',null,0 )
 text12694.initSLine(0)
 text12694.initHasBullet(0)
 text12694.initRotateAngle(0,0,0)
@@ -485,7 +477,7 @@ text12694.initHasTextShadow(0)
 text12694.initHasBorder(0)
 text12694.initHasOutline(0)
 text12694.initHasMargin(0)
-text12694.addIe8Attr(208, 441, 184, 127, 0, 0)
+text12694.addIe8Attr(353, 441, 184, 113, 0, 0)
 text12694.addHeading(0)
 text12694.addOpacity(100)
 text12694.arrCSSStyles = new Array();
@@ -514,7 +506,6 @@ arObjs.push(text57808);
 arObjs.push(button65228);
 arObjs.push(image12686);
 arObjs.push(image12688);
-arObjs.push(og12689);
 arObjs.push(image12691);
 arObjs.push(text12692);
 arObjs.push(text12693);
@@ -531,7 +522,6 @@ writeStyleSheets(arObjs);}
 <body onfocus="trivOnFocus()" onResize="ReFlow()">
 
     <DIV style="visibility:hidden;" id="pageDIV" >
-<div id="og12689"><a id="og12689anc"></a></div>
    </DIV>
 <script>
 if( is.min ){
