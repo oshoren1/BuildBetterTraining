@@ -5,7 +5,7 @@ PhoneResponsive={"785":{
 ,
 "text56824":{"x":31,"y":410,"w":71,"h":15,"txtscale":100,"bOffBottom":1}
 ,
-"shape3288":{"x":610,"y":167,"w":17.000000,"h":16.000000,"stylemods":[{"sel":"div.shape3288Text","decl":" { position:absolute; top:1.000000px; left:1.000000px; display:flex; justify-content:center; align-items:center; width:15.000000px; height:14.000000px;}"},{"sel":"span.shape3288Text","decl":" { width:11.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:9px; font-size:9px; font-family:\"Lucida Sans Unicode\", sans-serif; color:#21314d;}"}],"bOffBottom":0 ,"td": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAAQCAYAAADwMZRfAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAASSURBVDhPY2AYBaNgFIwC6gAABFAAAagefKsAAAAASUVORK5CYII="  ,"fd": "" ,"p": "M 16.000000 8.000000 L 1.000000 15.000000 L 1.000000 1.000000 L 16.000000 8.000000 z"}
+"shape3288":{"x":575,"y":176,"w":17.000000,"h":16.000000,"stylemods":[{"sel":"div.shape3288Text","decl":" { position:absolute; top:1.000000px; left:1.000000px; display:flex; justify-content:center; align-items:center; width:15.000000px; height:14.000000px;}"},{"sel":"span.shape3288Text","decl":" { width:11.000000px; margin-right:5px; margin-left:5px; text-align:center; line-height:9px; font-size:9px; font-family:\"Lucida Sans Unicode\", sans-serif; color:#21314d;}"}],"bOffBottom":0 ,"td": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAAQCAYAAADwMZRfAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAASSURBVDhPY2AYBaNgFIwC6gAABFAAAagefKsAAAAASUVORK5CYII="  ,"fd": "" ,"p": "M 16.000000 8.000000 L 1.000000 15.000000 L 1.000000 1.000000 L 16.000000 8.000000 z"}
 ,
 "audio3324":{"x":516,"y":212,"w":150,"h":24,"ctrlH":24,"bOffBottom":0}
 ,
@@ -27,7 +27,7 @@ PhoneResponsive={"785":{
 ,
 "audio3538":{"x":31,"y":317,"w":225,"h":24,"ctrlH":24,"bOffBottom":0}
 ,
-"text3173":{"x":499,"y":74,"w":209,"h":138,"txtscale":100,"bOffBottom":0}
+"text3173":{"x":479,"y":74,"w":225,"h":94,"txtscale":100,"bOffBottom":0}
 ,
 "text3675":{"x":118,"y":59,"w":166,"h":31,"txtscale":100,"bOffBottom":0}
 ,
