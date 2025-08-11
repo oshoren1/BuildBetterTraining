@@ -196,7 +196,7 @@ function init11() {
   findWH()
   if( is.min ){
     trivPageTracking.InitPageTracking();
-    PreloadResources(new Array(text78347,shape78446,audio78507,shape79492,shape79626,audio79593,button78182,image78090,text78015,image78034,shape78309,shape78556,text78647,audio79126,shape78850,text78690,shape78093,image78063))
+    PreloadResources(new Array(text78347,shape78446,audio78507,shape79492,shape79626,audio79593,button78182,text78015,image78034,shape78309,shape78556,text78647,audio79126,shape78850,text78690,image78063))
     pageLayer.show(true);
     text78347.init()
     shape78446.init()
@@ -205,7 +205,6 @@ function init11() {
     shape79626.init()
     audio79593.init()
     button78182.init()
-    image78090.init()
     text78015.init()
     image78034.init()
     shape78309.init()
@@ -214,7 +213,6 @@ function init11() {
     audio79126.init()
     shape78850.init()
     text78690.init()
-    shape78093.init()
     image78063.init()
     text78347.activate()
     shape78446.activate()
@@ -223,7 +221,6 @@ function init11() {
     shape79626.activate()
     audio79593.activate()
     button78182.activate()
-    image78090.activate()
     text78015.activate()
     image78034.activate()
     shape78309.activate()
@@ -232,7 +229,6 @@ function init11() {
     audio79126.activate()
     shape78850.activate()
     text78690.activate()
-    shape78093.activate()
     image78063.activate()
 button78182.strCookieState = (trivBtnTracking.GetRangeStatus(78182,true));
 button78182.loadStateFromSes("normalState");
@@ -498,16 +494,6 @@ function button78182onUp() {
   action78183();
 }
 
-function action78091(fn){
-    ObjLayerActionGoToNewWindow( 'page13271.html', 'Trivantis_', 'width=1296,height=759,scrollbars=1,resizable=1,menubar=1,toolbar=1,location=1,status=1' ); 
-    if(fn && typeof(fn) == 'string' ) eval(fn);
-    else if(fn && typeof(fn) == 'function' ) fn();
-}
-
-function image78090onUp() {
-  action78091();
-}
-
 function action78016(fn){
     text78015.actionChangeContents( "Page  " +  VarPageInTitle.getValue() + "","alignleft","1" ); 
     if(fn && typeof(fn) == 'string' ) eval(fn);
@@ -545,7 +531,7 @@ function setPlayerMute(plrObj, bMute){
 }
 
 if( is.min ){
-text78347 = new ObjText('text78347',null,289,158,303,99,1,29,null,'div',null,0 )
+text78347 = new ObjText('text78347',null,289,158,303,99,1,27,null,'div',null,0 )
 text78347.initSLine(0)
 text78347.initHasBullet(0)
 text78347.initRotateAngle(0,0,0)
@@ -562,7 +548,7 @@ text78347.arrCSSStyles.push('span.text78347Font1 { font-size:16px; font-family:"
 text78347.addInnerText('<div id=\"text78347\" aria-live=\"off\"  ><p lang=\"en\"  legLH=\"1.409\" style=\"margin-left:0px;text-indent:0px;line-height:1.350;margin-top:0px;margin-bottom:0px;text-align:center;\" >\n<span class=\"text78347Font1\" style=\"position:relative;top:-2px;\" >Have you ever taken a course where the learning objectives you were supposed to achieve were not articulated well? How did you know what was expected of you? \n</span ></p ></div>\n');
 text78347.build()
 
-shape78446 = new ObjImage('shape78446','images/shape78446.png','Triangle Right',417,256,26.000000,25.000000,1,30,'div','',0 )
+shape78446 = new ObjImage('shape78446','images/shape78446.png','Triangle Right',417,256,26.000000,25.000000,1,28,'div','',0 )
 shape78446.initRotateAngle(0,0,0,-1.000000,-1.000000,24,23)
 shape78446.initHasShadow(0)
 shape78446.initHasReflection(0)
@@ -578,12 +564,12 @@ shape78446.hasOnUp = true
 shape78446.capture=4
 shape78446.build()
 
-audio78507 = new ObjMedia('audio78507','Develop Learning objectives_1',288,335,300,24,1,31,'media/develop_learning_objectives_1.mp3',0,0,0,0,1,0.800000,1,'div',0);
+audio78507 = new ObjMedia('audio78507','Develop Learning objectives_1',288,335,300,24,1,29,'media/develop_learning_objectives_1.mp3',0,0,0,0,1,0.800000,1,'div',0);
 audio78507.bSpeedControl = true;
 audio78507.BuildMediaString()
 audio78507.build()
 
-shape79492 = new ObjImage('shape79492','images/shape79492.png','Triangle Right_2',426,302,26.000000,25.000000,0,32,'div','',0 )
+shape79492 = new ObjImage('shape79492','images/shape79492.png','Triangle Right_2',426,302,26.000000,25.000000,0,30,'div','',0 )
 shape79492.initRotateAngle(0,0,0,-1.000000,-1.000000,24,23)
 shape79492.initHasShadow(0)
 shape79492.initHasReflection(0)
@@ -599,7 +585,7 @@ shape79492.hasOnUp = true
 shape79492.capture=4
 shape79492.build()
 
-shape79626 = new ObjImage('shape79626','images/shape79626.png','Triangle Right_3',253,428,26.000000,25.000000,0,33,'div','',0 )
+shape79626 = new ObjImage('shape79626','images/shape79626.png','Triangle Right_3',253,428,26.000000,25.000000,0,31,'div','',0 )
 shape79626.initRotateAngle(0,0,0,-1.000000,-1.000000,24,23)
 shape79626.initHasShadow(0)
 shape79626.initHasReflection(0)
@@ -615,12 +601,12 @@ shape79626.hasOnUp = true
 shape79626.capture=4
 shape79626.build()
 
-audio79593 = new ObjMedia('audio79593','Develop learning obj_3',34,463,300,24,0,34,'media/develop_learning_obj_3.mp3',0,0,0,0,1,0.800000,1,'div',0);
+audio79593 = new ObjMedia('audio79593','Develop learning obj_3',34,463,300,24,0,32,'media/develop_learning_obj_3.mp3',0,0,0,0,1,0.800000,1,'div',0);
 audio79593.bSpeedControl = true;
 audio79593.BuildMediaString()
 audio79593.build()
 
-button78182 = new ObjButton('button78182', 'Back',50,50,81.000000,43.000000,1,35,'div','',1,0)
+button78182 = new ObjButton('button78182', 'Back',50,50,81.000000,43.000000,1,33,'div','',1,0)
 button78182.setUseSvgFile(1)
 button78182.setFillStyle(1)
 button78182.setUniqueFillID('page78011_button78182')
@@ -645,20 +631,7 @@ button78182.bOverEnabled = true;
 button78182.bDownEnabled = true;
 button78182.build()
 
-image78090 = new ObjImage('image78090','images/pyramid_helpcrop_image13344.png','pyramid help',796,158,113,88,1,36,'div',null, 0 )
-image78090.initRotateAngle(0,0,0,0,0,0,0)
-image78090.initHasShadow(0)
-image78090.initHasReflection(0)
-image78090.addIe8Attr(796, 158, 113, 88, 0, 0)
-image78090.initImageMap(1,'0,0,113,0,113,88,0,88,0,0','M 0 0 L 113 0 L 113 88 L 0 88 L 0 0 z')
-image78090.addBorder(0)
-image78090.addOpacity(100)
-image78090.onUp = image78090onUp
-image78090.hasOnUp = true
-image78090.capture=4
-image78090.build()
-
-text78015 = new ObjText('text78015',null,50,685,116,21,0,37,null,'div',null,1 )
+text78015 = new ObjText('text78015',null,50,685,116,21,0,34,null,'div',null,1 )
 text78015.initSLine(1)
 text78015.initHasBullet(0)
 text78015.initRotateAngle(0,0,0)
@@ -676,7 +649,7 @@ text78015.arrCSSStyles.push('span.text78015Font2 { font-size:13px; font-family:"
 text78015.addInnerText('<div id=\"text78015\" aria-live=\"off\"  ><p lang=\"en\"  style=\"margin-left:0px;text-indent:0px;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text78015Font1\"  >Page n</span ><span class=\"text78015Font2\" style=\"background-color:transparent\" >\n</span ></p ></div>\n');
 text78015.build()
 
-image78034 = new ObjImage('image78034','images/litchen_backgroundcrop_image19338.png','kitchen background',0,0,1280,719,1,10,'div',null, 0 )
+image78034 = new ObjImage('image78034','images/litchen_backgroundcrop_image19338.png','kitchen background',0,0,1280,719,1,9,'div',null, 0 )
 image78034.initRotateAngle(0,0,0,0,0,0,0)
 image78034.initHasShadow(0)
 image78034.initHasReflection(0)
@@ -686,7 +659,7 @@ image78034.addBorder(0)
 image78034.addOpacity(100)
 image78034.build()
 
-shape78309 = new ObjImage('shape78309','images/shape78309.png','Callout Ellipse',255,116,354.000000,180.000000,1,11,'div','',0 )
+shape78309 = new ObjImage('shape78309','images/shape78309.png','Callout Ellipse',255,116,354.000000,180.000000,1,10,'div','',0 )
 shape78309.initRotateAngle(0,0,0,1.000000,0.000000,353,179)
 shape78309.initHasShadow(0)
 shape78309.initHasReflection(0)
@@ -699,7 +672,7 @@ shape78309.initLineWeight(1)
 shape78309.addOpacity(100)
 shape78309.build()
 
-shape78556 = new ObjImage('shape78556','images/shape78556.png','Callout Ellipse 2',254,116,368.000000,224.000000,0,12,'div','',0 )
+shape78556 = new ObjImage('shape78556','images/shape78556.png','Callout Ellipse 2',254,116,368.000000,224.000000,0,11,'div','',0 )
 shape78556.initRotateAngle(0,0,0,0.000000,0.000000,366,223)
 shape78556.initHasShadow(0)
 shape78556.initHasReflection(0)
@@ -712,7 +685,7 @@ shape78556.initLineWeight(1)
 shape78556.addOpacity(100)
 shape78556.build()
 
-text78647 = new ObjText('text78647',null,288,152,304,140,0,13,null,'div',null,0 )
+text78647 = new ObjText('text78647',null,288,152,304,140,0,12,null,'div',null,0 )
 text78647.initSLine(0)
 text78647.initHasBullet(0)
 text78647.initRotateAngle(0,0,0)
@@ -729,12 +702,12 @@ text78647.arrCSSStyles.push('span.text78647Font1 { font-size:16px; font-family:"
 text78647.addInnerText('<div id=\"text78647\" aria-live=\"off\"  ><p lang=\"en\"  legLH=\"1.409\" style=\"margin-left:0px;text-indent:0px;line-height:1.350;margin-top:0px;margin-bottom:0px;text-align:center;\" >\n<span class=\"text78647Font1\" style=\"position:relative;top:-2px;\" >A key element of effective teaching \n</span ></p >\n<p  legLH=\"1.409\" style=\"margin-left:0px;text-indent:0px;line-height:1.350;margin-top:0px;margin-bottom:0px;text-align:center;\" >\n<span class=\"text78647Font1\" style=\"position:relative;top:-2px;\" >is creating well-written Course Learning Outcomes (CLOs) that clearly state what learners will be able to do after the training. CLOs shape your content, guide your activities, and determine your assessments. \n</span ></p ></div>\n');
 text78647.build()
 
-audio79126 = new ObjMedia('audio79126','Develop Learning Ob_2',301,347,300,24,0,14,'media/develop_learning_ob_2.mp3',0,0,0,0,1,0.800000,1,'div',0);
+audio79126 = new ObjMedia('audio79126','Develop Learning Ob_2',301,347,300,24,0,13,'media/develop_learning_ob_2.mp3',0,0,0,0,1,0.800000,1,'div',0);
 audio79126.bSpeedControl = true;
 audio79126.BuildMediaString()
 audio79126.build()
 
-shape78850 = new ObjImage('shape78850','images/shape78850.png','Rectangle',33,113,269.000000,350.000000,0,15,'div','',0 )
+shape78850 = new ObjImage('shape78850','images/shape78850.png','Rectangle',33,113,269.000000,350.000000,0,14,'div','',0 )
 shape78850.initRotateAngle(0,0,0,-1.000000,-1.000000,267,348)
 shape78850.initHasShadow(0)
 shape78850.initHasReflection(0)
@@ -747,7 +720,7 @@ shape78850.initLineWeight(1)
 shape78850.addOpacity(100)
 shape78850.build()
 
-text78690 = new ObjText('text78690',null,43,126,253,355,0,16,null,'div',null,0 )
+text78690 = new ObjText('text78690',null,43,126,253,355,0,15,null,'div',null,0 )
 text78690.initSLine(0)
 text78690.initHasBullet(1)
 text78690.initRotateAngle(0,0,0)
@@ -765,20 +738,7 @@ text78690.arrCSSStyles.push('li.text78690Font1 { font-size:16px; font-family:"Ar
 text78690.addInnerText('<div id=\"text78690\" aria-live=\"off\"  ><p lang=\"en\"  legLH=\"1.409\" style=\"margin-left:0px;text-indent:0px;line-height:1.350;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text78690Font1\" style=\"position:relative;top:-2px;\" >Strong learning objectives:\n</span ></p >\n<p  legLH=\"1.409\" style=\"margin-left:0px;text-indent:0px;line-height:1.350;margin-top:0px;margin-bottom:0px;text-align:left;\" >\n<span class=\"text78690Font1\" style=\"background-color:transparentposition:relative;top:-2px;\" >\n&nbsp;</span ></p >\n<ul  style=\"list-style-position:outside;text-align:left;\" >\n<li  class=\"text78690Font1\" data-bltIndnt=\"0\" style=\"line-height:1.409;position:relative;margin-left:15px;margin-top:0px;margin-bottom:3px; list-style-image:url(\'images/text78690CircleBulletFont6.png\'); padding-left:8px;\"><!--{ \ndata-bltIndnt:0\n} --><span class=\"text78690Font1\"  >Use clear, measurable, and action-oriented verbs. E.g., describe, analyze, demonstrate. (See the Bloom\'s Action Verbs list for ideas.)\n</span ></li >\n<li  class=\"text78690Font1\" data-bltIndnt=\"0\" style=\"line-height:1.409;position:relative;margin-left:15px;margin-top:0px;margin-bottom:3px; list-style-image:url(\'images/text78690CircleBulletFont6.png\'); padding-left:8px;\"><!--{ \ndata-bltIndnt:0\n} --><span class=\"text78690Font1\"  >Are observable and measurable, making it possible to determine whether learners have achieved them.\n</span ></li >\n<li  class=\"text78690Font1\" data-bltIndnt=\"0\" style=\"line-height:1.409;position:relative;margin-left:15px;margin-top:0px;margin-bottom:3px; list-style-image:url(\'images/text78690CircleBulletFont6.png\'); padding-left:8px;\"><!--{ \ndata-bltIndnt:0\n} --><span class=\"text78690Font1\"  >Align with the appropriate cognitive level in Bloom\'s Taxonomy.\n</span ></li >\n</ul ></div>\n');
 text78690.build()
 
-shape78093 = new ObjImage('shape78093','images/shape78093.png','Rounded Rectangle',782,157,140.000000,92.000000,1,17,'div','',0 )
-shape78093.initRotateAngle(0,0,0,-1.000000,-1.000000,138,90)
-shape78093.initHasShadow(0)
-shape78093.initHasReflection(0)
-shape78093.setUniqueFillID('page78011_shape78093')
-shape78093.addIe8Attr(782.000000, 157.000000, 140.000000, 92.000000, 0, 0)
-shape78093.initImageMap(1,'23,1,117,1,121,1,126,3,129,5,133,7,135,11,137,14,139,19,139,23,139,69,139,73,137,78,135,81,133,85,129,87,126,89,121,91,117,91,23,91,19,91,15,89,11,87,8,85,5,81,3,77,1,73,1,69,1,23,1,19,3,14,5,11,7,7,11,5,14,3,19,1,23,1','M 23.000000 1.000000 L 117.000000 1.000000 L 121.437500 1.437500 L 125.562500 2.750000 L 129.312500 4.750000 L 132.562500 7.437500 L 135.250000 10.687500 L 137.250000 14.437500 L 138.562500 18.562500 L 139.000000 23.000000 L 139.000000 69.000000 L 138.562500 73.437500 L 137.250000 77.562500 L 135.250000 81.312500 L 132.562500 84.562500 L 129.312500 87.250000 L 125.562500 89.250000 L 121.437500 90.562500 L 117.000000 91.000000 L 23.000000 91.000000 L 18.687500 90.562500 L 14.625000 89.312500 L 10.875000 87.312500 L 7.500000 84.562500 L 4.750000 81.187500 L 2.687500 77.437500 L 1.437500 73.312500 L 1.000000 69.000000 L 1.000000 23.000000 L 1.437500 18.562500 L 2.750000 14.437500 L 4.750000 10.687500 L 7.437500 7.437500 L 10.687500 4.750000 L 14.437500 2.750000 L 18.562500 1.437500 L 23.000000 1.000000 z', '', 'stroke:#010000; stroke-width:1; stroke-linejoin:round;stroke-dasharray: none; fill:#FFFFFF;"' , '')
-shape78093.setUseSvgFile(1)
-shape78093.addBorder(0)
-shape78093.initLineWeight(1)
-shape78093.addOpacity(100)
-shape78093.build()
-
-image78063 = new ObjImage('image78063','images/5crop_image18601.png','a smiling female chef with red hair, wearing uniform and chef&#39;s hat',607,226,176,313,1,18,'div',null, 0 )
+image78063 = new ObjImage('image78063','images/5crop_image18601.png','a smiling female chef with red hair, wearing uniform and chef&#39;s hat',607,226,176,313,1,16,'div',null, 0 )
 image78063.initRotateAngle(0,0,0,0,0,0,0)
 image78063.initHasShadow(0)
 image78063.initHasReflection(0)
@@ -795,7 +755,6 @@ arObjs.push(shape79492);
 arObjs.push(shape79626);
 arObjs.push(audio79593);
 arObjs.push(button78182);
-arObjs.push(image78090);
 arObjs.push(text78015);
 arObjs.push(image78034);
 arObjs.push(shape78309);
@@ -804,7 +763,6 @@ arObjs.push(text78647);
 arObjs.push(audio79126);
 arObjs.push(shape78850);
 arObjs.push(text78690);
-arObjs.push(shape78093);
 arObjs.push(image78063);
 
 
@@ -838,7 +796,6 @@ if( is.min ){
     appendElement(shape79626, null, null);
     appendElement(audio79593, null, null);
     appendElement(button78182, null, null);
-    appendElement(image78090, null, null);
     appendElement(text78015, null, null);
     appendElement(image78034, null, null);
     appendElement(shape78309, null, null);
@@ -847,7 +804,6 @@ if( is.min ){
     appendElement(audio79126, null, null);
     appendElement(shape78850, null, null);
     appendElement(text78690, null, null);
-    appendElement(shape78093, null, null);
     appendElement(image78063, null, null);
 }
 </script>
