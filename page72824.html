@@ -335,7 +335,7 @@ function playerReady(obj){
 }
 
 function action90317(fn){
-    trivExitPage('https://docs.google.com/document/d/1G1tiU9nSRFW_UwhwSezuNvjHBRTVvqYl/edit?usp=drive_link&ouid=113974539151410157526&rtpof=true&sd=true',true); 
+    ObjLayerActionGoToNewWindow( 'https://docs.google.com/document/d/1G1tiU9nSRFW_UwhwSezuNvjHBRTVvqYl/edit?usp=drive_link&ouid=113974539151410157526&rtpof=true&sd=true', 'Trivantis_', 'width=1025,height=701,scrollbars=1,resizable=1,menubar=1,toolbar=1,location=1,status=1' ); 
     if(fn && typeof(fn) == 'string' ) eval(fn);
     else if(fn && typeof(fn) == 'function' ) fn();
 }

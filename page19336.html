@@ -392,13 +392,13 @@ function checkQuestions( bFeedback, bForce, bNotLeavingPage ) {
     if( !wrong ) {        VarTriQA_19380.add('1')
 		var at = parseInt(VarTriQA_19380.getValue())
 		if( at >= 5 ) { DisableQu_19380(); }
-        trivActFBCnt++; action19380_1(onAfterFBAction); return 0;  } //1
+        trivActFBCnt++; action19380_4(onAfterFBAction); return 0;  } //1
 
     if( wrong ) {        VarTriQA_19380.add('1')
 		var at = parseInt(VarTriQA_19380.getValue())
-		if( at >= 5 ) { DisableQu_19380(); trivActFBCnt++;action19380_3(onAfterFBAction); return 1;
+		if( at >= 5 ) { DisableQu_19380(); trivActFBCnt++;action19380_6(onAfterFBAction); return 1;
 }
-        else { trivActFBCnt++; action19380_2(onAfterFBAction); return 0;
+        else { trivActFBCnt++; action19380_5(onAfterFBAction); return 0;
         }
   } //2 
 
@@ -593,16 +593,16 @@ function DisableQu_19380() {
     }
   }
 }
-function action19380_1(fn){
-    if(!document.getElementById("DLG_Div_19380"))trivAlert( 'action19380_1', 'BuildBetterTraining', 'Correct!\nExplanation: \nRemembering focuses on recalling facts, basic concepts, or procedures from memory without necessarily understanding or using them. Listing steps is purely about retrieval.\n\nUnderstanding goes beyond memory; it means grasping the meaning. Summarizing shows that the learner can interpret information in their own words.\n\nApplying means using knowledge or procedures in a real situation. Following a checklist to perform a task correctly is a direct application of learned knowledge.\n\n Analyzing requires breaking information into parts and examining . relationships. Identifying what went wrong in a project demands deep analysis of different components and factors.\n\nEvaluating asks learners to make judgments based on criteria and standards. Critiquing requires comparing, assessing value, and defending a choice based on evidence.\n\n Creating is about producing new or original work. Designing a brand-new process from scratch demands synthesizing knowledge, inventing ideas, and structuring them into a coherent result', fn );
+function action19380_4(fn){
+    if(!document.getElementById("DLG_Div_19380"))trivAlert( 'action19380_4', 'BuildBetterTraining', 'Correct!\nExplanation: \nRemembering focuses on recalling facts, basic concepts, or procedures from memory without necessarily understanding or using them. Listing steps is purely about retrieval.\n\nUnderstanding goes beyond memory; it means grasping the meaning. Summarizing shows that the learner can interpret information in their own words.\n\nApplying means using knowledge or procedures in a real situation. Following a checklist to perform a task correctly is a direct application of learned knowledge.\n\n Analyzing requires breaking information into parts and examining . relationships. Identifying what went wrong in a project demands deep analysis of different components and factors.\n\nEvaluating asks learners to make judgments based on criteria and standards. Critiquing requires comparing, assessing value, and defending a choice based on evidence.\n\n Creating is about producing new or original work. Designing a brand-new process from scratch demands synthesizing knowledge, inventing ideas, and structuring them into a coherent result', fn );
 }
 
-function action19380_2(fn){
-    if(!document.getElementById("DLG_Div_19380"))trivAlert( 'action19380_2', 'BuildBetterTraining', 'You answered the question incorrectly. Please try again!', fn );
+function action19380_5(fn){
+    if(!document.getElementById("DLG_Div_19380"))trivAlert( 'action19380_5', 'BuildBetterTraining', 'You answered the question incorrectly. Please try again!', fn );
 }
 
-function action19380_3(fn){
-    if(!document.getElementById("DLG_Div_19380"))trivAlert( 'action19380_3', 'BuildBetterTraining', 'Your answer is still not correct and you have exhausted all of your attempts. Please go back and review the cognitive levels before you contimue with the course. ', fn );
+function action19380_6(fn){
+    if(!document.getElementById("DLG_Div_19380"))trivAlert( 'action19380_6', 'BuildBetterTraining', 'Your answer is still not correct and you have exhausted all of your attempts. Please go back and review the cognitive levels before you contimue with the course. ', fn );
 }
 
 if( is.min ){
